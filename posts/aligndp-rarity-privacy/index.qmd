@@ -1,0 +1,58 @@
+---
+title: "AlignDP: locking knowledge transfer at the data interface"
+description: "Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones."
+author: "Madhava Gaikwad"
+date: "2025-12-21"
+categories: [privacy, differential-privacy, llm, security]
+---
+
+Large language models can be copied without permission. An attacker can extract
+training data, distill the model into a smaller copy, or fine-tune on its outputs.
+The common defenses are watermarking and monitoring. Both share a weakness. They
+act after the leak. A watermark helps you prove that copying happened, and
+monitoring helps you notice it, but by then the knowledge has already moved.
+AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the
+data interface, before knowledge leaves.
+
+## Two kinds of field need two kinds of protection
+
+The key observation is that not all data is equally risky, and the right protection
+depends on how often a value appears.
+
+Rare fields are the dangerous ones. A value that shows up only a few times can
+identify its source, so it needs strong hiding. AlignDP applies PAC
+indistinguishability to rare fields. The practical meaning is that an observer
+cannot reliably tell whether a given rare value was present, so the rare
+information stays concealed.
+
+Common fields are different. You often want to keep useful aggregate statistics
+about them, such as how frequent each value is. AlignDP protects these with RAPPOR,
+a well-known method for local differential privacy. RAPPOR randomizes each
+individual report so no single response is revealing, while still allowing accurate
+frequency estimates once many reports are combined. The frequent values stay usable
+in aggregate without exposing any one contributor.
+
+A global aggregator sits over both tiers. It manages composition, meaning the way
+many small privacy releases add up, and it tracks the overall budget so the total
+exposure stays bounded.
+
+## What the paper shows
+
+The work establishes theoretical results for both tiers. It extends the PAC
+guarantee to the global aggregation step and derives error bounds for the RAPPOR
+estimates. Simulations match the design intent. Rare categories remain hidden,
+while frequent categories can be recovered with small error. The paper is explicit
+about the tradeoff between privacy and utility, since that tension is the heart of
+any differential privacy scheme.
+
+## Why it matters
+
+Defending a model after it has been copied is a weak position. AlignDP moves the
+control to the point where data enters, and it tailors the strength of protection
+to the risk each field carries. Strong hiding goes where identification is
+possible. Lighter, aggregate-preserving protection goes where only statistics
+matter.
+
+## Read the paper
+
+[AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)](https://arxiv.org/abs/2512.17251).

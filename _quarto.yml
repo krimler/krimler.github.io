@@ -16,6 +16,8 @@ website:
         text: Blog
       - href: papers/index.qmd
         text: Papers
+      - href: cv.qmd
+        text: CV
       - href: about.qmd
         text: About
     right:

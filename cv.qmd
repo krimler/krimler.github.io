@@ -1,0 +1,109 @@
+---
+title: "Madhava Gaikwad"
+subtitle: "Engineering Leader · 20 years in infrastructure and security"
+toc: true
+---
+
+[gaikwad.madhav@gmail.com](mailto:gaikwad.madhav@gmail.com) ·
+Bengaluru ·
+[LinkedIn](https://www.linkedin.com/in/safeai/) ·
+[GitHub](https://github.com/krimler) ·
+[Google Scholar](https://scholar.google.com/citations?user=YReGIGMAAAAJ)
+
+I work at the intersection of distributed systems, AI alignment, privacy and
+differential privacy, and ML systems. I turn theory into runnable, tested
+artifacts.
+
+## Skills
+
+- **Languages:** Python, Go, C++, Java
+- **AI and safety:** RAG, guardrailing, MCP, evaluation and monitoring
+- **Cryptography and authorization:** Zero Trust, OAuth2/OIDC, SAML, PKI, OPA/Rego, WAF, SSL/TLS
+- **Distributed systems:** containers, Kubernetes, Envoy, gRPC, Spark, Kafka, OpenTelemetry
+
+## Experience
+
+**Independent (Kriml), Founder, AI security startup.** Bengaluru. December 2025 to present.
+
+- Researched, built, and productized a secure, anonymous, FDA-compliant medical AI bot.
+- Worked with the IETF BMWG group to develop AI-related measurement drafts.
+
+**Microsoft, Senior Software Engineer and Manager.** Bengaluru. February 2021 to December 2025.
+
+- Built Net Copilot, an LLM-powered multi-agent system with chat, search, and API
+  capabilities, serving 250 daily active engineers. Implemented RAG pipelines and
+  fine-tuned and distilled models for production.
+- As Engineering Manager from November 2022 to November 2025, led a 15-member
+  cross-geo SRE team for GPU fleet network operations. Defined SLIs and SLOs for
+  Azure datacenter networking. Owned MTTM and MTTR metrics and reduced time to
+  mitigate by 30%. Designed on-call rotations, escalation policies, incident
+  fatigue management, and an engineer growth path.
+
+**Cisco, Technical Leader.** Bengaluru. June 2012 to February 2021.
+
+- Led architecture and delivery of an $80M web security gateway platform.
+  Engineered TLS performance optimizations and TCP tuning in the FreeBSD kernel,
+  achieving 1.2x throughput and 2x faster decryption.
+- Drove the enterprise security roadmap and cross-org architecture reviews.
+  Implemented differential privacy guarantees for an enterprise firewall and
+  ensured GDPR compliance.
+
+**Early roles (Symantec, TCS).** Mumbai and Pune. December 2006 to June 2012.
+
+- Worked on email security, AAA systems, and network protocol development in
+  C/C++ and Java.
+
+## Education
+
+**Bachelor of Engineering, Information Technology.** Shivaji University, Kolhapur.
+2006. Distinction.
+
+## Selected publications and preprints
+
+Several of these have companion posts on this blog that explain the ideas in plain
+language. See the [blog](index.qmd) and [papers](papers/index.qmd).
+
+- AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs.
+  NeurIPS 2025 Workshop. [arXiv:2512.17251](https://arxiv.org/abs/2512.17251) ·
+  [post](posts/aligndp-rarity-privacy/)
+- NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback.
+  [arXiv:2507.21131](https://arxiv.org/abs/2507.21131) ·
+  [post](posts/npo-meta-alignment/)
+- ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability.
+  [arXiv:2508.16119](https://arxiv.org/abs/2508.16119) ·
+  [post](posts/ansc-capacity-health/)
+- AVEC: Bootstrapping Privacy for Local LLMs.
+  [arXiv:2509.10561](https://arxiv.org/abs/2509.10561) ·
+  [post](posts/avec-edge-privacy/)
+- Murphy's Laws of AI Alignment: Why the Gap Always Wins.
+  [arXiv:2509.05381](https://arxiv.org/abs/2509.05381) ·
+  [post](posts/murphy-alignment-gap/)
+- When Are Two RLHF Objectives the Same? (Opal).
+  [arXiv:2509.11298](https://arxiv.org/abs/2509.11298) ·
+  [post](posts/opal-rlhf-equivalence/)
+- Did You Check the Right Pocket? Cost-Sensitive Store Routing for
+  Memory-Augmented Agents. ICLR 2026 Workshop.
+  [arXiv:2603.15658](https://arxiv.org/abs/2603.15658) ·
+  [post](posts/memory-store-routing/)
+- AEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture.
+  [paper](papers/aegis.qmd) · [post](posts/aegis-evidence-obligation/)
+- Heuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime
+  Statistics. [paper](papers/fibonacci-primes.qmd) ·
+  [post](posts/fibonacci-prime-statistics/)
+- Algorithmic Analysis of DAM. ICLR 2026 Workshop.
+  [OpenReview](https://openreview.net/pdf?id=zgHAqaIybd)
+- The Abstention Protocol: Root Cause Analysis for Clos Fabrics. USENIX OSDI 2026.
+- Agentic Trust Fabric: A Systematization of Knowledge of Security Architectures
+  for Autonomous AI Agents.
+  [preprint](https://philpapers.org/archive/GAITAT-2.pdf)
+- Adaptive WAF: Multi-Armed Bandits for Web Application Firewall Rule Tuning.
+  [preprint](https://philpapers.org/archive/GAIHPS.pdf)
+- Zero Trust Identity and Authorization Profile.
+  [draft](https://philpapers.org/archive/GAIZTI.pdf)
+
+## IETF drafts (LLM benchmarking, under BMWG review)
+
+- [LLM Benchmarking Terminology](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/)
+- [LLM Benchmarking Methodology](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/)
+- [LLM Benchmarking Profiles](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/)
+- [LLM Serving Workload Profiles](https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/)

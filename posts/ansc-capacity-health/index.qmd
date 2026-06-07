@@ -1,0 +1,52 @@
+---
+title: "Scoring a datacenter fleet by the risk of what happens next"
+description: "Alerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact."
+author: "Madhava Gaikwad"
+date: "2025-08-22"
+categories: [distributed-systems, reliability, sre]
+---
+
+A hyperscale datacenter network runs thousands of devices and links. When one
+fails, an alert fires. That alert tells you what broke. It does not tell you how
+close the whole system is to running out of capacity. Those are different
+questions. A single link failing in a region with plenty of spare capacity is
+routine. The same failure in a region already running hot can be the last step
+before a shortfall. ANSC is built to score the second question.
+
+## The gap in ordinary alerting
+
+Standard monitoring detects individual device or link failures. Each alert is
+local. It says nothing about the aggregate risk that several failures together
+push a datacenter or a region past its capacity limit. Operators are left to piece
+that picture together by hand, often while the alerts are still arriving. The risk
+that matters is the cascading one, and it lives above the level of any single
+alert.
+
+## What ANSC measures
+
+ANSC produces a color-coded health score for each datacenter and region. The score
+ranks urgency by the probability of an imminent capacity violation rather than by
+the impact of what has already happened. Two ingredients go into it. The first is
+the current residual capacity, meaning how much headroom is left right now. The
+second is the probability of additional failures on top of the current state. The
+score combines these and normalizes them at the datacenter level and the regional
+level, so a green datacenter and a red one mean the same thing wherever you look.
+
+## What it changes for operators
+
+The paper reports ANSC running across more than 400 datacenters and 60 regions.
+The effect is to cut noise and point attention at the places most likely to fail
+soon. Instead of a flat stream of equal-looking alerts, an operator sees a ranked
+view of where capacity is genuinely at risk. Remediation effort goes to the
+highest risk first, which is where it does the most good.
+
+## Why it matters
+
+Reliability at this scale is a prioritization problem. There are always more
+alerts than people. A score that orders work by the probability of the next
+failure, rather than by the noise of the last one, is what lets a small team hold
+a large fleet.
+
+## Read the paper
+
+[ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)](https://arxiv.org/abs/2508.16119).

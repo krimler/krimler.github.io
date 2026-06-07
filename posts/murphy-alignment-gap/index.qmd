@@ -1,0 +1,58 @@
+---
+title: "Why the alignment gap always wins, unless you know where to look"
+description: "When human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial."
+author: "Madhava Gaikwad"
+date: "2025-09-05"
+categories: [ai-alignment, rlhf, learning-theory]
+---
+
+Reinforcement learning from human feedback is the standard way to align a model.
+People compare model outputs, the comparisons train a reward model, and the model
+is tuned to score well on that reward. The whole scheme rests on the feedback being
+right. This paper studies what happens when it is not.
+
+## A compass that points wrong in some places
+
+The setup is misspecified feedback. Human feedback is systematically wrong on
+certain kinds of input. A useful picture is a compass that points true almost
+everywhere but points the wrong way in a few specific regions. The problem is not
+random error, which averages out. It is consistent error in particular places.
+
+Two numbers describe how bad it is. One is the fraction of contexts where the
+feedback is biased. The other is the strength of that bias. The trouble lives in
+the corner of the input space where both are nonzero.
+
+## The hard result
+
+The paper proves a lower bound. Suppose two candidate reward functions agree
+everywhere except on the biased contexts. To tell them apart from feedback alone,
+any learning algorithm needs a number of samples that grows exponentially in the
+prevalence of the bias and the square of its strength. Rare edge cases with subtly
+wrong feedback create a learning problem that is exponentially hard. You can pour
+in data and still not know which objective you are actually optimizing.
+
+This is the sense in which the gap always wins. The gap is the distance between
+what you optimize, a proxy built from human feedback, and what you actually want,
+the true objective. When the problematic contexts are rare and the feedback there
+is quietly biased, no amount of ordinary data closes that gap.
+
+## The way out
+
+There is one escape, and it is specific. Suppose you have a calibration oracle, a
+way to identify where the feedback is unreliable. Then you can spend your limited
+questions on exactly those contexts. The paper shows that this collapses the cost
+from exponential to polynomial. You no longer need to find the needle by luck,
+because you have been told which haystack it is in.
+
+The lesson is practical. Throwing more feedback at an aligned system does not help
+where the feedback itself is broken. Finding and targeting the broken regions does.
+
+## What is settled and what is open
+
+The results are theoretical. The paper proves the lower bound and the oracle
+speedup. It invites collaboration on large-scale experiments and on building the
+benchmarks that would test these effects in practice.
+
+## Read the paper
+
+[Murphy's Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)](https://arxiv.org/abs/2509.05381).

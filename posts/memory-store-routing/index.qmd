@@ -1,0 +1,49 @@
+---
+title: "Did you check the right pocket? Routing retrieval across an agent's memory"
+description: "Memory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers."
+author: "Madhava Gaikwad"
+date: "2026-03-19"
+categories: [llm-agents, retrieval, memory, ml-systems]
+---
+
+A memory-augmented agent keeps several specialized stores. One might hold facts,
+another the recent conversation, another notes about tools or users. When a request
+arrives, most systems read from every store and stuff all of it into the model's
+context. That is the equivalent of patting down every pocket to find your keys. It
+works, and it is wasteful. Reading everything costs tokens, and it pulls in
+irrelevant context that can crowd out the useful part.
+
+## Retrieval as routing
+
+The paper reframes the problem. Choosing which store to read is a routing decision,
+and routing deserves to be a first-class part of the design. Stated plainly, for
+each request the agent should decide which store or stores to consult, and that
+decision should weigh two things against each other. One is accuracy, the quality
+of the eventual answer. The other is retrieval cost, measured in context tokens. A
+good router reads the store that holds the answer and skips the rest.
+
+## What the evidence shows
+
+To measure the ceiling, the paper uses an oracle router. An oracle router is an
+idealized router that always picks the right store, used here to show what perfect
+routing would buy. The oracle achieves better downstream question-answering
+accuracy while spending far fewer context tokens than reading from all stores. Both
+numbers move in the good direction at once. Selective retrieval is not only cheaper,
+it gives better answers, because irrelevant context was hurting quality in the
+first place.
+
+The oracle is a measurement tool rather than a deployable system, since it relies
+on knowing the right store in advance. The paper presents this as early-stage work
+and argues for learned routing, where the agent learns to make the store choice on
+its own, as the path to scalable multi-store systems.
+
+## Why it matters
+
+As agents accumulate more kinds of memory, reading all of it per request scales
+badly in both cost and quality. Turning store selection into an explicit,
+cost-aware decision is what keeps a multi-store agent affordable and sharp as the
+number of stores grows.
+
+## Read the paper
+
+[Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)](https://arxiv.org/abs/2603.15658).

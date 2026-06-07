@@ -1,0 +1,56 @@
+---
+title: "Treating alignment as something you can measure and reduce: NPO"
+description: "Most pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback."
+author: "Madhava Gaikwad"
+date: "2025-07-28"
+categories: [ai-alignment, rlhf, ml-systems]
+---
+
+Alignment means making a model behave the way people actually want it to behave.
+Most production pipelines treat this as a one-time step. You train the model, you
+ship it, and you hope it stays aligned. NPO starts from a different stance.
+Alignment is a quantity you can measure, supervise, and drive down over time.
+
+## The two quantities
+
+NPO names two things and turns each into a number.
+
+The first is alignment loss. This is how far the model's behavior sits from what
+was intended. Driving it down is the usual goal.
+
+The second is meta-alignment, and it is the idea that gives the paper its name.
+Meta-alignment asks whether your monitoring is itself trustworthy. A system that
+reports "everything looks aligned" is only useful if that report tracks reality.
+NPO calls this monitoring fidelity. The paper shows that meta-alignment reduces to
+ordinary alignment once you fix a threshold on the monitor. In plain terms,
+checking the checker is the same kind of problem as the original check, so the
+same machinery handles both.
+
+## The feedback that drives it
+
+The loop runs on structured human feedback. This is more than a thumbs up. It
+includes likes, explicit overrides where a person corrects the system, and
+abstentions where a person declines to answer. Each kind of signal carries
+different information, and NPO ingests all of them. Around this sit the operational
+pieces a real deployment needs: scoring scenarios, tuning thresholds, and
+validating policies before they take effect.
+
+## Why the loop is stable
+
+A feedback loop is only useful if it settles rather than drifts. NPO proves that
+under noisy feedback both quantities converge, and that they do so together. The
+alignment loss and the monitoring fidelity both approach their targets as more
+feedback arrives. The paper backs the theory with results from a large deployment,
+along with simulation artifacts and ablation studies that isolate which parts of
+the design carry the weight.
+
+## Why it matters
+
+The shift here is from a single alignment event to a controlled process. Once
+alignment and the honesty of its monitoring are both numbers that provably go down
+under feedback, you can run alignment the way you run any other reliability metric.
+You watch it, you set targets, and you route effort to where the number is worst.
+
+## Read the paper
+
+[NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)](https://arxiv.org/abs/2507.21131).

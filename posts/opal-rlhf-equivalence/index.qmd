@@ -1,0 +1,50 @@
+---
+title: "When are two RLHF objectives the same? A canonical form for preference losses"
+description: "The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different."
+author: "Madhava Gaikwad"
+date: "2025-09-11"
+categories: [ai-alignment, rlhf, preference-optimization]
+---
+
+Aligning a model to human preferences has produced a long list of training
+objectives. Each new one tends to arrive as a distinct improvement over the last.
+The list keeps growing, and it is hard to tell which of these objectives are
+genuinely new and which are the same idea written in different notation. This paper
+gives a tool to settle the question.
+
+## Canonicalization
+
+The tool is called Opal, and it does canonicalization. A canonical form is a
+standard way of writing something so that two things that are really equal end up
+looking identical. Given two preference objectives, Opal returns one of two
+answers. Either it produces a canonical form that shows the two are algebraically
+the same, or it produces a concrete witness that they differ. A witness here is a
+specific case where the two objectives disagree, so the difference is demonstrated
+rather than asserted.
+
+## What it finds
+
+Run Opal across the popular methods and a clear picture emerges. Many widely used
+objectives optimize the same underlying thing. Their apparent differences are
+reparameterizations, meaning the same objective dressed in different variables.
+Some methods, by contrast, are provably distinct, and Opal isolates a small set of
+structural mechanisms that produce real differences rather than cosmetic ones.
+
+One finding is worth calling out because it is easy to miss. Batch normalization
+can cause the same response pair to receive different gradients depending on which
+other examples share its batch. The training signal for a pair stops being a
+property of the pair alone. It becomes a property of the batch it landed in. That
+is a genuine difference in objective, and it comes from a detail most people treat
+as bookkeeping.
+
+## Why it matters
+
+A field that keeps proposing objectives needs a way to tell novelty from notation.
+Opal turns that into a decidable check. It tells you when a new method is a real
+departure and when it is an old method in new clothes. That saves effort, and it
+points attention at the handful of structural choices that actually change what the
+model learns.
+
+## Read the paper
+
+[When Are Two RLHF Objectives the Same? (arXiv:2509.11298)](https://arxiv.org/abs/2509.11298).

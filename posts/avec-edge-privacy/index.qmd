@@ -1,0 +1,55 @@
+---
+title: "Enforcing privacy at the edge for local language models: AVEC"
+description: "A local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee."
+author: "Madhava Gaikwad"
+date: "2025-09-13"
+categories: [privacy, differential-privacy, llm, edge]
+---
+
+A local language model runs on your own device, which keeps your data close. Some
+queries are too hard for the small local model, so it delegates them to a larger
+model in the cloud. That handoff is the weak point. The query sent outward can
+carry sensitive information. AVEC is a proposal for controlling that handoff. The
+name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge
+and makes the delegation verifiable.
+
+A note on what this is. AVEC is a position paper. Its evaluation is simulation
+based by design, and it does not claim deployment readiness or measured task
+quality with live models. The contribution is an architecture and the theory that
+goes with it.
+
+## Spending a privacy budget per query
+
+The core mechanism is an adaptive budget. Differential privacy is a way of adding
+calibrated random noise so that an output reveals very little about any single
+underlying record. The strength of that protection is a budget, and spending more
+budget buys more accuracy at the cost of more exposure. Most systems fix one budget
+for everything. AVEC sets the budget per query, based on three things: how
+sensitive the query is, how confident the local model is on its own, and how much
+budget the user has already spent in the past.
+
+To keep the spending honest, AVEC tracks it with an odometer. An odometer is a
+running tally of privacy budget consumed across many queries, so the system always
+knows how much protection remains. The accounting uses Rényi differential privacy,
+a version of the theory that composes cleanly when you add up many small releases.
+
+## What it proves it can and cannot do
+
+The paper does the unglamorous work of marking the boundaries. It establishes
+utility ceilings, which are limits on how good the answers can be at a given level
+of privacy. It establishes delegation-leakage bounds, which cap how much the
+handoff to the remote model can reveal. It also proves impossibility results. Two
+tempting shortcuts do not work on their own. Deterministic gating, where a fixed
+rule decides what to send, cannot provide the guarantee. Hash-only certification,
+where a hash is used to prove integrity, is not enough by itself.
+
+## Why it matters
+
+Local models are sold on privacy, and the delegation step quietly undermines that
+promise. AVEC takes the step seriously. It treats each outward query as a metered
+privacy event, verifies the transformation on the device, and is honest about the
+ceilings and the dead ends. That gives later empirical work a clear target.
+
+## Read the paper
+
+[AVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)](https://arxiv.org/abs/2509.10561).
