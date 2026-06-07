@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "prompts/write-post.html",
+    "href": "prompts/write-post.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "prompts/write-post.html#voice",
+    "href": "prompts/write-post.html#voice",
+    "title": "",
+    "section": "Voice",
+    "text": "Voice\nWrite the way a strong researcher talks through a problem at a whiteboard. Assume the reader is smart and busy. Respect their time. Explain the idea, not your feelings about the idea."
+  },
+  {
+    "objectID": "prompts/write-post.html#hard-rules",
+    "href": "prompts/write-post.html#hard-rules",
+    "title": "",
+    "section": "Hard rules",
+    "text": "Hard rules\n\nNo em dashes anywhere. Do not use the character “—”.\nDo not join two independent statements with an em dash, a comma, or a semicolon. Write the statement straight. If two ideas are joined, split them into two sentences.\nWrong: “The algorithm runs in linear time, this matters for large inputs.” Wrong: “The algorithm runs in linear time; this matters for large inputs.” Right: “The algorithm runs in linear time. This matters for large inputs.”\nNo contrastive framing. Do not set up a contrast to sound clever.\nBanned shapes: “It is not X, it is Y.” “X is not just Y, it is Z.” “Rather than X, we Y.” “The point is not X but Y.” Instead, say the thing you mean directly.\nNo rhetorical questions. Ask a question only when you answer it with real content in the next sentence.\nNo AI slop. Remove filler and stock phrases. Banned words and phrases include: delve, dive into, unleash, unlock, leverage (as a verb), seamless, robust (as filler), realm, landscape, tapestry, testament, navigate (figurative), in today’s world, it is worth noting, it is important to note, needless to say, at the end of the day, game changer, the world of, journey, embark, foster, harness (figurative), elevate, supercharge, cutting edge, paradigm shift.\nNo hype and no hedging clichés. Do not write “very”, “really”, “simply”, “just”, “of course”, “obviously”, “clearly” as padding. Say the precise claim.\nNo lists where prose works. Use a list only for genuinely parallel items, steps, or cases."
+  },
+  {
+    "objectID": "prompts/write-post.html#how-to-structure-a-post",
+    "href": "prompts/write-post.html#how-to-structure-a-post",
+    "title": "",
+    "section": "How to structure a post",
+    "text": "How to structure a post\n\nOpen with the problem and why it is hard. One or two sentences. State it concretely.\nSet up notation and definitions before you use them.\nDevelop the idea in order. Each paragraph should add one thing.\nShow a small example or special case before the general result.\nState the main result plainly. Give the bound, the theorem, or the claim.\nGive the argument or the intuition for why it holds.\nNote limits and open questions honestly.\nLink the code and cite the papers."
+  },
+  {
+    "objectID": "prompts/write-post.html#math-code-and-citations-on-this-blog",
+    "href": "prompts/write-post.html#math-code-and-citations-on-this-blog",
+    "title": "",
+    "section": "Math, code, and citations on this blog",
+    "text": "Math, code, and citations on this blog\n\nMath uses $...$ inline and $$...$$ for display. Number important equations and reference them.\nCode goes in fenced blocks with a language tag. Keep snippets short and real. Link the full source on GitHub instead of pasting long files.\nCite papers with [@bibkey] and add the BibTeX to references.bib. Pull the entry from the arXiv page under “Export BibTeX citation”."
+  },
+  {
+    "objectID": "prompts/write-post.html#attribution",
+    "href": "prompts/write-post.html#attribution",
+    "title": "",
+    "section": "Attribution",
+    "text": "Attribution\nNever add Claude, AI tools, or any assistant as an author, co-author, or contributor. Commits and posts carry only human authorship. Do not add “Co-Authored-By” lines or “Generated with” notes."
+  },
+  {
+    "objectID": "prompts/write-post.html#self-check-before-publishing",
+    "href": "prompts/write-post.html#self-check-before-publishing",
+    "title": "",
+    "section": "Self check before publishing",
+    "text": "Self check before publishing\nRead the draft once and confirm each item.\n\nNo “—” anywhere in the text.\nNo comma or semicolon joining two independent statements.\nNo “not X but Y” or similar contrastive shapes.\nNo banned slop words.\nEvery claim is precise. Every term is defined before use.\nEvery code block runs or links to source. Every cited paper is in the bib.\nA knowledgeable reader learns the result and why it holds."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Krimler",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHello, world — a feature tour\n\n\n\nmeta\n\nmath\n\nml\n\n\n\nHow math, code, and citations render on this blog.\n\n\n\n\n\nJun 7, 2026\n\n\nKrimler\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Hello, world — a feature tour",
+    "section": "",
+    "text": "Welcome. This post exists to show every building block you’ll reuse."
+  },
+  {
+    "objectID": "posts/welcome/index.html#math",
+    "href": "posts/welcome/index.html#math",
+    "title": "Hello, world — a feature tour",
+    "section": "Math",
+    "text": "Math\nInline math like e^{i\\pi} + 1 = 0 works, and so do display equations:\n\n\\nabla_\\theta \\, \\mathcal{L}(\\theta) = \\mathbb{E}_{x \\sim \\mathcal{D}}\\!\\left[ \\nabla_\\theta \\, \\ell(f_\\theta(x), y) \\right]\n\\tag{1}\nYou can cross-reference it: see Equation 1."
+  },
+  {
+    "objectID": "posts/welcome/index.html#code",
+    "href": "posts/welcome/index.html#code",
+    "title": "Hello, world — a feature tour",
+    "section": "Code",
+    "text": "Code\nimport torch\n\ndef attention(q, k, v):\n    scores = q @ k.transpose(-2, -1) / k.size(-1) ** 0.5\n    return torch.softmax(scores, dim=-1) @ v\nReaders get a copy button automatically. To point at real code, just link the repo: the implementation lives here."
+  },
+  {
+    "objectID": "posts/welcome/index.html#citing-arxiv-papers",
+    "href": "posts/welcome/index.html#citing-arxiv-papers",
+    "title": "Hello, world — a feature tour",
+    "section": "Citing arXiv papers",
+    "text": "Citing arXiv papers\nCite a paper inline like this (Vaswani et al. 2017) and the reference list is built automatically at the bottom from references.bib. To add a paper: open its arXiv page → “Export BibTeX citation” → paste the entry into references.bib."
+  },
+  {
+    "objectID": "posts/welcome/index.html#references",
+    "href": "posts/welcome/index.html#references",
+    "title": "Hello, world — a feature tour",
+    "section": "References",
+    "text": "References\n\n\nVaswani, Ashish, Noam Shazeer, Niki Parmar, et al. 2017. “Attention Is All You Need.” Advances in Neural Information Processing Systems. https://arxiv.org/abs/1706.03762."
+  },
+  {
+    "objectID": "papers/index.html",
+    "href": "papers/index.html",
+    "title": "Papers",
+    "section": "",
+    "text": "Finished papers (PDFs). Each entry opens a page with the PDF embedded inline and a download button.\nTo add a paper: drop the PDF in papers/files/, copy papers/_template.qmd to papers/your-paper.qmd, and edit the front matter.\n\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\nDate\nTitle\nDescription\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I write about mathematics, computer science, AI/ML, and security — notes, deep-dives, and occasional papers. Code referenced here lives on GitHub."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\n\nGitHub: @krimler\nEmail: add your email"
+  }
+]
