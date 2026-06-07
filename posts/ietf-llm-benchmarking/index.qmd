@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Bruegel's The Tower of Babel"
 categories: [llm-systems, benchmarking, ietf, distributed-systems]
 ---
+![The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.](cover.jpg)
 
 When two systems both claim a throughput number for serving a language model, the
 numbers usually do not compare. One measured tokens per second at the model engine.
@@ -97,7 +98,3 @@ ambiguity in the terms. The methodology makes a run reproducible. The profiles
 declare what was and was not included in a measurement. The workloads make sure
 systems are compared on representative tasks. Together they make LLM serving numbers
 something you can actually trust when you compare them.
-
----
-
-*Cover image: The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.*

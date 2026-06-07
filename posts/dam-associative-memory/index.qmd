@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Arcimboldo's The Librarian, a figure composed of books"
 categories: [machine-learning, associative-memory, learning-theory]
 ---
+![The Librarian, Giuseppe Arcimboldo (c. 1566). Public domain, via Wikimedia Commons.](cover.jpg)
 
 An associative memory stores a set of patterns and recalls the right one from a
 partial or corrupted version of it. Give it a noisy image and it returns the clean
@@ -70,7 +71,3 @@ what lets you reason about these systems as engineered components.
 
 Algorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop.
 [OpenReview](https://openreview.net/forum?id=zgHAqaIybd).
-
----
-
-*Cover image: The Librarian, Giuseppe Arcimboldo (c. 1566). Public domain, via Wikimedia Commons.*

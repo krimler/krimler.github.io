@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Vermeer's The Geographer holding measuring instruments"
 categories: [ai-alignment, rlhf, ml-systems]
 ---
+![The Geographer, Johannes Vermeer (c. 1668). Public domain, via Wikimedia Commons.](cover.jpg)
 
 Alignment means making a model behave the way people actually want it to behave.
 Most production pipelines treat this as a one-time step. You train the model, you
@@ -56,7 +57,3 @@ You watch it, you set targets, and you route effort to where the number is worst
 ## Read the paper
 
 [NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)](https://arxiv.org/abs/2507.21131).
-
----
-
-*Cover image: The Geographer, Johannes Vermeer (c. 1668). Public domain, via Wikimedia Commons.*

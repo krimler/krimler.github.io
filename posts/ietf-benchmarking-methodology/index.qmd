@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Joseph Wright's An Experiment on a Bird in the Air Pump"
 categories: [llm-systems, benchmarking, ietf]
 ---
+![An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons.](cover.jpg)
 
 *Part of a series on the IETF drafts for benchmarking LLM serving. Start with the
 [overview](../ietf-llm-benchmarking/).*
@@ -70,7 +71,3 @@ a second team can check.
 ## Read the draft
 
 [Benchmarking Methodology for Large Language Model Serving](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/).
-
----
-
-*Cover image: An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons.*

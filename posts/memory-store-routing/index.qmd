@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Domenico Remps Cabinet of Curiosities with many compartments"
 categories: [llm-agents, retrieval, memory, ml-systems]
 ---
+![Cabinet of Curiosities, Domenico Remps (c. 1690). Public domain, via Wikimedia Commons.](cover.jpg)
 
 A memory-augmented agent keeps several specialized stores. One might hold facts,
 another the recent conversation, another notes about tools or users. When a request
@@ -49,7 +50,3 @@ number of stores grows.
 ## Read the paper
 
 [Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)](https://arxiv.org/abs/2603.15658).
-
----
-
-*Cover image: Cabinet of Curiosities, Domenico Remps (c. 1690). Public domain, via Wikimedia Commons.*

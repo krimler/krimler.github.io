@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Ernst Haeckel's plate of sea anemones from Kunstformen der Natur"
 categories: [llm-systems, benchmarking, ietf]
 ---
+![Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons.](cover.jpg)
 
 *Part of a series on the IETF drafts for benchmarking LLM serving. Start with the
 [overview](../ietf-llm-benchmarking/).*
@@ -62,7 +63,3 @@ judged on the same range of work that production actually throws at it.
 ## Read the draft
 
 [Benchmarking Workload Profiles for Large Language Model Serving](https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/).
-
----
-
-*Cover image: Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons.*

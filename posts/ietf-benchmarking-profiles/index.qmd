@@ -7,6 +7,7 @@ image: cover.svg
 image-alt: "Nested measurement boundaries from model engine to compound system"
 categories: [llm-systems, benchmarking, ietf]
 ---
+![](cover.svg)
 
 *Part of a series on the IETF drafts for benchmarking LLM serving. Start with the
 [overview](../ietf-llm-benchmarking/).*

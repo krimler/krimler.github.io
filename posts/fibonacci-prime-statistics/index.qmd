@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "The Great Wave off Kanagawa by Hokusai"
 categories: [number-theory, primes, statistics, reproducibility]
 ---
+![The Great Wave off Kanagawa, Katsushika Hokusai (c. 1831). Public domain, via Wikimedia Commons.](cover.jpg)
 
 A Fibonacci prime is a Fibonacci number that is also prime. The Fibonacci numbers
 are the familiar sequence 1, 1, 2, 3, 5, 8, 13, and so on, where each term is the
@@ -135,7 +136,3 @@ draws on, is here:
 
 ::: {#refs}
 :::
-
----
-
-*Cover image: The Great Wave off Kanagawa, Katsushika Hokusai (c. 1831). Public domain, via Wikimedia Commons.*

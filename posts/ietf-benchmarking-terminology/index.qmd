@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Antonello da Messina's Saint Jerome in His Study"
 categories: [llm-systems, benchmarking, ietf]
 ---
+![Saint Jerome in His Study, Antonello da Messina (c. 1475). Public domain, via Wikimedia Commons.](cover.jpg)
 
 *Part of a series on the IETF drafts for benchmarking LLM serving. Start with the
 [overview](../ietf-llm-benchmarking/).*
@@ -60,7 +61,3 @@ benchmarking effort has a foundation to stand on.
 ## Read the draft
 
 [Benchmarking Terminology for Large Language Model Serving](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/).
-
----
-
-*Cover image: Saint Jerome in His Study, Antonello da Messina (c. 1475). Public domain, via Wikimedia Commons.*

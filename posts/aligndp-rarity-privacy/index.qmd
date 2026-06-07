@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Massys' The Moneylender and His Wife"
 categories: [privacy, differential-privacy, llm, security]
 ---
+![The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.](cover.jpg)
 
 Large language models can be copied without permission. An attacker can extract
 training data, distill the model into a smaller copy, or fine-tune on its outputs.
@@ -58,7 +59,3 @@ matter.
 ## Read the paper
 
 [AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)](https://arxiv.org/abs/2512.17251).
-
----
-
-*Cover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.*

@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Lorenzetti's Allegory of Good Government fresco"
 categories: [ai-governance, enterprise-architecture, ontology, security]
 ---
+![Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons.](cover.jpg)
 
 Enterprise architecture is the discipline that aligns an organisation's business
 strategy with its information assets, applications, and technology. Two open
@@ -129,7 +130,3 @@ The full paper, with the formal model and the complete regulatory mapping, is he
 
 ::: {#refs}
 :::
-
----
-
-*Cover image: Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons.*

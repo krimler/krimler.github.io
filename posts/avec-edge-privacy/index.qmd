@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Vermeer's Woman Reading a Letter"
 categories: [privacy, differential-privacy, llm, edge]
 ---
+![Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons.](cover.jpg)
 
 A local language model runs on your own device, which keeps your data close. Some
 queries are too hard for the small local model, so it delegates them to a larger
@@ -55,7 +56,3 @@ ceilings and the dead ends. That gives later empirical work a clear target.
 ## Read the paper
 
 [AVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)](https://arxiv.org/abs/2509.10561).
-
----
-
-*Cover image: Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons.*

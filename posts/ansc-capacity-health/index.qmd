@@ -7,6 +7,7 @@ image: cover.jpg
 image-alt: "Turner's Rain, Steam and Speed showing a railway in motion"
 categories: [distributed-systems, reliability, sre]
 ---
+![Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons.](cover.jpg)
 
 A hyperscale datacenter network runs thousands of devices and links. When one
 fails, an alert fires. That alert tells you what broke. It does not tell you how
@@ -52,7 +53,3 @@ a large fleet.
 ## Read the paper
 
 [ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)](https://arxiv.org/abs/2508.16119).
-
----
-
-*Cover image: Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons.*

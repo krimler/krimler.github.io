@@ -7,6 +7,7 @@ image: cover.svg
 image-alt: "Two mirrored forms meeting at a central axis"
 categories: [ai-alignment, rlhf, preference-optimization]
 ---
+![](cover.svg)
 
 Aligning a model to human preferences has produced a long list of training
 objectives. Each new one tends to arrive as a distinct improvement over the last.
