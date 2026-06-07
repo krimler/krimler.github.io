@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Madhava Gaikwad">
+<meta name="dcterms.date" content="2026-01-20">
+<meta name="description" content="The third of four IETF drafts on benchmarking LLM serving. A profile binds the terms and the method to a concrete role in the system, so a number says exactly what it includes.">
 
-<title>About – Krimler</title>
+<title>Declaring the measurement boundary: the IETF profiles draft – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +29,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,13 +80,17 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="About – Krimler">
-<meta property="og:description" content="Notes and papers on mathematics, computer science, AI/ML, and security.">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Declaring the measurement boundary: the IETF profiles draft – Krimler">
+<meta property="og:description" content="The third of four IETF drafts on benchmarking LLM serving. A profile binds the terms and the method to a concrete role in the system, so a number says exactly what it includes.">
+<meta property="og:image" content="https://krimler.github.io/posts/ietf-benchmarking-profiles/cover.svg">
 <meta property="og:site_name" content="Krimler">
-<meta name="twitter:title" content="About – Krimler">
-<meta name="twitter:description" content="Notes and papers on mathematics, computer science, AI/ML, and security.">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:alt" content="Nested measurement boundaries from model engine to compound system">
+<meta name="twitter:title" content="Declaring the measurement boundary: the IETF profiles draft – Krimler">
+<meta name="twitter:description" content="The third of four IETF drafts on benchmarking LLM serving. A profile binds the terms and the method to a concrete role in the system, so a number says exactly what it includes.">
+<meta name="twitter:image" content="https://krimler.github.io/posts/ietf-benchmarking-profiles/cover.svg">
+<meta name="twitter:image:alt" content="Nested measurement boundaries from model engine to compound system">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -255,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Krimler</span>
     </a>
   </div>
@@ -266,19 +273,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./papers/index.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -289,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -310,10 +317,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-i-build" id="toc-what-i-build" class="nav-link active" data-scroll-target="#what-i-build">What I build</a></li>
-  <li><a href="#focus-areas" id="toc-focus-areas" class="nav-link" data-scroll-target="#focus-areas">Focus areas</a></li>
-  <li><a href="#talk-to-me-about" id="toc-talk-to-me-about" class="nav-link" data-scroll-target="#talk-to-me-about">Talk to me about</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#what-a-profile-is" id="toc-what-a-profile-is" class="nav-link active" data-scroll-target="#what-a-profile-is">What a profile is</a></li>
+  <li><a href="#the-profiles-it-defines" id="toc-the-profiles-it-defines" class="nav-link" data-scroll-target="#the-profiles-it-defines">The profiles it defines</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">Why it matters</a></li>
+  <li><a href="#read-the-draft" id="toc-read-the-draft" class="nav-link" data-scroll-target="#read-the-draft">Read the draft</a></li>
   </ul>
 </nav>
     </div>
@@ -323,14 +330,36 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
+<h1 class="title">Declaring the measurement boundary: the IETF profiles draft</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">llm-systems</div>
+    <div class="quarto-category">benchmarking</div>
+    <div class="quarto-category">ietf</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    The third of four IETF drafts on benchmarking LLM serving. A profile binds the terms and the method to a concrete role in the system, so a number says exactly what it includes.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Madhava Gaikwad </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 20, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -340,33 +369,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Hi, I am Madhava Gaikwad.</p>
-<p>I am a Senior Software Engineer working at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts.</p>
-<p>I work on bridging AI alignment theory with real-world systems. My background spans differential privacy, reinforcement learning from feedback, distributed consensus, and novel data abstractions for telemetry and streaming analytics. The questions I keep coming back to are these. How do we reason about uncertainty rigorously. How do we guarantee safety and rollback in complex infrastructure. How do we design data and learning pipelines that stay robust at scale.</p>
-<section id="what-i-build" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-build">What I build</h2>
-<p>Small, composable systems. Clear quickstarts. Minimal tests and CI. Figures you can reproduce.</p>
+<p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
+<p>Time to first token is a single phrase that can mean several different numbers. It depends on where you start the clock. Do you include the gateway. Do you include the firewall inspection. Do you include the network hop. Each choice gives a different value, and a benchmark that does not say which choice it made cannot be compared with another. The third IETF draft fixes this with profiles. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement.</p>
+<section id="what-a-profile-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-a-profile-is">What a profile is</h2>
+<p>A profile binds the vocabulary and the procedures to a concrete role in the system and a concrete workload pattern. Its job is to declare the boundary. A profile says exactly where a measurement starts and stops, so two results taken under the same profile are measuring the same thing.</p>
 </section>
-<section id="focus-areas" class="level2">
-<h2 class="anchored" data-anchor-id="focus-areas">Focus areas</h2>
+<section id="the-profiles-it-defines" class="level2">
+<h2 class="anchored" data-anchor-id="the-profiles-it-defines">The profiles it defines</h2>
+<p>The draft defines infrastructure profiles for the distinct roles in a serving stack.</p>
 <ul>
-<li>Alignment loops, including RLHF and beyond</li>
-<li>Operator views of learning</li>
-<li>Differential privacy for LLMs</li>
-<li>Reliability at datacenter scale</li>
+<li><strong>Model engine.</strong> Raw inference: prefill, decode, and management of the key-value cache.</li>
+<li><strong>AI gateway.</strong> The overhead of routing, authentication, and caching.</li>
+<li><strong>AI firewall.</strong> The latency and accuracy of security inspection, including detection rates and false positive rates.</li>
+<li><strong>Compound system.</strong> End-to-end completion for orchestrated multi-step workflows such as retrieval-augmented generation and agents.</li>
 </ul>
+<p>It also defines workload profiles for how the system is driven, including a chatbot pattern, which is multi-turn and human-paced, and a compound workflow pattern, which is multi-step and machine-paced.</p>
+<p>The draft specifies profiles only. It introduces no new metrics and no thresholds. It is the layer that makes the terminology and the methodology comparable across real deployments, where a request passes through several components before it reaches the model.</p>
 </section>
-<section id="talk-to-me-about" class="level2">
-<h2 class="anchored" data-anchor-id="talk-to-me-about">Talk to me about</h2>
-<p>Turning research into demos. Privacy-first LLMs. Robust infrastructure for ML.</p>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Production systems are built from a gateway, a firewall, an engine, and more. Most published benchmarks never say which of these the numbers include. Profiles remove that ambiguity by making the boundary an explicit, declared part of every result.</p>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<ul>
-<li>Email: <a href="mailto:gaikwad.madhav@gmail.com">gaikwad.madhav@gmail.com</a></li>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/safeai/">safeai</a></li>
-<li>GitHub: <a href="https://github.com/krimler">krimler</a></li>
-</ul>
+<section id="read-the-draft" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
+<p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/">Performance Benchmarking Profiles for Large Language Model Serving Systems</a>.</p>
 
 
 </section>
@@ -810,5 +837,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

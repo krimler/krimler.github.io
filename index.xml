@@ -265,6 +265,13 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 <p>When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.</p>
+<p>This post is the overview. Each draft also has its own post.</p>
+<ul>
+<li><a href="../ietf-benchmarking-terminology/">Terminology: a shared vocabulary</a></li>
+<li><a href="../ietf-benchmarking-methodology/">Methodology: how to run the tests</a></li>
+<li><a href="../ietf-benchmarking-profiles/">Profiles: declaring the measurement boundary</a></li>
+<li><a href="../ietf-benchmarking-workloads/">Workloads: twenty-five representative tasks</a></li>
+</ul>
 <section id="the-words" class="level2">
 <h2 class="anchored" data-anchor-id="the-words">The words</h2>
 <p>The first draft is a terminology document. It defines a shared vocabulary for LLM serving performance, covering latency, throughput, resource use, and quality. It gives precise definitions for a large set of metrics. These include time to first token, the delay before the first output appears, and inter-token latency, the gap between successive output tokens. It separates the two phases of generation, prefill where the prompt is processed and decode where tokens are produced. It covers throughput, latency percentiles and jitter, multi-tenant concerns such as fairness and head-of-line blocking, optimizations such as prefix caching and speculative decoding, compound systems such as retrieval-augmented generation and agents, and quality signals such as policy violations and false refusals. It defines terms only. It prescribes no method and sets no pass-or-fail thresholds.</p>
@@ -302,6 +309,228 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <guid>https://krimler.github.io/posts/ietf-llm-benchmarking/</guid>
   <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
   <media:content url="https://krimler.github.io/posts/ietf-llm-benchmarking/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Twenty-five representative tasks: the IETF workload profiles draft</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/ietf-benchmarking-workloads/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
+<p>A serving system can look fast on one kind of task and slow on another. Embedding a short document and running a long agentic plan stress completely different parts of the stack. To compare systems fairly, the workloads themselves have to be standardized. The fourth IETF draft does this. It is co-authored by Mohadeb Mondal and Madhava Gaikwad, an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement.</p>
+<section id="five-dimensions" class="level2">
+<h2 class="anchored" data-anchor-id="five-dimensions">Five dimensions</h2>
+<p>Every workload is described along five dimensions. Together they capture what makes a task cheap or expensive to serve.</p>
+<ul>
+<li><strong>Input to output ratio.</strong> Whether the task is mostly prompt, mostly generation, or balanced.</li>
+<li><strong>Output constraints.</strong> Whether the output is non-token, minimal, structured, semi-structured, or free-form.</li>
+<li><strong>Latency sensitivity.</strong> Whether the task is interactive, near-real-time, or throughput-oriented.</li>
+<li><strong>Concurrency pattern.</strong> Whether requests are single-stream, bursty, sustained and high, or chained in sequence.</li>
+<li><strong>Prefix sharing.</strong> How much of the prompt prefix is shared across requests, from none, through a shared system prompt, up to a shared document or schema.</li>
+</ul>
+</section>
+<section id="twenty-five-profiles-in-six-groups" class="level2">
+<h2 class="anchored" data-anchor-id="twenty-five-profiles-in-six-groups">Twenty-five profiles in six groups</h2>
+<p>The draft defines 25 standard workloads, sorted into six groups by what they demand of the system.</p>
+<ul>
+<li><strong>Group A, non-generative.</strong> Embeddings, cross-encoder reranking, and logprob scoring.</li>
+<li><strong>Group B, minimal output.</strong> Classification, short question answering, and function calling.</li>
+<li><strong>Group C, interactive streaming.</strong> Chat, code completion, and roleplay.</li>
+<li><strong>Group D, prefill-heavy.</strong> Summarization, document question answering, and extraction.</li>
+<li><strong>Group E, decode-heavy.</strong> Content generation, reasoning, and translation.</li>
+<li><strong>Group F, multi-step.</strong> Agentic workflows and planning.</li>
+</ul>
+<p>Each profile maps to the metrics and test procedures from the companion methodology and profiles drafts, so a workload, the way to measure it, and the boundary it is measured at all line up.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Without standard workloads, every benchmark picks its own favourable task and the results stop being comparable. A fixed, representative set means a serving system is judged on the same range of work that production actually throws at it.</p>
+</section>
+<section id="read-the-draft" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
+<p><a href="https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/">Benchmarking Workload Profiles for Large Language Model Serving</a>.</p>
+<hr>
+<p><em>Cover image: Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>llm-systems</category>
+  <category>benchmarking</category>
+  <category>ietf</category>
+  <guid>https://krimler.github.io/posts/ietf-benchmarking-workloads/</guid>
+  <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/ietf-benchmarking-workloads/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Declaring the measurement boundary: the IETF profiles draft</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/ietf-benchmarking-profiles/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
+<p>Time to first token is a single phrase that can mean several different numbers. It depends on where you start the clock. Do you include the gateway. Do you include the firewall inspection. Do you include the network hop. Each choice gives a different value, and a benchmark that does not say which choice it made cannot be compared with another. The third IETF draft fixes this with profiles. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement.</p>
+<section id="what-a-profile-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-a-profile-is">What a profile is</h2>
+<p>A profile binds the vocabulary and the procedures to a concrete role in the system and a concrete workload pattern. Its job is to declare the boundary. A profile says exactly where a measurement starts and stops, so two results taken under the same profile are measuring the same thing.</p>
+</section>
+<section id="the-profiles-it-defines" class="level2">
+<h2 class="anchored" data-anchor-id="the-profiles-it-defines">The profiles it defines</h2>
+<p>The draft defines infrastructure profiles for the distinct roles in a serving stack.</p>
+<ul>
+<li><strong>Model engine.</strong> Raw inference: prefill, decode, and management of the key-value cache.</li>
+<li><strong>AI gateway.</strong> The overhead of routing, authentication, and caching.</li>
+<li><strong>AI firewall.</strong> The latency and accuracy of security inspection, including detection rates and false positive rates.</li>
+<li><strong>Compound system.</strong> End-to-end completion for orchestrated multi-step workflows such as retrieval-augmented generation and agents.</li>
+</ul>
+<p>It also defines workload profiles for how the system is driven, including a chatbot pattern, which is multi-turn and human-paced, and a compound workflow pattern, which is multi-step and machine-paced.</p>
+<p>The draft specifies profiles only. It introduces no new metrics and no thresholds. It is the layer that makes the terminology and the methodology comparable across real deployments, where a request passes through several components before it reaches the model.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Production systems are built from a gateway, a firewall, an engine, and more. Most published benchmarks never say which of these the numbers include. Profiles remove that ambiguity by making the boundary an explicit, declared part of every result.</p>
+</section>
+<section id="read-the-draft" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
+<p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/">Performance Benchmarking Profiles for Large Language Model Serving Systems</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>llm-systems</category>
+  <category>benchmarking</category>
+  <category>ietf</category>
+  <guid>https://krimler.github.io/posts/ietf-benchmarking-profiles/</guid>
+  <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/ietf-benchmarking-profiles/cover.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>A shared vocabulary for LLM serving (IETF terminology draft)</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/ietf-benchmarking-terminology/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
+<p>When two teams report a throughput number for serving a language model, the numbers often do not mean the same thing. One counted prompt tokens, the other did not. One measured at the model engine, the other after a gateway. The words match and the measurements do not. The first IETF draft in this series addresses that directly. It defines a shared vocabulary for LLM serving performance and nothing more. The draft is an individual submission to the IETF Benchmarking Methodology Working Group and carries no formal IETF endorsement.</p>
+<section id="what-it-defines" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-defines">What it defines</h2>
+<p>The draft gives precise definitions for a large set of metrics, on the order of seventy, grouped into about a dozen categories. The categories cover the parts of serving that people measure and disagree about.</p>
+<ul>
+<li><strong>Request and response timing.</strong> Time to first token, the delay before the first output appears. Inter-token latency, the gap between successive output tokens. Normalized latency, which adjusts for output length.</li>
+<li><strong>Phase-specific timing.</strong> Prefill latency, the cost of processing the prompt, and decode latency, the cost of generating tokens. These two phases behave differently, so the draft keeps them separate.</li>
+<li><strong>Throughput.</strong> Token rates and request rates, defined so it is clear what is being counted.</li>
+<li><strong>Latency distribution.</strong> Percentiles and jitter, since an average hides the tail that users actually feel.</li>
+<li><strong>Multi-tenancy and scheduling.</strong> Fairness across tenants and head-of-line blocking, where one large request stalls the queue behind it.</li>
+<li><strong>Optimizations.</strong> Prefix caching, which reuses work across requests that share a prompt, and speculative decoding, which guesses tokens ahead and verifies them.</li>
+<li><strong>Compound systems.</strong> Retrieval-augmented generation and agentic workflows, where a request triggers several model and tool calls.</li>
+<li><strong>Quality enforcement.</strong> Policy violations and false refusals, so safety behavior is measurable rather than anecdotal.</li>
+</ul>
+</section>
+<section id="what-it-leaves-out-on-purpose" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-leaves-out-on-purpose">What it leaves out, on purpose</h2>
+<p>The draft defines terms only. It prescribes no method for measuring them and sets no pass-or-fail thresholds. That restraint is the point. A vocabulary that everyone agrees on has to be separable from any one way of testing. The method comes in the next draft, and the thresholds are left to whoever runs a benchmark.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Comparable benchmarks start with agreed words. Once time to first token and inter-token latency mean one thing across papers and products, the rest of the benchmarking effort has a foundation to stand on.</p>
+</section>
+<section id="read-the-draft" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
+<p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/">Benchmarking Terminology for Large Language Model Serving</a>.</p>
+<hr>
+<p><em>Cover image: Saint Jerome in His Study, Antonello da Messina (c.&nbsp;1475). Public domain, via Wikimedia Commons.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>llm-systems</category>
+  <category>benchmarking</category>
+  <category>ietf</category>
+  <guid>https://krimler.github.io/posts/ietf-benchmarking-terminology/</guid>
+  <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/ietf-benchmarking-terminology/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>How to run the tests: the IETF LLM serving methodology draft</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/ietf-benchmarking-methodology/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
+<p>Agreed words are the start. A reproducible benchmark also needs an agreed procedure. The second IETF draft supplies it. It specifies how to set up a test, what traffic to send, what to measure, and how to report the result. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement.</p>
+<section id="where-to-measure" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-measure">Where to measure</h2>
+<p>The draft defines three system boundaries, because a serving stack has layers and a number means little without saying which layer it covers.</p>
+<ul>
+<li>The <strong>model engine</strong>, which is raw inference.</li>
+<li>The <strong>application gateway</strong>, which adds routing, authentication, and caching.</li>
+<li>The <strong>compound system</strong>, which is the full end-to-end path including retrieval and tool use.</li>
+</ul>
+<p>A measurement always states which of these boundaries it was taken at.</p>
+</section>
+<section id="what-traffic-to-send" class="level2">
+<h2 class="anchored" data-anchor-id="what-traffic-to-send">What traffic to send</h2>
+<p>It defines reference workloads so that everyone drives the system with comparable traffic. These include uniform synthetic traffic, skewed synthetic traffic, a conversation pattern, code completion, and long context. Each stresses the system in a different way, from steady load to bursty load to very long prompts.</p>
+</section>
+<section id="the-ten-tests" class="level2">
+<h2 class="anchored" data-anchor-id="the-ten-tests">The ten tests</h2>
+<p>The draft lays out ten benchmarking tests. Together they cover speed, capacity, fairness, and the cost of the features that production systems actually run.</p>
+<ol type="1">
+<li>Time to first token.</li>
+<li>Output token throughput.</li>
+<li>The tradeoff between throughput and latency.</li>
+<li>The distribution of inter-token latency, not just its average.</li>
+<li>Concurrent request capacity.</li>
+<li>Scheduling fairness across requests.</li>
+<li>Prefix cache effectiveness.</li>
+<li>Behavior under memory pressure.</li>
+<li>Long-context scaling.</li>
+<li>The overhead added by guardrails.</li>
+</ol>
+</section>
+<section id="what-it-accounts-for" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-accounts-for">What it accounts for</h2>
+<p>The methodology is built for how LLM serving really behaves. It handles streaming output, where tokens arrive over time rather than all at once. It handles dynamic batching, where the system groups requests on the fly. It handles context-dependent performance, where a long prompt changes the numbers. It also measures the cost of safety systems rather than ignoring them. The goal throughout is a run that someone else can repeat and get the same answer.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>A benchmark that cannot be reproduced is a marketing number. By fixing the boundaries, the traffic, and the tests, this draft makes a serving result something a second team can check.</p>
+</section>
+<section id="read-the-draft" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
+<p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/">Benchmarking Methodology for Large Language Model Serving</a>.</p>
+<hr>
+<p><em>Cover image: An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>llm-systems</category>
+  <category>benchmarking</category>
+  <category>ietf</category>
+  <guid>https://krimler.github.io/posts/ietf-benchmarking-methodology/</guid>
+  <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/ietf-benchmarking-methodology/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>AlignDP: locking knowledge transfer at the data interface</title>

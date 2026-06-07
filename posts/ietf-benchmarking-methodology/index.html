@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Madhava Gaikwad">
+<meta name="dcterms.date" content="2026-01-20">
+<meta name="description" content="The second of four IETF drafts on benchmarking LLM serving. It turns the vocabulary into a procedure: where to measure, what traffic to send, and which ten tests to run.">
 
-<title>About – Krimler</title>
+<title>How to run the tests: the IETF LLM serving methodology draft – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +29,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,13 +80,17 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="About – Krimler">
-<meta property="og:description" content="Notes and papers on mathematics, computer science, AI/ML, and security.">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="How to run the tests: the IETF LLM serving methodology draft – Krimler">
+<meta property="og:description" content="The second of four IETF drafts on benchmarking LLM serving. It turns the vocabulary into a procedure: where to measure, what traffic to send, and which ten tests to run.">
+<meta property="og:image" content="https://krimler.github.io/posts/ietf-benchmarking-methodology/cover.jpg">
 <meta property="og:site_name" content="Krimler">
-<meta name="twitter:title" content="About – Krimler">
-<meta name="twitter:description" content="Notes and papers on mathematics, computer science, AI/ML, and security.">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:alt" content="Joseph Wright's An Experiment on a Bird in the Air Pump">
+<meta name="twitter:title" content="How to run the tests: the IETF LLM serving methodology draft – Krimler">
+<meta name="twitter:description" content="The second of four IETF drafts on benchmarking LLM serving. It turns the vocabulary into a procedure: where to measure, what traffic to send, and which ten tests to run.">
+<meta name="twitter:image" content="https://krimler.github.io/posts/ietf-benchmarking-methodology/cover.jpg">
+<meta name="twitter:image:alt" content="Joseph Wright's An Experiment on a Bird in the Air Pump">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -255,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Krimler</span>
     </a>
   </div>
@@ -266,19 +273,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./papers/index.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -289,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -310,10 +317,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-i-build" id="toc-what-i-build" class="nav-link active" data-scroll-target="#what-i-build">What I build</a></li>
-  <li><a href="#focus-areas" id="toc-focus-areas" class="nav-link" data-scroll-target="#focus-areas">Focus areas</a></li>
-  <li><a href="#talk-to-me-about" id="toc-talk-to-me-about" class="nav-link" data-scroll-target="#talk-to-me-about">Talk to me about</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#where-to-measure" id="toc-where-to-measure" class="nav-link active" data-scroll-target="#where-to-measure">Where to measure</a></li>
+  <li><a href="#what-traffic-to-send" id="toc-what-traffic-to-send" class="nav-link" data-scroll-target="#what-traffic-to-send">What traffic to send</a></li>
+  <li><a href="#the-ten-tests" id="toc-the-ten-tests" class="nav-link" data-scroll-target="#the-ten-tests">The ten tests</a></li>
+  <li><a href="#what-it-accounts-for" id="toc-what-it-accounts-for" class="nav-link" data-scroll-target="#what-it-accounts-for">What it accounts for</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">Why it matters</a></li>
+  <li><a href="#read-the-draft" id="toc-read-the-draft" class="nav-link" data-scroll-target="#read-the-draft">Read the draft</a></li>
   </ul>
 </nav>
     </div>
@@ -323,14 +332,36 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
+<h1 class="title">How to run the tests: the IETF LLM serving methodology draft</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">llm-systems</div>
+    <div class="quarto-category">benchmarking</div>
+    <div class="quarto-category">ietf</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    The second of four IETF drafts on benchmarking LLM serving. It turns the vocabulary into a procedure: where to measure, what traffic to send, and which ten tests to run.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Madhava Gaikwad </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 20, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -340,33 +371,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Hi, I am Madhava Gaikwad.</p>
-<p>I am a Senior Software Engineer working at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts.</p>
-<p>I work on bridging AI alignment theory with real-world systems. My background spans differential privacy, reinforcement learning from feedback, distributed consensus, and novel data abstractions for telemetry and streaming analytics. The questions I keep coming back to are these. How do we reason about uncertainty rigorously. How do we guarantee safety and rollback in complex infrastructure. How do we design data and learning pipelines that stay robust at scale.</p>
-<section id="what-i-build" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-build">What I build</h2>
-<p>Small, composable systems. Clear quickstarts. Minimal tests and CI. Figures you can reproduce.</p>
-</section>
-<section id="focus-areas" class="level2">
-<h2 class="anchored" data-anchor-id="focus-areas">Focus areas</h2>
+<p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
+<p>Agreed words are the start. A reproducible benchmark also needs an agreed procedure. The second IETF draft supplies it. It specifies how to set up a test, what traffic to send, what to measure, and how to report the result. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement.</p>
+<section id="where-to-measure" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-measure">Where to measure</h2>
+<p>The draft defines three system boundaries, because a serving stack has layers and a number means little without saying which layer it covers.</p>
 <ul>
-<li>Alignment loops, including RLHF and beyond</li>
-<li>Operator views of learning</li>
-<li>Differential privacy for LLMs</li>
-<li>Reliability at datacenter scale</li>
+<li>The <strong>model engine</strong>, which is raw inference.</li>
+<li>The <strong>application gateway</strong>, which adds routing, authentication, and caching.</li>
+<li>The <strong>compound system</strong>, which is the full end-to-end path including retrieval and tool use.</li>
 </ul>
+<p>A measurement always states which of these boundaries it was taken at.</p>
 </section>
-<section id="talk-to-me-about" class="level2">
-<h2 class="anchored" data-anchor-id="talk-to-me-about">Talk to me about</h2>
-<p>Turning research into demos. Privacy-first LLMs. Robust infrastructure for ML.</p>
+<section id="what-traffic-to-send" class="level2">
+<h2 class="anchored" data-anchor-id="what-traffic-to-send">What traffic to send</h2>
+<p>It defines reference workloads so that everyone drives the system with comparable traffic. These include uniform synthetic traffic, skewed synthetic traffic, a conversation pattern, code completion, and long context. Each stresses the system in a different way, from steady load to bursty load to very long prompts.</p>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<ul>
-<li>Email: <a href="mailto:gaikwad.madhav@gmail.com">gaikwad.madhav@gmail.com</a></li>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/safeai/">safeai</a></li>
-<li>GitHub: <a href="https://github.com/krimler">krimler</a></li>
-</ul>
+<section id="the-ten-tests" class="level2">
+<h2 class="anchored" data-anchor-id="the-ten-tests">The ten tests</h2>
+<p>The draft lays out ten benchmarking tests. Together they cover speed, capacity, fairness, and the cost of the features that production systems actually run.</p>
+<ol type="1">
+<li>Time to first token.</li>
+<li>Output token throughput.</li>
+<li>The tradeoff between throughput and latency.</li>
+<li>The distribution of inter-token latency, not just its average.</li>
+<li>Concurrent request capacity.</li>
+<li>Scheduling fairness across requests.</li>
+<li>Prefix cache effectiveness.</li>
+<li>Behavior under memory pressure.</li>
+<li>Long-context scaling.</li>
+<li>The overhead added by guardrails.</li>
+</ol>
+</section>
+<section id="what-it-accounts-for" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-accounts-for">What it accounts for</h2>
+<p>The methodology is built for how LLM serving really behaves. It handles streaming output, where tokens arrive over time rather than all at once. It handles dynamic batching, where the system groups requests on the fly. It handles context-dependent performance, where a long prompt changes the numbers. It also measures the cost of safety systems rather than ignoring them. The goal throughout is a run that someone else can repeat and get the same answer.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>A benchmark that cannot be reproduced is a marketing number. By fixing the boundaries, the traffic, and the tests, this draft makes a serving result something a second team can check.</p>
+</section>
+<section id="read-the-draft" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
+<p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/">Benchmarking Methodology for Large Language Model Serving</a>.</p>
+<hr>
+<p><em>Cover image: An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -810,5 +859,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -46,7 +46,7 @@
     "href": "index.html",
     "title": "Krimler",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCounting Fibonacci primes: what a finite computation can and cannot add\n\n\n\nnumber-theory\n\nprimes\n\nstatistics\n\nreproducibility\n\n\n\nTreating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAEGIS: typed evidence and obligations for AI-native enterprise architecture\n\n\n\nai-governance\n\nenterprise-architecture\n\nontology\n\nsecurity\n\n\n\nWhy static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.\n\n\n\n\n\nApr 9, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDid you check the right pocket? Routing retrieval across an agent’s memory\n\n\n\nllm-agents\n\nretrieval\n\nmemory\n\nml-systems\n\n\n\nMemory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers.\n\n\n\n\n\nMar 19, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nFinite-size guarantees for dense associative memory\n\n\n\nmachine-learning\n\nassociative-memory\n\nlearning-theory\n\n\n\nModern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nA common language for benchmarking LLM serving: four IETF drafts\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\ndistributed-systems\n\n\n\nThroughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAlignDP: locking knowledge transfer at the data interface\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nsecurity\n\n\n\nWatermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.\n\n\n\n\n\nDec 21, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nEnforcing privacy at the edge for local language models: AVEC\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nedge\n\n\n\nA local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee.\n\n\n\n\n\nSep 13, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhen are two RLHF objectives the same? A canonical form for preference losses\n\n\n\nai-alignment\n\nrlhf\n\npreference-optimization\n\n\n\nThe preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.\n\n\n\n\n\nSep 11, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhy the alignment gap always wins, unless you know where to look\n\n\n\nai-alignment\n\nrlhf\n\nlearning-theory\n\n\n\nWhen human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.\n\n\n\n\n\nSep 5, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nScoring a datacenter fleet by the risk of what happens next\n\n\n\ndistributed-systems\n\nreliability\n\nsre\n\n\n\nAlerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact.\n\n\n\n\n\nAug 22, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTreating alignment as something you can measure and reduce: NPO\n\n\n\nai-alignment\n\nrlhf\n\nml-systems\n\n\n\nMost pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback.\n\n\n\n\n\nJul 28, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCounting Fibonacci primes: what a finite computation can and cannot add\n\n\n\nnumber-theory\n\nprimes\n\nstatistics\n\nreproducibility\n\n\n\nTreating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAEGIS: typed evidence and obligations for AI-native enterprise architecture\n\n\n\nai-governance\n\nenterprise-architecture\n\nontology\n\nsecurity\n\n\n\nWhy static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.\n\n\n\n\n\nApr 9, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDid you check the right pocket? Routing retrieval across an agent’s memory\n\n\n\nllm-agents\n\nretrieval\n\nmemory\n\nml-systems\n\n\n\nMemory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers.\n\n\n\n\n\nMar 19, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nFinite-size guarantees for dense associative memory\n\n\n\nmachine-learning\n\nassociative-memory\n\nlearning-theory\n\n\n\nModern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nA common language for benchmarking LLM serving: four IETF drafts\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\ndistributed-systems\n\n\n\nThroughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTwenty-five representative tasks: the IETF workload profiles draft\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe fourth of four IETF drafts on benchmarking LLM serving. It standardizes the workloads themselves, so systems are compared on the same representative tasks, each described along five dimensions.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDeclaring the measurement boundary: the IETF profiles draft\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe third of four IETF drafts on benchmarking LLM serving. A profile binds the terms and the method to a concrete role in the system, so a number says exactly what it includes.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nA shared vocabulary for LLM serving (IETF terminology draft)\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe first of four IETF drafts on benchmarking LLM serving. It fixes the words: precise definitions for the metrics that everyone uses loosely, with no methodology and no thresholds.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nHow to run the tests: the IETF LLM serving methodology draft\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe second of four IETF drafts on benchmarking LLM serving. It turns the vocabulary into a procedure: where to measure, what traffic to send, and which ten tests to run.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAlignDP: locking knowledge transfer at the data interface\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nsecurity\n\n\n\nWatermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.\n\n\n\n\n\nDec 21, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nEnforcing privacy at the edge for local language models: AVEC\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nedge\n\n\n\nA local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee.\n\n\n\n\n\nSep 13, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhen are two RLHF objectives the same? A canonical form for preference losses\n\n\n\nai-alignment\n\nrlhf\n\npreference-optimization\n\n\n\nThe preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.\n\n\n\n\n\nSep 11, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhy the alignment gap always wins, unless you know where to look\n\n\n\nai-alignment\n\nrlhf\n\nlearning-theory\n\n\n\nWhen human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.\n\n\n\n\n\nSep 5, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nScoring a datacenter fleet by the risk of what happens next\n\n\n\ndistributed-systems\n\nreliability\n\nsre\n\n\n\nAlerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact.\n\n\n\n\n\nAug 22, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTreating alignment as something you can measure and reduce: NPO\n\n\n\nai-alignment\n\nrlhf\n\nml-systems\n\n\n\nMost pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback.\n\n\n\n\n\nJul 28, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "papers/fibonacci-primes.html",
@@ -56,102 +56,123 @@
     "text": "A companion blog post walks through the results: Counting Fibonacci primes: what a finite computation can and cannot add.\nCode and scripts: github.com/krimler/k-bonacci.\n⬇ Download PDF"
   },
   {
-    "objectID": "posts/fibonacci-prime-statistics/index.html",
-    "href": "posts/fibonacci-prime-statistics/index.html",
-    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "objectID": "posts/ietf-benchmarking-methodology/index.html",
+    "href": "posts/ietf-benchmarking-methodology/index.html",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
     "section": "",
-    "text": "A Fibonacci prime is a Fibonacci number that is also prime. The Fibonacci numbers are the familiar sequence 1, 1, 2, 3, 5, 8, 13, and so on, where each term is the sum of the two before it. Most of them are not prime. As of June 2025 we know of 57 positions in the sequence where the Fibonacci number is prime or almost certainly prime. They are spread very far apart. The largest one that has been fully proven prime sits at position 201107. The largest one we believe is prime sits at position 11964299, a number with about 2.5 million digits, checked by a fast test that is right in practice but does not constitute a proof. Whether the list goes on forever is an open question. No one knows a rule that produces these positions.\nThis study takes a different stance. It treats the 57 positions as a small dataset and asks a plain question. Is there any hidden pattern in them, and if there is, where does it live? The mathematics needed to answer this is already in the literature. What the study adds is method. It puts an honest error bar on a prediction, it runs a battery of tests to tell a real pattern apart from a coincidence, and it ships code so anyone can rerun everything. The scripts are at github.com/krimler/k-bonacci."
+    "text": "Part of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nAgreed words are the start. A reproducible benchmark also needs an agreed procedure. The second IETF draft supplies it. It specifies how to set up a test, what traffic to send, what to measure, and how to report the result. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
   },
   {
-    "objectID": "posts/fibonacci-prime-statistics/index.html#how-many-should-there-be",
-    "href": "posts/fibonacci-prime-statistics/index.html#how-many-should-there-be",
-    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
-    "section": "How many should there be",
-    "text": "How many should there be\nThere is a well-known way to guess how many Fibonacci primes lie below some cutoff. The Fibonacci numbers grow at a steady multiplicative rate, so a Fibonacci number deep in the sequence has a predictable size. A number of that size is prime with a chance that shrinks as the number grows, in the usual way primes thin out. A classical divisibility fact narrows the search further. A Fibonacci number can only be prime when its position is itself prime. Combining these gives a clean prediction. The number of Fibonacci primes up to a cutoff grows in step with the logarithm of that cutoff, times a fixed constant.\nThis is the Grantham and Granville heuristic (Grantham and Granville 2024). Run it out to the current search depth and it predicts about 60 positions. We observe 57. The agreement is close.\nThere is a wrinkle worth airing. A quick fit of the constant comes out about 19% higher than the value the theory predicts. The study tracks the gap down. Fitting the constant against the Fibonacci data alone lands within 3% of the theoretical value. Pooling several related sequences gives a range that comfortably contains it. The apparent excess turns out to be a mix of a bookkeeping choice in the formula and ordinary small-sample noise. With only 57 points, the data cannot even tell the theoretical constant apart from a nearby look-alike value. Settling that would take far more data than the search has produced."
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#where-to-measure",
+    "href": "posts/ietf-benchmarking-methodology/index.html#where-to-measure",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "Where to measure",
+    "text": "Where to measure\nThe draft defines three system boundaries, because a serving stack has layers and a number means little without saying which layer it covers.\n\nThe model engine, which is raw inference.\nThe application gateway, which adds routing, authentication, and caching.\nThe compound system, which is the full end-to-end path including retrieval and tool use.\n\nA measurement always states which of these boundaries it was taken at."
   },
   {
-    "objectID": "posts/fibonacci-prime-statistics/index.html#predicting-the-next-one",
-    "href": "posts/fibonacci-prime-statistics/index.html#predicting-the-next-one",
-    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
-    "section": "Predicting the next one",
-    "text": "Predicting the next one\nIf the positions are spread out with no memory of each other, you can still say something useful about the next one. Look at the gaps between consecutive positions on a logarithmic scale. Those gaps behave like the waiting times in a process that has no memory, the same statistics that govern how long you wait for the next random arrival. Standard tests back this up.\nThat observation supports a prediction with an error bar, which the earlier work never attempted. From the data available up to a point, the method gives a 90% window for where the next position should fall. The position that was actually found next landed inside the window. Replaying this one step at a time across the whole list, the true position fell inside its predicted window about 87% of the time. For a method with a single tunable number, landing near the promised 90% is about as well as one can ask."
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#what-traffic-to-send",
+    "href": "posts/ietf-benchmarking-methodology/index.html#what-traffic-to-send",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "What traffic to send",
+    "text": "What traffic to send\nIt defines reference workloads so that everyone drives the system with comparable traffic. These include uniform synthetic traffic, skewed synthetic traffic, a conversation pattern, code completion, and long context. Each stresses the system in a different way, from steady load to bursty load to very long prompts."
   },
   {
-    "objectID": "posts/fibonacci-prime-statistics/index.html#looking-for-hidden-patterns",
-    "href": "posts/fibonacci-prime-statistics/index.html#looking-for-hidden-patterns",
-    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
-    "section": "Looking for hidden patterns",
-    "text": "Looking for hidden patterns\nThe study then hunts for structure in the positions. It checks whether they favour certain remainders, whether neighbours influence each other, whether some special families of primes are over- or under-represented, and whether the leading digits follow the lopsided distribution that many natural datasets show. Every test comes back empty.\nAs a single overall check, the authors generated three thousand fake datasets from the no-pattern model and compared nine summary measurements. The real data looked unremarkable on all nine. The honest conclusion is stated plainly. At 57 points there is no pattern to find. The biases people detect in primes are measured across millions of cases. A list of 57 is far too short to see effects that faint."
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#the-ten-tests",
+    "href": "posts/ietf-benchmarking-methodology/index.html#the-ten-tests",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "The ten tests",
+    "text": "The ten tests\nThe draft lays out ten benchmarking tests. Together they cover speed, capacity, fairness, and the cost of the features that production systems actually run.\n\nTime to first token.\nOutput token throughput.\nThe tradeoff between throughput and latency.\nThe distribution of inter-token latency, not just its average.\nConcurrent request capacity.\nScheduling fairness across requests.\nPrefix cache effectiveness.\nBehavior under memory pressure.\nLong-context scaling.\nThe overhead added by guardrails."
   },
   {
-    "objectID": "posts/fibonacci-prime-statistics/index.html#where-structure-does-live",
-    "href": "posts/fibonacci-prime-statistics/index.html#where-structure-does-live",
-    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
-    "section": "Where structure does live",
-    "text": "Where structure does live\nThe positions of the primes carry no usable structure. The way primes divide these sequences is a different story, and here the picture is exact.\nFor the Fibonacci numbers, ask which is the first position a given prime divides. A classical result of Lagarias says that for two thirds of primes that first position is even (Lagarias 1985). The study confirms this to high precision across many primes. The finer details of this divisibility follow from a known proof built on a symmetry argument from algebra (Cubre and Rouse 2014).\nThe study then moves to relatives of the Fibonacci numbers built from longer recurrences, where each term sums the previous three, four, or more. These no longer have the clean divisibility property. Their behaviour is instead controlled by a symmetry group attached to the recurrence, and a classical theorem turns that symmetry into exact proportions for how the sequence repeats when reduced by a prime. The study confirms these proportions numerically for the three-term and four-term cases.\nFor the three-term case there is one quantity the study can only estimate. It measures it at about 0.40 and is careful to flag that the exact value is not known. The study also corrects a claim in an earlier draft that said these finer densities were computable for any length of recurrence. For the general case they are open, with a partial result under a standard unproven hypothesis as the best that is currently known (Järviniemi 2022)."
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#what-it-accounts-for",
+    "href": "posts/ietf-benchmarking-methodology/index.html#what-it-accounts-for",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "What it accounts for",
+    "text": "What it accounts for\nThe methodology is built for how LLM serving really behaves. It handles streaming output, where tokens arrive over time rather than all at once. It handles dynamic batching, where the system groups requests on the fly. It handles context-dependent performance, where a long prompt changes the numbers. It also measures the cost of safety systems rather than ignoring them. The goal throughout is a run that someone else can repeat and get the same answer."
   },
   {
-    "objectID": "posts/fibonacci-prime-statistics/index.html#what-is-known-and-what-is-new",
-    "href": "posts/fibonacci-prime-statistics/index.html#what-is-known-and-what-is-new",
-    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
-    "section": "What is known and what is new",
-    "text": "What is known and what is new\nThe point of the study is the line it draws between the two. The count estimate, the matching constant, the two-thirds divisibility result, the symmetry-driven proportions, and the repetition structure of the longer sequences are established mathematics with citations. The new contributions are smaller and clearly marked. There is a prediction window with a measured success rate. There is a reusable battery of tests for telling structure apart from noise. There is a fully cited reproduction that anyone can run."
-  },
-  {
-    "objectID": "posts/fibonacci-prime-statistics/index.html#reproducibility",
-    "href": "posts/fibonacci-prime-statistics/index.html#reproducibility",
-    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
-    "section": "Reproducibility",
-    "text": "Reproducibility\nEvery result comes from self-contained Python scripts using standard scientific libraries. The input data are the published index lists for the Fibonacci, Lucas, and related sequences. The code is at github.com/krimler/k-bonacci."
-  },
-  {
-    "objectID": "posts/fibonacci-prime-statistics/index.html#read-the-paper",
-    "href": "posts/fibonacci-prime-statistics/index.html#read-the-paper",
-    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
-    "section": "Read the paper",
-    "text": "Read the paper\nThe full paper, with the precise statements, the constants, and the proofs it draws on, is here: Fibonacci and k-bonacci prime statistics (PDF and details)."
-  },
-  {
-    "objectID": "posts/fibonacci-prime-statistics/index.html#references",
-    "href": "posts/fibonacci-prime-statistics/index.html#references",
-    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
-    "section": "References",
-    "text": "References\n\n\nCubre, Paul, and Jeremy Rouse. 2014. “Divisibility Properties of the Fibonacci Entry Point.” Proceedings of the American Mathematical Society 142 (11): 3771–85. https://arxiv.org/abs/1212.6221.\n\n\nGrantham, Jon, and Andrew Granville. 2024. Fibonacci Primes, Primes of the Form 2^n-k, and Beyond. https://arxiv.org/abs/2307.07894.\n\n\nJärviniemi, Olli. 2022. “Positive Lower Density for Prime Divisors of Generic Linear Recurrences.” Mathematical Proceedings of the Cambridge Philosophical Society. https://arxiv.org/abs/2102.04042.\n\n\nLagarias, Jeffrey C. 1985. “The Set of Primes Dividing the Lucas Numbers Has Density 2/3.” Pacific Journal of Mathematics 118 (2): 449–61.\n\n\n\nCover image: The Great Wave off Kanagawa, Katsushika Hokusai (c. 1831). Public domain, via Wikimedia Commons."
-  },
-  {
-    "objectID": "posts/aligndp-rarity-privacy/index.html",
-    "href": "posts/aligndp-rarity-privacy/index.html",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
-    "section": "",
-    "text": "Large language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves."
-  },
-  {
-    "objectID": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
-    "href": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
-    "section": "Two kinds of field need two kinds of protection",
-    "text": "Two kinds of field need two kinds of protection\nThe key observation is that not all data is equally risky, and the right protection depends on how often a value appears.\nRare fields are the dangerous ones. A value that shows up only a few times can identify its source, so it needs strong hiding. AlignDP applies PAC indistinguishability to rare fields. The practical meaning is that an observer cannot reliably tell whether a given rare value was present, so the rare information stays concealed.\nCommon fields are different. You often want to keep useful aggregate statistics about them, such as how frequent each value is. AlignDP protects these with RAPPOR, a well-known method for local differential privacy. RAPPOR randomizes each individual report so no single response is revealing, while still allowing accurate frequency estimates once many reports are combined. The frequent values stay usable in aggregate without exposing any one contributor.\nA global aggregator sits over both tiers. It manages composition, meaning the way many small privacy releases add up, and it tracks the overall budget so the total exposure stays bounded."
-  },
-  {
-    "objectID": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
-    "href": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
-    "section": "What the paper shows",
-    "text": "What the paper shows\nThe work establishes theoretical results for both tiers. It extends the PAC guarantee to the global aggregation step and derives error bounds for the RAPPOR estimates. Simulations match the design intent. Rare categories remain hidden, while frequent categories can be recovered with small error. The paper is explicit about the tradeoff between privacy and utility, since that tension is the heart of any differential privacy scheme."
-  },
-  {
-    "objectID": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
-    "href": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#why-it-matters",
+    "href": "posts/ietf-benchmarking-methodology/index.html#why-it-matters",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
     "section": "Why it matters",
-    "text": "Why it matters\nDefending a model after it has been copied is a weak position. AlignDP moves the control to the point where data enters, and it tailors the strength of protection to the risk each field carries. Strong hiding goes where identification is possible. Lighter, aggregate-preserving protection goes where only statistics matter."
+    "text": "Why it matters\nA benchmark that cannot be reproduced is a marketing number. By fixing the boundaries, the traffic, and the tests, this draft makes a serving result something a second team can check."
   },
   {
-    "objectID": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
-    "href": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#read-the-draft",
+    "href": "posts/ietf-benchmarking-methodology/index.html#read-the-draft",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "Read the draft",
+    "text": "Read the draft\nBenchmarking Methodology for Large Language Model Serving.\n\nCover image: An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html",
+    "href": "posts/opal-rlhf-equivalence/index.html",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "",
+    "text": "Aligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#canonicalization",
+    "href": "posts/opal-rlhf-equivalence/index.html#canonicalization",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "Canonicalization",
+    "text": "Canonicalization\nThe tool is called Opal, and it does canonicalization. A canonical form is a standard way of writing something so that two things that are really equal end up looking identical. Given two preference objectives, Opal returns one of two answers. Either it produces a canonical form that shows the two are algebraically the same, or it produces a concrete witness that they differ. A witness here is a specific case where the two objectives disagree, so the difference is demonstrated rather than asserted."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
+    "href": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "What it finds",
+    "text": "What it finds\nRun Opal across the popular methods and a clear picture emerges. Many widely used objectives optimize the same underlying thing. Their apparent differences are reparameterizations, meaning the same objective dressed in different variables. Some methods, by contrast, are provably distinct, and Opal isolates a small set of structural mechanisms that produce real differences rather than cosmetic ones.\nOne finding is worth calling out because it is easy to miss. Batch normalization can cause the same response pair to receive different gradients depending on which other examples share its batch. The training signal for a pair stops being a property of the pair alone. It becomes a property of the batch it landed in. That is a genuine difference in objective, and it comes from a detail most people treat as bookkeeping."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
+    "href": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "Why it matters",
+    "text": "Why it matters\nA field that keeps proposing objectives needs a way to tell novelty from notation. Opal turns that into a decidable check. It tells you when a new method is a real departure and when it is an old method in new clothes. That saves effort, and it points attention at the handful of structural choices that actually change what the model learns."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
+    "href": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
     "section": "Read the paper",
-    "text": "Read the paper\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251).\n\nCover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons."
+    "text": "Read the paper\nWhen Are Two RLHF Objectives the Same? (arXiv:2509.11298)."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html",
+    "href": "posts/avec-edge-privacy/index.html",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "",
+    "text": "A local language model runs on your own device, which keeps your data close. Some queries are too hard for the small local model, so it delegates them to a larger model in the cloud. That handoff is the weak point. The query sent outward can carry sensitive information. AVEC is a proposal for controlling that handoff. The name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge and makes the delegation verifiable.\nA note on what this is. AVEC is a position paper. Its evaluation is simulation based by design, and it does not claim deployment readiness or measured task quality with live models. The contribution is an architecture and the theory that goes with it."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
+    "href": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "Spending a privacy budget per query",
+    "text": "Spending a privacy budget per query\nThe core mechanism is an adaptive budget. Differential privacy is a way of adding calibrated random noise so that an output reveals very little about any single underlying record. The strength of that protection is a budget, and spending more budget buys more accuracy at the cost of more exposure. Most systems fix one budget for everything. AVEC sets the budget per query, based on three things: how sensitive the query is, how confident the local model is on its own, and how much budget the user has already spent in the past.\nTo keep the spending honest, AVEC tracks it with an odometer. An odometer is a running tally of privacy budget consumed across many queries, so the system always knows how much protection remains. The accounting uses Rényi differential privacy, a version of the theory that composes cleanly when you add up many small releases."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
+    "href": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "What it proves it can and cannot do",
+    "text": "What it proves it can and cannot do\nThe paper does the unglamorous work of marking the boundaries. It establishes utility ceilings, which are limits on how good the answers can be at a given level of privacy. It establishes delegation-leakage bounds, which cap how much the handoff to the remote model can reveal. It also proves impossibility results. Two tempting shortcuts do not work on their own. Deterministic gating, where a fixed rule decides what to send, cannot provide the guarantee. Hash-only certification, where a hash is used to prove integrity, is not enough by itself."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#why-it-matters",
+    "href": "posts/avec-edge-privacy/index.html#why-it-matters",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "Why it matters",
+    "text": "Why it matters\nLocal models are sold on privacy, and the delegation step quietly undermines that promise. AVEC takes the step seriously. It treats each outward query as a metered privacy event, verifies the transformation on the device, and is honest about the ceilings and the dead ends. That gives later empirical work a clear target."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#read-the-paper",
+    "href": "posts/avec-edge-privacy/index.html#read-the-paper",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "Read the paper",
+    "text": "Read the paper\nAVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561).\n\nCover image: Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "posts/npo-meta-alignment/index.html",
@@ -196,11 +217,46 @@
     "text": "Read the paper\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131).\n\nCover image: The Geographer, Johannes Vermeer (c. 1668). Public domain, via Wikimedia Commons."
   },
   {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html",
+    "href": "posts/ietf-benchmarking-workloads/index.html",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "",
+    "text": "Part of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nA serving system can look fast on one kind of task and slow on another. Embedding a short document and running a long agentic plan stress completely different parts of the stack. To compare systems fairly, the workloads themselves have to be standardized. The fourth IETF draft does this. It is co-authored by Mohadeb Mondal and Madhava Gaikwad, an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html#five-dimensions",
+    "href": "posts/ietf-benchmarking-workloads/index.html#five-dimensions",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "Five dimensions",
+    "text": "Five dimensions\nEvery workload is described along five dimensions. Together they capture what makes a task cheap or expensive to serve.\n\nInput to output ratio. Whether the task is mostly prompt, mostly generation, or balanced.\nOutput constraints. Whether the output is non-token, minimal, structured, semi-structured, or free-form.\nLatency sensitivity. Whether the task is interactive, near-real-time, or throughput-oriented.\nConcurrency pattern. Whether requests are single-stream, bursty, sustained and high, or chained in sequence.\nPrefix sharing. How much of the prompt prefix is shared across requests, from none, through a shared system prompt, up to a shared document or schema."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html#twenty-five-profiles-in-six-groups",
+    "href": "posts/ietf-benchmarking-workloads/index.html#twenty-five-profiles-in-six-groups",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "Twenty-five profiles in six groups",
+    "text": "Twenty-five profiles in six groups\nThe draft defines 25 standard workloads, sorted into six groups by what they demand of the system.\n\nGroup A, non-generative. Embeddings, cross-encoder reranking, and logprob scoring.\nGroup B, minimal output. Classification, short question answering, and function calling.\nGroup C, interactive streaming. Chat, code completion, and roleplay.\nGroup D, prefill-heavy. Summarization, document question answering, and extraction.\nGroup E, decode-heavy. Content generation, reasoning, and translation.\nGroup F, multi-step. Agentic workflows and planning.\n\nEach profile maps to the metrics and test procedures from the companion methodology and profiles drafts, so a workload, the way to measure it, and the boundary it is measured at all line up."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html#why-it-matters",
+    "href": "posts/ietf-benchmarking-workloads/index.html#why-it-matters",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "Why it matters",
+    "text": "Why it matters\nWithout standard workloads, every benchmark picks its own favourable task and the results stop being comparable. A fixed, representative set means a serving system is judged on the same range of work that production actually throws at it."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html#read-the-draft",
+    "href": "posts/ietf-benchmarking-workloads/index.html#read-the-draft",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "Read the draft",
+    "text": "Read the draft\nBenchmarking Workload Profiles for Large Language Model Serving.\n\nCover image: Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons."
+  },
+  {
     "objectID": "posts/ietf-llm-benchmarking/index.html",
     "href": "posts/ietf-llm-benchmarking/index.html",
     "title": "A common language for benchmarking LLM serving: four IETF drafts",
     "section": "",
-    "text": "When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads."
+    "text": "When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.\nThis post is the overview. Each draft also has its own post."
   },
   {
     "objectID": "posts/ietf-llm-benchmarking/index.html#the-words",
@@ -462,74 +518,172 @@
     "text": "Read the paper\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658).\n\nCover image: Cabinet of Curiosities, Domenico Remps (c. 1690). Public domain, via Wikimedia Commons."
   },
   {
-    "objectID": "posts/avec-edge-privacy/index.html",
-    "href": "posts/avec-edge-privacy/index.html",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "objectID": "posts/ietf-benchmarking-profiles/index.html",
+    "href": "posts/ietf-benchmarking-profiles/index.html",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
     "section": "",
-    "text": "A local language model runs on your own device, which keeps your data close. Some queries are too hard for the small local model, so it delegates them to a larger model in the cloud. That handoff is the weak point. The query sent outward can carry sensitive information. AVEC is a proposal for controlling that handoff. The name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge and makes the delegation verifiable.\nA note on what this is. AVEC is a position paper. Its evaluation is simulation based by design, and it does not claim deployment readiness or measured task quality with live models. The contribution is an architecture and the theory that goes with it."
+    "text": "Part of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nTime to first token is a single phrase that can mean several different numbers. It depends on where you start the clock. Do you include the gateway. Do you include the firewall inspection. Do you include the network hop. Each choice gives a different value, and a benchmark that does not say which choice it made cannot be compared with another. The third IETF draft fixes this with profiles. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
   },
   {
-    "objectID": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
-    "href": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
-    "section": "Spending a privacy budget per query",
-    "text": "Spending a privacy budget per query\nThe core mechanism is an adaptive budget. Differential privacy is a way of adding calibrated random noise so that an output reveals very little about any single underlying record. The strength of that protection is a budget, and spending more budget buys more accuracy at the cost of more exposure. Most systems fix one budget for everything. AVEC sets the budget per query, based on three things: how sensitive the query is, how confident the local model is on its own, and how much budget the user has already spent in the past.\nTo keep the spending honest, AVEC tracks it with an odometer. An odometer is a running tally of privacy budget consumed across many queries, so the system always knows how much protection remains. The accounting uses Rényi differential privacy, a version of the theory that composes cleanly when you add up many small releases."
+    "objectID": "posts/ietf-benchmarking-profiles/index.html#what-a-profile-is",
+    "href": "posts/ietf-benchmarking-profiles/index.html#what-a-profile-is",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
+    "section": "What a profile is",
+    "text": "What a profile is\nA profile binds the vocabulary and the procedures to a concrete role in the system and a concrete workload pattern. Its job is to declare the boundary. A profile says exactly where a measurement starts and stops, so two results taken under the same profile are measuring the same thing."
   },
   {
-    "objectID": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
-    "href": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
-    "section": "What it proves it can and cannot do",
-    "text": "What it proves it can and cannot do\nThe paper does the unglamorous work of marking the boundaries. It establishes utility ceilings, which are limits on how good the answers can be at a given level of privacy. It establishes delegation-leakage bounds, which cap how much the handoff to the remote model can reveal. It also proves impossibility results. Two tempting shortcuts do not work on their own. Deterministic gating, where a fixed rule decides what to send, cannot provide the guarantee. Hash-only certification, where a hash is used to prove integrity, is not enough by itself."
+    "objectID": "posts/ietf-benchmarking-profiles/index.html#the-profiles-it-defines",
+    "href": "posts/ietf-benchmarking-profiles/index.html#the-profiles-it-defines",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
+    "section": "The profiles it defines",
+    "text": "The profiles it defines\nThe draft defines infrastructure profiles for the distinct roles in a serving stack.\n\nModel engine. Raw inference: prefill, decode, and management of the key-value cache.\nAI gateway. The overhead of routing, authentication, and caching.\nAI firewall. The latency and accuracy of security inspection, including detection rates and false positive rates.\nCompound system. End-to-end completion for orchestrated multi-step workflows such as retrieval-augmented generation and agents.\n\nIt also defines workload profiles for how the system is driven, including a chatbot pattern, which is multi-turn and human-paced, and a compound workflow pattern, which is multi-step and machine-paced.\nThe draft specifies profiles only. It introduces no new metrics and no thresholds. It is the layer that makes the terminology and the methodology comparable across real deployments, where a request passes through several components before it reaches the model."
   },
   {
-    "objectID": "posts/avec-edge-privacy/index.html#why-it-matters",
-    "href": "posts/avec-edge-privacy/index.html#why-it-matters",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "objectID": "posts/ietf-benchmarking-profiles/index.html#why-it-matters",
+    "href": "posts/ietf-benchmarking-profiles/index.html#why-it-matters",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
     "section": "Why it matters",
-    "text": "Why it matters\nLocal models are sold on privacy, and the delegation step quietly undermines that promise. AVEC takes the step seriously. It treats each outward query as a metered privacy event, verifies the transformation on the device, and is honest about the ceilings and the dead ends. That gives later empirical work a clear target."
+    "text": "Why it matters\nProduction systems are built from a gateway, a firewall, an engine, and more. Most published benchmarks never say which of these the numbers include. Profiles remove that ambiguity by making the boundary an explicit, declared part of every result."
   },
   {
-    "objectID": "posts/avec-edge-privacy/index.html#read-the-paper",
-    "href": "posts/avec-edge-privacy/index.html#read-the-paper",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
-    "section": "Read the paper",
-    "text": "Read the paper\nAVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561).\n\nCover image: Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons."
+    "objectID": "posts/ietf-benchmarking-profiles/index.html#read-the-draft",
+    "href": "posts/ietf-benchmarking-profiles/index.html#read-the-draft",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
+    "section": "Read the draft",
+    "text": "Read the draft\nPerformance Benchmarking Profiles for Large Language Model Serving Systems."
   },
   {
-    "objectID": "posts/opal-rlhf-equivalence/index.html",
-    "href": "posts/opal-rlhf-equivalence/index.html",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "objectID": "posts/ietf-benchmarking-terminology/index.html",
+    "href": "posts/ietf-benchmarking-terminology/index.html",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
     "section": "",
-    "text": "Aligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question."
+    "text": "Part of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nWhen two teams report a throughput number for serving a language model, the numbers often do not mean the same thing. One counted prompt tokens, the other did not. One measured at the model engine, the other after a gateway. The words match and the measurements do not. The first IETF draft in this series addresses that directly. It defines a shared vocabulary for LLM serving performance and nothing more. The draft is an individual submission to the IETF Benchmarking Methodology Working Group and carries no formal IETF endorsement."
   },
   {
-    "objectID": "posts/opal-rlhf-equivalence/index.html#canonicalization",
-    "href": "posts/opal-rlhf-equivalence/index.html#canonicalization",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
-    "section": "Canonicalization",
-    "text": "Canonicalization\nThe tool is called Opal, and it does canonicalization. A canonical form is a standard way of writing something so that two things that are really equal end up looking identical. Given two preference objectives, Opal returns one of two answers. Either it produces a canonical form that shows the two are algebraically the same, or it produces a concrete witness that they differ. A witness here is a specific case where the two objectives disagree, so the difference is demonstrated rather than asserted."
+    "objectID": "posts/ietf-benchmarking-terminology/index.html#what-it-defines",
+    "href": "posts/ietf-benchmarking-terminology/index.html#what-it-defines",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
+    "section": "What it defines",
+    "text": "What it defines\nThe draft gives precise definitions for a large set of metrics, on the order of seventy, grouped into about a dozen categories. The categories cover the parts of serving that people measure and disagree about.\n\nRequest and response timing. Time to first token, the delay before the first output appears. Inter-token latency, the gap between successive output tokens. Normalized latency, which adjusts for output length.\nPhase-specific timing. Prefill latency, the cost of processing the prompt, and decode latency, the cost of generating tokens. These two phases behave differently, so the draft keeps them separate.\nThroughput. Token rates and request rates, defined so it is clear what is being counted.\nLatency distribution. Percentiles and jitter, since an average hides the tail that users actually feel.\nMulti-tenancy and scheduling. Fairness across tenants and head-of-line blocking, where one large request stalls the queue behind it.\nOptimizations. Prefix caching, which reuses work across requests that share a prompt, and speculative decoding, which guesses tokens ahead and verifies them.\nCompound systems. Retrieval-augmented generation and agentic workflows, where a request triggers several model and tool calls.\nQuality enforcement. Policy violations and false refusals, so safety behavior is measurable rather than anecdotal."
   },
   {
-    "objectID": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
-    "href": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
-    "section": "What it finds",
-    "text": "What it finds\nRun Opal across the popular methods and a clear picture emerges. Many widely used objectives optimize the same underlying thing. Their apparent differences are reparameterizations, meaning the same objective dressed in different variables. Some methods, by contrast, are provably distinct, and Opal isolates a small set of structural mechanisms that produce real differences rather than cosmetic ones.\nOne finding is worth calling out because it is easy to miss. Batch normalization can cause the same response pair to receive different gradients depending on which other examples share its batch. The training signal for a pair stops being a property of the pair alone. It becomes a property of the batch it landed in. That is a genuine difference in objective, and it comes from a detail most people treat as bookkeeping."
+    "objectID": "posts/ietf-benchmarking-terminology/index.html#what-it-leaves-out-on-purpose",
+    "href": "posts/ietf-benchmarking-terminology/index.html#what-it-leaves-out-on-purpose",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
+    "section": "What it leaves out, on purpose",
+    "text": "What it leaves out, on purpose\nThe draft defines terms only. It prescribes no method for measuring them and sets no pass-or-fail thresholds. That restraint is the point. A vocabulary that everyone agrees on has to be separable from any one way of testing. The method comes in the next draft, and the thresholds are left to whoever runs a benchmark."
   },
   {
-    "objectID": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
-    "href": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "objectID": "posts/ietf-benchmarking-terminology/index.html#why-it-matters",
+    "href": "posts/ietf-benchmarking-terminology/index.html#why-it-matters",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
     "section": "Why it matters",
-    "text": "Why it matters\nA field that keeps proposing objectives needs a way to tell novelty from notation. Opal turns that into a decidable check. It tells you when a new method is a real departure and when it is an old method in new clothes. That saves effort, and it points attention at the handful of structural choices that actually change what the model learns."
+    "text": "Why it matters\nComparable benchmarks start with agreed words. Once time to first token and inter-token latency mean one thing across papers and products, the rest of the benchmarking effort has a foundation to stand on."
   },
   {
-    "objectID": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
-    "href": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "objectID": "posts/ietf-benchmarking-terminology/index.html#read-the-draft",
+    "href": "posts/ietf-benchmarking-terminology/index.html#read-the-draft",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
+    "section": "Read the draft",
+    "text": "Read the draft\nBenchmarking Terminology for Large Language Model Serving.\n\nCover image: Saint Jerome in His Study, Antonello da Messina (c. 1475). Public domain, via Wikimedia Commons."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html",
+    "href": "posts/aligndp-rarity-privacy/index.html",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "",
+    "text": "Large language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
+    "href": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "Two kinds of field need two kinds of protection",
+    "text": "Two kinds of field need two kinds of protection\nThe key observation is that not all data is equally risky, and the right protection depends on how often a value appears.\nRare fields are the dangerous ones. A value that shows up only a few times can identify its source, so it needs strong hiding. AlignDP applies PAC indistinguishability to rare fields. The practical meaning is that an observer cannot reliably tell whether a given rare value was present, so the rare information stays concealed.\nCommon fields are different. You often want to keep useful aggregate statistics about them, such as how frequent each value is. AlignDP protects these with RAPPOR, a well-known method for local differential privacy. RAPPOR randomizes each individual report so no single response is revealing, while still allowing accurate frequency estimates once many reports are combined. The frequent values stay usable in aggregate without exposing any one contributor.\nA global aggregator sits over both tiers. It manages composition, meaning the way many small privacy releases add up, and it tracks the overall budget so the total exposure stays bounded."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
+    "href": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "What the paper shows",
+    "text": "What the paper shows\nThe work establishes theoretical results for both tiers. It extends the PAC guarantee to the global aggregation step and derives error bounds for the RAPPOR estimates. Simulations match the design intent. Rare categories remain hidden, while frequent categories can be recovered with small error. The paper is explicit about the tradeoff between privacy and utility, since that tension is the heart of any differential privacy scheme."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
+    "href": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "Why it matters",
+    "text": "Why it matters\nDefending a model after it has been copied is a weak position. AlignDP moves the control to the point where data enters, and it tailors the strength of protection to the risk each field carries. Strong hiding goes where identification is possible. Lighter, aggregate-preserving protection goes where only statistics matter."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
+    "href": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
     "section": "Read the paper",
-    "text": "Read the paper\nWhen Are Two RLHF Objectives the Same? (arXiv:2509.11298)."
+    "text": "Read the paper\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251).\n\nCover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html",
+    "href": "posts/fibonacci-prime-statistics/index.html",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "",
+    "text": "A Fibonacci prime is a Fibonacci number that is also prime. The Fibonacci numbers are the familiar sequence 1, 1, 2, 3, 5, 8, 13, and so on, where each term is the sum of the two before it. Most of them are not prime. As of June 2025 we know of 57 positions in the sequence where the Fibonacci number is prime or almost certainly prime. They are spread very far apart. The largest one that has been fully proven prime sits at position 201107. The largest one we believe is prime sits at position 11964299, a number with about 2.5 million digits, checked by a fast test that is right in practice but does not constitute a proof. Whether the list goes on forever is an open question. No one knows a rule that produces these positions.\nThis study takes a different stance. It treats the 57 positions as a small dataset and asks a plain question. Is there any hidden pattern in them, and if there is, where does it live? The mathematics needed to answer this is already in the literature. What the study adds is method. It puts an honest error bar on a prediction, it runs a battery of tests to tell a real pattern apart from a coincidence, and it ships code so anyone can rerun everything. The scripts are at github.com/krimler/k-bonacci."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#how-many-should-there-be",
+    "href": "posts/fibonacci-prime-statistics/index.html#how-many-should-there-be",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "How many should there be",
+    "text": "How many should there be\nThere is a well-known way to guess how many Fibonacci primes lie below some cutoff. The Fibonacci numbers grow at a steady multiplicative rate, so a Fibonacci number deep in the sequence has a predictable size. A number of that size is prime with a chance that shrinks as the number grows, in the usual way primes thin out. A classical divisibility fact narrows the search further. A Fibonacci number can only be prime when its position is itself prime. Combining these gives a clean prediction. The number of Fibonacci primes up to a cutoff grows in step with the logarithm of that cutoff, times a fixed constant.\nThis is the Grantham and Granville heuristic (Grantham and Granville 2024). Run it out to the current search depth and it predicts about 60 positions. We observe 57. The agreement is close.\nThere is a wrinkle worth airing. A quick fit of the constant comes out about 19% higher than the value the theory predicts. The study tracks the gap down. Fitting the constant against the Fibonacci data alone lands within 3% of the theoretical value. Pooling several related sequences gives a range that comfortably contains it. The apparent excess turns out to be a mix of a bookkeeping choice in the formula and ordinary small-sample noise. With only 57 points, the data cannot even tell the theoretical constant apart from a nearby look-alike value. Settling that would take far more data than the search has produced."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#predicting-the-next-one",
+    "href": "posts/fibonacci-prime-statistics/index.html#predicting-the-next-one",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "Predicting the next one",
+    "text": "Predicting the next one\nIf the positions are spread out with no memory of each other, you can still say something useful about the next one. Look at the gaps between consecutive positions on a logarithmic scale. Those gaps behave like the waiting times in a process that has no memory, the same statistics that govern how long you wait for the next random arrival. Standard tests back this up.\nThat observation supports a prediction with an error bar, which the earlier work never attempted. From the data available up to a point, the method gives a 90% window for where the next position should fall. The position that was actually found next landed inside the window. Replaying this one step at a time across the whole list, the true position fell inside its predicted window about 87% of the time. For a method with a single tunable number, landing near the promised 90% is about as well as one can ask."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#looking-for-hidden-patterns",
+    "href": "posts/fibonacci-prime-statistics/index.html#looking-for-hidden-patterns",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "Looking for hidden patterns",
+    "text": "Looking for hidden patterns\nThe study then hunts for structure in the positions. It checks whether they favour certain remainders, whether neighbours influence each other, whether some special families of primes are over- or under-represented, and whether the leading digits follow the lopsided distribution that many natural datasets show. Every test comes back empty.\nAs a single overall check, the authors generated three thousand fake datasets from the no-pattern model and compared nine summary measurements. The real data looked unremarkable on all nine. The honest conclusion is stated plainly. At 57 points there is no pattern to find. The biases people detect in primes are measured across millions of cases. A list of 57 is far too short to see effects that faint."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#where-structure-does-live",
+    "href": "posts/fibonacci-prime-statistics/index.html#where-structure-does-live",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "Where structure does live",
+    "text": "Where structure does live\nThe positions of the primes carry no usable structure. The way primes divide these sequences is a different story, and here the picture is exact.\nFor the Fibonacci numbers, ask which is the first position a given prime divides. A classical result of Lagarias says that for two thirds of primes that first position is even (Lagarias 1985). The study confirms this to high precision across many primes. The finer details of this divisibility follow from a known proof built on a symmetry argument from algebra (Cubre and Rouse 2014).\nThe study then moves to relatives of the Fibonacci numbers built from longer recurrences, where each term sums the previous three, four, or more. These no longer have the clean divisibility property. Their behaviour is instead controlled by a symmetry group attached to the recurrence, and a classical theorem turns that symmetry into exact proportions for how the sequence repeats when reduced by a prime. The study confirms these proportions numerically for the three-term and four-term cases.\nFor the three-term case there is one quantity the study can only estimate. It measures it at about 0.40 and is careful to flag that the exact value is not known. The study also corrects a claim in an earlier draft that said these finer densities were computable for any length of recurrence. For the general case they are open, with a partial result under a standard unproven hypothesis as the best that is currently known (Järviniemi 2022)."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#what-is-known-and-what-is-new",
+    "href": "posts/fibonacci-prime-statistics/index.html#what-is-known-and-what-is-new",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "What is known and what is new",
+    "text": "What is known and what is new\nThe point of the study is the line it draws between the two. The count estimate, the matching constant, the two-thirds divisibility result, the symmetry-driven proportions, and the repetition structure of the longer sequences are established mathematics with citations. The new contributions are smaller and clearly marked. There is a prediction window with a measured success rate. There is a reusable battery of tests for telling structure apart from noise. There is a fully cited reproduction that anyone can run."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#reproducibility",
+    "href": "posts/fibonacci-prime-statistics/index.html#reproducibility",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "Reproducibility",
+    "text": "Reproducibility\nEvery result comes from self-contained Python scripts using standard scientific libraries. The input data are the published index lists for the Fibonacci, Lucas, and related sequences. The code is at github.com/krimler/k-bonacci."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#read-the-paper",
+    "href": "posts/fibonacci-prime-statistics/index.html#read-the-paper",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "Read the paper",
+    "text": "Read the paper\nThe full paper, with the precise statements, the constants, and the proofs it draws on, is here: Fibonacci and k-bonacci prime statistics (PDF and details)."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#references",
+    "href": "posts/fibonacci-prime-statistics/index.html#references",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "References",
+    "text": "References\n\n\nCubre, Paul, and Jeremy Rouse. 2014. “Divisibility Properties of the Fibonacci Entry Point.” Proceedings of the American Mathematical Society 142 (11): 3771–85. https://arxiv.org/abs/1212.6221.\n\n\nGrantham, Jon, and Andrew Granville. 2024. Fibonacci Primes, Primes of the Form 2^n-k, and Beyond. https://arxiv.org/abs/2307.07894.\n\n\nJärviniemi, Olli. 2022. “Positive Lower Density for Prime Divisors of Generic Linear Recurrences.” Mathematical Proceedings of the Cambridge Philosophical Society. https://arxiv.org/abs/2102.04042.\n\n\nLagarias, Jeffrey C. 1985. “The Set of Primes Dividing the Lucas Numbers Has Density 2/3.” Pacific Journal of Mathematics 118 (2): 449–61.\n\n\n\nCover image: The Great Wave off Kanagawa, Katsushika Hokusai (c. 1831). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "papers/aegis.html",
@@ -578,6 +732,6 @@
     "href": "about.html#contact",
     "title": "About",
     "section": "Contact",
-    "text": "Contact\n\nEmail: gaikwad.madhav@gmail.com\nLinkedIn: li69nux\nGitHub: krimler"
+    "text": "Contact\n\nEmail: gaikwad.madhav@gmail.com\nLinkedIn: safeai\nGitHub: krimler"
   }
 ]

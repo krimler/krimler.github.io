@@ -372,6 +372,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.</p>
+<p>This post is the overview. Each draft also has its own post.</p>
+<ul>
+<li><a href="../ietf-benchmarking-terminology/">Terminology: a shared vocabulary</a></li>
+<li><a href="../ietf-benchmarking-methodology/">Methodology: how to run the tests</a></li>
+<li><a href="../ietf-benchmarking-profiles/">Profiles: declaring the measurement boundary</a></li>
+<li><a href="../ietf-benchmarking-workloads/">Workloads: twenty-five representative tasks</a></li>
+</ul>
 <section id="the-words" class="level2">
 <h2 class="anchored" data-anchor-id="the-words">The words</h2>
 <p>The first draft is a terminology document. It defines a shared vocabulary for LLM serving performance, covering latency, throughput, resource use, and quality. It gives precise definitions for a large set of metrics. These include time to first token, the delay before the first output appears, and inter-token latency, the gap between successive output tokens. It separates the two phases of generation, prefill where the prompt is processed and decode where tokens are produced. It covers throughput, latency percentiles and jitter, multi-tenant concerns such as fairness and head-of-line blocking, optimizations such as prefix caching and speculative decoding, compound systems such as retrieval-augmented generation and agents, and quality signals such as policy violations and false refusals. It defines terms only. It prescribes no method and sets no pass-or-fail thresholds.</p>

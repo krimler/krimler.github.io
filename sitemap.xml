@@ -13,11 +13,15 @@
     <lastmod>2026-06-07T10:07:57.228Z</lastmod>
   </url>
   <url>
-    <loc>https://krimler.github.io/posts/fibonacci-prime-statistics/index.html</loc>
-    <lastmod>2026-06-07T11:32:06.830Z</lastmod>
+    <loc>https://krimler.github.io/posts/ietf-benchmarking-methodology/index.html</loc>
+    <lastmod>2026-06-07T15:39:00.135Z</lastmod>
   </url>
   <url>
-    <loc>https://krimler.github.io/posts/aligndp-rarity-privacy/index.html</loc>
+    <loc>https://krimler.github.io/posts/opal-rlhf-equivalence/index.html</loc>
+    <lastmod>2026-06-07T11:32:06.831Z</lastmod>
+  </url>
+  <url>
+    <loc>https://krimler.github.io/posts/avec-edge-privacy/index.html</loc>
     <lastmod>2026-06-07T11:32:06.831Z</lastmod>
   </url>
   <url>
@@ -25,8 +29,12 @@
     <lastmod>2026-06-07T11:32:06.830Z</lastmod>
   </url>
   <url>
+    <loc>https://krimler.github.io/posts/ietf-benchmarking-workloads/index.html</loc>
+    <lastmod>2026-06-07T15:39:00.135Z</lastmod>
+  </url>
+  <url>
     <loc>https://krimler.github.io/posts/ietf-llm-benchmarking/index.html</loc>
-    <lastmod>2026-06-07T11:32:06.831Z</lastmod>
+    <lastmod>2026-06-07T11:46:25.021Z</lastmod>
   </url>
   <url>
     <loc>https://krimler.github.io/posts/ansc-capacity-health/index.html</loc>
@@ -49,12 +57,20 @@
     <lastmod>2026-06-07T11:32:06.831Z</lastmod>
   </url>
   <url>
-    <loc>https://krimler.github.io/posts/avec-edge-privacy/index.html</loc>
+    <loc>https://krimler.github.io/posts/ietf-benchmarking-profiles/index.html</loc>
+    <lastmod>2026-06-07T15:39:00.135Z</lastmod>
+  </url>
+  <url>
+    <loc>https://krimler.github.io/posts/ietf-benchmarking-terminology/index.html</loc>
+    <lastmod>2026-06-07T15:39:00.135Z</lastmod>
+  </url>
+  <url>
+    <loc>https://krimler.github.io/posts/aligndp-rarity-privacy/index.html</loc>
     <lastmod>2026-06-07T11:32:06.831Z</lastmod>
   </url>
   <url>
-    <loc>https://krimler.github.io/posts/opal-rlhf-equivalence/index.html</loc>
-    <lastmod>2026-06-07T11:32:06.831Z</lastmod>
+    <loc>https://krimler.github.io/posts/fibonacci-prime-statistics/index.html</loc>
+    <lastmod>2026-06-07T11:32:06.830Z</lastmod>
   </url>
   <url>
     <loc>https://krimler.github.io/papers/aegis.html</loc>
@@ -66,6 +82,6 @@
   </url>
   <url>
     <loc>https://krimler.github.io/about.html</loc>
-    <lastmod>2026-06-07T10:29:34.522Z</lastmod>
+    <lastmod>2026-06-07T11:46:36.853Z</lastmod>
   </url>
 </urlset>

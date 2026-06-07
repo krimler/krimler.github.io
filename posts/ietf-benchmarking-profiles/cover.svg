@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f3b3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="95" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#e2e8f0" font-style="italic">where does the measurement start?</text>
+  <!-- nested boundaries: engine inside gateway inside firewall inside compound -->
+  <g font-family="Georgia, serif" font-size="22">
+    <rect x="120" y="150" width="960" height="360" rx="14" fill="none" stroke="#5eead4" stroke-width="2.5" stroke-dasharray="7 7"/>
+    <text x="140" y="180" fill="#5eead4">Compound system</text>
+    <rect x="200" y="210" width="800" height="250" rx="12" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="7 7"/>
+    <text x="220" y="238" fill="#38bdf8">AI firewall</text>
+    <rect x="290" y="270" width="620" height="150" rx="10" fill="none" stroke="#818cf8" stroke-width="2.5" stroke-dasharray="7 7"/>
+    <text x="310" y="298" fill="#818cf8">AI gateway</text>
+    <rect x="400" y="320" width="400" height="70" rx="8" fill="#1e293b" stroke="#f0abfc" stroke-width="2.5"/>
+    <text x="600" y="363" text-anchor="middle" fill="#f0abfc">Model engine</text>
+  </g>
+  <text x="600" y="565" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#94a3b8" letter-spacing="3">KRIMLER · IETF BENCHMARKING PROFILES</text>
+</svg>
