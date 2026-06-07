@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Madhava Gaikwad">
-<meta name="dcterms.date" content="2025-12-21">
-<meta name="description" content="Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.">
+<meta name="dcterms.date" content="2026-01-20">
+<meta name="description" content="Modern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles.">
 
-<title>AlignDP: locking knowledge transfer at the data interface – Krimler</title>
+<title>Finite-size guarantees for dense associative memory – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -81,15 +81,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="AlignDP: locking knowledge transfer at the data interface – Krimler">
-<meta property="og:description" content="Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.">
-<meta property="og:image" content="https://krimler.github.io/posts/aligndp-rarity-privacy/cover.jpg">
+<meta property="og:title" content="Finite-size guarantees for dense associative memory – Krimler">
+<meta property="og:description" content="Modern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles.">
+<meta property="og:image" content="https://krimler.github.io/posts/dam-associative-memory/cover.jpg">
 <meta property="og:site_name" content="Krimler">
-<meta property="og:image:alt" content="Massys' The Moneylender and His Wife">
-<meta name="twitter:title" content="AlignDP: locking knowledge transfer at the data interface – Krimler">
-<meta name="twitter:description" content="Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.">
-<meta name="twitter:image" content="https://krimler.github.io/posts/aligndp-rarity-privacy/cover.jpg">
-<meta name="twitter:image:alt" content="Massys' The Moneylender and His Wife">
+<meta property="og:image:alt" content="Arcimboldo's The Librarian, a figure composed of books">
+<meta name="twitter:title" content="Finite-size guarantees for dense associative memory – Krimler">
+<meta name="twitter:description" content="Modern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles.">
+<meta name="twitter:image" content="https://krimler.github.io/posts/dam-associative-memory/cover.jpg">
+<meta name="twitter:image:alt" content="Arcimboldo's The Librarian, a figure composed of books">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -317,8 +317,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#two-kinds-of-field-need-two-kinds-of-protection" id="toc-two-kinds-of-field-need-two-kinds-of-protection" class="nav-link active" data-scroll-target="#two-kinds-of-field-need-two-kinds-of-protection">Two kinds of field need two kinds of protection</a></li>
-  <li><a href="#what-the-paper-shows" id="toc-what-the-paper-shows" class="nav-link" data-scroll-target="#what-the-paper-shows">What the paper shows</a></li>
+  <li><a href="#the-gap-in-the-theory" id="toc-the-gap-in-the-theory" class="nav-link active" data-scroll-target="#the-gap-in-the-theory">The gap in the theory</a></li>
+  <li><a href="#how-fast-recall-settles" id="toc-how-fast-recall-settles" class="nav-link" data-scroll-target="#how-fast-recall-settles">How fast recall settles</a></li>
+  <li><a href="#how-much-corruption-it-survives" id="toc-how-much-corruption-it-survives" class="nav-link" data-scroll-target="#how-much-corruption-it-survives">How much corruption it survives</a></li>
+  <li><a href="#why-it-always-settles" id="toc-why-it-always-settles" class="nav-link" data-scroll-target="#why-it-always-settles">Why it always settles</a></li>
   <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">Why it matters</a></li>
   <li><a href="#read-the-paper" id="toc-read-the-paper" class="nav-link" data-scroll-target="#read-the-paper">Read the paper</a></li>
   </ul>
@@ -330,18 +332,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AlignDP: locking knowledge transfer at the data interface</h1>
+<h1 class="title">Finite-size guarantees for dense associative memory</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">privacy</div>
-    <div class="quarto-category">differential-privacy</div>
-    <div class="quarto-category">llm</div>
-    <div class="quarto-category">security</div>
+    <div class="quarto-category">machine-learning</div>
+    <div class="quarto-category">associative-memory</div>
+    <div class="quarto-category">learning-theory</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.
+    Modern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles.
   </div>
 </div>
 
@@ -358,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 21, 2025</p>
+      <p class="date">January 20, 2026</p>
     </div>
   </div>
   
@@ -370,27 +371,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Large language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves.</p>
-<section id="two-kinds-of-field-need-two-kinds-of-protection" class="level2">
-<h2 class="anchored" data-anchor-id="two-kinds-of-field-need-two-kinds-of-protection">Two kinds of field need two kinds of protection</h2>
-<p>The key observation is that not all data is equally risky, and the right protection depends on how often a value appears.</p>
-<p>Rare fields are the dangerous ones. A value that shows up only a few times can identify its source, so it needs strong hiding. AlignDP applies PAC indistinguishability to rare fields. The practical meaning is that an observer cannot reliably tell whether a given rare value was present, so the rare information stays concealed.</p>
-<p>Common fields are different. You often want to keep useful aggregate statistics about them, such as how frequent each value is. AlignDP protects these with RAPPOR, a well-known method for local differential privacy. RAPPOR randomizes each individual report so no single response is revealing, while still allowing accurate frequency estimates once many reports are combined. The frequent values stay usable in aggregate without exposing any one contributor.</p>
-<p>A global aggregator sits over both tiers. It manages composition, meaning the way many small privacy releases add up, and it tracks the overall budget so the total exposure stays bounded.</p>
+<p>An associative memory stores a set of patterns and recalls the right one from a partial or corrupted version of it. Give it a noisy image and it returns the clean stored image it most resembles. The classic version is the Hopfield network. Dense Associative Memory, or DAM, is the modern version. It uses higher-order interactions among the stored bits, and that buys a large jump in capacity. The number of patterns it can hold grows roughly like a high power of the network size, where the power is set by the order of the interactions.</p>
+<section id="the-gap-in-the-theory" class="level2">
+<h2 class="anchored" data-anchor-id="the-gap-in-the-theory">The gap in the theory</h2>
+<p>The existing analysis of DAM studies the limit where the network is infinitely large and the stored patterns are drawn at random. That setting is clean, and it tells you the capacity scales. It does not tell you what happens in a real network of a fixed, finite size. It gives no convergence rate, so you do not know how many steps recall takes. It does not say how the memory behaves when an adversary, rather than chance, chooses the corruption. This work fills those gaps with an algorithmic analysis, meaning it studies the actual retrieval procedure step by step under conditions you can check.</p>
 </section>
-<section id="what-the-paper-shows" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-paper-shows">What the paper shows</h2>
-<p>The work establishes theoretical results for both tiers. It extends the PAC guarantee to the global aggregation step and derives error bounds for the RAPPOR estimates. Simulations match the design intent. Rare categories remain hidden, while frequent categories can be recovered with small error. The paper is explicit about the tradeoff between privacy and utility, since that tension is the heart of any differential privacy scheme.</p>
+<section id="how-fast-recall-settles" class="level2">
+<h2 class="anchored" data-anchor-id="how-fast-recall-settles">How fast recall settles</h2>
+<p>The first result is about speed. Recall in these networks runs by updating one unit at a time, which is called asynchronous updating. The paper assumes two checkable conditions. The stored patterns are well separated from each other, and the interference between them stays bounded even when the memory is heavily loaded. Under these, retrieval converges geometrically. Geometric convergence means the error shrinks by a constant fraction at every step. Once the state enters the basin of attraction, the region around a stored pattern that pulls inputs toward it, the number of steps needed to lock on grows only with the logarithm of the network size. That is fast. Doubling the network adds only a constant number of steps.</p>
+</section>
+<section id="how-much-corruption-it-survives" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-corruption-it-survives">How much corruption it survives</h2>
+<p>The second result is about robustness against a deliberate attacker. The paper states an explicit margin condition. A margin here is the safety gap between the correct pattern and its nearest competitor. The condition turns that gap into a concrete number: how many corrupted bits the memory can absorb in a single pass and still recover the right pattern. This makes robustness a quantity you can compute for a given network rather than a hope.</p>
+</section>
+<section id="why-it-always-settles" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-always-settles">Why it always settles</h2>
+<p>The third result explains why retrieval never gets stuck cycling. The paper shows that DAM retrieval is a potential game. A potential game is a system where every local update improves a single global score. Because each unit’s update can only raise that score, and the score cannot rise forever, the process must come to rest. It settles at a stable configuration, which in game terms is a pure Nash equilibrium and in memory terms is a recalled pattern. The capacity results survive this finite-size treatment, matching the classical scaling for random patterns and holding up to small logarithmic factors in the worst case.</p>
 </section>
 <section id="why-it-matters" class="level2">
 <h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
-<p>Defending a model after it has been copied is a weak position. AlignDP moves the control to the point where data enters, and it tailors the strength of protection to the risk each field carries. Strong hiding goes where identification is possible. Lighter, aggregate-preserving protection goes where only statistics matter.</p>
+<p>Dense associative memory underlies the attention mechanism in modern networks, so its guarantees are not a curiosity. Turning capacity, speed, and robustness from statements about an infinite limit into checkable conditions on a real network is what lets you reason about these systems as engineered components.</p>
 </section>
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
-<p><a href="https://arxiv.org/abs/2512.17251">AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)</a>.</p>
+<p>Algorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop. <a href="https://openreview.net/forum?id=zgHAqaIybd">OpenReview</a>.</p>
 <hr>
-<p><em>Cover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.</em></p>
+<p><em>Cover image: The Librarian, Giuseppe Arcimboldo (c.&nbsp;1566). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>

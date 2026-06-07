@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Madhava Gaikwad">
-<meta name="dcterms.date" content="2025-12-21">
-<meta name="description" content="Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.">
+<meta name="dcterms.date" content="2026-01-20">
+<meta name="description" content="Throughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads.">
 
-<title>AlignDP: locking knowledge transfer at the data interface – Krimler</title>
+<title>A common language for benchmarking LLM serving: four IETF drafts – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -81,15 +81,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="AlignDP: locking knowledge transfer at the data interface – Krimler">
-<meta property="og:description" content="Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.">
-<meta property="og:image" content="https://krimler.github.io/posts/aligndp-rarity-privacy/cover.jpg">
+<meta property="og:title" content="A common language for benchmarking LLM serving: four IETF drafts – Krimler">
+<meta property="og:description" content="Throughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads.">
+<meta property="og:image" content="https://krimler.github.io/posts/ietf-llm-benchmarking/cover.jpg">
 <meta property="og:site_name" content="Krimler">
-<meta property="og:image:alt" content="Massys' The Moneylender and His Wife">
-<meta name="twitter:title" content="AlignDP: locking knowledge transfer at the data interface – Krimler">
-<meta name="twitter:description" content="Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.">
-<meta name="twitter:image" content="https://krimler.github.io/posts/aligndp-rarity-privacy/cover.jpg">
-<meta name="twitter:image:alt" content="Massys' The Moneylender and His Wife">
+<meta property="og:image:alt" content="Bruegel's The Tower of Babel">
+<meta name="twitter:title" content="A common language for benchmarking LLM serving: four IETF drafts – Krimler">
+<meta name="twitter:description" content="Throughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads.">
+<meta name="twitter:image" content="https://krimler.github.io/posts/ietf-llm-benchmarking/cover.jpg">
+<meta name="twitter:image:alt" content="Bruegel's The Tower of Babel">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -317,10 +317,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#two-kinds-of-field-need-two-kinds-of-protection" id="toc-two-kinds-of-field-need-two-kinds-of-protection" class="nav-link active" data-scroll-target="#two-kinds-of-field-need-two-kinds-of-protection">Two kinds of field need two kinds of protection</a></li>
-  <li><a href="#what-the-paper-shows" id="toc-what-the-paper-shows" class="nav-link" data-scroll-target="#what-the-paper-shows">What the paper shows</a></li>
+  <li><a href="#the-words" id="toc-the-words" class="nav-link active" data-scroll-target="#the-words">The words</a></li>
+  <li><a href="#the-method" id="toc-the-method" class="nav-link" data-scroll-target="#the-method">The method</a></li>
+  <li><a href="#the-measurement-boundaries" id="toc-the-measurement-boundaries" class="nav-link" data-scroll-target="#the-measurement-boundaries">The measurement boundaries</a></li>
+  <li><a href="#the-workloads" id="toc-the-workloads" class="nav-link" data-scroll-target="#the-workloads">The workloads</a></li>
   <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">Why it matters</a></li>
-  <li><a href="#read-the-paper" id="toc-read-the-paper" class="nav-link" data-scroll-target="#read-the-paper">Read the paper</a></li>
   </ul>
 </nav>
     </div>
@@ -330,18 +331,18 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AlignDP: locking knowledge transfer at the data interface</h1>
+<h1 class="title">A common language for benchmarking LLM serving: four IETF drafts</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">privacy</div>
-    <div class="quarto-category">differential-privacy</div>
-    <div class="quarto-category">llm</div>
-    <div class="quarto-category">security</div>
+    <div class="quarto-category">llm-systems</div>
+    <div class="quarto-category">benchmarking</div>
+    <div class="quarto-category">ietf</div>
+    <div class="quarto-category">distributed-systems</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.
+    Throughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads.
   </div>
 </div>
 
@@ -358,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 21, 2025</p>
+      <p class="date">January 20, 2026</p>
     </div>
   </div>
   
@@ -370,27 +371,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Large language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves.</p>
-<section id="two-kinds-of-field-need-two-kinds-of-protection" class="level2">
-<h2 class="anchored" data-anchor-id="two-kinds-of-field-need-two-kinds-of-protection">Two kinds of field need two kinds of protection</h2>
-<p>The key observation is that not all data is equally risky, and the right protection depends on how often a value appears.</p>
-<p>Rare fields are the dangerous ones. A value that shows up only a few times can identify its source, so it needs strong hiding. AlignDP applies PAC indistinguishability to rare fields. The practical meaning is that an observer cannot reliably tell whether a given rare value was present, so the rare information stays concealed.</p>
-<p>Common fields are different. You often want to keep useful aggregate statistics about them, such as how frequent each value is. AlignDP protects these with RAPPOR, a well-known method for local differential privacy. RAPPOR randomizes each individual report so no single response is revealing, while still allowing accurate frequency estimates once many reports are combined. The frequent values stay usable in aggregate without exposing any one contributor.</p>
-<p>A global aggregator sits over both tiers. It manages composition, meaning the way many small privacy releases add up, and it tracks the overall budget so the total exposure stays bounded.</p>
+<p>When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.</p>
+<section id="the-words" class="level2">
+<h2 class="anchored" data-anchor-id="the-words">The words</h2>
+<p>The first draft is a terminology document. It defines a shared vocabulary for LLM serving performance, covering latency, throughput, resource use, and quality. It gives precise definitions for a large set of metrics. These include time to first token, the delay before the first output appears, and inter-token latency, the gap between successive output tokens. It separates the two phases of generation, prefill where the prompt is processed and decode where tokens are produced. It covers throughput, latency percentiles and jitter, multi-tenant concerns such as fairness and head-of-line blocking, optimizations such as prefix caching and speculative decoding, compound systems such as retrieval-augmented generation and agents, and quality signals such as policy violations and false refusals. It defines terms only. It prescribes no method and sets no pass-or-fail thresholds.</p>
+<p>See the <a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/">Terminology draft</a>.</p>
 </section>
-<section id="what-the-paper-shows" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-paper-shows">What the paper shows</h2>
-<p>The work establishes theoretical results for both tiers. It extends the PAC guarantee to the global aggregation step and derives error bounds for the RAPPOR estimates. Simulations match the design intent. Rare categories remain hidden, while frequent categories can be recovered with small error. The paper is explicit about the tradeoff between privacy and utility, since that tension is the heart of any differential privacy scheme.</p>
+<section id="the-method" class="level2">
+<h2 class="anchored" data-anchor-id="the-method">The method</h2>
+<p>The second draft is a methodology. It says how to run the tests, set up the parameters, take the measurements, and report the results. It defines three system boundaries to test at: the model engine, the application gateway, and the full compound system. It defines reference workloads, including uniform and skewed synthetic traffic, conversation, code completion, and long context. It defines ten tests, among them time to first token, output token throughput, the throughput-and-latency tradeoff, the distribution of inter-token latency, concurrent request capacity, scheduling fairness, prefix cache effectiveness, behavior under memory pressure, long-context scaling, and the overhead added by guardrails. The goal is reproducible and fair comparison that accounts for streaming output, dynamic batching, and the cost of safety systems.</p>
+<p>See the <a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/">Methodology draft</a>.</p>
+</section>
+<section id="the-measurement-boundaries" class="level2">
+<h2 class="anchored" data-anchor-id="the-measurement-boundaries">The measurement boundaries</h2>
+<p>The third draft defines profiles. A profile binds the terms and the procedures to a concrete role in the system and a concrete workload pattern, and it declares exactly where the measurement starts and stops. This matters because a metric like time to first token changes depending on whether you include the gateway, the firewall, and the network. Without a declared boundary the numbers are not comparable. The draft defines infrastructure profiles for the model engine, the AI gateway, the AI firewall, and the compound system, along with workload profiles for a chatbot and a compound workflow. It specifies profiles only, not new metrics or thresholds.</p>
+<p>See the <a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/">Profiles draft</a>.</p>
+</section>
+<section id="the-workloads" class="level2">
+<h2 class="anchored" data-anchor-id="the-workloads">The workloads</h2>
+<p>The fourth draft defines the workloads themselves. It gives 25 standard workload profiles organized into six groups, so that everyone tests against the same representative tasks. The groups run from non-generative work such as embeddings, reranking, and scoring, through minimal-output tasks such as classification and function calling, interactive streaming such as chat and code completion, prefill-heavy tasks such as summarization and document question answering, decode-heavy tasks such as content generation and reasoning, and multi-step agentic workflows. Each profile is described along five dimensions: the ratio of input to output, the constraints on the output, the latency sensitivity, the concurrency pattern, and how much of the prompt prefix is shared across requests.</p>
+<p>See the <a href="https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/">Serving Workload Profiles draft</a>.</p>
 </section>
 <section id="why-it-matters" class="level2">
 <h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
-<p>Defending a model after it has been copied is a weak position. AlignDP moves the control to the point where data enters, and it tailors the strength of protection to the risk each field carries. Strong hiding goes where identification is possible. Lighter, aggregate-preserving protection goes where only statistics matter.</p>
-</section>
-<section id="read-the-paper" class="level2">
-<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
-<p><a href="https://arxiv.org/abs/2512.17251">AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)</a>.</p>
+<p>Benchmarks only mean something when everyone measures the same thing the same way. These four drafts supply the missing pieces in order. The vocabulary removes ambiguity in the terms. The methodology makes a run reproducible. The profiles declare what was and was not included in a measurement. The workloads make sure systems are compared on representative tasks. Together they make LLM serving numbers something you can actually trust when you compare them.</p>
 <hr>
-<p><em>Cover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.</em></p>
+<p><em>Cover image: The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>

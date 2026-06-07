@@ -74,6 +74,8 @@ Järviniemi, Olli. 2022. <span>“Positive Lower Density for Prime Divisors of G
 Lagarias, Jeffrey C. 1985. <span>“The Set of Primes Dividing the Lucas Numbers Has Density 2/3.”</span> <em>Pacific Journal of Mathematics</em> 118 (2): 449–61.
 </div>
 </div>
+<hr>
+<p><em>Cover image: The Great Wave off Kanagawa, Katsushika Hokusai (c.&nbsp;1831). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -85,6 +87,7 @@ Lagarias, Jeffrey C. 1985. <span>“The Set of Primes Dividing the Lucas Numbers
   <category>reproducibility</category>
   <guid>https://krimler.github.io/posts/fibonacci-prime-statistics/</guid>
   <pubDate>Sat, 06 Jun 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/fibonacci-prime-statistics/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>AEGIS: typed evidence and obligations for AI-native enterprise architecture</title>
@@ -146,6 +149,8 @@ Lagarias, Jeffrey C. 1985. <span>“The Set of Primes Dividing the Lucas Numbers
 European Parliament and Council of the European Union. 2024. <em>Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act)</em>. Official Journal of the European Union, L 2024/1689.
 </div>
 </div>
+<hr>
+<p><em>Cover image: Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -157,6 +162,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <category>security</category>
   <guid>https://krimler.github.io/posts/aegis-evidence-obligation/</guid>
   <pubDate>Wed, 08 Apr 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/aegis-evidence-obligation/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Did you check the right pocket? Routing retrieval across an agent’s memory</title>
@@ -185,6 +191,8 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2603.15658">Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)</a>.</p>
+<hr>
+<p><em>Cover image: Cabinet of Curiosities, Domenico Remps (c.&nbsp;1690). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -196,6 +204,104 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <category>ml-systems</category>
   <guid>https://krimler.github.io/posts/memory-store-routing/</guid>
   <pubDate>Wed, 18 Mar 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/memory-store-routing/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Finite-size guarantees for dense associative memory</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/dam-associative-memory/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>An associative memory stores a set of patterns and recalls the right one from a partial or corrupted version of it. Give it a noisy image and it returns the clean stored image it most resembles. The classic version is the Hopfield network. Dense Associative Memory, or DAM, is the modern version. It uses higher-order interactions among the stored bits, and that buys a large jump in capacity. The number of patterns it can hold grows roughly like a high power of the network size, where the power is set by the order of the interactions.</p>
+<section id="the-gap-in-the-theory" class="level2">
+<h2 class="anchored" data-anchor-id="the-gap-in-the-theory">The gap in the theory</h2>
+<p>The existing analysis of DAM studies the limit where the network is infinitely large and the stored patterns are drawn at random. That setting is clean, and it tells you the capacity scales. It does not tell you what happens in a real network of a fixed, finite size. It gives no convergence rate, so you do not know how many steps recall takes. It does not say how the memory behaves when an adversary, rather than chance, chooses the corruption. This work fills those gaps with an algorithmic analysis, meaning it studies the actual retrieval procedure step by step under conditions you can check.</p>
+</section>
+<section id="how-fast-recall-settles" class="level2">
+<h2 class="anchored" data-anchor-id="how-fast-recall-settles">How fast recall settles</h2>
+<p>The first result is about speed. Recall in these networks runs by updating one unit at a time, which is called asynchronous updating. The paper assumes two checkable conditions. The stored patterns are well separated from each other, and the interference between them stays bounded even when the memory is heavily loaded. Under these, retrieval converges geometrically. Geometric convergence means the error shrinks by a constant fraction at every step. Once the state enters the basin of attraction, the region around a stored pattern that pulls inputs toward it, the number of steps needed to lock on grows only with the logarithm of the network size. That is fast. Doubling the network adds only a constant number of steps.</p>
+</section>
+<section id="how-much-corruption-it-survives" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-corruption-it-survives">How much corruption it survives</h2>
+<p>The second result is about robustness against a deliberate attacker. The paper states an explicit margin condition. A margin here is the safety gap between the correct pattern and its nearest competitor. The condition turns that gap into a concrete number: how many corrupted bits the memory can absorb in a single pass and still recover the right pattern. This makes robustness a quantity you can compute for a given network rather than a hope.</p>
+</section>
+<section id="why-it-always-settles" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-always-settles">Why it always settles</h2>
+<p>The third result explains why retrieval never gets stuck cycling. The paper shows that DAM retrieval is a potential game. A potential game is a system where every local update improves a single global score. Because each unit’s update can only raise that score, and the score cannot rise forever, the process must come to rest. It settles at a stable configuration, which in game terms is a pure Nash equilibrium and in memory terms is a recalled pattern. The capacity results survive this finite-size treatment, matching the classical scaling for random patterns and holding up to small logarithmic factors in the worst case.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Dense associative memory underlies the attention mechanism in modern networks, so its guarantees are not a curiosity. Turning capacity, speed, and robustness from statements about an infinite limit into checkable conditions on a real network is what lets you reason about these systems as engineered components.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p>Algorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop. <a href="https://openreview.net/forum?id=zgHAqaIybd">OpenReview</a>.</p>
+<hr>
+<p><em>Cover image: The Librarian, Giuseppe Arcimboldo (c.&nbsp;1566). Public domain, via Wikimedia Commons.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>associative-memory</category>
+  <category>learning-theory</category>
+  <guid>https://krimler.github.io/posts/dam-associative-memory/</guid>
+  <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/dam-associative-memory/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>A common language for benchmarking LLM serving: four IETF drafts</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/ietf-llm-benchmarking/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.</p>
+<section id="the-words" class="level2">
+<h2 class="anchored" data-anchor-id="the-words">The words</h2>
+<p>The first draft is a terminology document. It defines a shared vocabulary for LLM serving performance, covering latency, throughput, resource use, and quality. It gives precise definitions for a large set of metrics. These include time to first token, the delay before the first output appears, and inter-token latency, the gap between successive output tokens. It separates the two phases of generation, prefill where the prompt is processed and decode where tokens are produced. It covers throughput, latency percentiles and jitter, multi-tenant concerns such as fairness and head-of-line blocking, optimizations such as prefix caching and speculative decoding, compound systems such as retrieval-augmented generation and agents, and quality signals such as policy violations and false refusals. It defines terms only. It prescribes no method and sets no pass-or-fail thresholds.</p>
+<p>See the <a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/">Terminology draft</a>.</p>
+</section>
+<section id="the-method" class="level2">
+<h2 class="anchored" data-anchor-id="the-method">The method</h2>
+<p>The second draft is a methodology. It says how to run the tests, set up the parameters, take the measurements, and report the results. It defines three system boundaries to test at: the model engine, the application gateway, and the full compound system. It defines reference workloads, including uniform and skewed synthetic traffic, conversation, code completion, and long context. It defines ten tests, among them time to first token, output token throughput, the throughput-and-latency tradeoff, the distribution of inter-token latency, concurrent request capacity, scheduling fairness, prefix cache effectiveness, behavior under memory pressure, long-context scaling, and the overhead added by guardrails. The goal is reproducible and fair comparison that accounts for streaming output, dynamic batching, and the cost of safety systems.</p>
+<p>See the <a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/">Methodology draft</a>.</p>
+</section>
+<section id="the-measurement-boundaries" class="level2">
+<h2 class="anchored" data-anchor-id="the-measurement-boundaries">The measurement boundaries</h2>
+<p>The third draft defines profiles. A profile binds the terms and the procedures to a concrete role in the system and a concrete workload pattern, and it declares exactly where the measurement starts and stops. This matters because a metric like time to first token changes depending on whether you include the gateway, the firewall, and the network. Without a declared boundary the numbers are not comparable. The draft defines infrastructure profiles for the model engine, the AI gateway, the AI firewall, and the compound system, along with workload profiles for a chatbot and a compound workflow. It specifies profiles only, not new metrics or thresholds.</p>
+<p>See the <a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/">Profiles draft</a>.</p>
+</section>
+<section id="the-workloads" class="level2">
+<h2 class="anchored" data-anchor-id="the-workloads">The workloads</h2>
+<p>The fourth draft defines the workloads themselves. It gives 25 standard workload profiles organized into six groups, so that everyone tests against the same representative tasks. The groups run from non-generative work such as embeddings, reranking, and scoring, through minimal-output tasks such as classification and function calling, interactive streaming such as chat and code completion, prefill-heavy tasks such as summarization and document question answering, decode-heavy tasks such as content generation and reasoning, and multi-step agentic workflows. Each profile is described along five dimensions: the ratio of input to output, the constraints on the output, the latency sensitivity, the concurrency pattern, and how much of the prompt prefix is shared across requests.</p>
+<p>See the <a href="https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/">Serving Workload Profiles draft</a>.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Benchmarks only mean something when everyone measures the same thing the same way. These four drafts supply the missing pieces in order. The vocabulary removes ambiguity in the terms. The methodology makes a run reproducible. The profiles declare what was and was not included in a measurement. The workloads make sure systems are compared on representative tasks. Together they make LLM serving numbers something you can actually trust when you compare them.</p>
+<hr>
+<p><em>Cover image: The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>llm-systems</category>
+  <category>benchmarking</category>
+  <category>ietf</category>
+  <category>distributed-systems</category>
+  <guid>https://krimler.github.io/posts/ietf-llm-benchmarking/</guid>
+  <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/ietf-llm-benchmarking/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>AlignDP: locking knowledge transfer at the data interface</title>
@@ -226,6 +332,8 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2512.17251">AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)</a>.</p>
+<hr>
+<p><em>Cover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -237,6 +345,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <category>security</category>
   <guid>https://krimler.github.io/posts/aligndp-rarity-privacy/</guid>
   <pubDate>Sat, 20 Dec 2025 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/aligndp-rarity-privacy/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Enforcing privacy at the edge for local language models: AVEC</title>
@@ -266,6 +375,8 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2509.10561">AVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)</a>.</p>
+<hr>
+<p><em>Cover image: Woman Reading a Letter, Johannes Vermeer (c.&nbsp;1663). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -277,6 +388,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <category>edge</category>
   <guid>https://krimler.github.io/posts/avec-edge-privacy/</guid>
   <pubDate>Fri, 12 Sep 2025 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/avec-edge-privacy/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>When are two RLHF objectives the same? A canonical form for preference losses</title>
@@ -315,6 +427,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <category>preference-optimization</category>
   <guid>https://krimler.github.io/posts/opal-rlhf-equivalence/</guid>
   <pubDate>Wed, 10 Sep 2025 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>Why the alignment gap always wins, unless you know where to look</title>
@@ -349,6 +462,8 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2509.05381">Murphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)</a>.</p>
+<hr>
+<p><em>Cover image: Landscape with the Fall of Icarus, after Pieter Bruegel the Elder (16th century). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -359,6 +474,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <category>learning-theory</category>
   <guid>https://krimler.github.io/posts/murphy-alignment-gap/</guid>
   <pubDate>Thu, 04 Sep 2025 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/murphy-alignment-gap/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Scoring a datacenter fleet by the risk of what happens next</title>
@@ -390,6 +506,8 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2508.16119">ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)</a>.</p>
+<hr>
+<p><em>Cover image: Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -400,6 +518,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <category>sre</category>
   <guid>https://krimler.github.io/posts/ansc-capacity-health/</guid>
   <pubDate>Thu, 21 Aug 2025 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/ansc-capacity-health/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Treating alignment as something you can measure and reduce: NPO</title>
@@ -433,6 +552,8 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2507.21131">NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)</a>.</p>
+<hr>
+<p><em>Cover image: The Geographer, Johannes Vermeer (c.&nbsp;1668). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -443,6 +564,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <category>ml-systems</category>
   <guid>https://krimler.github.io/posts/npo-meta-alignment/</guid>
   <pubDate>Sun, 27 Jul 2025 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/npo-meta-alignment/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

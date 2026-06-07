@@ -46,7 +46,7 @@
     "href": "index.html",
     "title": "Krimler",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCounting Fibonacci primes: what a finite computation can and cannot add\n\n\n\nnumber-theory\n\nprimes\n\nstatistics\n\nreproducibility\n\n\n\nTreating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAEGIS: typed evidence and obligations for AI-native enterprise architecture\n\n\n\nai-governance\n\nenterprise-architecture\n\nontology\n\nsecurity\n\n\n\nWhy static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.\n\n\n\n\n\nApr 9, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDid you check the right pocket? Routing retrieval across an agent’s memory\n\n\n\nllm-agents\n\nretrieval\n\nmemory\n\nml-systems\n\n\n\nMemory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers.\n\n\n\n\n\nMar 19, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAlignDP: locking knowledge transfer at the data interface\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nsecurity\n\n\n\nWatermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.\n\n\n\n\n\nDec 21, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nEnforcing privacy at the edge for local language models: AVEC\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nedge\n\n\n\nA local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee.\n\n\n\n\n\nSep 13, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhen are two RLHF objectives the same? A canonical form for preference losses\n\n\n\nai-alignment\n\nrlhf\n\npreference-optimization\n\n\n\nThe preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.\n\n\n\n\n\nSep 11, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhy the alignment gap always wins, unless you know where to look\n\n\n\nai-alignment\n\nrlhf\n\nlearning-theory\n\n\n\nWhen human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.\n\n\n\n\n\nSep 5, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nScoring a datacenter fleet by the risk of what happens next\n\n\n\ndistributed-systems\n\nreliability\n\nsre\n\n\n\nAlerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact.\n\n\n\n\n\nAug 22, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTreating alignment as something you can measure and reduce: NPO\n\n\n\nai-alignment\n\nrlhf\n\nml-systems\n\n\n\nMost pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback.\n\n\n\n\n\nJul 28, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCounting Fibonacci primes: what a finite computation can and cannot add\n\n\n\nnumber-theory\n\nprimes\n\nstatistics\n\nreproducibility\n\n\n\nTreating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAEGIS: typed evidence and obligations for AI-native enterprise architecture\n\n\n\nai-governance\n\nenterprise-architecture\n\nontology\n\nsecurity\n\n\n\nWhy static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.\n\n\n\n\n\nApr 9, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDid you check the right pocket? Routing retrieval across an agent’s memory\n\n\n\nllm-agents\n\nretrieval\n\nmemory\n\nml-systems\n\n\n\nMemory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers.\n\n\n\n\n\nMar 19, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nFinite-size guarantees for dense associative memory\n\n\n\nmachine-learning\n\nassociative-memory\n\nlearning-theory\n\n\n\nModern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nA common language for benchmarking LLM serving: four IETF drafts\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\ndistributed-systems\n\n\n\nThroughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAlignDP: locking knowledge transfer at the data interface\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nsecurity\n\n\n\nWatermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.\n\n\n\n\n\nDec 21, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nEnforcing privacy at the edge for local language models: AVEC\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nedge\n\n\n\nA local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee.\n\n\n\n\n\nSep 13, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhen are two RLHF objectives the same? A canonical form for preference losses\n\n\n\nai-alignment\n\nrlhf\n\npreference-optimization\n\n\n\nThe preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.\n\n\n\n\n\nSep 11, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhy the alignment gap always wins, unless you know where to look\n\n\n\nai-alignment\n\nrlhf\n\nlearning-theory\n\n\n\nWhen human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.\n\n\n\n\n\nSep 5, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nScoring a datacenter fleet by the risk of what happens next\n\n\n\ndistributed-systems\n\nreliability\n\nsre\n\n\n\nAlerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact.\n\n\n\n\n\nAug 22, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTreating alignment as something you can measure and reduce: NPO\n\n\n\nai-alignment\n\nrlhf\n\nml-systems\n\n\n\nMost pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback.\n\n\n\n\n\nJul 28, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "papers/fibonacci-primes.html",
@@ -116,7 +116,7 @@
     "href": "posts/fibonacci-prime-statistics/index.html#references",
     "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
     "section": "References",
-    "text": "References\n\n\nCubre, Paul, and Jeremy Rouse. 2014. “Divisibility Properties of the Fibonacci Entry Point.” Proceedings of the American Mathematical Society 142 (11): 3771–85. https://arxiv.org/abs/1212.6221.\n\n\nGrantham, Jon, and Andrew Granville. 2024. Fibonacci Primes, Primes of the Form 2^n-k, and Beyond. https://arxiv.org/abs/2307.07894.\n\n\nJärviniemi, Olli. 2022. “Positive Lower Density for Prime Divisors of Generic Linear Recurrences.” Mathematical Proceedings of the Cambridge Philosophical Society. https://arxiv.org/abs/2102.04042.\n\n\nLagarias, Jeffrey C. 1985. “The Set of Primes Dividing the Lucas Numbers Has Density 2/3.” Pacific Journal of Mathematics 118 (2): 449–61."
+    "text": "References\n\n\nCubre, Paul, and Jeremy Rouse. 2014. “Divisibility Properties of the Fibonacci Entry Point.” Proceedings of the American Mathematical Society 142 (11): 3771–85. https://arxiv.org/abs/1212.6221.\n\n\nGrantham, Jon, and Andrew Granville. 2024. Fibonacci Primes, Primes of the Form 2^n-k, and Beyond. https://arxiv.org/abs/2307.07894.\n\n\nJärviniemi, Olli. 2022. “Positive Lower Density for Prime Divisors of Generic Linear Recurrences.” Mathematical Proceedings of the Cambridge Philosophical Society. https://arxiv.org/abs/2102.04042.\n\n\nLagarias, Jeffrey C. 1985. “The Set of Primes Dividing the Lucas Numbers Has Density 2/3.” Pacific Journal of Mathematics 118 (2): 449–61.\n\n\n\nCover image: The Great Wave off Kanagawa, Katsushika Hokusai (c. 1831). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "posts/aligndp-rarity-privacy/index.html",
@@ -151,7 +151,7 @@
     "href": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
     "title": "AlignDP: locking knowledge transfer at the data interface",
     "section": "Read the paper",
-    "text": "Read the paper\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)."
+    "text": "Read the paper\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251).\n\nCover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "posts/npo-meta-alignment/index.html",
@@ -193,7 +193,49 @@
     "href": "posts/npo-meta-alignment/index.html#read-the-paper",
     "title": "Treating alignment as something you can measure and reduce: NPO",
     "section": "Read the paper",
-    "text": "Read the paper\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)."
+    "text": "Read the paper\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131).\n\nCover image: The Geographer, Johannes Vermeer (c. 1668). Public domain, via Wikimedia Commons."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html",
+    "href": "posts/ietf-llm-benchmarking/index.html",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "",
+    "text": "When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#the-words",
+    "href": "posts/ietf-llm-benchmarking/index.html#the-words",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "The words",
+    "text": "The words\nThe first draft is a terminology document. It defines a shared vocabulary for LLM serving performance, covering latency, throughput, resource use, and quality. It gives precise definitions for a large set of metrics. These include time to first token, the delay before the first output appears, and inter-token latency, the gap between successive output tokens. It separates the two phases of generation, prefill where the prompt is processed and decode where tokens are produced. It covers throughput, latency percentiles and jitter, multi-tenant concerns such as fairness and head-of-line blocking, optimizations such as prefix caching and speculative decoding, compound systems such as retrieval-augmented generation and agents, and quality signals such as policy violations and false refusals. It defines terms only. It prescribes no method and sets no pass-or-fail thresholds.\nSee the Terminology draft."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#the-method",
+    "href": "posts/ietf-llm-benchmarking/index.html#the-method",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "The method",
+    "text": "The method\nThe second draft is a methodology. It says how to run the tests, set up the parameters, take the measurements, and report the results. It defines three system boundaries to test at: the model engine, the application gateway, and the full compound system. It defines reference workloads, including uniform and skewed synthetic traffic, conversation, code completion, and long context. It defines ten tests, among them time to first token, output token throughput, the throughput-and-latency tradeoff, the distribution of inter-token latency, concurrent request capacity, scheduling fairness, prefix cache effectiveness, behavior under memory pressure, long-context scaling, and the overhead added by guardrails. The goal is reproducible and fair comparison that accounts for streaming output, dynamic batching, and the cost of safety systems.\nSee the Methodology draft."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#the-measurement-boundaries",
+    "href": "posts/ietf-llm-benchmarking/index.html#the-measurement-boundaries",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "The measurement boundaries",
+    "text": "The measurement boundaries\nThe third draft defines profiles. A profile binds the terms and the procedures to a concrete role in the system and a concrete workload pattern, and it declares exactly where the measurement starts and stops. This matters because a metric like time to first token changes depending on whether you include the gateway, the firewall, and the network. Without a declared boundary the numbers are not comparable. The draft defines infrastructure profiles for the model engine, the AI gateway, the AI firewall, and the compound system, along with workload profiles for a chatbot and a compound workflow. It specifies profiles only, not new metrics or thresholds.\nSee the Profiles draft."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#the-workloads",
+    "href": "posts/ietf-llm-benchmarking/index.html#the-workloads",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "The workloads",
+    "text": "The workloads\nThe fourth draft defines the workloads themselves. It gives 25 standard workload profiles organized into six groups, so that everyone tests against the same representative tasks. The groups run from non-generative work such as embeddings, reranking, and scoring, through minimal-output tasks such as classification and function calling, interactive streaming such as chat and code completion, prefill-heavy tasks such as summarization and document question answering, decode-heavy tasks such as content generation and reasoning, and multi-step agentic workflows. Each profile is described along five dimensions: the ratio of input to output, the constraints on the output, the latency sensitivity, the concurrency pattern, and how much of the prompt prefix is shared across requests.\nSee the Serving Workload Profiles draft."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#why-it-matters",
+    "href": "posts/ietf-llm-benchmarking/index.html#why-it-matters",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "Why it matters",
+    "text": "Why it matters\nBenchmarks only mean something when everyone measures the same thing the same way. These four drafts supply the missing pieces in order. The vocabulary removes ambiguity in the terms. The methodology makes a run reproducible. The profiles declare what was and was not included in a measurement. The workloads make sure systems are compared on representative tasks. Together they make LLM serving numbers something you can actually trust when you compare them.\n\nCover image: The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "posts/ansc-capacity-health/index.html",
@@ -235,7 +277,7 @@
     "href": "posts/ansc-capacity-health/index.html#read-the-paper",
     "title": "Scoring a datacenter fleet by the risk of what happens next",
     "section": "Read the paper",
-    "text": "Read the paper\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)."
+    "text": "Read the paper\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119).\n\nCover image: Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "posts/murphy-alignment-gap/index.html",
@@ -277,7 +319,7 @@
     "href": "posts/murphy-alignment-gap/index.html#read-the-paper",
     "title": "Why the alignment gap always wins, unless you know where to look",
     "section": "Read the paper",
-    "text": "Read the paper\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)."
+    "text": "Read the paper\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381).\n\nCover image: Landscape with the Fall of Icarus, after Pieter Bruegel the Elder (16th century). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "posts/aegis-evidence-obligation/index.html",
@@ -333,7 +375,56 @@
     "href": "posts/aegis-evidence-obligation/index.html#references",
     "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
     "section": "References",
-    "text": "References\n\n\nEuropean Parliament and Council of the European Union. 2024. Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act). Official Journal of the European Union, L 2024/1689."
+    "text": "References\n\n\nEuropean Parliament and Council of the European Union. 2024. Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act). Official Journal of the European Union, L 2024/1689.\n\n\n\nCover image: Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html",
+    "href": "posts/dam-associative-memory/index.html",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "",
+    "text": "An associative memory stores a set of patterns and recalls the right one from a partial or corrupted version of it. Give it a noisy image and it returns the clean stored image it most resembles. The classic version is the Hopfield network. Dense Associative Memory, or DAM, is the modern version. It uses higher-order interactions among the stored bits, and that buys a large jump in capacity. The number of patterns it can hold grows roughly like a high power of the network size, where the power is set by the order of the interactions."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#the-gap-in-the-theory",
+    "href": "posts/dam-associative-memory/index.html#the-gap-in-the-theory",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "The gap in the theory",
+    "text": "The gap in the theory\nThe existing analysis of DAM studies the limit where the network is infinitely large and the stored patterns are drawn at random. That setting is clean, and it tells you the capacity scales. It does not tell you what happens in a real network of a fixed, finite size. It gives no convergence rate, so you do not know how many steps recall takes. It does not say how the memory behaves when an adversary, rather than chance, chooses the corruption. This work fills those gaps with an algorithmic analysis, meaning it studies the actual retrieval procedure step by step under conditions you can check."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#how-fast-recall-settles",
+    "href": "posts/dam-associative-memory/index.html#how-fast-recall-settles",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "How fast recall settles",
+    "text": "How fast recall settles\nThe first result is about speed. Recall in these networks runs by updating one unit at a time, which is called asynchronous updating. The paper assumes two checkable conditions. The stored patterns are well separated from each other, and the interference between them stays bounded even when the memory is heavily loaded. Under these, retrieval converges geometrically. Geometric convergence means the error shrinks by a constant fraction at every step. Once the state enters the basin of attraction, the region around a stored pattern that pulls inputs toward it, the number of steps needed to lock on grows only with the logarithm of the network size. That is fast. Doubling the network adds only a constant number of steps."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#how-much-corruption-it-survives",
+    "href": "posts/dam-associative-memory/index.html#how-much-corruption-it-survives",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "How much corruption it survives",
+    "text": "How much corruption it survives\nThe second result is about robustness against a deliberate attacker. The paper states an explicit margin condition. A margin here is the safety gap between the correct pattern and its nearest competitor. The condition turns that gap into a concrete number: how many corrupted bits the memory can absorb in a single pass and still recover the right pattern. This makes robustness a quantity you can compute for a given network rather than a hope."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#why-it-always-settles",
+    "href": "posts/dam-associative-memory/index.html#why-it-always-settles",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "Why it always settles",
+    "text": "Why it always settles\nThe third result explains why retrieval never gets stuck cycling. The paper shows that DAM retrieval is a potential game. A potential game is a system where every local update improves a single global score. Because each unit’s update can only raise that score, and the score cannot rise forever, the process must come to rest. It settles at a stable configuration, which in game terms is a pure Nash equilibrium and in memory terms is a recalled pattern. The capacity results survive this finite-size treatment, matching the classical scaling for random patterns and holding up to small logarithmic factors in the worst case."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#why-it-matters",
+    "href": "posts/dam-associative-memory/index.html#why-it-matters",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "Why it matters",
+    "text": "Why it matters\nDense associative memory underlies the attention mechanism in modern networks, so its guarantees are not a curiosity. Turning capacity, speed, and robustness from statements about an infinite limit into checkable conditions on a real network is what lets you reason about these systems as engineered components."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#read-the-paper",
+    "href": "posts/dam-associative-memory/index.html#read-the-paper",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "Read the paper",
+    "text": "Read the paper\nAlgorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop. OpenReview.\n\nCover image: The Librarian, Giuseppe Arcimboldo (c. 1566). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "posts/memory-store-routing/index.html",
@@ -368,7 +459,7 @@
     "href": "posts/memory-store-routing/index.html#read-the-paper",
     "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
     "section": "Read the paper",
-    "text": "Read the paper\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)."
+    "text": "Read the paper\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658).\n\nCover image: Cabinet of Curiosities, Domenico Remps (c. 1690). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "posts/avec-edge-privacy/index.html",
@@ -403,7 +494,7 @@
     "href": "posts/avec-edge-privacy/index.html#read-the-paper",
     "title": "Enforcing privacy at the edge for local language models: AVEC",
     "section": "Read the paper",
-    "text": "Read the paper\nAVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)."
+    "text": "Read the paper\nAVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561).\n\nCover image: Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons."
   },
   {
     "objectID": "posts/opal-rlhf-equivalence/index.html",
