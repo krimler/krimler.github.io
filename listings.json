@@ -2,11 +2,15 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/welcome/index.html"
+      "/posts/fibonacci-prime-statistics/index.html",
+      "/posts/aegis-evidence-obligation/index.html"
     ]
   },
   {
     "listing": "/papers/index.html",
-    "items": []
+    "items": [
+      "/papers/fibonacci-primes.html",
+      "/papers/aegis.html"
+    ]
   }
 ]

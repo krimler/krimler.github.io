@@ -12,9 +12,9 @@
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Sat, 06 Jun 2026 18:30:00 GMT</lastBuildDate>
 <item>
-  <title>Hello, world — a feature tour</title>
-  <dc:creator>Krimler </dc:creator>
-  <link>https://krimler.github.io/posts/welcome/</link>
+  <title>Counting Fibonacci primes: what a finite computation can and cannot add</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/fibonacci-prime-statistics/</link>
   <description><![CDATA[ 
 
 
@@ -22,67 +22,58 @@
 
 
 
-<p>Welcome. This post exists to show every building block you’ll reuse.</p>
-<section id="math" class="level2">
-<h2 class="anchored" data-anchor-id="math">Math</h2>
-<p>Inline math like <img src="https://latex.codecogs.com/png.latex?e%5E%7Bi%5Cpi%7D%20+%201%20=%200"> works, and so do display equations:</p>
-<p><span id="eq-gradient"><img src="https://latex.codecogs.com/png.latex?%0A%5Cnabla_%5Ctheta%20%5C,%20%5Cmathcal%7BL%7D(%5Ctheta)%20=%20%5Cmathbb%7BE%7D_%7Bx%20%5Csim%20%5Cmathcal%7BD%7D%7D%5C!%5Cleft%5B%20%5Cnabla_%5Ctheta%20%5C,%20%5Cell(f_%5Ctheta(x),%20y)%20%5Cright%5D%0A%5Ctag%7B1%7D"></span></p>
-<p>You can cross-reference it: see Equation&nbsp;1.</p>
+<p>A Fibonacci prime is a Fibonacci number <img src="https://latex.codecogs.com/png.latex?F_n"> that is prime. As of June 2025 there are 57 known indices <img src="https://latex.codecogs.com/png.latex?n"> for which <img src="https://latex.codecogs.com/png.latex?F_n"> is prime or probably prime. They range from <img src="https://latex.codecogs.com/png.latex?F_3"> up to <img src="https://latex.codecogs.com/png.latex?F_%7B11964299%7D">. The largest one proven prime is <img src="https://latex.codecogs.com/png.latex?F_%7B201107%7D">. The rest are probable primes. They pass a Miller-Rabin test and have not been certified. Whether there are infinitely many Fibonacci primes is open. No pattern is known beyond a density heuristic.</p>
+<p>This study treats the 57 indices as a dataset. It asks whether any visible structure survives scrutiny, and where such structure lives. The mathematics behind the question is already established in the literature. The contribution is a method. It adds an uncertainty-quantified prediction layer, a null-model battery that separates real structure from sampling noise, and a fully cited reproduction. All computations run from released Python scripts at <a href="https://github.com/krimler/k-bonacci">github.com/krimler/k-bonacci</a>.</p>
+<section id="the-density-heuristic" class="level2">
+<h2 class="anchored" data-anchor-id="the-density-heuristic">The density heuristic</h2>
+<p>Start with the count. A random integer of the size of <img src="https://latex.codecogs.com/png.latex?F_p%20%5Csim%20%5Cvarphi%5Ep/%5Csqrt5"> is prime with probability about <img src="https://latex.codecogs.com/png.latex?1/%5Clog%20F_p%20%5Capprox%201/(p%5Clog%5Cvarphi)">. The Fibonacci numbers form a divisibility sequence, so <img src="https://latex.codecogs.com/png.latex?F_m%20%5Cmid%20F_n"> exactly when <img src="https://latex.codecogs.com/png.latex?m%20%5Cmid%20n"> for <img src="https://latex.codecogs.com/png.latex?m%20%3E%202">. A prime <img src="https://latex.codecogs.com/png.latex?F_p"> with <img src="https://latex.codecogs.com/png.latex?p%20%3E%204"> therefore forces <img src="https://latex.codecogs.com/png.latex?p"> prime. Summing the prime probability over primes and applying Mertens’ theorem injects a factor <img src="https://latex.codecogs.com/png.latex?e%5E%7B%5Cgamma%7D">, where <img src="https://latex.codecogs.com/png.latex?%5Cgamma"> is the Euler-Mascheroni constant. Grantham and Granville conjecture <span class="citation" data-cites="grantham2024fibonacci">(Grantham and Granville 2024)</span></p>
+<p><span id="eq-count"><img src="https://latex.codecogs.com/png.latex?%0A%5C#%5C%7B%5C,%20n%20%5Cle%20N%20:%20F_n%20%5Ctext%7B%20prime%7D%20%5C,%5C%7D%20%5C;%5Csim%5C;%20e%5E%7B%5Cgamma%7D%5C,%5Clog_%7B%5Cvarphi%7D%20N.%0A%5Ctag%7B1%7D"></span></p>
+<p>At <img src="https://latex.codecogs.com/png.latex?N%20=%201.2%5Ctimes10%5E%7B7%7D"> the heuristic predicts about 60.3 indices. The observed count is 57.</p>
+<p>A naive maximum-likelihood estimate of the leading constant sits about 19% above <img src="https://latex.codecogs.com/png.latex?e%5E%7B%5Cgamma%7D">. The study reconciles this. Fitting the constant over the Fibonacci indices alone gives an estimate within 3% of <img src="https://latex.codecogs.com/png.latex?e%5E%7B%5Cgamma%7D">. A pooled estimate over four related division-type families gives <img src="https://latex.codecogs.com/png.latex?2.11"> with a 95% interval of <img src="https://latex.codecogs.com/png.latex?%5B1.75,%202.48%5D">, which contains <img src="https://latex.codecogs.com/png.latex?e%5E%7B%5Cgamma%7D%5Capprox%201.781">. The apparent excess decomposes into three parts. There is the choice of <img src="https://latex.codecogs.com/png.latex?%5Clog%20X"> versus <img src="https://latex.codecogs.com/png.latex?%5Clog%20X%20+%20E_1"> in the Mertens partial sum. There is small-sample noise. There are family-specific divisor factors. The data cannot separate <img src="https://latex.codecogs.com/png.latex?e%5E%7B%5Cgamma%7D%5Capprox%201.781"> from <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cpi%7D%5Capprox%201.772"> at one standard deviation. Resolving the two would need about <img src="https://latex.codecogs.com/png.latex?4%5Ctimes10%5E%7B4%7D"> primes, reachable only by pooling more families.</p>
 </section>
-<section id="code" class="level2">
-<h2 class="anchored" data-anchor-id="code">Code</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> torch</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> attention(q, k, v):</span>
-<span id="cb1-4">    scores <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> q <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">@</span> k.transpose(<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> k.size(<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span> <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.5</span></span>
-<span id="cb1-5">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">return</span> torch.softmax(scores, dim<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">@</span> v</span></code></pre></div></div>
-<p>Readers get a copy button automatically. To point at real code, just link the repo: <a href="https://github.com/krimler">the implementation lives here</a>.</p>
+<section id="prediction-with-quantified-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="prediction-with-quantified-uncertainty">Prediction with quantified uncertainty</h2>
+<p>The indices grow geometrically. Define the gaps <img src="https://latex.codecogs.com/png.latex?g_k%20=%20%5Clog%20n_%7Bk+1%7D%20-%20%5Clog%20n_k">. To the resolution of 57 points these gaps are independent and exponentially distributed. A Kolmogorov-Smirnov test against the exponential gives <img src="https://latex.codecogs.com/png.latex?p%20=%200.63">. The lag-1 autocorrelation is <img src="https://latex.codecogs.com/png.latex?-0.09"> with <img src="https://latex.codecogs.com/png.latex?p%20=%200.53">. The gaps behave like a memoryless Poisson process in <img src="https://latex.codecogs.com/png.latex?%5Clog%20n">.</p>
+<p>The reference literature performs no interval estimation. This study adds one. Treating the next index as <img src="https://latex.codecogs.com/png.latex?n_%7B37%7D%5Ccdot%20e%5E%7Bg%7D"> with <img src="https://latex.codecogs.com/png.latex?g"> exponential yields a 90% predictive window of <img src="https://latex.codecogs.com/png.latex?%5B2.04,%205.07%5D%5Ctimes10%5E%7B5%7D">. The true next index is 397379, which lies inside. A one-step-ahead backtest over the 46 predictable indices puts 40 of them inside their nominal 90% intervals. That is 87% coverage, which is well calibrated for a one-parameter model.</p>
 </section>
-<section id="citing-arxiv-papers" class="level2">
-<h2 class="anchored" data-anchor-id="citing-arxiv-papers">Citing arXiv papers</h2>
-<p>Cite a paper inline like this <span class="citation" data-cites="vaswani2017attention">(Vaswani et al. 2017)</span> and the reference list is built automatically at the bottom from <code>references.bib</code>. To add a paper: open its arXiv page → “Export BibTeX citation” → paste the entry into <code>references.bib</code>.</p>
+<section id="residue-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="residue-statistics">Residue statistics</h2>
+<p>The study probes the indices for structure. It runs residue-class biases modulo 4, 5, and 10, a Lemke Oliver-Soundararajan consecutive-residue correlation, a Sophie Germain depletion, an order-of-primeness enrichment, and a Benford leading-digit test. All return null. As a global check the authors simulated 3000 index sets from the <img src="https://latex.codecogs.com/png.latex?e%5E%7B%5Cgamma%7D"> density model and compared nine statistics. The observed data was an outlier in zero of the nine.</p>
+<p>The conclusion is stated plainly. No structure is detectable at <img src="https://latex.codecogs.com/png.latex?N%20=%2057">. Against percent-level biases measured on millions of primes, the power of 57 points is negligible. The Lemke Oliver-Soundararajan effect cannot apply here. It is a short-range effect among consecutive primes. The positions studied here are long-range, with a median gap near 5000.</p>
+</section>
+<section id="the-divisibility-layer" class="level2">
+<h2 class="anchored" data-anchor-id="the-divisibility-layer">The divisibility layer</h2>
+<p>The location of the indices carries no algebraic handle. The factor structure does. Here the established cases are theorems, and the study adds one conjectural set.</p>
+<p>For Fibonacci numbers the rank of apparition <img src="https://latex.codecogs.com/png.latex?z(p)"> is the least <img src="https://latex.codecogs.com/png.latex?m"> with <img src="https://latex.codecogs.com/png.latex?p%20%5Cmid%20F_m">. Lagarias proved that the primes dividing the Lucas numbers have density <img src="https://latex.codecogs.com/png.latex?2/3"> <span class="citation" data-cites="lagarias1985lucas">(Lagarias 1985)</span>. The study confirms <img src="https://latex.codecogs.com/png.latex?P(z(p)%5Ctext%7B%20even%7D)%20=%202/3"> numerically, measuring <img src="https://latex.codecogs.com/png.latex?0.66684"> over 148931 primes. The Pisano multiplier and the 2-adic valuation of <img src="https://latex.codecogs.com/png.latex?z(p)"> both follow from Cubre and Rouse’s proof via a Chebotarev argument <span class="citation" data-cites="cubre2014divisibility">(Cubre and Rouse 2014)</span>.</p>
+<p>For <img src="https://latex.codecogs.com/png.latex?k">-bonacci sequences with <img src="https://latex.codecogs.com/png.latex?k%20%5Cge%203"> the divisibility-sequence property fails. The governing object is the Galois group of the characteristic polynomial <img src="https://latex.codecogs.com/png.latex?x%5E%7Bk%7D%20-%20x%5E%7Bk-1%7D%20-%20%5Ccdots%20-%201">, which is the full symmetric group <img src="https://latex.codecogs.com/png.latex?S_k"> for <img src="https://latex.codecogs.com/png.latex?k"> even or prime. The prime-splitting types, and so the period of the sequence modulo <img src="https://latex.codecogs.com/png.latex?p">, follow the cycle-type densities of <img src="https://latex.codecogs.com/png.latex?S_k"> by Chebotarev. The study confirms the <img src="https://latex.codecogs.com/png.latex?S_3"> and <img src="https://latex.codecogs.com/png.latex?S_4"> densities numerically.</p>
+<p>For the Tribonacci period <img src="https://latex.codecogs.com/png.latex?h(p)"> the study records a conjectural density. Over 5131 primes below <img src="https://latex.codecogs.com/png.latex?5%5Ctimes10%5E%7B4%7D"> it estimates <img src="https://latex.codecogs.com/png.latex?P(h(p)%5Ctext%7B%20odd%7D)%20%5Capprox%200.397">. The exact constant is open. The study corrects an earlier draft that called the Tribonacci divisor and entry-point densities computable for any order. The general case is open. Järviniemi’s positive lower density under GRH is the current state of the art <span class="citation" data-cites="jarviniemi2022density">(Järviniemi 2022)</span>.</p>
+</section>
+<section id="what-is-known-versus-what-is-added" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-known-versus-what-is-added">What is known versus what is added</h2>
+<p>The value of this study is the line it draws. The count law, the <img src="https://latex.codecogs.com/png.latex?e%5E%7B%5Cgamma%7D"> constant, the <img src="https://latex.codecogs.com/png.latex?2/3"> Lucas density, the <img src="https://latex.codecogs.com/png.latex?S_k"> splitting densities, and the Tribonacci period structure are established theorems with citations. The additions are three. There is a coverage-validated prediction interval for the index counts. There is a reusable null-model battery for separating structure from sampling noise. There is a fully cited, script-based reproduction.</p>
+</section>
+<section id="reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="reproducibility">Reproducibility</h2>
+<p>All results come from self-contained Python scripts using NumPy, SciPy, and Matplotlib. The index data are the OEIS b-files for the Fibonacci, Lucas, Mersenne, and Wagstaff sequences. The code is at <a href="https://github.com/krimler/k-bonacci">github.com/krimler/k-bonacci</a>.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p>The full paper is here: <a href="../../papers/fibonacci-primes.html">Fibonacci and k-bonacci prime statistics (PDF and details)</a>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-vaswani2017attention" class="csl-entry">
-Vaswani, Ashish, Noam Shazeer, Niki Parmar, et al. 2017. <span>“Attention Is All You Need.”</span> <em>Advances in Neural Information Processing Systems</em>. <a href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a>.
+<div id="ref-cubre2014divisibility" class="csl-entry">
+Cubre, Paul, and Jeremy Rouse. 2014. <span>“Divisibility Properties of the Fibonacci Entry Point.”</span> <em>Proceedings of the American Mathematical Society</em> 142 (11): 3771–85. <a href="https://arxiv.org/abs/1212.6221">https://arxiv.org/abs/1212.6221</a>.
+</div>
+<div id="ref-grantham2024fibonacci" class="csl-entry">
+Grantham, Jon, and Andrew Granville. 2024. <em>Fibonacci Primes, Primes of the Form <img src="https://latex.codecogs.com/png.latex?2%5En-k">, and Beyond</em>. <a href="https://arxiv.org/abs/2307.07894">https://arxiv.org/abs/2307.07894</a>.
+</div>
+<div id="ref-jarviniemi2022density" class="csl-entry">
+Järviniemi, Olli. 2022. <span>“Positive Lower Density for Prime Divisors of Generic Linear Recurrences.”</span> <em>Mathematical Proceedings of the Cambridge Philosophical Society</em>. <a href="https://arxiv.org/abs/2102.04042">https://arxiv.org/abs/2102.04042</a>.
+</div>
+<div id="ref-lagarias1985lucas" class="csl-entry">
+Lagarias, Jeffrey C. 1985. <span>“The Set of Primes Dividing the Lucas Numbers Has Density 2/3.”</span> <em>Pacific Journal of Mathematics</em> 118 (2): 449–61.
 </div>
 </div>
 
@@ -92,12 +83,116 @@ Vaswani, Ashish, Noam Shazeer, Niki Parmar, et al. 2017. <span>“Attention Is A
 </section>
 
  ]]></description>
-  <category>meta</category>
-  <category>math</category>
-  <category>ml</category>
-  <guid>https://krimler.github.io/posts/welcome/</guid>
+  <category>number-theory</category>
+  <category>primes</category>
+  <category>statistics</category>
+  <category>reproducibility</category>
+  <guid>https://krimler.github.io/posts/fibonacci-prime-statistics/</guid>
   <pubDate>Sat, 06 Jun 2026 18:30:00 GMT</pubDate>
-  <media:content url="https://krimler.github.io/posts/welcome" medium="image"/>
+</item>
+<item>
+  <title>AEGIS: typed evidence and obligations for AI-native enterprise architecture</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/aegis-evidence-obligation/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>Enterprise architecture is the discipline that aligns an organisation’s business strategy with its information assets, applications, and technology. Two open standards govern the field. TOGAF defines a lifecycle. ArchiMate defines a modelling language. Both assume systems that behave predictably. Both assume governance happens in periodic review meetings. Both assume an architecture document stays accurate for months after it is written.</p>
+<p>AI-native systems break these assumptions. A deployed language model produces probabilistic outputs. An autonomous agent calls tools in situations it has not seen during testing. A retrieval-augmented pipeline changes its effective knowledge base every time new documents are ingested. When such a system decides on credit, hiring, or infrastructure configuration, a static diagram cannot tell you whether the system still meets its regulatory obligations. That question needs continuous, machine-checkable governance.</p>
+<p>The regulatory pressure is concrete. The EU AI Act entered into force in August 2024. Its high-risk requirements become enforceable from August 2026 <span class="citation" data-cites="euaiact2024">(European Parliament and Council of the European Union 2024)</span>. ISO/IEC 42001:2023 requires a traceable evidence index that links each obligation to specific processes and artefacts. NIST AI RMF names traceability as a core property of trustworthy AI. Current enterprise architecture tools do not produce conformity evidence at this level of detail or at this cadence.</p>
+<section id="what-aegis-adds" class="level2">
+<h2 class="anchored" data-anchor-id="what-aegis-adds">What AEGIS adds</h2>
+<p>AEGIS is a typed ontology and lifecycle framework. It sits at the enterprise architecture layer above existing artefacts. The name stands for Architecture with Evidence, Governance, Intent, and Safety. The paper makes three contributions.</p>
+<ol type="1">
+<li>An evidence-obligation metamodel. Seven new typed entities become first-class architectural objects. They connect to existing entities through seven typed relations. AEGIS profiles ArchiMate Next and extends W3C PROV-O, so existing models need no re-modelling.</li>
+<li>A continuous conformance lifecycle. The document-centric TOGAF lifecycle is replaced by a six-phase loop called IMVDOA.</li>
+<li>A regulatory crosswalk. All 38 ISO/IEC 42001 controls and the key EU AI Act articles for high-risk systems map to obligation types.</li>
+</ol>
+<p>Recent work supplies useful artefacts at lower layers. Policy Cards encode per-agent obligations in machine-readable form <span class="citation" data-cites="mavracic2025policycards">(Mavračić 2025)</span>. AI Bills of Materials track model provenance. Attestable Audits cryptographically verify benchmark claims <span class="citation" data-cites="schnabl2025attestable">(Schnabl et al. 2025)</span>. LLM Audit Trails log lifecycle events <span class="citation" data-cites="ojewale2026audittrails">(Ojewale et al. 2026)</span>. Each of these operates in isolation. A Policy Card governs one deployed agent. It does not know which architectural service the agent implements, which data asset it accesses, or which regulatory obligation that access is subject to. AEGIS connects agent-layer engineering to enterprise-level regulatory expectation.</p>
+</section>
+<section id="the-seven-entity-types" class="level2">
+<h2 class="anchored" data-anchor-id="the-seven-entity-types">The seven entity types</h2>
+<p>AEGIS defines seven typed entities as OWL2 classes, each aligned with PROV-O.</p>
+<ul>
+<li><strong>Evidence</strong> is a time-stamped, provenance-carrying artefact that attests a property of an architectural entity. Every instance carries an issuer, an issue time, an expiry time, a status in {valid, expired, superseded, revoked}, and a strength in <img src="https://latex.codecogs.com/png.latex?%5B0,1%5D">.</li>
+<li><strong>Obligation</strong> is a machine-checkable normative requirement on an architectural entity. Each carries a deontic modality in {must, must_not, should, may}, a trigger condition expressed in SHACL or OPA Rego, the evidence it requires, a regulatory source, and a priority.</li>
+<li><strong>Policy</strong> is a named, versioned collection of obligations. It is the enterprise-level counterpart to an agent-level Policy Card.</li>
+<li><strong>Risk</strong> is a structured risk entry aligned with ISO 31000.</li>
+<li><strong>RuntimeSignal</strong> is an event emitted by a deployed system. Once linked to an architectural entity and an obligation it is promoted to an Evidence object.</li>
+<li><strong>Exception</strong> is a time-bounded, machine-readable dispensation from an obligation, recording who granted it and why.</li>
+<li><strong>ArchitectureDecisionRecord</strong> extends the architecture decision record concept and is machine-queryable.</li>
+</ul>
+</section>
+<section id="the-closure-rule" class="level2">
+<h2 class="anchored" data-anchor-id="the-closure-rule">The closure rule</h2>
+<p>The core inference is the evidence-obligation closure. Write <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bconstrained%5C_by%7D(e,o)"> when architectural entity <img src="https://latex.codecogs.com/png.latex?e"> is constrained by obligation <img src="https://latex.codecogs.com/png.latex?o">, and <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bverified%5C_by%7D(o,v)"> when evidence <img src="https://latex.codecogs.com/png.latex?v"> verifies <img src="https://latex.codecogs.com/png.latex?o">. The rule is</p>
+<p><span id="eq-closure"><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bconstrained%5C_by%7D(e,o)%20%5C;%5Cwedge%5C;%20%5Cneg%5C,%5Cexists%20v%5C,%5Cbig(%5Ctext%7Bverified%5C_by%7D(o,v)%20%5Cwedge%20v.%5Ctext%7Bstatus%7D=%5Ctext%7Bvalid%7D%5Cbig)%20%5C;%5CRightarrow%5C;%20%5Ctext%7Bviolates%7D(e,o).%0A%5Ctag%7B1%7D"></span></p>
+<p>In words, an entity constrained by an obligation violates that obligation when no valid evidence verifies it. Equation&nbsp;1 is evaluated continuously as part of the runtime loop.</p>
+<p>A worked example shows how a violation appears over time. Service S1 is constrained by obligation O1, “PII must not flow to an external endpoint unless a redaction proof exists”, sourced from EU AI Act Article 10. Evidence E1 verifies O1 with an expiry of 2026-07-15. On 16 July 2026 the status of E1 becomes expired. The closure rule fires. S1 now violates O1. The conformance loop raises a runtime signal and escalates it to the responsible actor. No human re-review was needed to detect this.</p>
+</section>
+<section id="the-imvdoa-lifecycle" class="level2">
+<h2 class="anchored" data-anchor-id="the-imvdoa-lifecycle">The IMVDOA lifecycle</h2>
+<p>AEGIS replaces the linear TOGAF lifecycle with a continuous six-phase loop: Intent, Model, Verify, Deploy, Observe, Adapt.</p>
+<ul>
+<li><strong>Intent</strong> derives typed obligations from regulatory sources, organisational policies, and stakeholder constraints.</li>
+<li><strong>Model</strong> attaches policies, AI bills of materials, and obligations to every agent, service, and data asset.</li>
+<li><strong>Verify</strong> runs SHACL shape checks for structural completeness and a Defeasible Deontic Logic prover for obligation satisfiability. Failures block deployment.</li>
+<li><strong>Deploy</strong> registers a deployment event in the audit trail and activates fitness functions.</li>
+<li><strong>Observe</strong> consumes enforcement events, audit-trail entries, and audit results as runtime signals, then promotes verified signals to evidence.</li>
+<li><strong>Adapt</strong> fires when the per-entity conformance score falls below a threshold.</li>
+</ul>
+<p>The conformance score for entity <img src="https://latex.codecogs.com/png.latex?e"> is the fraction of its mandatory obligations that currently hold valid evidence.</p>
+<p><span id="eq-kappa"><img src="https://latex.codecogs.com/png.latex?%0A%5Ckappa(e)%20=%20%5Cfrac%7B%5Cbig%7C%5C%7B%5C,%20o%20:%20%5Ctext%7Bconstrained%5C_by%7D(e,o),%5C;%20o.%5Ctext%7Bdeontic%7D=%5Ctext%7Bmust%7D,%5C;%20%5Cexists%20v%5C,(%5Ctext%7Bverified%5C_by%7D(o,v)%20%5Cwedge%20v.%5Ctext%7Bstatus%7D=%5Ctext%7Bvalid%7D)%20%5C,%5C%7D%5Cbig%7C%7D%7B%5Cbig%7C%5C%7B%5C,%20o%20:%20%5Ctext%7Bconstrained%5C_by%7D(e,o),%5C;%20o.%5Ctext%7Bdeontic%7D=%5Ctext%7Bmust%7D%20%5C,%5C%7D%5Cbig%7C%7D.%0A%5Ctag%7B2%7D"></span></p>
+<p>Adapt re-runs the Intent, Model, and Verify sub-cycle for the affected scope.</p>
+</section>
+<section id="what-the-framework-can-express" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-framework-can-express">What the framework can express</h2>
+<p>The paper gives three expressiveness constructions. Each is a structured demonstration that the metamodel can represent a class of governance artefact or detect a class of failure by logical inference alone. No deployed system is measured.</p>
+<p>The first maps all 38 ISO/IEC 42001 Annex A controls to typed obligations through the conformity triple “Control to Test to Evidence”, expressed as machine-queryable SPARQL over the obligation graph.</p>
+<p>The second detects three classes of obligation drift by the closure rule. Evidence can expire without re-verification. A Policy Card can be updated at the agent layer while its enterprise-level policy is not. A regulatory update can supersede the source an obligation points to. ArchiMate models and code-level fitness functions detect none of these.</p>
+<p>The third lifts agent-level Policy Cards into an enterprise-level conformance graph and exposes conflicts between cards that agent-layer enforcement cannot see.</p>
+</section>
+<section id="limits" class="level2">
+<h2 class="anchored" data-anchor-id="limits">Limits</h2>
+<p>The three constructions are expressiveness demonstrations. They do not report measurements from a deployed system. The crosswalk covers the EU AI Act and ISO/IEC 42001. Extension to other regimes such as GDPR or FDA AI/ML guidance needs additional tables. The Defeasible Deontic Logic prover has polynomial complexity and has not been profiled at enterprise scale. A full implementation covering the OWL2 ontology, the SHACL shapes, the SPARQL closure queries, and a Policy Card lifting tool is the primary target for future work. Empirical evaluation against existing toolchains requires that implementation first.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p>The full paper is here: <a href="../../papers/aegis.html">AEGIS (PDF and details)</a>.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-euaiact2024" class="csl-entry">
+European Parliament and Council of the European Union. 2024. <em>Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act)</em>. Official Journal of the European Union, L 2024/1689.
+</div>
+<div id="ref-mavracic2025policycards" class="csl-entry">
+Mavračić, J. 2025. <em>Policy Cards: Machine-Readable Runtime Governance for Autonomous AI Agents</em>. <a href="https://arxiv.org/abs/2510.24383">https://arxiv.org/abs/2510.24383</a>.
+</div>
+<div id="ref-ojewale2026audittrails" class="csl-entry">
+Ojewale, V., H. Suresh, and S. Venkatasubramanian. 2026. <em>Audit Trails for Accountability in Large Language Models</em>. <a href="https://arxiv.org/abs/2601.20727">https://arxiv.org/abs/2601.20727</a>.
+</div>
+<div id="ref-schnabl2025attestable" class="csl-entry">
+Schnabl, C., D. Hugenroth, B. Marino, and A. R. Beresford. 2025. <em>Attestable Audits: Verifiable AI Safety Benchmarks Using Trusted Execution Environments</em>. <a href="https://arxiv.org/abs/2506.23706">https://arxiv.org/abs/2506.23706</a>.
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+ ]]></description>
+  <category>ai-governance</category>
+  <category>enterprise-architecture</category>
+  <category>ontology</category>
+  <category>security</category>
+  <guid>https://krimler.github.io/posts/aegis-evidence-obligation/</guid>
+  <pubDate>Wed, 08 Apr 2026 18:30:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

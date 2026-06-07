@@ -53,49 +53,154 @@
     "href": "index.html",
     "title": "Krimler",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHello, world — a feature tour\n\n\n\nmeta\n\nmath\n\nml\n\n\n\nHow math, code, and citations render on this blog.\n\n\n\n\n\nJun 7, 2026\n\n\nKrimler\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCounting Fibonacci primes: what a finite computation can and cannot add\n\n\n\nnumber-theory\n\nprimes\n\nstatistics\n\nreproducibility\n\n\n\nTreating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a coverage-validated prediction interval, a null-model battery that finds no structure, and an exact divisibility layer.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAEGIS: typed evidence and obligations for AI-native enterprise architecture\n\n\n\nai-governance\n\nenterprise-architecture\n\nontology\n\nsecurity\n\n\n\nWhy static architecture diagrams cannot govern AI systems, and a metamodel that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.\n\n\n\n\n\nApr 9, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Hello, world — a feature tour",
+    "objectID": "papers/fibonacci-primes.html",
+    "href": "papers/fibonacci-primes.html",
+    "title": "Heuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics",
     "section": "",
-    "text": "Welcome. This post exists to show every building block you’ll reuse."
+    "text": "A companion blog post walks through the results: Counting Fibonacci primes: what a finite computation can and cannot add.\nCode and scripts: github.com/krimler/k-bonacci.\n⬇ Download PDF"
   },
   {
-    "objectID": "posts/welcome/index.html#math",
-    "href": "posts/welcome/index.html#math",
-    "title": "Hello, world — a feature tour",
-    "section": "Math",
-    "text": "Math\nInline math like e^{i\\pi} + 1 = 0 works, and so do display equations:\n\n\\nabla_\\theta \\, \\mathcal{L}(\\theta) = \\mathbb{E}_{x \\sim \\mathcal{D}}\\!\\left[ \\nabla_\\theta \\, \\ell(f_\\theta(x), y) \\right]\n\\tag{1}\nYou can cross-reference it: see Equation 1."
+    "objectID": "posts/fibonacci-prime-statistics/index.html",
+    "href": "posts/fibonacci-prime-statistics/index.html",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "",
+    "text": "A Fibonacci prime is a Fibonacci number F_n that is prime. As of June 2025 there are 57 known indices n for which F_n is prime or probably prime. They range from F_3 up to F_{11964299}. The largest one proven prime is F_{201107}. The rest are probable primes. They pass a Miller-Rabin test and have not been certified. Whether there are infinitely many Fibonacci primes is open. No pattern is known beyond a density heuristic.\nThis study treats the 57 indices as a dataset. It asks whether any visible structure survives scrutiny, and where such structure lives. The mathematics behind the question is already established in the literature. The contribution is a method. It adds an uncertainty-quantified prediction layer, a null-model battery that separates real structure from sampling noise, and a fully cited reproduction. All computations run from released Python scripts at github.com/krimler/k-bonacci."
   },
   {
-    "objectID": "posts/welcome/index.html#code",
-    "href": "posts/welcome/index.html#code",
-    "title": "Hello, world — a feature tour",
-    "section": "Code",
-    "text": "Code\nimport torch\n\ndef attention(q, k, v):\n    scores = q @ k.transpose(-2, -1) / k.size(-1) ** 0.5\n    return torch.softmax(scores, dim=-1) @ v\nReaders get a copy button automatically. To point at real code, just link the repo: the implementation lives here."
+    "objectID": "posts/fibonacci-prime-statistics/index.html#the-density-heuristic",
+    "href": "posts/fibonacci-prime-statistics/index.html#the-density-heuristic",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "The density heuristic",
+    "text": "The density heuristic\nStart with the count. A random integer of the size of F_p \\sim \\varphi^p/\\sqrt5 is prime with probability about 1/\\log F_p \\approx 1/(p\\log\\varphi). The Fibonacci numbers form a divisibility sequence, so F_m \\mid F_n exactly when m \\mid n for m &gt; 2. A prime F_p with p &gt; 4 therefore forces p prime. Summing the prime probability over primes and applying Mertens’ theorem injects a factor e^{\\gamma}, where \\gamma is the Euler-Mascheroni constant. Grantham and Granville conjecture (Grantham and Granville 2024)\n\n\\#\\{\\, n \\le N : F_n \\text{ prime} \\,\\} \\;\\sim\\; e^{\\gamma}\\,\\log_{\\varphi} N.\n\\tag{1}\nAt N = 1.2\\times10^{7} the heuristic predicts about 60.3 indices. The observed count is 57.\nA naive maximum-likelihood estimate of the leading constant sits about 19% above e^{\\gamma}. The study reconciles this. Fitting the constant over the Fibonacci indices alone gives an estimate within 3% of e^{\\gamma}. A pooled estimate over four related division-type families gives 2.11 with a 95% interval of [1.75, 2.48], which contains e^{\\gamma}\\approx 1.781. The apparent excess decomposes into three parts. There is the choice of \\log X versus \\log X + E_1 in the Mertens partial sum. There is small-sample noise. There are family-specific divisor factors. The data cannot separate e^{\\gamma}\\approx 1.781 from \\sqrt{\\pi}\\approx 1.772 at one standard deviation. Resolving the two would need about 4\\times10^{4} primes, reachable only by pooling more families."
   },
   {
-    "objectID": "posts/welcome/index.html#citing-arxiv-papers",
-    "href": "posts/welcome/index.html#citing-arxiv-papers",
-    "title": "Hello, world — a feature tour",
-    "section": "Citing arXiv papers",
-    "text": "Citing arXiv papers\nCite a paper inline like this (Vaswani et al. 2017) and the reference list is built automatically at the bottom from references.bib. To add a paper: open its arXiv page → “Export BibTeX citation” → paste the entry into references.bib."
+    "objectID": "posts/fibonacci-prime-statistics/index.html#prediction-with-quantified-uncertainty",
+    "href": "posts/fibonacci-prime-statistics/index.html#prediction-with-quantified-uncertainty",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "Prediction with quantified uncertainty",
+    "text": "Prediction with quantified uncertainty\nThe indices grow geometrically. Define the gaps g_k = \\log n_{k+1} - \\log n_k. To the resolution of 57 points these gaps are independent and exponentially distributed. A Kolmogorov-Smirnov test against the exponential gives p = 0.63. The lag-1 autocorrelation is -0.09 with p = 0.53. The gaps behave like a memoryless Poisson process in \\log n.\nThe reference literature performs no interval estimation. This study adds one. Treating the next index as n_{37}\\cdot e^{g} with g exponential yields a 90% predictive window of [2.04, 5.07]\\times10^{5}. The true next index is 397379, which lies inside. A one-step-ahead backtest over the 46 predictable indices puts 40 of them inside their nominal 90% intervals. That is 87% coverage, which is well calibrated for a one-parameter model."
   },
   {
-    "objectID": "posts/welcome/index.html#references",
-    "href": "posts/welcome/index.html#references",
-    "title": "Hello, world — a feature tour",
+    "objectID": "posts/fibonacci-prime-statistics/index.html#residue-statistics",
+    "href": "posts/fibonacci-prime-statistics/index.html#residue-statistics",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "Residue statistics",
+    "text": "Residue statistics\nThe study probes the indices for structure. It runs residue-class biases modulo 4, 5, and 10, a Lemke Oliver-Soundararajan consecutive-residue correlation, a Sophie Germain depletion, an order-of-primeness enrichment, and a Benford leading-digit test. All return null. As a global check the authors simulated 3000 index sets from the e^{\\gamma} density model and compared nine statistics. The observed data was an outlier in zero of the nine.\nThe conclusion is stated plainly. No structure is detectable at N = 57. Against percent-level biases measured on millions of primes, the power of 57 points is negligible. The Lemke Oliver-Soundararajan effect cannot apply here. It is a short-range effect among consecutive primes. The positions studied here are long-range, with a median gap near 5000."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#the-divisibility-layer",
+    "href": "posts/fibonacci-prime-statistics/index.html#the-divisibility-layer",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "The divisibility layer",
+    "text": "The divisibility layer\nThe location of the indices carries no algebraic handle. The factor structure does. Here the established cases are theorems, and the study adds one conjectural set.\nFor Fibonacci numbers the rank of apparition z(p) is the least m with p \\mid F_m. Lagarias proved that the primes dividing the Lucas numbers have density 2/3 (Lagarias 1985). The study confirms P(z(p)\\text{ even}) = 2/3 numerically, measuring 0.66684 over 148931 primes. The Pisano multiplier and the 2-adic valuation of z(p) both follow from Cubre and Rouse’s proof via a Chebotarev argument (Cubre and Rouse 2014).\nFor k-bonacci sequences with k \\ge 3 the divisibility-sequence property fails. The governing object is the Galois group of the characteristic polynomial x^{k} - x^{k-1} - \\cdots - 1, which is the full symmetric group S_k for k even or prime. The prime-splitting types, and so the period of the sequence modulo p, follow the cycle-type densities of S_k by Chebotarev. The study confirms the S_3 and S_4 densities numerically.\nFor the Tribonacci period h(p) the study records a conjectural density. Over 5131 primes below 5\\times10^{4} it estimates P(h(p)\\text{ odd}) \\approx 0.397. The exact constant is open. The study corrects an earlier draft that called the Tribonacci divisor and entry-point densities computable for any order. The general case is open. Järviniemi’s positive lower density under GRH is the current state of the art (Järviniemi 2022)."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#what-is-known-versus-what-is-added",
+    "href": "posts/fibonacci-prime-statistics/index.html#what-is-known-versus-what-is-added",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "What is known versus what is added",
+    "text": "What is known versus what is added\nThe value of this study is the line it draws. The count law, the e^{\\gamma} constant, the 2/3 Lucas density, the S_k splitting densities, and the Tribonacci period structure are established theorems with citations. The additions are three. There is a coverage-validated prediction interval for the index counts. There is a reusable null-model battery for separating structure from sampling noise. There is a fully cited, script-based reproduction."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#reproducibility",
+    "href": "posts/fibonacci-prime-statistics/index.html#reproducibility",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "Reproducibility",
+    "text": "Reproducibility\nAll results come from self-contained Python scripts using NumPy, SciPy, and Matplotlib. The index data are the OEIS b-files for the Fibonacci, Lucas, Mersenne, and Wagstaff sequences. The code is at github.com/krimler/k-bonacci."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#read-the-paper",
+    "href": "posts/fibonacci-prime-statistics/index.html#read-the-paper",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
+    "section": "Read the paper",
+    "text": "Read the paper\nThe full paper is here: Fibonacci and k-bonacci prime statistics (PDF and details)."
+  },
+  {
+    "objectID": "posts/fibonacci-prime-statistics/index.html#references",
+    "href": "posts/fibonacci-prime-statistics/index.html#references",
+    "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
     "section": "References",
-    "text": "References\n\n\nVaswani, Ashish, Noam Shazeer, Niki Parmar, et al. 2017. “Attention Is All You Need.” Advances in Neural Information Processing Systems. https://arxiv.org/abs/1706.03762."
+    "text": "References\n\n\nCubre, Paul, and Jeremy Rouse. 2014. “Divisibility Properties of the Fibonacci Entry Point.” Proceedings of the American Mathematical Society 142 (11): 3771–85. https://arxiv.org/abs/1212.6221.\n\n\nGrantham, Jon, and Andrew Granville. 2024. Fibonacci Primes, Primes of the Form 2^n-k, and Beyond. https://arxiv.org/abs/2307.07894.\n\n\nJärviniemi, Olli. 2022. “Positive Lower Density for Prime Divisors of Generic Linear Recurrences.” Mathematical Proceedings of the Cambridge Philosophical Society. https://arxiv.org/abs/2102.04042.\n\n\nLagarias, Jeffrey C. 1985. “The Set of Primes Dividing the Lucas Numbers Has Density 2/3.” Pacific Journal of Mathematics 118 (2): 449–61."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html",
+    "href": "posts/aegis-evidence-obligation/index.html",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "",
+    "text": "Enterprise architecture is the discipline that aligns an organisation’s business strategy with its information assets, applications, and technology. Two open standards govern the field. TOGAF defines a lifecycle. ArchiMate defines a modelling language. Both assume systems that behave predictably. Both assume governance happens in periodic review meetings. Both assume an architecture document stays accurate for months after it is written.\nAI-native systems break these assumptions. A deployed language model produces probabilistic outputs. An autonomous agent calls tools in situations it has not seen during testing. A retrieval-augmented pipeline changes its effective knowledge base every time new documents are ingested. When such a system decides on credit, hiring, or infrastructure configuration, a static diagram cannot tell you whether the system still meets its regulatory obligations. That question needs continuous, machine-checkable governance.\nThe regulatory pressure is concrete. The EU AI Act entered into force in August 2024. Its high-risk requirements become enforceable from August 2026 (European Parliament and Council of the European Union 2024). ISO/IEC 42001:2023 requires a traceable evidence index that links each obligation to specific processes and artefacts. NIST AI RMF names traceability as a core property of trustworthy AI. Current enterprise architecture tools do not produce conformity evidence at this level of detail or at this cadence."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#what-aegis-adds",
+    "href": "posts/aegis-evidence-obligation/index.html#what-aegis-adds",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "What AEGIS adds",
+    "text": "What AEGIS adds\nAEGIS is a typed ontology and lifecycle framework. It sits at the enterprise architecture layer above existing artefacts. The name stands for Architecture with Evidence, Governance, Intent, and Safety. The paper makes three contributions.\n\nAn evidence-obligation metamodel. Seven new typed entities become first-class architectural objects. They connect to existing entities through seven typed relations. AEGIS profiles ArchiMate Next and extends W3C PROV-O, so existing models need no re-modelling.\nA continuous conformance lifecycle. The document-centric TOGAF lifecycle is replaced by a six-phase loop called IMVDOA.\nA regulatory crosswalk. All 38 ISO/IEC 42001 controls and the key EU AI Act articles for high-risk systems map to obligation types.\n\nRecent work supplies useful artefacts at lower layers. Policy Cards encode per-agent obligations in machine-readable form (Mavračić 2025). AI Bills of Materials track model provenance. Attestable Audits cryptographically verify benchmark claims (Schnabl et al. 2025). LLM Audit Trails log lifecycle events (Ojewale et al. 2026). Each of these operates in isolation. A Policy Card governs one deployed agent. It does not know which architectural service the agent implements, which data asset it accesses, or which regulatory obligation that access is subject to. AEGIS connects agent-layer engineering to enterprise-level regulatory expectation."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#the-seven-entity-types",
+    "href": "posts/aegis-evidence-obligation/index.html#the-seven-entity-types",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "The seven entity types",
+    "text": "The seven entity types\nAEGIS defines seven typed entities as OWL2 classes, each aligned with PROV-O.\n\nEvidence is a time-stamped, provenance-carrying artefact that attests a property of an architectural entity. Every instance carries an issuer, an issue time, an expiry time, a status in {valid, expired, superseded, revoked}, and a strength in [0,1].\nObligation is a machine-checkable normative requirement on an architectural entity. Each carries a deontic modality in {must, must_not, should, may}, a trigger condition expressed in SHACL or OPA Rego, the evidence it requires, a regulatory source, and a priority.\nPolicy is a named, versioned collection of obligations. It is the enterprise-level counterpart to an agent-level Policy Card.\nRisk is a structured risk entry aligned with ISO 31000.\nRuntimeSignal is an event emitted by a deployed system. Once linked to an architectural entity and an obligation it is promoted to an Evidence object.\nException is a time-bounded, machine-readable dispensation from an obligation, recording who granted it and why.\nArchitectureDecisionRecord extends the architecture decision record concept and is machine-queryable."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#the-closure-rule",
+    "href": "posts/aegis-evidence-obligation/index.html#the-closure-rule",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "The closure rule",
+    "text": "The closure rule\nThe core inference is the evidence-obligation closure. Write \\text{constrained\\_by}(e,o) when architectural entity e is constrained by obligation o, and \\text{verified\\_by}(o,v) when evidence v verifies o. The rule is\n\n\\text{constrained\\_by}(e,o) \\;\\wedge\\; \\neg\\,\\exists v\\,\\big(\\text{verified\\_by}(o,v) \\wedge v.\\text{status}=\\text{valid}\\big) \\;\\Rightarrow\\; \\text{violates}(e,o).\n\\tag{1}\nIn words, an entity constrained by an obligation violates that obligation when no valid evidence verifies it. Equation 1 is evaluated continuously as part of the runtime loop.\nA worked example shows how a violation appears over time. Service S1 is constrained by obligation O1, “PII must not flow to an external endpoint unless a redaction proof exists”, sourced from EU AI Act Article 10. Evidence E1 verifies O1 with an expiry of 2026-07-15. On 16 July 2026 the status of E1 becomes expired. The closure rule fires. S1 now violates O1. The conformance loop raises a runtime signal and escalates it to the responsible actor. No human re-review was needed to detect this."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#the-imvdoa-lifecycle",
+    "href": "posts/aegis-evidence-obligation/index.html#the-imvdoa-lifecycle",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "The IMVDOA lifecycle",
+    "text": "The IMVDOA lifecycle\nAEGIS replaces the linear TOGAF lifecycle with a continuous six-phase loop: Intent, Model, Verify, Deploy, Observe, Adapt.\n\nIntent derives typed obligations from regulatory sources, organisational policies, and stakeholder constraints.\nModel attaches policies, AI bills of materials, and obligations to every agent, service, and data asset.\nVerify runs SHACL shape checks for structural completeness and a Defeasible Deontic Logic prover for obligation satisfiability. Failures block deployment.\nDeploy registers a deployment event in the audit trail and activates fitness functions.\nObserve consumes enforcement events, audit-trail entries, and audit results as runtime signals, then promotes verified signals to evidence.\nAdapt fires when the per-entity conformance score falls below a threshold.\n\nThe conformance score for entity e is the fraction of its mandatory obligations that currently hold valid evidence.\n\n\\kappa(e) = \\frac{\\big|\\{\\, o : \\text{constrained\\_by}(e,o),\\; o.\\text{deontic}=\\text{must},\\; \\exists v\\,(\\text{verified\\_by}(o,v) \\wedge v.\\text{status}=\\text{valid}) \\,\\}\\big|}{\\big|\\{\\, o : \\text{constrained\\_by}(e,o),\\; o.\\text{deontic}=\\text{must} \\,\\}\\big|}.\n\\tag{2}\nAdapt re-runs the Intent, Model, and Verify sub-cycle for the affected scope."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#what-the-framework-can-express",
+    "href": "posts/aegis-evidence-obligation/index.html#what-the-framework-can-express",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "What the framework can express",
+    "text": "What the framework can express\nThe paper gives three expressiveness constructions. Each is a structured demonstration that the metamodel can represent a class of governance artefact or detect a class of failure by logical inference alone. No deployed system is measured.\nThe first maps all 38 ISO/IEC 42001 Annex A controls to typed obligations through the conformity triple “Control to Test to Evidence”, expressed as machine-queryable SPARQL over the obligation graph.\nThe second detects three classes of obligation drift by the closure rule. Evidence can expire without re-verification. A Policy Card can be updated at the agent layer while its enterprise-level policy is not. A regulatory update can supersede the source an obligation points to. ArchiMate models and code-level fitness functions detect none of these.\nThe third lifts agent-level Policy Cards into an enterprise-level conformance graph and exposes conflicts between cards that agent-layer enforcement cannot see."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#limits",
+    "href": "posts/aegis-evidence-obligation/index.html#limits",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "Limits",
+    "text": "Limits\nThe three constructions are expressiveness demonstrations. They do not report measurements from a deployed system. The crosswalk covers the EU AI Act and ISO/IEC 42001. Extension to other regimes such as GDPR or FDA AI/ML guidance needs additional tables. The Defeasible Deontic Logic prover has polynomial complexity and has not been profiled at enterprise scale. A full implementation covering the OWL2 ontology, the SHACL shapes, the SPARQL closure queries, and a Policy Card lifting tool is the primary target for future work. Empirical evaluation against existing toolchains requires that implementation first."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#read-the-paper",
+    "href": "posts/aegis-evidence-obligation/index.html#read-the-paper",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "Read the paper",
+    "text": "Read the paper\nThe full paper is here: AEGIS (PDF and details)."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#references",
+    "href": "posts/aegis-evidence-obligation/index.html#references",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "References",
+    "text": "References\n\n\nEuropean Parliament and Council of the European Union. 2024. Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act). Official Journal of the European Union, L 2024/1689.\n\n\nMavračić, J. 2025. Policy Cards: Machine-Readable Runtime Governance for Autonomous AI Agents. https://arxiv.org/abs/2510.24383.\n\n\nOjewale, V., H. Suresh, and S. Venkatasubramanian. 2026. Audit Trails for Accountability in Large Language Models. https://arxiv.org/abs/2601.20727.\n\n\nSchnabl, C., D. Hugenroth, B. Marino, and A. R. Beresford. 2025. Attestable Audits: Verifiable AI Safety Benchmarks Using Trusted Execution Environments. https://arxiv.org/abs/2506.23706."
+  },
+  {
+    "objectID": "papers/aegis.html",
+    "href": "papers/aegis.html",
+    "title": "AEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture",
+    "section": "",
+    "text": "A companion blog post walks through the framework: AEGIS: typed evidence and obligations for AI-native enterprise architecture.\n⬇ Download PDF"
   },
   {
     "objectID": "papers/index.html",
     "href": "papers/index.html",
     "title": "Papers",
     "section": "",
-    "text": "Finished papers (PDFs). Each entry opens a page with the PDF embedded inline and a download button.\nTo add a paper: drop the PDF in papers/files/, copy papers/_template.qmd to papers/your-paper.qmd, and edit the front matter.\n\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\nDate\nTitle\nDescription\n\n\n\n\n\nNo matching items"
+    "text": "Finished papers (PDFs). Each entry opens a page with the PDF embedded inline and a download button.\nTo add a paper: drop the PDF in papers/files/, copy papers/_template.qmd to papers/your-paper.qmd, and edit the front matter.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nJun 7, 2026\n\n\nHeuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics\n\n\nA reproducible verification study of the statistics of Fibonacci and k-bonacci prime indices, with a coverage-validated prediction interval, a null-model battery, and a fully cited provenance map.\n\n\n\n\n\n\nApr 9, 2026\n\n\nAEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture\n\n\nA typed ontology and lifecycle that makes evidence, obligations, and runtime signals first-class enterprise-architecture objects, with a crosswalk to the EU AI Act and ISO/IEC 42001.\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
