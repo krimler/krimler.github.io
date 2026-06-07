@@ -371,6 +371,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.</p>
 <p>This post is the overview. Each draft also has its own post.</p>
 <ul>
@@ -402,8 +408,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="why-it-matters" class="level2">
 <h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
 <p>Benchmarks only mean something when everyone measures the same thing the same way. These four drafts supply the missing pieces in order. The vocabulary removes ambiguity in the terms. The methodology makes a run reproducible. The profiles declare what was and was not included in a measurement. The workloads make sure systems are compared on representative tasks. Together they make LLM serving numbers something you can actually trust when you compare them.</p>
-<hr>
-<p><em>Cover image: The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>

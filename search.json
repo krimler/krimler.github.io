@@ -60,7 +60,7 @@
     "href": "posts/ietf-benchmarking-methodology/index.html",
     "title": "How to run the tests: the IETF LLM serving methodology draft",
     "section": "",
-    "text": "Part of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nAgreed words are the start. A reproducible benchmark also needs an agreed procedure. The second IETF draft supplies it. It specifies how to set up a test, what traffic to send, what to measure, and how to report the result. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
+    "text": "An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons.\nPart of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nAgreed words are the start. A reproducible benchmark also needs an agreed procedure. The second IETF draft supplies it. It specifies how to set up a test, what traffic to send, what to measure, and how to report the result. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
   },
   {
     "objectID": "posts/ietf-benchmarking-methodology/index.html#where-to-measure",
@@ -102,7 +102,7 @@
     "href": "posts/ietf-benchmarking-methodology/index.html#read-the-draft",
     "title": "How to run the tests: the IETF LLM serving methodology draft",
     "section": "Read the draft",
-    "text": "Read the draft\nBenchmarking Methodology for Large Language Model Serving.\n\nCover image: An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons."
+    "text": "Read the draft\nBenchmarking Methodology for Large Language Model Serving."
   },
   {
     "objectID": "posts/opal-rlhf-equivalence/index.html",
@@ -144,7 +144,7 @@
     "href": "posts/avec-edge-privacy/index.html",
     "title": "Enforcing privacy at the edge for local language models: AVEC",
     "section": "",
-    "text": "A local language model runs on your own device, which keeps your data close. Some queries are too hard for the small local model, so it delegates them to a larger model in the cloud. That handoff is the weak point. The query sent outward can carry sensitive information. AVEC is a proposal for controlling that handoff. The name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge and makes the delegation verifiable.\nA note on what this is. AVEC is a position paper. Its evaluation is simulation based by design, and it does not claim deployment readiness or measured task quality with live models. The contribution is an architecture and the theory that goes with it."
+    "text": "Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons.\nA local language model runs on your own device, which keeps your data close. Some queries are too hard for the small local model, so it delegates them to a larger model in the cloud. That handoff is the weak point. The query sent outward can carry sensitive information. AVEC is a proposal for controlling that handoff. The name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge and makes the delegation verifiable.\nA note on what this is. AVEC is a position paper. Its evaluation is simulation based by design, and it does not claim deployment readiness or measured task quality with live models. The contribution is an architecture and the theory that goes with it."
   },
   {
     "objectID": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
@@ -172,14 +172,14 @@
     "href": "posts/avec-edge-privacy/index.html#read-the-paper",
     "title": "Enforcing privacy at the edge for local language models: AVEC",
     "section": "Read the paper",
-    "text": "Read the paper\nAVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561).\n\nCover image: Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons."
+    "text": "Read the paper\nAVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)."
   },
   {
     "objectID": "posts/npo-meta-alignment/index.html",
     "href": "posts/npo-meta-alignment/index.html",
     "title": "Treating alignment as something you can measure and reduce: NPO",
     "section": "",
-    "text": "Alignment means making a model behave the way people actually want it to behave. Most production pipelines treat this as a one-time step. You train the model, you ship it, and you hope it stays aligned. NPO starts from a different stance. Alignment is a quantity you can measure, supervise, and drive down over time."
+    "text": "The Geographer, Johannes Vermeer (c. 1668). Public domain, via Wikimedia Commons.\nAlignment means making a model behave the way people actually want it to behave. Most production pipelines treat this as a one-time step. You train the model, you ship it, and you hope it stays aligned. NPO starts from a different stance. Alignment is a quantity you can measure, supervise, and drive down over time."
   },
   {
     "objectID": "posts/npo-meta-alignment/index.html#the-two-quantities",
@@ -214,14 +214,14 @@
     "href": "posts/npo-meta-alignment/index.html#read-the-paper",
     "title": "Treating alignment as something you can measure and reduce: NPO",
     "section": "Read the paper",
-    "text": "Read the paper\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131).\n\nCover image: The Geographer, Johannes Vermeer (c. 1668). Public domain, via Wikimedia Commons."
+    "text": "Read the paper\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)."
   },
   {
     "objectID": "posts/ietf-benchmarking-workloads/index.html",
     "href": "posts/ietf-benchmarking-workloads/index.html",
     "title": "Twenty-five representative tasks: the IETF workload profiles draft",
     "section": "",
-    "text": "Part of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nA serving system can look fast on one kind of task and slow on another. Embedding a short document and running a long agentic plan stress completely different parts of the stack. To compare systems fairly, the workloads themselves have to be standardized. The fourth IETF draft does this. It is co-authored by Mohadeb Mondal and Madhava Gaikwad, an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
+    "text": "Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons.\nPart of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nA serving system can look fast on one kind of task and slow on another. Embedding a short document and running a long agentic plan stress completely different parts of the stack. To compare systems fairly, the workloads themselves have to be standardized. The fourth IETF draft does this. It is co-authored by Mohadeb Mondal and Madhava Gaikwad, an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
   },
   {
     "objectID": "posts/ietf-benchmarking-workloads/index.html#five-dimensions",
@@ -249,14 +249,14 @@
     "href": "posts/ietf-benchmarking-workloads/index.html#read-the-draft",
     "title": "Twenty-five representative tasks: the IETF workload profiles draft",
     "section": "Read the draft",
-    "text": "Read the draft\nBenchmarking Workload Profiles for Large Language Model Serving.\n\nCover image: Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons."
+    "text": "Read the draft\nBenchmarking Workload Profiles for Large Language Model Serving."
   },
   {
     "objectID": "posts/ietf-llm-benchmarking/index.html",
     "href": "posts/ietf-llm-benchmarking/index.html",
     "title": "A common language for benchmarking LLM serving: four IETF drafts",
     "section": "",
-    "text": "When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.\nThis post is the overview. Each draft also has its own post."
+    "text": "The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.\nWhen two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.\nThis post is the overview. Each draft also has its own post."
   },
   {
     "objectID": "posts/ietf-llm-benchmarking/index.html#the-words",
@@ -291,14 +291,14 @@
     "href": "posts/ietf-llm-benchmarking/index.html#why-it-matters",
     "title": "A common language for benchmarking LLM serving: four IETF drafts",
     "section": "Why it matters",
-    "text": "Why it matters\nBenchmarks only mean something when everyone measures the same thing the same way. These four drafts supply the missing pieces in order. The vocabulary removes ambiguity in the terms. The methodology makes a run reproducible. The profiles declare what was and was not included in a measurement. The workloads make sure systems are compared on representative tasks. Together they make LLM serving numbers something you can actually trust when you compare them.\n\nCover image: The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons."
+    "text": "Why it matters\nBenchmarks only mean something when everyone measures the same thing the same way. These four drafts supply the missing pieces in order. The vocabulary removes ambiguity in the terms. The methodology makes a run reproducible. The profiles declare what was and was not included in a measurement. The workloads make sure systems are compared on representative tasks. Together they make LLM serving numbers something you can actually trust when you compare them."
   },
   {
     "objectID": "posts/ansc-capacity-health/index.html",
     "href": "posts/ansc-capacity-health/index.html",
     "title": "Scoring a datacenter fleet by the risk of what happens next",
     "section": "",
-    "text": "A hyperscale datacenter network runs thousands of devices and links. When one fails, an alert fires. That alert tells you what broke. It does not tell you how close the whole system is to running out of capacity. Those are different questions. A single link failing in a region with plenty of spare capacity is routine. The same failure in a region already running hot can be the last step before a shortfall. ANSC is built to score the second question."
+    "text": "Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons.\nA hyperscale datacenter network runs thousands of devices and links. When one fails, an alert fires. That alert tells you what broke. It does not tell you how close the whole system is to running out of capacity. Those are different questions. A single link failing in a region with plenty of spare capacity is routine. The same failure in a region already running hot can be the last step before a shortfall. ANSC is built to score the second question."
   },
   {
     "objectID": "posts/ansc-capacity-health/index.html#the-gap-in-ordinary-alerting",
@@ -333,14 +333,14 @@
     "href": "posts/ansc-capacity-health/index.html#read-the-paper",
     "title": "Scoring a datacenter fleet by the risk of what happens next",
     "section": "Read the paper",
-    "text": "Read the paper\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119).\n\nCover image: Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons."
+    "text": "Read the paper\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)."
   },
   {
     "objectID": "posts/murphy-alignment-gap/index.html",
     "href": "posts/murphy-alignment-gap/index.html",
     "title": "Why the alignment gap always wins, unless you know where to look",
     "section": "",
-    "text": "Reinforcement learning from human feedback is the standard way to align a model. People compare model outputs, the comparisons train a reward model, and the model is tuned to score well on that reward. The whole scheme rests on the feedback being right. This paper studies what happens when it is not."
+    "text": "Landscape with the Fall of Icarus, after Pieter Bruegel the Elder (16th century). Public domain, via Wikimedia Commons.\nReinforcement learning from human feedback is the standard way to align a model. People compare model outputs, the comparisons train a reward model, and the model is tuned to score well on that reward. The whole scheme rests on the feedback being right. This paper studies what happens when it is not."
   },
   {
     "objectID": "posts/murphy-alignment-gap/index.html#a-compass-that-points-wrong-in-some-places",
@@ -375,14 +375,14 @@
     "href": "posts/murphy-alignment-gap/index.html#read-the-paper",
     "title": "Why the alignment gap always wins, unless you know where to look",
     "section": "Read the paper",
-    "text": "Read the paper\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381).\n\nCover image: Landscape with the Fall of Icarus, after Pieter Bruegel the Elder (16th century). Public domain, via Wikimedia Commons."
+    "text": "Read the paper\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)."
   },
   {
     "objectID": "posts/aegis-evidence-obligation/index.html",
     "href": "posts/aegis-evidence-obligation/index.html",
     "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
     "section": "",
-    "text": "Enterprise architecture is the discipline that aligns an organisation’s business strategy with its information assets, applications, and technology. Two open standards govern the field. TOGAF defines a lifecycle. ArchiMate defines a modelling language. Both assume systems that behave predictably. Both assume governance happens in periodic review meetings. Both assume an architecture document stays accurate for months after it is written.\nAI-native systems break these assumptions. A deployed language model produces different outputs for similar inputs. An autonomous agent calls tools in situations it has not seen during testing. A retrieval-augmented pipeline changes what it knows every time new documents are ingested. When such a system decides on credit, hiring, or infrastructure configuration, a static diagram cannot tell you whether the system still meets its regulatory obligations. That question needs checking that runs continuously and that a machine can perform.\nThe regulatory pressure is concrete. The EU AI Act entered into force in August 2024. Its rules for high-risk systems become enforceable from August 2026 (European Parliament and Council of the European Union 2024). ISO/IEC 42001, the management-system standard for AI, asks for a traceable index that links each obligation to the specific processes and documents that satisfy it. The NIST AI Risk Management Framework names traceability as a core property of trustworthy AI. Current enterprise architecture tools do not produce this kind of evidence at the level of detail or at the speed these rules expect."
+    "text": "Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons.\nEnterprise architecture is the discipline that aligns an organisation’s business strategy with its information assets, applications, and technology. Two open standards govern the field. TOGAF defines a lifecycle. ArchiMate defines a modelling language. Both assume systems that behave predictably. Both assume governance happens in periodic review meetings. Both assume an architecture document stays accurate for months after it is written.\nAI-native systems break these assumptions. A deployed language model produces different outputs for similar inputs. An autonomous agent calls tools in situations it has not seen during testing. A retrieval-augmented pipeline changes what it knows every time new documents are ingested. When such a system decides on credit, hiring, or infrastructure configuration, a static diagram cannot tell you whether the system still meets its regulatory obligations. That question needs checking that runs continuously and that a machine can perform.\nThe regulatory pressure is concrete. The EU AI Act entered into force in August 2024. Its rules for high-risk systems become enforceable from August 2026 (European Parliament and Council of the European Union 2024). ISO/IEC 42001, the management-system standard for AI, asks for a traceable index that links each obligation to the specific processes and documents that satisfy it. The NIST AI Risk Management Framework names traceability as a core property of trustworthy AI. Current enterprise architecture tools do not produce this kind of evidence at the level of detail or at the speed these rules expect."
   },
   {
     "objectID": "posts/aegis-evidence-obligation/index.html#the-idea",
@@ -431,14 +431,14 @@
     "href": "posts/aegis-evidence-obligation/index.html#references",
     "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
     "section": "References",
-    "text": "References\n\n\nEuropean Parliament and Council of the European Union. 2024. Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act). Official Journal of the European Union, L 2024/1689.\n\n\n\nCover image: Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons."
+    "text": "References\n\n\nEuropean Parliament and Council of the European Union. 2024. Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act). Official Journal of the European Union, L 2024/1689."
   },
   {
     "objectID": "posts/dam-associative-memory/index.html",
     "href": "posts/dam-associative-memory/index.html",
     "title": "Finite-size guarantees for dense associative memory",
     "section": "",
-    "text": "An associative memory stores a set of patterns and recalls the right one from a partial or corrupted version of it. Give it a noisy image and it returns the clean stored image it most resembles. The classic version is the Hopfield network. Dense Associative Memory, or DAM, is the modern version. It uses higher-order interactions among the stored bits, and that buys a large jump in capacity. The number of patterns it can hold grows roughly like a high power of the network size, where the power is set by the order of the interactions."
+    "text": "The Librarian, Giuseppe Arcimboldo (c. 1566). Public domain, via Wikimedia Commons.\nAn associative memory stores a set of patterns and recalls the right one from a partial or corrupted version of it. Give it a noisy image and it returns the clean stored image it most resembles. The classic version is the Hopfield network. Dense Associative Memory, or DAM, is the modern version. It uses higher-order interactions among the stored bits, and that buys a large jump in capacity. The number of patterns it can hold grows roughly like a high power of the network size, where the power is set by the order of the interactions."
   },
   {
     "objectID": "posts/dam-associative-memory/index.html#the-gap-in-the-theory",
@@ -480,14 +480,14 @@
     "href": "posts/dam-associative-memory/index.html#read-the-paper",
     "title": "Finite-size guarantees for dense associative memory",
     "section": "Read the paper",
-    "text": "Read the paper\nAlgorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop. OpenReview.\n\nCover image: The Librarian, Giuseppe Arcimboldo (c. 1566). Public domain, via Wikimedia Commons."
+    "text": "Read the paper\nAlgorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop. OpenReview."
   },
   {
     "objectID": "posts/memory-store-routing/index.html",
     "href": "posts/memory-store-routing/index.html",
     "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
     "section": "",
-    "text": "A memory-augmented agent keeps several specialized stores. One might hold facts, another the recent conversation, another notes about tools or users. When a request arrives, most systems read from every store and stuff all of it into the model’s context. That is the equivalent of patting down every pocket to find your keys. It works, and it is wasteful. Reading everything costs tokens, and it pulls in irrelevant context that can crowd out the useful part."
+    "text": "Cabinet of Curiosities, Domenico Remps (c. 1690). Public domain, via Wikimedia Commons.\nA memory-augmented agent keeps several specialized stores. One might hold facts, another the recent conversation, another notes about tools or users. When a request arrives, most systems read from every store and stuff all of it into the model’s context. That is the equivalent of patting down every pocket to find your keys. It works, and it is wasteful. Reading everything costs tokens, and it pulls in irrelevant context that can crowd out the useful part."
   },
   {
     "objectID": "posts/memory-store-routing/index.html#retrieval-as-routing",
@@ -515,7 +515,7 @@
     "href": "posts/memory-store-routing/index.html#read-the-paper",
     "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
     "section": "Read the paper",
-    "text": "Read the paper\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658).\n\nCover image: Cabinet of Curiosities, Domenico Remps (c. 1690). Public domain, via Wikimedia Commons."
+    "text": "Read the paper\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)."
   },
   {
     "objectID": "posts/ietf-benchmarking-profiles/index.html",
@@ -557,7 +557,7 @@
     "href": "posts/ietf-benchmarking-terminology/index.html",
     "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
     "section": "",
-    "text": "Part of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nWhen two teams report a throughput number for serving a language model, the numbers often do not mean the same thing. One counted prompt tokens, the other did not. One measured at the model engine, the other after a gateway. The words match and the measurements do not. The first IETF draft in this series addresses that directly. It defines a shared vocabulary for LLM serving performance and nothing more. The draft is an individual submission to the IETF Benchmarking Methodology Working Group and carries no formal IETF endorsement."
+    "text": "Saint Jerome in His Study, Antonello da Messina (c. 1475). Public domain, via Wikimedia Commons.\nPart of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nWhen two teams report a throughput number for serving a language model, the numbers often do not mean the same thing. One counted prompt tokens, the other did not. One measured at the model engine, the other after a gateway. The words match and the measurements do not. The first IETF draft in this series addresses that directly. It defines a shared vocabulary for LLM serving performance and nothing more. The draft is an individual submission to the IETF Benchmarking Methodology Working Group and carries no formal IETF endorsement."
   },
   {
     "objectID": "posts/ietf-benchmarking-terminology/index.html#what-it-defines",
@@ -585,14 +585,14 @@
     "href": "posts/ietf-benchmarking-terminology/index.html#read-the-draft",
     "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
     "section": "Read the draft",
-    "text": "Read the draft\nBenchmarking Terminology for Large Language Model Serving.\n\nCover image: Saint Jerome in His Study, Antonello da Messina (c. 1475). Public domain, via Wikimedia Commons."
+    "text": "Read the draft\nBenchmarking Terminology for Large Language Model Serving."
   },
   {
     "objectID": "posts/aligndp-rarity-privacy/index.html",
     "href": "posts/aligndp-rarity-privacy/index.html",
     "title": "AlignDP: locking knowledge transfer at the data interface",
     "section": "",
-    "text": "Large language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves."
+    "text": "The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.\nLarge language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves."
   },
   {
     "objectID": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
@@ -620,14 +620,14 @@
     "href": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
     "title": "AlignDP: locking knowledge transfer at the data interface",
     "section": "Read the paper",
-    "text": "Read the paper\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251).\n\nCover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons."
+    "text": "Read the paper\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)."
   },
   {
     "objectID": "posts/fibonacci-prime-statistics/index.html",
     "href": "posts/fibonacci-prime-statistics/index.html",
     "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
     "section": "",
-    "text": "A Fibonacci prime is a Fibonacci number that is also prime. The Fibonacci numbers are the familiar sequence 1, 1, 2, 3, 5, 8, 13, and so on, where each term is the sum of the two before it. Most of them are not prime. As of June 2025 we know of 57 positions in the sequence where the Fibonacci number is prime or almost certainly prime. They are spread very far apart. The largest one that has been fully proven prime sits at position 201107. The largest one we believe is prime sits at position 11964299, a number with about 2.5 million digits, checked by a fast test that is right in practice but does not constitute a proof. Whether the list goes on forever is an open question. No one knows a rule that produces these positions.\nThis study takes a different stance. It treats the 57 positions as a small dataset and asks a plain question. Is there any hidden pattern in them, and if there is, where does it live? The mathematics needed to answer this is already in the literature. What the study adds is method. It puts an honest error bar on a prediction, it runs a battery of tests to tell a real pattern apart from a coincidence, and it ships code so anyone can rerun everything. The scripts are at github.com/krimler/k-bonacci."
+    "text": "The Great Wave off Kanagawa, Katsushika Hokusai (c. 1831). Public domain, via Wikimedia Commons.\nA Fibonacci prime is a Fibonacci number that is also prime. The Fibonacci numbers are the familiar sequence 1, 1, 2, 3, 5, 8, 13, and so on, where each term is the sum of the two before it. Most of them are not prime. As of June 2025 we know of 57 positions in the sequence where the Fibonacci number is prime or almost certainly prime. They are spread very far apart. The largest one that has been fully proven prime sits at position 201107. The largest one we believe is prime sits at position 11964299, a number with about 2.5 million digits, checked by a fast test that is right in practice but does not constitute a proof. Whether the list goes on forever is an open question. No one knows a rule that produces these positions.\nThis study takes a different stance. It treats the 57 positions as a small dataset and asks a plain question. Is there any hidden pattern in them, and if there is, where does it live? The mathematics needed to answer this is already in the literature. What the study adds is method. It puts an honest error bar on a prediction, it runs a battery of tests to tell a real pattern apart from a coincidence, and it ships code so anyone can rerun everything. The scripts are at github.com/krimler/k-bonacci."
   },
   {
     "objectID": "posts/fibonacci-prime-statistics/index.html#how-many-should-there-be",
@@ -683,7 +683,7 @@
     "href": "posts/fibonacci-prime-statistics/index.html#references",
     "title": "Counting Fibonacci primes: what a finite computation can and cannot add",
     "section": "References",
-    "text": "References\n\n\nCubre, Paul, and Jeremy Rouse. 2014. “Divisibility Properties of the Fibonacci Entry Point.” Proceedings of the American Mathematical Society 142 (11): 3771–85. https://arxiv.org/abs/1212.6221.\n\n\nGrantham, Jon, and Andrew Granville. 2024. Fibonacci Primes, Primes of the Form 2^n-k, and Beyond. https://arxiv.org/abs/2307.07894.\n\n\nJärviniemi, Olli. 2022. “Positive Lower Density for Prime Divisors of Generic Linear Recurrences.” Mathematical Proceedings of the Cambridge Philosophical Society. https://arxiv.org/abs/2102.04042.\n\n\nLagarias, Jeffrey C. 1985. “The Set of Primes Dividing the Lucas Numbers Has Density 2/3.” Pacific Journal of Mathematics 118 (2): 449–61.\n\n\n\nCover image: The Great Wave off Kanagawa, Katsushika Hokusai (c. 1831). Public domain, via Wikimedia Commons."
+    "text": "References\n\n\nCubre, Paul, and Jeremy Rouse. 2014. “Divisibility Properties of the Fibonacci Entry Point.” Proceedings of the American Mathematical Society 142 (11): 3771–85. https://arxiv.org/abs/1212.6221.\n\n\nGrantham, Jon, and Andrew Granville. 2024. Fibonacci Primes, Primes of the Form 2^n-k, and Beyond. https://arxiv.org/abs/2307.07894.\n\n\nJärviniemi, Olli. 2022. “Positive Lower Density for Prime Divisors of Generic Linear Recurrences.” Mathematical Proceedings of the Cambridge Philosophical Society. https://arxiv.org/abs/2102.04042.\n\n\nLagarias, Jeffrey C. 1985. “The Set of Primes Dividing the Lucas Numbers Has Density 2/3.” Pacific Journal of Mathematics 118 (2): 449–61."
   },
   {
     "objectID": "papers/aegis.html",

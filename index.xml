@@ -21,6 +21,12 @@
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/fibonacci-prime-statistics/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>The Great Wave off Kanagawa, Katsushika Hokusai (c.&nbsp;1831). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>A Fibonacci prime is a Fibonacci number that is also prime. The Fibonacci numbers are the familiar sequence 1, 1, 2, 3, 5, 8, 13, and so on, where each term is the sum of the two before it. Most of them are not prime. As of June 2025 we know of 57 positions in the sequence where the Fibonacci number is prime or almost certainly prime. They are spread very far apart. The largest one that has been fully proven prime sits at position 201107. The largest one we believe is prime sits at position 11964299, a number with about 2.5 million digits, checked by a fast test that is right in practice but does not constitute a proof. Whether the list goes on forever is an open question. No one knows a rule that produces these positions.</p>
 <p>This study takes a different stance. It treats the 57 positions as a small dataset and asks a plain question. Is there any hidden pattern in them, and if there is, where does it live? The mathematics needed to answer this is already in the literature. What the study adds is method. It puts an honest error bar on a prediction, it runs a battery of tests to tell a real pattern apart from a coincidence, and it ships code so anyone can rerun everything. The scripts are at <a href="https://github.com/krimler/k-bonacci">github.com/krimler/k-bonacci</a>.</p>
 <section id="how-many-should-there-be" class="level2">
@@ -74,8 +80,6 @@ Järviniemi, Olli. 2022. <span>“Positive Lower Density for Prime Divisors of G
 Lagarias, Jeffrey C. 1985. <span>“The Set of Primes Dividing the Lucas Numbers Has Density 2/3.”</span> <em>Pacific Journal of Mathematics</em> 118 (2): 449–61.
 </div>
 </div>
-<hr>
-<p><em>Cover image: The Great Wave off Kanagawa, Katsushika Hokusai (c.&nbsp;1831). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -99,6 +103,12 @@ Lagarias, Jeffrey C. 1985. <span>“The Set of Primes Dividing the Lucas Numbers
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/aegis-evidence-obligation/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>Enterprise architecture is the discipline that aligns an organisation’s business strategy with its information assets, applications, and technology. Two open standards govern the field. TOGAF defines a lifecycle. ArchiMate defines a modelling language. Both assume systems that behave predictably. Both assume governance happens in periodic review meetings. Both assume an architecture document stays accurate for months after it is written.</p>
 <p>AI-native systems break these assumptions. A deployed language model produces different outputs for similar inputs. An autonomous agent calls tools in situations it has not seen during testing. A retrieval-augmented pipeline changes what it knows every time new documents are ingested. When such a system decides on credit, hiring, or infrastructure configuration, a static diagram cannot tell you whether the system still meets its regulatory obligations. That question needs checking that runs continuously and that a machine can perform.</p>
 <p>The regulatory pressure is concrete. The EU AI Act entered into force in August 2024. Its rules for high-risk systems become enforceable from August 2026 <span class="citation" data-cites="euaiact2024">(European Parliament and Council of the European Union 2024)</span>. ISO/IEC 42001, the management-system standard for AI, asks for a traceable index that links each obligation to the specific processes and documents that satisfy it. The NIST AI Risk Management Framework names traceability as a core property of trustworthy AI. Current enterprise architecture tools do not produce this kind of evidence at the level of detail or at the speed these rules expect.</p>
@@ -149,8 +159,6 @@ Lagarias, Jeffrey C. 1985. <span>“The Set of Primes Dividing the Lucas Numbers
 European Parliament and Council of the European Union. 2024. <em>Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act)</em>. Official Journal of the European Union, L 2024/1689.
 </div>
 </div>
-<hr>
-<p><em>Cover image: Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -174,6 +182,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/memory-store-routing/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Cabinet of Curiosities, Domenico Remps (c.&nbsp;1690). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>A memory-augmented agent keeps several specialized stores. One might hold facts, another the recent conversation, another notes about tools or users. When a request arrives, most systems read from every store and stuff all of it into the model’s context. That is the equivalent of patting down every pocket to find your keys. It works, and it is wasteful. Reading everything costs tokens, and it pulls in irrelevant context that can crowd out the useful part.</p>
 <section id="retrieval-as-routing" class="level2">
 <h2 class="anchored" data-anchor-id="retrieval-as-routing">Retrieval as routing</h2>
@@ -191,8 +205,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2603.15658">Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)</a>.</p>
-<hr>
-<p><em>Cover image: Cabinet of Curiosities, Domenico Remps (c.&nbsp;1690). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -216,6 +228,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/dam-associative-memory/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>The Librarian, Giuseppe Arcimboldo (c.&nbsp;1566). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>An associative memory stores a set of patterns and recalls the right one from a partial or corrupted version of it. Give it a noisy image and it returns the clean stored image it most resembles. The classic version is the Hopfield network. Dense Associative Memory, or DAM, is the modern version. It uses higher-order interactions among the stored bits, and that buys a large jump in capacity. The number of patterns it can hold grows roughly like a high power of the network size, where the power is set by the order of the interactions.</p>
 <section id="the-gap-in-the-theory" class="level2">
 <h2 class="anchored" data-anchor-id="the-gap-in-the-theory">The gap in the theory</h2>
@@ -240,8 +258,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p>Algorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop. <a href="https://openreview.net/forum?id=zgHAqaIybd">OpenReview</a>.</p>
-<hr>
-<p><em>Cover image: The Librarian, Giuseppe Arcimboldo (c.&nbsp;1566). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -264,6 +280,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/ietf-llm-benchmarking/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>When two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.</p>
 <p>This post is the overview. Each draft also has its own post.</p>
 <ul>
@@ -295,8 +317,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="why-it-matters" class="level2">
 <h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
 <p>Benchmarks only mean something when everyone measures the same thing the same way. These four drafts supply the missing pieces in order. The vocabulary removes ambiguity in the terms. The methodology makes a run reproducible. The profiles declare what was and was not included in a measurement. The workloads make sure systems are compared on representative tasks. Together they make LLM serving numbers something you can actually trust when you compare them.</p>
-<hr>
-<p><em>Cover image: The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -320,6 +340,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/ietf-benchmarking-workloads/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
 <p>A serving system can look fast on one kind of task and slow on another. Embedding a short document and running a long agentic plan stress completely different parts of the stack. To compare systems fairly, the workloads themselves have to be standardized. The fourth IETF draft does this. It is co-authored by Mohadeb Mondal and Madhava Gaikwad, an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement.</p>
 <section id="five-dimensions" class="level2">
@@ -353,8 +379,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-draft" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
 <p><a href="https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/">Benchmarking Workload Profiles for Large Language Model Serving</a>.</p>
-<hr>
-<p><em>Cover image: Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -377,6 +401,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<p><img src="https://krimler.github.io/posts/ietf-benchmarking-profiles/cover.svg" class="img-fluid"></p>
 <p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
 <p>Time to first token is a single phrase that can mean several different numbers. It depends on where you start the clock. Do you include the gateway. Do you include the firewall inspection. Do you include the network hop. Each choice gives a different value, and a benchmark that does not say which choice it made cannot be compared with another. The third IETF draft fixes this with profiles. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement.</p>
 <section id="what-a-profile-is" class="level2">
@@ -424,6 +449,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/ietf-benchmarking-terminology/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Saint Jerome in His Study, Antonello da Messina (c.&nbsp;1475). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
 <p>When two teams report a throughput number for serving a language model, the numbers often do not mean the same thing. One counted prompt tokens, the other did not. One measured at the model engine, the other after a gateway. The words match and the measurements do not. The first IETF draft in this series addresses that directly. It defines a shared vocabulary for LLM serving performance and nothing more. The draft is an individual submission to the IETF Benchmarking Methodology Working Group and carries no formal IETF endorsement.</p>
 <section id="what-it-defines" class="level2">
@@ -451,8 +482,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-draft" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
 <p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/">Benchmarking Terminology for Large Language Model Serving</a>.</p>
-<hr>
-<p><em>Cover image: Saint Jerome in His Study, Antonello da Messina (c.&nbsp;1475). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -475,6 +504,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/ietf-benchmarking-methodology/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p><em>Part of a series on the IETF drafts for benchmarking LLM serving. Start with the <a href="../ietf-llm-benchmarking/">overview</a>.</em></p>
 <p>Agreed words are the start. A reproducible benchmark also needs an agreed procedure. The second IETF draft supplies it. It specifies how to set up a test, what traffic to send, what to measure, and how to report the result. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement.</p>
 <section id="where-to-measure" class="level2">
@@ -518,8 +553,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-draft" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
 <p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/">Benchmarking Methodology for Large Language Model Serving</a>.</p>
-<hr>
-<p><em>Cover image: An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -542,6 +575,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/aligndp-rarity-privacy/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>Large language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves.</p>
 <section id="two-kinds-of-field-need-two-kinds-of-protection" class="level2">
 <h2 class="anchored" data-anchor-id="two-kinds-of-field-need-two-kinds-of-protection">Two kinds of field need two kinds of protection</h2>
@@ -561,8 +600,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2512.17251">AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)</a>.</p>
-<hr>
-<p><em>Cover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -586,6 +623,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/avec-edge-privacy/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Woman Reading a Letter, Johannes Vermeer (c.&nbsp;1663). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>A local language model runs on your own device, which keeps your data close. Some queries are too hard for the small local model, so it delegates them to a larger model in the cloud. That handoff is the weak point. The query sent outward can carry sensitive information. AVEC is a proposal for controlling that handoff. The name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge and makes the delegation verifiable.</p>
 <p>A note on what this is. AVEC is a position paper. Its evaluation is simulation based by design, and it does not claim deployment readiness or measured task quality with live models. The contribution is an architecture and the theory that goes with it.</p>
 <section id="spending-a-privacy-budget-per-query" class="level2">
@@ -604,8 +647,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2509.10561">AVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)</a>.</p>
-<hr>
-<p><em>Cover image: Woman Reading a Letter, Johannes Vermeer (c.&nbsp;1663). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -629,6 +670,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<p><img src="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.svg" class="img-fluid"></p>
 <p>Aligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question.</p>
 <section id="canonicalization" class="level2">
 <h2 class="anchored" data-anchor-id="canonicalization">Canonicalization</h2>
@@ -668,6 +710,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/murphy-alignment-gap/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Landscape with the Fall of Icarus, after Pieter Bruegel the Elder (16th century). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>Reinforcement learning from human feedback is the standard way to align a model. People compare model outputs, the comparisons train a reward model, and the model is tuned to score well on that reward. The whole scheme rests on the feedback being right. This paper studies what happens when it is not.</p>
 <section id="a-compass-that-points-wrong-in-some-places" class="level2">
 <h2 class="anchored" data-anchor-id="a-compass-that-points-wrong-in-some-places">A compass that points wrong in some places</h2>
@@ -691,8 +739,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2509.05381">Murphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)</a>.</p>
-<hr>
-<p><em>Cover image: Landscape with the Fall of Icarus, after Pieter Bruegel the Elder (16th century). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -715,6 +761,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/ansc-capacity-health/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>A hyperscale datacenter network runs thousands of devices and links. When one fails, an alert fires. That alert tells you what broke. It does not tell you how close the whole system is to running out of capacity. Those are different questions. A single link failing in a region with plenty of spare capacity is routine. The same failure in a region already running hot can be the last step before a shortfall. ANSC is built to score the second question.</p>
 <section id="the-gap-in-ordinary-alerting" class="level2">
 <h2 class="anchored" data-anchor-id="the-gap-in-ordinary-alerting">The gap in ordinary alerting</h2>
@@ -735,8 +787,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2508.16119">ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)</a>.</p>
-<hr>
-<p><em>Cover image: Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
@@ -759,6 +809,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/npo-meta-alignment/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>The Geographer, Johannes Vermeer (c.&nbsp;1668). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>Alignment means making a model behave the way people actually want it to behave. Most production pipelines treat this as a one-time step. You train the model, you ship it, and you hope it stays aligned. NPO starts from a different stance. Alignment is a quantity you can measure, supervise, and drive down over time.</p>
 <section id="the-two-quantities" class="level2">
 <h2 class="anchored" data-anchor-id="the-two-quantities">The two quantities</h2>
@@ -781,8 +837,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
 <p><a href="https://arxiv.org/abs/2507.21131">NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)</a>.</p>
-<hr>
-<p><em>Cover image: The Geographer, Johannes Vermeer (c.&nbsp;1668). Public domain, via Wikimedia Commons.</em></p>
 
 
 </section>
