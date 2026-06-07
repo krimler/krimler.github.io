@@ -41,7 +41,6 @@ format:
     toc-depth: 3
     code-copy: true
     code-overflow: wrap
-    code-tools: true          # "view source" button on code-heavy posts
     highlight-style: github
     anchor-sections: true
     smooth-scroll: true

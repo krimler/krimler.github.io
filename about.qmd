@@ -2,11 +2,37 @@
 title: "About"
 ---
 
-I write about **mathematics, computer science, AI/ML, and security** — notes,
-deep-dives, and occasional papers. Code referenced here lives on
-[GitHub](https://github.com/krimler).
+Hi, I am Madhava Gaikwad.
+
+I am a Senior Software Engineer working at the intersection of distributed
+systems, AI alignment, privacy and differential privacy, and ML systems. I turn
+theory into runnable, tested artifacts.
+
+I work on bridging AI alignment theory with real-world systems. My background
+spans differential privacy, reinforcement learning from feedback, distributed
+consensus, and novel data abstractions for telemetry and streaming analytics. The
+questions I keep coming back to are these. How do we reason about uncertainty
+rigorously. How do we guarantee safety and rollback in complex infrastructure. How
+do we design data and learning pipelines that stay robust at scale.
+
+## What I build
+
+Small, composable systems. Clear quickstarts. Minimal tests and CI. Figures you
+can reproduce.
+
+## Focus areas
+
+- Alignment loops, including RLHF and beyond
+- Operator views of learning
+- Differential privacy for LLMs
+- Reliability at datacenter scale
+
+## Talk to me about
+
+Turning research into demos. Privacy-first LLMs. Robust infrastructure for ML.
 
 ## Contact
 
-- GitHub: [\@krimler](https://github.com/krimler)
-- Email: *add your email*
+- Email: [gaikwad.madhav@gmail.com](mailto:gaikwad.madhav@gmail.com)
+- LinkedIn: [li69nux](https://www.linkedin.com/in/li69nux/)
+- GitHub: [krimler](https://github.com/krimler)

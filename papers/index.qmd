@@ -8,8 +8,5 @@ listing:
   filter-ui: true
 ---
 
-Finished papers (PDFs). Each entry opens a page with the PDF embedded inline and
-a download button.
-
-**To add a paper:** drop the PDF in `papers/files/`, copy
-`papers/_template.qmd` to `papers/your-paper.qmd`, and edit the front matter.
+Papers and preprints. Each entry opens the full PDF with a download link, and most
+have a companion post that explains the ideas in plain language.
