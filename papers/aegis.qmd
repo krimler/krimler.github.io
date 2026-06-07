@@ -1,0 +1,16 @@
+---
+title: "AEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture"
+description: "A typed ontology and lifecycle that makes evidence, obligations, and runtime signals first-class enterprise-architecture objects, with a crosswalk to the EU AI Act and ISO/IEC 42001."
+date: "2026-04-09"
+author: "Madhava Gaikwad and Mohadeb Mondal"
+categories: [ai-governance, enterprise-architecture, ontology]
+pdf: "files/aegis.pdf"
+---
+
+A companion blog post walks through the framework: [AEGIS: typed evidence and
+obligations for AI-native enterprise architecture](../posts/aegis-evidence-obligation/).
+
+```{=html}
+<p><a class="btn btn-primary" href="files/aegis.pdf" download>⬇ Download PDF</a></p>
+<embed src="files/aegis.pdf" type="application/pdf" width="100%" height="900px" />
+```

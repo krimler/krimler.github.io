@@ -1,0 +1,18 @@
+---
+title: "Heuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics"
+description: "A reproducible verification study of the statistics of Fibonacci and k-bonacci prime indices, with a coverage-validated prediction interval, a null-model battery, and a fully cited provenance map."
+date: "2026-06-07"
+author: "Madhava Gaikwad"
+categories: [number-theory, primes, statistics, reproducibility]
+pdf: "files/fibonacci-primes.pdf"
+---
+
+A companion blog post walks through the results: [Counting Fibonacci primes: what
+a finite computation can and cannot add](../posts/fibonacci-prime-statistics/).
+
+Code and scripts: [github.com/krimler/k-bonacci](https://github.com/krimler/k-bonacci).
+
+```{=html}
+<p><a class="btn btn-primary" href="files/fibonacci-primes.pdf" download>⬇ Download PDF</a></p>
+<embed src="files/fibonacci-primes.pdf" type="application/pdf" width="100%" height="900px" />
+```

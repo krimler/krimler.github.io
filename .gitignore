@@ -4,3 +4,6 @@
 *.log
 
 **/*.quarto_ipynb
+
+# Private / under-review papers (keep local, never publish)
+papers/main.pdf
