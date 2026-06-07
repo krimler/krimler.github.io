@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Madhava Gaikwad – Krimler</title>
+<title>Reviews – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +26,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,16 +76,92 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Madhava Gaikwad – Krimler">
-<meta property="og:description" content="Engineering Leader · 20 years in infrastructure and security">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="alternate" type="application/rss+xml" title="Krimler" href="index.xml" data-external="1"><meta property="og:title" content="Reviews – Krimler">
+<meta property="og:description" content="Notes and papers on mathematics, computer science, AI/ML, and security.">
+<meta property="og:image" content="https://krimler.github.io/reviews/accelnet/cover.jpg">
 <meta property="og:site_name" content="Krimler">
-<meta name="twitter:title" content="Madhava Gaikwad – Krimler">
-<meta name="twitter:description" content="Engineering Leader · 20 years in infrastructure and security">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:alt" content="Bellotto&amp;#039;s view of the Grand Canal in Venice">
+<meta name="twitter:title" content="Reviews – Krimler">
+<meta name="twitter:description" content="Notes and papers on mathematics, computer science, AI/ML, and security.">
+<meta name="twitter:image" content="https://krimler.github.io/reviews/accelnet/cover.jpg">
+<meta name="twitter:image:alt" content="Bellotto&amp;#039;s view of the Grand Canal in Venice">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -255,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Krimler</span>
     </a>
   </div>
@@ -266,23 +344,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./papers/index.html"> 
+    <a class="nav-link" href="../papers/index.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./reviews/index.html"> 
+    <a class="nav-link active" href="../reviews/index.html" aria-current="page"> 
 <span class="menu-text">Reviews</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./cv.html" aria-current="page"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -293,7 +371,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
+    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -306,35 +384,24 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#skills" id="toc-skills" class="nav-link active" data-scroll-target="#skills">Skills</a></li>
-  <li><a href="#experience" id="toc-experience" class="nav-link" data-scroll-target="#experience">Experience</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#selected-publications-and-preprints" id="toc-selected-publications-and-preprints" class="nav-link" data-scroll-target="#selected-publications-and-preprints">Selected publications and preprints</a></li>
-  <li><a href="#ietf-drafts-llm-benchmarking-under-bmwg-review" id="toc-ietf-drafts-llm-benchmarking-under-bmwg-review" class="nav-link" data-scroll-target="#ietf-drafts-llm-benchmarking-under-bmwg-review">IETF drafts (LLM benchmarking, under BMWG review)</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWwtc3lzdGVtcw==">ml-systems <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV0d29ya2luZw==">networking <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGFwZXItcmV2aWV3">paper-review <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3lzdGVtcw==">systems <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Madhava Gaikwad</h1>
-<p class="subtitle lead">Engineering Leader · 20 years in infrastructure and security</p>
+<h1 class="title">Reviews</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -346,76 +413,84 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="mailto:gaikwad.madhav@gmail.com">gaikwad.madhav@gmail.com</a> · Bengaluru · <a href="https://www.linkedin.com/in/safeai/">LinkedIn</a> · <a href="https://github.com/krimler">GitHub</a> · <a href="https://scholar.google.com/citations?user=YReGIGMAAAAJ">Google Scholar</a></p>
-<p>I work at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts.</p>
-<section id="skills" class="level2">
-<h2 class="anchored" data-anchor-id="skills">Skills</h2>
-<ul>
-<li><strong>Languages:</strong> Python, Go, C++, Java</li>
-<li><strong>AI and safety:</strong> RAG, guardrailing, MCP, evaluation and monitoring</li>
-<li><strong>Cryptography and authorization:</strong> Zero Trust, OAuth2/OIDC, SAML, PKI, OPA/Rego, WAF, SSL/TLS</li>
-<li><strong>Distributed systems:</strong> containers, Kubernetes, Envoy, gRPC, Spark, Kafka, OpenTelemetry</li>
-</ul>
-</section>
-<section id="experience" class="level2">
-<h2 class="anchored" data-anchor-id="experience">Experience</h2>
-<p><strong>Independent (Kriml), Founder, AI security startup.</strong> Bengaluru. December 2025 to present.</p>
-<ul>
-<li>Researched, built, and productized a secure, anonymous, FDA-compliant medical AI bot.</li>
-<li>Worked with the IETF BMWG group to develop AI-related measurement drafts.</li>
-</ul>
-<p><strong>Microsoft, Senior Software Engineer and Manager.</strong> Bengaluru. February 2021 to December 2025.</p>
-<ul>
-<li>Built Net Copilot, an LLM-powered multi-agent system with chat, search, and API capabilities, serving 250 daily active engineers. Implemented RAG pipelines and fine-tuned and distilled models for production.</li>
-<li>As Engineering Manager from November 2022 to November 2025, led a 15-member cross-geo SRE team for GPU fleet network operations. Defined SLIs and SLOs for Azure datacenter networking. Owned MTTM and MTTR metrics and reduced time to mitigate by 30%. Designed on-call rotations, escalation policies, incident fatigue management, and an engineer growth path.</li>
-</ul>
-<p><strong>Cisco, Technical Leader.</strong> Bengaluru. June 2012 to February 2021.</p>
-<ul>
-<li>Led architecture and delivery of an $80M web security gateway platform. Engineered TLS performance optimizations and TCP tuning in the FreeBSD kernel, achieving 1.2x throughput and 2x faster decryption.</li>
-<li>Drove the enterprise security roadmap and cross-org architecture reviews. Implemented differential privacy guarantees for an enterprise firewall and ensured GDPR compliance.</li>
-</ul>
-<p><strong>Early roles (Symantec, TCS).</strong> Mumbai and Pune. December 2006 to June 2012.</p>
-<ul>
-<li>Worked on email security, AAA systems, and network protocol development in C/C++ and Java.</li>
-</ul>
-</section>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<p><strong>Bachelor of Engineering, Information Technology.</strong> Shivaji University, Kolhapur. 2006. Distinction.</p>
-</section>
-<section id="selected-publications-and-preprints" class="level2">
-<h2 class="anchored" data-anchor-id="selected-publications-and-preprints">Selected publications and preprints</h2>
-<p>Several of these have companion posts on this blog that explain the ideas in plain language. See the <a href="./index.html">blog</a> and <a href="./papers/index.html">papers</a>.</p>
-<ul>
-<li>AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs. NeurIPS 2025 Workshop. <a href="https://arxiv.org/abs/2512.17251">arXiv:2512.17251</a> · <a href="posts/aligndp-rarity-privacy/">post</a></li>
-<li>NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback. <a href="https://arxiv.org/abs/2507.21131">arXiv:2507.21131</a> · <a href="posts/npo-meta-alignment/">post</a></li>
-<li>ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability. <a href="https://arxiv.org/abs/2508.16119">arXiv:2508.16119</a> · <a href="posts/ansc-capacity-health/">post</a></li>
-<li>AVEC: Bootstrapping Privacy for Local LLMs. <a href="https://arxiv.org/abs/2509.10561">arXiv:2509.10561</a> · <a href="posts/avec-edge-privacy/">post</a></li>
-<li>Murphy’s Laws of AI Alignment: Why the Gap Always Wins. <a href="https://arxiv.org/abs/2509.05381">arXiv:2509.05381</a> · <a href="posts/murphy-alignment-gap/">post</a></li>
-<li>When Are Two RLHF Objectives the Same? (Opal). <a href="https://arxiv.org/abs/2509.11298">arXiv:2509.11298</a> · <a href="posts/opal-rlhf-equivalence/">post</a></li>
-<li>Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents. ICLR 2026 Workshop. <a href="https://arxiv.org/abs/2603.15658">arXiv:2603.15658</a> · <a href="posts/memory-store-routing/">post</a></li>
-<li>AEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture. <a href="./papers/aegis.html">paper</a> · <a href="posts/aegis-evidence-obligation/">post</a></li>
-<li>Heuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics. <a href="./papers/fibonacci-primes.html">paper</a> · <a href="posts/fibonacci-prime-statistics/">post</a></li>
-<li>Algorithmic Analysis of DAM. ICLR 2026 Workshop. <a href="https://openreview.net/pdf?id=zgHAqaIybd">OpenReview</a></li>
-<li>The Abstention Protocol: Root Cause Analysis for Clos Fabrics. USENIX OSDI 2026.</li>
-<li>Agentic Trust Fabric: A Systematization of Knowledge of Security Architectures for Autonomous AI Agents. <a href="https://philpapers.org/archive/GAITAT-2.pdf">preprint</a></li>
-<li>Adaptive WAF: Multi-Armed Bandits for Web Application Firewall Rule Tuning. <a href="https://philpapers.org/archive/GAIHPS.pdf">preprint</a></li>
-<li>Zero Trust Identity and Authorization Profile. <a href="https://philpapers.org/archive/GAIZTI.pdf">draft</a></li>
-</ul>
-</section>
-<section id="ietf-drafts-llm-benchmarking-under-bmwg-review" class="level2">
-<h2 class="anchored" data-anchor-id="ietf-drafts-llm-benchmarking-under-bmwg-review">IETF drafts (LLM benchmarking, under BMWG review)</h2>
-<ul>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/">LLM Benchmarking Terminology</a></li>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/">LLM Benchmarking Methodology</a></li>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/">LLM Benchmarking Profiles</a></li>
-<li><a href="https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/">LLM Serving Workload Profiles</a></li>
-</ul>
+<p>Reader’s notes on papers worth reading, written in the spirit of an admiring colleague. These review external work. Each post links to the original and does not host it.</p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="cGFwZXItcmV2aWV3JTJDbmV0d29ya2luZyUyQ3N5c3RlbXM=" data-listing-date-sort="1780770600000" data-listing-file-modified-sort="1780852658739" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="828">
+<div class="thumbnail"><a href="../reviews/accelnet/index.html" class="no-external">
+
+<img loading="lazy" src="../reviews/accelnet/cover.jpg" class="thumbnail-image" alt="Bellotto&amp;#039;s view of the Grand Canal in Venice">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../reviews/accelnet/index.html" class="no-external">Reading AccelNet: SmartNICs in the public cloud</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGFwZXItcmV2aWV3'); return false;">paper-review</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bmV0d29ya2luZw=='); return false;">networking</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtcw=='); return false;">systems</div>
+
+</div>
+<div class="delink listing-description"><a href="../reviews/accelnet/index.html" class="no-external">
+<p>A review of Azure Accelerated Networking (Firestone et al., NSDI ’18). A landmark paper with production evidence at real scale, and a few places where the evaluation could close the loop.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../reviews/accelnet/index.html" class="no-external">
+<div class="listing-date">
+Jun 7, 2026
+</div>
+<div class="listing-author">
+Madhava Gaikwad
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="cGFwZXItcmV2aWV3JTJDbmV0d29ya2luZyUyQ21sLXN5c3RlbXM=" data-listing-date-sort="1780770600000" data-listing-file-modified-sort="1780852689841" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1046">
+<div class="thumbnail"><a href="../reviews/mrc-srv6/index.html" class="no-external">
+
+<img loading="lazy" src="../reviews/mrc-srv6/cover.jpg" class="thumbnail-image" alt="Velazquez&amp;#039;s The Spinners, figures weaving thread into fabric">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../reviews/mrc-srv6/index.html" class="no-external">Reading MRC and SRv6: resilient AI supercomputer networking</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGFwZXItcmV2aWV3'); return false;">paper-review</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bmV0d29ya2luZw=='); return false;">networking</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWwtc3lzdGVtcw=='); return false;">ml-systems</div>
+
+</div>
+<div class="delink listing-description"><a href="../reviews/mrc-srv6/index.html" class="no-external">
+<p>A review of Araujo et al.&nbsp;(arXiv 2605.04333). A bold, candid paper on networking 100,000-GPU clusters, with one clear opportunity: symmetry in the evidence.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../reviews/mrc-srv6/index.html" class="no-external">
+<div class="listing-date">
+Jun 7, 2026
+</div>
+<div class="listing-author">
+Madhava Gaikwad
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -854,5 +929,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

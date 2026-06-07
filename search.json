@@ -1,626 +1,94 @@
 [
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Madhava Gaikwad",
+    "objectID": "reviews/index.html",
+    "href": "reviews/index.html",
+    "title": "Reviews",
     "section": "",
-    "text": "gaikwad.madhav@gmail.com · Bengaluru · LinkedIn · GitHub · Google Scholar\nI work at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts."
+    "text": "Reader’s notes on papers worth reading, written in the spirit of an admiring colleague. These review external work. Each post links to the original and does not host it.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading AccelNet: SmartNICs in the public cloud\n\n\n\npaper-review\n\nnetworking\n\nsystems\n\n\n\nA review of Azure Accelerated Networking (Firestone et al., NSDI ’18). A landmark paper with production evidence at real scale, and a few places where the evaluation could close the loop.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nReading MRC and SRv6: resilient AI supercomputer networking\n\n\n\npaper-review\n\nnetworking\n\nml-systems\n\n\n\nA review of Araujo et al. (arXiv 2605.04333). A bold, candid paper on networking 100,000-GPU clusters, with one clear opportunity: symmetry in the evidence.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "cv.html#skills",
-    "href": "cv.html#skills",
-    "title": "Madhava Gaikwad",
-    "section": "Skills",
-    "text": "Skills\n\nLanguages: Python, Go, C++, Java\nAI and safety: RAG, guardrailing, MCP, evaluation and monitoring\nCryptography and authorization: Zero Trust, OAuth2/OIDC, SAML, PKI, OPA/Rego, WAF, SSL/TLS\nDistributed systems: containers, Kubernetes, Envoy, gRPC, Spark, Kafka, OpenTelemetry"
-  },
-  {
-    "objectID": "cv.html#experience",
-    "href": "cv.html#experience",
-    "title": "Madhava Gaikwad",
-    "section": "Experience",
-    "text": "Experience\nIndependent (Kriml), Founder, AI security startup. Bengaluru. December 2025 to present.\n\nResearched, built, and productized a secure, anonymous, FDA-compliant medical AI bot.\nWorked with the IETF BMWG group to develop AI-related measurement drafts.\n\nMicrosoft, Senior Software Engineer and Manager. Bengaluru. February 2021 to December 2025.\n\nBuilt Net Copilot, an LLM-powered multi-agent system with chat, search, and API capabilities, serving 250 daily active engineers. Implemented RAG pipelines and fine-tuned and distilled models for production.\nAs Engineering Manager from November 2022 to November 2025, led a 15-member cross-geo SRE team for GPU fleet network operations. Defined SLIs and SLOs for Azure datacenter networking. Owned MTTM and MTTR metrics and reduced time to mitigate by 30%. Designed on-call rotations, escalation policies, incident fatigue management, and an engineer growth path.\n\nCisco, Technical Leader. Bengaluru. June 2012 to February 2021.\n\nLed architecture and delivery of an $80M web security gateway platform. Engineered TLS performance optimizations and TCP tuning in the FreeBSD kernel, achieving 1.2x throughput and 2x faster decryption.\nDrove the enterprise security roadmap and cross-org architecture reviews. Implemented differential privacy guarantees for an enterprise firewall and ensured GDPR compliance.\n\nEarly roles (Symantec, TCS). Mumbai and Pune. December 2006 to June 2012.\n\nWorked on email security, AAA systems, and network protocol development in C/C++ and Java."
-  },
-  {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "Madhava Gaikwad",
-    "section": "Education",
-    "text": "Education\nBachelor of Engineering, Information Technology. Shivaji University, Kolhapur. 2006. Distinction."
-  },
-  {
-    "objectID": "cv.html#selected-publications-and-preprints",
-    "href": "cv.html#selected-publications-and-preprints",
-    "title": "Madhava Gaikwad",
-    "section": "Selected publications and preprints",
-    "text": "Selected publications and preprints\nSeveral of these have companion posts on this blog that explain the ideas in plain language. See the blog and papers.\n\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs. NeurIPS 2025 Workshop. arXiv:2512.17251 · post\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback. arXiv:2507.21131 · post\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability. arXiv:2508.16119 · post\nAVEC: Bootstrapping Privacy for Local LLMs. arXiv:2509.10561 · post\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins. arXiv:2509.05381 · post\nWhen Are Two RLHF Objectives the Same? (Opal). arXiv:2509.11298 · post\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents. ICLR 2026 Workshop. arXiv:2603.15658 · post\nAEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture. paper · post\nHeuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics. paper · post\nAlgorithmic Analysis of DAM. ICLR 2026 Workshop. OpenReview\nThe Abstention Protocol: Root Cause Analysis for Clos Fabrics. USENIX OSDI 2026.\nAgentic Trust Fabric: A Systematization of Knowledge of Security Architectures for Autonomous AI Agents. preprint\nAdaptive WAF: Multi-Armed Bandits for Web Application Firewall Rule Tuning. preprint\nZero Trust Identity and Authorization Profile. draft"
-  },
-  {
-    "objectID": "cv.html#ietf-drafts-llm-benchmarking-under-bmwg-review",
-    "href": "cv.html#ietf-drafts-llm-benchmarking-under-bmwg-review",
-    "title": "Madhava Gaikwad",
-    "section": "IETF drafts (LLM benchmarking, under BMWG review)",
-    "text": "IETF drafts (LLM benchmarking, under BMWG review)\n\nLLM Benchmarking Terminology\nLLM Benchmarking Methodology\nLLM Benchmarking Profiles\nLLM Serving Workload Profiles"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Krimler",
+    "objectID": "reviews/mrc-srv6/index.html",
+    "href": "reviews/mrc-srv6/index.html",
+    "title": "Reading MRC and SRv6: resilient AI supercomputer networking",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCounting Fibonacci primes: what a finite computation can and cannot add\n\n\n\nnumber-theory\n\nprimes\n\nstatistics\n\nreproducibility\n\n\n\nTreating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAEGIS: typed evidence and obligations for AI-native enterprise architecture\n\n\n\nai-governance\n\nenterprise-architecture\n\nontology\n\nsecurity\n\n\n\nWhy static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.\n\n\n\n\n\nApr 9, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDid you check the right pocket? Routing retrieval across an agent’s memory\n\n\n\nllm-agents\n\nretrieval\n\nmemory\n\nml-systems\n\n\n\nMemory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers.\n\n\n\n\n\nMar 19, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nFinite-size guarantees for dense associative memory\n\n\n\nmachine-learning\n\nassociative-memory\n\nlearning-theory\n\n\n\nModern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nA common language for benchmarking LLM serving: four IETF drafts\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\ndistributed-systems\n\n\n\nThroughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTwenty-five representative tasks: the IETF workload profiles draft\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe fourth of four IETF drafts on benchmarking LLM serving. It standardizes the workloads themselves, so systems are compared on the same representative tasks, each described along five dimensions.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDeclaring the measurement boundary: the IETF profiles draft\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe third of four IETF drafts on benchmarking LLM serving. A profile binds the terms and the method to a concrete role in the system, so a number says exactly what it includes.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nA shared vocabulary for LLM serving (IETF terminology draft)\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe first of four IETF drafts on benchmarking LLM serving. It fixes the words: precise definitions for the metrics that everyone uses loosely, with no methodology and no thresholds.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nHow to run the tests: the IETF LLM serving methodology draft\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe second of four IETF drafts on benchmarking LLM serving. It turns the vocabulary into a procedure: where to measure, what traffic to send, and which ten tests to run.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAlignDP: locking knowledge transfer at the data interface\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nsecurity\n\n\n\nWatermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.\n\n\n\n\n\nDec 21, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nEnforcing privacy at the edge for local language models: AVEC\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nedge\n\n\n\nA local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee.\n\n\n\n\n\nSep 13, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhen are two RLHF objectives the same? A canonical form for preference losses\n\n\n\nai-alignment\n\nrlhf\n\npreference-optimization\n\n\n\nThe preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.\n\n\n\n\n\nSep 11, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhy the alignment gap always wins, unless you know where to look\n\n\n\nai-alignment\n\nrlhf\n\nlearning-theory\n\n\n\nWhen human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.\n\n\n\n\n\nSep 5, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nScoring a datacenter fleet by the risk of what happens next\n\n\n\ndistributed-systems\n\nreliability\n\nsre\n\n\n\nAlerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact.\n\n\n\n\n\nAug 22, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTreating alignment as something you can measure and reduce: NPO\n\n\n\nai-alignment\n\nrlhf\n\nml-systems\n\n\n\nMost pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback.\n\n\n\n\n\nJul 28, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
+    "text": "Las Hilanderas (The Spinners), Diego Velázquez (c. 1657). Public domain, via Wikimedia Commons.\nA review of an external paper. The work is not mine. This post is a reader’s notes, in the spirit of an admiring colleague.\nPaper: Resilient AI Supercomputer Networking using MRC and SRv6. Araujo et al. Authors come from OpenAI, Microsoft, AMD, Broadcom, and NVIDIA. arXiv preprint 2605.04333, May 2026.\nRead the original: arXiv:2605.04333. It is arXiv preprint 2605.04333v1 in cs.NI, dated 5 May 2026."
   },
   {
-    "objectID": "papers/fibonacci-primes.html",
-    "href": "papers/fibonacci-primes.html",
-    "title": "Heuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics",
+    "objectID": "reviews/mrc-srv6/index.html#what-the-paper-does",
+    "href": "reviews/mrc-srv6/index.html#what-the-paper-does",
+    "title": "Reading MRC and SRv6: resilient AI supercomputer networking",
+    "section": "What the paper does",
+    "text": "What the paper does\nLarge AI training jobs are synchronous. Every GPU waits for the slowest transfer in a step. So one bad link can stall the whole job. At 100,000 GPUs, network failures stop being rare. They become a daily event.\nThe paper offers a three-part answer.\nFirst, a new transport called MRC, short for Multipath RC. It extends RoCEv2. It sprays each queue pair across many paths instead of pinning it to one. It balances load with ECN signals. It recovers losses with selective ACK and packet trimming. It turns off PFC and runs the fabric in best-effort lossy mode.\nSecond, a multi-plane Clos topology. Take an 800 Gb/s NIC and split it into 8 lanes of 100 Gb/s. Build 8 parallel planes from the same switches. Now a 100,000 GPU cluster needs only two switch tiers, not three. This lowers latency, lowers cost and power, and shrinks the blast radius of any one link.\nThird, static source routing with SRv6. The endpoint writes the full path into each packet using uN micro-segments. Dynamic routing in the switches is turned off completely. So the endpoint owns failure handling, not the switch.\nThis runs in production at OpenAI and Microsoft. It has trained frontier models including ChatGPT and Codex. It is implemented on NVIDIA CX-8, AMD Pollara and Vulcano, and Broadcom Thor Ultra NICs. The spec is released openly through OCP."
+  },
+  {
+    "objectID": "reviews/mrc-srv6/index.html#what-works-well",
+    "href": "reviews/mrc-srv6/index.html#what-works-well",
+    "title": "Reading MRC and SRv6: resilient AI supercomputer networking",
+    "section": "What works well",
+    "text": "What works well\nThe design choices are bold and well argued. Turning off dynamic routing sounds backwards at first. Turning off PFC sounds risky too. But the reasoning is clean. Two adaptive systems fighting each other add no value. MRC already routes around failures on its own. So let it do that job alone.\nThe blast-radius argument is concrete and convincing. Losing one T0-to-T1 link in an 800 Gb/s single plane cuts a node’s capacity by about 3 percent. The same loss in a 100 Gb/s plane costs only about 0.4 percent. So the job barely notices a link flap. The team even leaves flapping links in service and repairs them later.\nThe observability insight is elegant. With static source routing, a probe takes the exact same path a data packet would take. So a Clustermapper probe gives ground truth on the forwarding plane. Switch telemetry cannot match this. This is why they can run a relaxed repair posture and still feel safe.\nThe multi-vendor breadth is a real systems achievement. The same protocol works across three NIC vendors and several switch platforms. That is strong evidence the design generalizes.\nThe honesty is refreshing. The team flags the single points of failure that remain. They flag the cases where their load-balancing rule does not behave well."
+  },
+  {
+    "objectID": "reviews/mrc-srv6/index.html#a-few-friendly-suggestions",
+    "href": "reviews/mrc-srv6/index.html#a-few-friendly-suggestions",
+    "title": "Reading MRC and SRv6: resilient AI supercomputer networking",
+    "section": "A few friendly suggestions",
+    "text": "A few friendly suggestions\nThe MRC versus RoCE comparison is uneven, and that is the thing I would fix first. MRC’s headline results come from 42,000 to 75,000 GPU jobs. The head-to-head against RoCE runs on tiny testbeds of 16 and 64 GPUs, called Cluster C and Cluster D. The authors say plainly they have no large deployment for a direct comparison.\nThat gap matters for two reasons. The RoCE baseline is configured by the authors, as a single plane with DCQCN. The authors also call DCQCN very hard to tune. So a skeptic could read the comparison as a gentle strawman. Even a partial at-scale A or B test would make the case airtight.\nThere is no at-scale before-and-after. The paper shows MRC works well at scale. It shows RoCE struggles on small testbeds. It never shows the old approach at the same scale. So the size of the win is asserted, not measured. The strongest possible number would be the job-interruption rate before MRC and after MRC at a fixed scale.\nClustermapper’s own cost deserves a paragraph. Every node runs an agent. Every agent probes every directly connected link every millisecond. That is powerful. But the total probe traffic and control overhead at 100,000 nodes is not characterized. There is also a small tension to resolve. The paper says MRC makes denylists unnecessary. Yet it keeps Clustermapper for observability and some policy calls. One sentence reconciling the two would help.\nSeveral key figures are single incidents. Figure 6 is one transceiver glitch that cost about 25 percent throughput. Figure 8 is one T1 reboot. These traces are vivid and useful. But a distribution across many failures would tell readers the typical case, not just the illustrative one. For example, a histogram of throughput dips and recovery times across all flaps in a job.\nThe remaining single point of failure is flagged, and it should be quantified. An 800 Gb/s NIC optic splits into 4 lanes of 200 Gb/s. If the NIC transceiver itself flaps, all ports go down at once. Then the queue pairs fail and the job cannot ride it out. The authors say this is rare and that a different optical design might avoid it. How often does it happen at scale, and what does it cost the job. That number would tell readers how close to fully resilient the system really is.\nGeneralizability is narrow by design. MRC needs SRv6 uN micro-segment support in the switches. It needs packet trimming in the switches. It needs specific NICs. It needs a multi-plane topology. So it suits a 100,000 GPU frontier cluster, where you can co-design the whole stack. A short note on what a smaller operator could adopt step by step would widen the paper’s reach.\nThe relation to UET could be sharper. MRC is described as a minimal extension to RoCE that borrows from Ultra Ethernet Transport. So a crisp line on what is new in MRC beyond UET would help. The novelty seems to be the SRv6 static-routing plus multi-plane co-design plus the production experience itself. Saying so directly would place the contribution well."
+  },
+  {
+    "objectID": "reviews/mrc-srv6/index.html#bottom-line",
+    "href": "reviews/mrc-srv6/index.html#bottom-line",
+    "title": "Reading MRC and SRv6: resilient AI supercomputer networking",
+    "section": "Bottom line",
+    "text": "Bottom line\nThis is a bold, important, and candid paper. The static-routing-for-observability argument is a standout. The multi-vendor production deployment is rare and valuable. Turning off both dynamic routing and PFC is exactly the kind of principled risk-taking the field needs.\nThe main opportunity is evidence symmetry. MRC’s at-scale wins are weighed against small-testbed RoCE. They are also weighed against an unquantified before. So the size of the benefit is the one thing a reader has to take partly on faith. Close that gap and a very persuasive paper becomes an unarguable one."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "A companion blog post walks through the results: Counting Fibonacci primes: what a finite computation can and cannot add.\nCode and scripts: github.com/krimler/k-bonacci.\n⬇ Download PDF"
+    "text": "Hi, I am Madhava Gaikwad.\nI am a Senior Software Engineer working at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts.\nI work on bridging AI alignment theory with real-world systems. My background spans differential privacy, reinforcement learning from feedback, distributed consensus, and novel data abstractions for telemetry and streaming analytics. The questions I keep coming back to are these. How do we reason about uncertainty rigorously. How do we guarantee safety and rollback in complex infrastructure. How do we design data and learning pipelines that stay robust at scale."
   },
   {
-    "objectID": "posts/ietf-benchmarking-methodology/index.html",
-    "href": "posts/ietf-benchmarking-methodology/index.html",
-    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "objectID": "about.html#what-i-build",
+    "href": "about.html#what-i-build",
+    "title": "About",
+    "section": "What I build",
+    "text": "What I build\nSmall, composable systems. Clear quickstarts. Minimal tests and CI. Figures you can reproduce."
+  },
+  {
+    "objectID": "about.html#focus-areas",
+    "href": "about.html#focus-areas",
+    "title": "About",
+    "section": "Focus areas",
+    "text": "Focus areas\n\nAlignment loops, including RLHF and beyond\nOperator views of learning\nDifferential privacy for LLMs\nReliability at datacenter scale"
+  },
+  {
+    "objectID": "about.html#talk-to-me-about",
+    "href": "about.html#talk-to-me-about",
+    "title": "About",
+    "section": "Talk to me about",
+    "text": "Talk to me about\nTurning research into demos. Privacy-first LLMs. Robust infrastructure for ML."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\n\nEmail: gaikwad.madhav@gmail.com\nLinkedIn: safeai\nGitHub: krimler"
+  },
+  {
+    "objectID": "papers/index.html",
+    "href": "papers/index.html",
+    "title": "Papers",
     "section": "",
-    "text": "An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons.\nPart of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nAgreed words are the start. A reproducible benchmark also needs an agreed procedure. The second IETF draft supplies it. It specifies how to set up a test, what traffic to send, what to measure, and how to report the result. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
+    "text": "Papers and preprints. Each entry opens the full PDF with a download link, and most have a companion post that explains the ideas in plain language.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nJun 7, 2026\n\n\nHeuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics\n\n\nA reproducible verification study of the statistics of Fibonacci and k-bonacci prime indices, with a coverage-validated prediction interval, a null-model battery, and a fully cited provenance map.\n\n\n\n\n\n\nApr 9, 2026\n\n\nAEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture\n\n\nA typed ontology and lifecycle that makes evidence, obligations, and runtime signals first-class enterprise-architecture objects, with a crosswalk to the EU AI Act and ISO/IEC 42001.\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/ietf-benchmarking-methodology/index.html#where-to-measure",
-    "href": "posts/ietf-benchmarking-methodology/index.html#where-to-measure",
-    "title": "How to run the tests: the IETF LLM serving methodology draft",
-    "section": "Where to measure",
-    "text": "Where to measure\nThe draft defines three system boundaries, because a serving stack has layers and a number means little without saying which layer it covers.\n\nThe model engine, which is raw inference.\nThe application gateway, which adds routing, authentication, and caching.\nThe compound system, which is the full end-to-end path including retrieval and tool use.\n\nA measurement always states which of these boundaries it was taken at."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-methodology/index.html#what-traffic-to-send",
-    "href": "posts/ietf-benchmarking-methodology/index.html#what-traffic-to-send",
-    "title": "How to run the tests: the IETF LLM serving methodology draft",
-    "section": "What traffic to send",
-    "text": "What traffic to send\nIt defines reference workloads so that everyone drives the system with comparable traffic. These include uniform synthetic traffic, skewed synthetic traffic, a conversation pattern, code completion, and long context. Each stresses the system in a different way, from steady load to bursty load to very long prompts."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-methodology/index.html#the-ten-tests",
-    "href": "posts/ietf-benchmarking-methodology/index.html#the-ten-tests",
-    "title": "How to run the tests: the IETF LLM serving methodology draft",
-    "section": "The ten tests",
-    "text": "The ten tests\nThe draft lays out ten benchmarking tests. Together they cover speed, capacity, fairness, and the cost of the features that production systems actually run.\n\nTime to first token.\nOutput token throughput.\nThe tradeoff between throughput and latency.\nThe distribution of inter-token latency, not just its average.\nConcurrent request capacity.\nScheduling fairness across requests.\nPrefix cache effectiveness.\nBehavior under memory pressure.\nLong-context scaling.\nThe overhead added by guardrails."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-methodology/index.html#what-it-accounts-for",
-    "href": "posts/ietf-benchmarking-methodology/index.html#what-it-accounts-for",
-    "title": "How to run the tests: the IETF LLM serving methodology draft",
-    "section": "What it accounts for",
-    "text": "What it accounts for\nThe methodology is built for how LLM serving really behaves. It handles streaming output, where tokens arrive over time rather than all at once. It handles dynamic batching, where the system groups requests on the fly. It handles context-dependent performance, where a long prompt changes the numbers. It also measures the cost of safety systems rather than ignoring them. The goal throughout is a run that someone else can repeat and get the same answer."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-methodology/index.html#why-it-matters",
-    "href": "posts/ietf-benchmarking-methodology/index.html#why-it-matters",
-    "title": "How to run the tests: the IETF LLM serving methodology draft",
-    "section": "Why it matters",
-    "text": "Why it matters\nA benchmark that cannot be reproduced is a marketing number. By fixing the boundaries, the traffic, and the tests, this draft makes a serving result something a second team can check."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-methodology/index.html#read-the-draft",
-    "href": "posts/ietf-benchmarking-methodology/index.html#read-the-draft",
-    "title": "How to run the tests: the IETF LLM serving methodology draft",
-    "section": "Read the draft",
-    "text": "Read the draft\nBenchmarking Methodology for Large Language Model Serving."
-  },
-  {
-    "objectID": "posts/opal-rlhf-equivalence/index.html",
-    "href": "posts/opal-rlhf-equivalence/index.html",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "objectID": "papers/aegis.html",
+    "href": "papers/aegis.html",
+    "title": "AEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture",
     "section": "",
-    "text": "Aligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question."
-  },
-  {
-    "objectID": "posts/opal-rlhf-equivalence/index.html#canonicalization",
-    "href": "posts/opal-rlhf-equivalence/index.html#canonicalization",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
-    "section": "Canonicalization",
-    "text": "Canonicalization\nThe tool is called Opal, and it does canonicalization. A canonical form is a standard way of writing something so that two things that are really equal end up looking identical. Given two preference objectives, Opal returns one of two answers. Either it produces a canonical form that shows the two are algebraically the same, or it produces a concrete witness that they differ. A witness here is a specific case where the two objectives disagree, so the difference is demonstrated rather than asserted."
-  },
-  {
-    "objectID": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
-    "href": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
-    "section": "What it finds",
-    "text": "What it finds\nRun Opal across the popular methods and a clear picture emerges. Many widely used objectives optimize the same underlying thing. Their apparent differences are reparameterizations, meaning the same objective dressed in different variables. Some methods, by contrast, are provably distinct, and Opal isolates a small set of structural mechanisms that produce real differences rather than cosmetic ones.\nOne finding is worth calling out because it is easy to miss. Batch normalization can cause the same response pair to receive different gradients depending on which other examples share its batch. The training signal for a pair stops being a property of the pair alone. It becomes a property of the batch it landed in. That is a genuine difference in objective, and it comes from a detail most people treat as bookkeeping."
-  },
-  {
-    "objectID": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
-    "href": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
-    "section": "Why it matters",
-    "text": "Why it matters\nA field that keeps proposing objectives needs a way to tell novelty from notation. Opal turns that into a decidable check. It tells you when a new method is a real departure and when it is an old method in new clothes. That saves effort, and it points attention at the handful of structural choices that actually change what the model learns."
-  },
-  {
-    "objectID": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
-    "href": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
-    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
-    "section": "Read the paper",
-    "text": "Read the paper\nWhen Are Two RLHF Objectives the Same? (arXiv:2509.11298)."
-  },
-  {
-    "objectID": "posts/avec-edge-privacy/index.html",
-    "href": "posts/avec-edge-privacy/index.html",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
-    "section": "",
-    "text": "Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons.\nA local language model runs on your own device, which keeps your data close. Some queries are too hard for the small local model, so it delegates them to a larger model in the cloud. That handoff is the weak point. The query sent outward can carry sensitive information. AVEC is a proposal for controlling that handoff. The name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge and makes the delegation verifiable.\nA note on what this is. AVEC is a position paper. Its evaluation is simulation based by design, and it does not claim deployment readiness or measured task quality with live models. The contribution is an architecture and the theory that goes with it."
-  },
-  {
-    "objectID": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
-    "href": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
-    "section": "Spending a privacy budget per query",
-    "text": "Spending a privacy budget per query\nThe core mechanism is an adaptive budget. Differential privacy is a way of adding calibrated random noise so that an output reveals very little about any single underlying record. The strength of that protection is a budget, and spending more budget buys more accuracy at the cost of more exposure. Most systems fix one budget for everything. AVEC sets the budget per query, based on three things: how sensitive the query is, how confident the local model is on its own, and how much budget the user has already spent in the past.\nTo keep the spending honest, AVEC tracks it with an odometer. An odometer is a running tally of privacy budget consumed across many queries, so the system always knows how much protection remains. The accounting uses Rényi differential privacy, a version of the theory that composes cleanly when you add up many small releases."
-  },
-  {
-    "objectID": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
-    "href": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
-    "section": "What it proves it can and cannot do",
-    "text": "What it proves it can and cannot do\nThe paper does the unglamorous work of marking the boundaries. It establishes utility ceilings, which are limits on how good the answers can be at a given level of privacy. It establishes delegation-leakage bounds, which cap how much the handoff to the remote model can reveal. It also proves impossibility results. Two tempting shortcuts do not work on their own. Deterministic gating, where a fixed rule decides what to send, cannot provide the guarantee. Hash-only certification, where a hash is used to prove integrity, is not enough by itself."
-  },
-  {
-    "objectID": "posts/avec-edge-privacy/index.html#why-it-matters",
-    "href": "posts/avec-edge-privacy/index.html#why-it-matters",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
-    "section": "Why it matters",
-    "text": "Why it matters\nLocal models are sold on privacy, and the delegation step quietly undermines that promise. AVEC takes the step seriously. It treats each outward query as a metered privacy event, verifies the transformation on the device, and is honest about the ceilings and the dead ends. That gives later empirical work a clear target."
-  },
-  {
-    "objectID": "posts/avec-edge-privacy/index.html#read-the-paper",
-    "href": "posts/avec-edge-privacy/index.html#read-the-paper",
-    "title": "Enforcing privacy at the edge for local language models: AVEC",
-    "section": "Read the paper",
-    "text": "Read the paper\nAVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)."
-  },
-  {
-    "objectID": "posts/npo-meta-alignment/index.html",
-    "href": "posts/npo-meta-alignment/index.html",
-    "title": "Treating alignment as something you can measure and reduce: NPO",
-    "section": "",
-    "text": "The Geographer, Johannes Vermeer (c. 1668). Public domain, via Wikimedia Commons.\nAlignment means making a model behave the way people actually want it to behave. Most production pipelines treat this as a one-time step. You train the model, you ship it, and you hope it stays aligned. NPO starts from a different stance. Alignment is a quantity you can measure, supervise, and drive down over time."
-  },
-  {
-    "objectID": "posts/npo-meta-alignment/index.html#the-two-quantities",
-    "href": "posts/npo-meta-alignment/index.html#the-two-quantities",
-    "title": "Treating alignment as something you can measure and reduce: NPO",
-    "section": "The two quantities",
-    "text": "The two quantities\nNPO names two things and turns each into a number.\nThe first is alignment loss. This is how far the model’s behavior sits from what was intended. Driving it down is the usual goal.\nThe second is meta-alignment, and it is the idea that gives the paper its name. Meta-alignment asks whether your monitoring is itself trustworthy. A system that reports “everything looks aligned” is only useful if that report tracks reality. NPO calls this monitoring fidelity. The paper shows that meta-alignment reduces to ordinary alignment once you fix a threshold on the monitor. In plain terms, checking the checker is the same kind of problem as the original check, so the same machinery handles both."
-  },
-  {
-    "objectID": "posts/npo-meta-alignment/index.html#the-feedback-that-drives-it",
-    "href": "posts/npo-meta-alignment/index.html#the-feedback-that-drives-it",
-    "title": "Treating alignment as something you can measure and reduce: NPO",
-    "section": "The feedback that drives it",
-    "text": "The feedback that drives it\nThe loop runs on structured human feedback. This is more than a thumbs up. It includes likes, explicit overrides where a person corrects the system, and abstentions where a person declines to answer. Each kind of signal carries different information, and NPO ingests all of them. Around this sit the operational pieces a real deployment needs: scoring scenarios, tuning thresholds, and validating policies before they take effect."
-  },
-  {
-    "objectID": "posts/npo-meta-alignment/index.html#why-the-loop-is-stable",
-    "href": "posts/npo-meta-alignment/index.html#why-the-loop-is-stable",
-    "title": "Treating alignment as something you can measure and reduce: NPO",
-    "section": "Why the loop is stable",
-    "text": "Why the loop is stable\nA feedback loop is only useful if it settles rather than drifts. NPO proves that under noisy feedback both quantities converge, and that they do so together. The alignment loss and the monitoring fidelity both approach their targets as more feedback arrives. The paper backs the theory with results from a large deployment, along with simulation artifacts and ablation studies that isolate which parts of the design carry the weight."
-  },
-  {
-    "objectID": "posts/npo-meta-alignment/index.html#why-it-matters",
-    "href": "posts/npo-meta-alignment/index.html#why-it-matters",
-    "title": "Treating alignment as something you can measure and reduce: NPO",
-    "section": "Why it matters",
-    "text": "Why it matters\nThe shift here is from a single alignment event to a controlled process. Once alignment and the honesty of its monitoring are both numbers that provably go down under feedback, you can run alignment the way you run any other reliability metric. You watch it, you set targets, and you route effort to where the number is worst."
-  },
-  {
-    "objectID": "posts/npo-meta-alignment/index.html#read-the-paper",
-    "href": "posts/npo-meta-alignment/index.html#read-the-paper",
-    "title": "Treating alignment as something you can measure and reduce: NPO",
-    "section": "Read the paper",
-    "text": "Read the paper\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-workloads/index.html",
-    "href": "posts/ietf-benchmarking-workloads/index.html",
-    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
-    "section": "",
-    "text": "Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons.\nPart of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nA serving system can look fast on one kind of task and slow on another. Embedding a short document and running a long agentic plan stress completely different parts of the stack. To compare systems fairly, the workloads themselves have to be standardized. The fourth IETF draft does this. It is co-authored by Mohadeb Mondal and Madhava Gaikwad, an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-workloads/index.html#five-dimensions",
-    "href": "posts/ietf-benchmarking-workloads/index.html#five-dimensions",
-    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
-    "section": "Five dimensions",
-    "text": "Five dimensions\nEvery workload is described along five dimensions. Together they capture what makes a task cheap or expensive to serve.\n\nInput to output ratio. Whether the task is mostly prompt, mostly generation, or balanced.\nOutput constraints. Whether the output is non-token, minimal, structured, semi-structured, or free-form.\nLatency sensitivity. Whether the task is interactive, near-real-time, or throughput-oriented.\nConcurrency pattern. Whether requests are single-stream, bursty, sustained and high, or chained in sequence.\nPrefix sharing. How much of the prompt prefix is shared across requests, from none, through a shared system prompt, up to a shared document or schema."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-workloads/index.html#twenty-five-profiles-in-six-groups",
-    "href": "posts/ietf-benchmarking-workloads/index.html#twenty-five-profiles-in-six-groups",
-    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
-    "section": "Twenty-five profiles in six groups",
-    "text": "Twenty-five profiles in six groups\nThe draft defines 25 standard workloads, sorted into six groups by what they demand of the system.\n\nGroup A, non-generative. Embeddings, cross-encoder reranking, and logprob scoring.\nGroup B, minimal output. Classification, short question answering, and function calling.\nGroup C, interactive streaming. Chat, code completion, and roleplay.\nGroup D, prefill-heavy. Summarization, document question answering, and extraction.\nGroup E, decode-heavy. Content generation, reasoning, and translation.\nGroup F, multi-step. Agentic workflows and planning.\n\nEach profile maps to the metrics and test procedures from the companion methodology and profiles drafts, so a workload, the way to measure it, and the boundary it is measured at all line up."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-workloads/index.html#why-it-matters",
-    "href": "posts/ietf-benchmarking-workloads/index.html#why-it-matters",
-    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
-    "section": "Why it matters",
-    "text": "Why it matters\nWithout standard workloads, every benchmark picks its own favourable task and the results stop being comparable. A fixed, representative set means a serving system is judged on the same range of work that production actually throws at it."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-workloads/index.html#read-the-draft",
-    "href": "posts/ietf-benchmarking-workloads/index.html#read-the-draft",
-    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
-    "section": "Read the draft",
-    "text": "Read the draft\nBenchmarking Workload Profiles for Large Language Model Serving."
-  },
-  {
-    "objectID": "posts/ietf-llm-benchmarking/index.html",
-    "href": "posts/ietf-llm-benchmarking/index.html",
-    "title": "A common language for benchmarking LLM serving: four IETF drafts",
-    "section": "",
-    "text": "The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.\nWhen two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.\nThis post is the overview. Each draft also has its own post."
-  },
-  {
-    "objectID": "posts/ietf-llm-benchmarking/index.html#the-words",
-    "href": "posts/ietf-llm-benchmarking/index.html#the-words",
-    "title": "A common language for benchmarking LLM serving: four IETF drafts",
-    "section": "The words",
-    "text": "The words\nThe first draft is a terminology document. It defines a shared vocabulary for LLM serving performance, covering latency, throughput, resource use, and quality. It gives precise definitions for a large set of metrics. These include time to first token, the delay before the first output appears, and inter-token latency, the gap between successive output tokens. It separates the two phases of generation, prefill where the prompt is processed and decode where tokens are produced. It covers throughput, latency percentiles and jitter, multi-tenant concerns such as fairness and head-of-line blocking, optimizations such as prefix caching and speculative decoding, compound systems such as retrieval-augmented generation and agents, and quality signals such as policy violations and false refusals. It defines terms only. It prescribes no method and sets no pass-or-fail thresholds.\nSee the Terminology draft."
-  },
-  {
-    "objectID": "posts/ietf-llm-benchmarking/index.html#the-method",
-    "href": "posts/ietf-llm-benchmarking/index.html#the-method",
-    "title": "A common language for benchmarking LLM serving: four IETF drafts",
-    "section": "The method",
-    "text": "The method\nThe second draft is a methodology. It says how to run the tests, set up the parameters, take the measurements, and report the results. It defines three system boundaries to test at: the model engine, the application gateway, and the full compound system. It defines reference workloads, including uniform and skewed synthetic traffic, conversation, code completion, and long context. It defines ten tests, among them time to first token, output token throughput, the throughput-and-latency tradeoff, the distribution of inter-token latency, concurrent request capacity, scheduling fairness, prefix cache effectiveness, behavior under memory pressure, long-context scaling, and the overhead added by guardrails. The goal is reproducible and fair comparison that accounts for streaming output, dynamic batching, and the cost of safety systems.\nSee the Methodology draft."
-  },
-  {
-    "objectID": "posts/ietf-llm-benchmarking/index.html#the-measurement-boundaries",
-    "href": "posts/ietf-llm-benchmarking/index.html#the-measurement-boundaries",
-    "title": "A common language for benchmarking LLM serving: four IETF drafts",
-    "section": "The measurement boundaries",
-    "text": "The measurement boundaries\nThe third draft defines profiles. A profile binds the terms and the procedures to a concrete role in the system and a concrete workload pattern, and it declares exactly where the measurement starts and stops. This matters because a metric like time to first token changes depending on whether you include the gateway, the firewall, and the network. Without a declared boundary the numbers are not comparable. The draft defines infrastructure profiles for the model engine, the AI gateway, the AI firewall, and the compound system, along with workload profiles for a chatbot and a compound workflow. It specifies profiles only, not new metrics or thresholds.\nSee the Profiles draft."
-  },
-  {
-    "objectID": "posts/ietf-llm-benchmarking/index.html#the-workloads",
-    "href": "posts/ietf-llm-benchmarking/index.html#the-workloads",
-    "title": "A common language for benchmarking LLM serving: four IETF drafts",
-    "section": "The workloads",
-    "text": "The workloads\nThe fourth draft defines the workloads themselves. It gives 25 standard workload profiles organized into six groups, so that everyone tests against the same representative tasks. The groups run from non-generative work such as embeddings, reranking, and scoring, through minimal-output tasks such as classification and function calling, interactive streaming such as chat and code completion, prefill-heavy tasks such as summarization and document question answering, decode-heavy tasks such as content generation and reasoning, and multi-step agentic workflows. Each profile is described along five dimensions: the ratio of input to output, the constraints on the output, the latency sensitivity, the concurrency pattern, and how much of the prompt prefix is shared across requests.\nSee the Serving Workload Profiles draft."
-  },
-  {
-    "objectID": "posts/ietf-llm-benchmarking/index.html#why-it-matters",
-    "href": "posts/ietf-llm-benchmarking/index.html#why-it-matters",
-    "title": "A common language for benchmarking LLM serving: four IETF drafts",
-    "section": "Why it matters",
-    "text": "Why it matters\nBenchmarks only mean something when everyone measures the same thing the same way. These four drafts supply the missing pieces in order. The vocabulary removes ambiguity in the terms. The methodology makes a run reproducible. The profiles declare what was and was not included in a measurement. The workloads make sure systems are compared on representative tasks. Together they make LLM serving numbers something you can actually trust when you compare them."
-  },
-  {
-    "objectID": "posts/ansc-capacity-health/index.html",
-    "href": "posts/ansc-capacity-health/index.html",
-    "title": "Scoring a datacenter fleet by the risk of what happens next",
-    "section": "",
-    "text": "Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons.\nA hyperscale datacenter network runs thousands of devices and links. When one fails, an alert fires. That alert tells you what broke. It does not tell you how close the whole system is to running out of capacity. Those are different questions. A single link failing in a region with plenty of spare capacity is routine. The same failure in a region already running hot can be the last step before a shortfall. ANSC is built to score the second question."
-  },
-  {
-    "objectID": "posts/ansc-capacity-health/index.html#the-gap-in-ordinary-alerting",
-    "href": "posts/ansc-capacity-health/index.html#the-gap-in-ordinary-alerting",
-    "title": "Scoring a datacenter fleet by the risk of what happens next",
-    "section": "The gap in ordinary alerting",
-    "text": "The gap in ordinary alerting\nStandard monitoring detects individual device or link failures. Each alert is local. It says nothing about the aggregate risk that several failures together push a datacenter or a region past its capacity limit. Operators are left to piece that picture together by hand, often while the alerts are still arriving. The risk that matters is the cascading one, and it lives above the level of any single alert."
-  },
-  {
-    "objectID": "posts/ansc-capacity-health/index.html#what-ansc-measures",
-    "href": "posts/ansc-capacity-health/index.html#what-ansc-measures",
-    "title": "Scoring a datacenter fleet by the risk of what happens next",
-    "section": "What ANSC measures",
-    "text": "What ANSC measures\nANSC produces a color-coded health score for each datacenter and region. The score ranks urgency by the probability of an imminent capacity violation rather than by the impact of what has already happened. Two ingredients go into it. The first is the current residual capacity, meaning how much headroom is left right now. The second is the probability of additional failures on top of the current state. The score combines these and normalizes them at the datacenter level and the regional level, so a green datacenter and a red one mean the same thing wherever you look."
-  },
-  {
-    "objectID": "posts/ansc-capacity-health/index.html#what-it-changes-for-operators",
-    "href": "posts/ansc-capacity-health/index.html#what-it-changes-for-operators",
-    "title": "Scoring a datacenter fleet by the risk of what happens next",
-    "section": "What it changes for operators",
-    "text": "What it changes for operators\nThe paper reports ANSC running across more than 400 datacenters and 60 regions. The effect is to cut noise and point attention at the places most likely to fail soon. Instead of a flat stream of equal-looking alerts, an operator sees a ranked view of where capacity is genuinely at risk. Remediation effort goes to the highest risk first, which is where it does the most good."
-  },
-  {
-    "objectID": "posts/ansc-capacity-health/index.html#why-it-matters",
-    "href": "posts/ansc-capacity-health/index.html#why-it-matters",
-    "title": "Scoring a datacenter fleet by the risk of what happens next",
-    "section": "Why it matters",
-    "text": "Why it matters\nReliability at this scale is a prioritization problem. There are always more alerts than people. A score that orders work by the probability of the next failure, rather than by the noise of the last one, is what lets a small team hold a large fleet."
-  },
-  {
-    "objectID": "posts/ansc-capacity-health/index.html#read-the-paper",
-    "href": "posts/ansc-capacity-health/index.html#read-the-paper",
-    "title": "Scoring a datacenter fleet by the risk of what happens next",
-    "section": "Read the paper",
-    "text": "Read the paper\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)."
-  },
-  {
-    "objectID": "posts/murphy-alignment-gap/index.html",
-    "href": "posts/murphy-alignment-gap/index.html",
-    "title": "Why the alignment gap always wins, unless you know where to look",
-    "section": "",
-    "text": "Landscape with the Fall of Icarus, after Pieter Bruegel the Elder (16th century). Public domain, via Wikimedia Commons.\nReinforcement learning from human feedback is the standard way to align a model. People compare model outputs, the comparisons train a reward model, and the model is tuned to score well on that reward. The whole scheme rests on the feedback being right. This paper studies what happens when it is not."
-  },
-  {
-    "objectID": "posts/murphy-alignment-gap/index.html#a-compass-that-points-wrong-in-some-places",
-    "href": "posts/murphy-alignment-gap/index.html#a-compass-that-points-wrong-in-some-places",
-    "title": "Why the alignment gap always wins, unless you know where to look",
-    "section": "A compass that points wrong in some places",
-    "text": "A compass that points wrong in some places\nThe setup is misspecified feedback. Human feedback is systematically wrong on certain kinds of input. A useful picture is a compass that points true almost everywhere but points the wrong way in a few specific regions. The problem is not random error, which averages out. It is consistent error in particular places.\nTwo numbers describe how bad it is. One is the fraction of contexts where the feedback is biased. The other is the strength of that bias. The trouble lives in the corner of the input space where both are nonzero."
-  },
-  {
-    "objectID": "posts/murphy-alignment-gap/index.html#the-hard-result",
-    "href": "posts/murphy-alignment-gap/index.html#the-hard-result",
-    "title": "Why the alignment gap always wins, unless you know where to look",
-    "section": "The hard result",
-    "text": "The hard result\nThe paper proves a lower bound. Suppose two candidate reward functions agree everywhere except on the biased contexts. To tell them apart from feedback alone, any learning algorithm needs a number of samples that grows exponentially in the prevalence of the bias and the square of its strength. Rare edge cases with subtly wrong feedback create a learning problem that is exponentially hard. You can pour in data and still not know which objective you are actually optimizing.\nThis is the sense in which the gap always wins. The gap is the distance between what you optimize, a proxy built from human feedback, and what you actually want, the true objective. When the problematic contexts are rare and the feedback there is quietly biased, no amount of ordinary data closes that gap."
-  },
-  {
-    "objectID": "posts/murphy-alignment-gap/index.html#the-way-out",
-    "href": "posts/murphy-alignment-gap/index.html#the-way-out",
-    "title": "Why the alignment gap always wins, unless you know where to look",
-    "section": "The way out",
-    "text": "The way out\nThere is one escape, and it is specific. Suppose you have a calibration oracle, a way to identify where the feedback is unreliable. Then you can spend your limited questions on exactly those contexts. The paper shows that this collapses the cost from exponential to polynomial. You no longer need to find the needle by luck, because you have been told which haystack it is in.\nThe lesson is practical. Throwing more feedback at an aligned system does not help where the feedback itself is broken. Finding and targeting the broken regions does."
-  },
-  {
-    "objectID": "posts/murphy-alignment-gap/index.html#what-is-settled-and-what-is-open",
-    "href": "posts/murphy-alignment-gap/index.html#what-is-settled-and-what-is-open",
-    "title": "Why the alignment gap always wins, unless you know where to look",
-    "section": "What is settled and what is open",
-    "text": "What is settled and what is open\nThe results are theoretical. The paper proves the lower bound and the oracle speedup. It invites collaboration on large-scale experiments and on building the benchmarks that would test these effects in practice."
-  },
-  {
-    "objectID": "posts/murphy-alignment-gap/index.html#read-the-paper",
-    "href": "posts/murphy-alignment-gap/index.html#read-the-paper",
-    "title": "Why the alignment gap always wins, unless you know where to look",
-    "section": "Read the paper",
-    "text": "Read the paper\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)."
-  },
-  {
-    "objectID": "posts/aegis-evidence-obligation/index.html",
-    "href": "posts/aegis-evidence-obligation/index.html",
-    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
-    "section": "",
-    "text": "Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons.\nEnterprise architecture is the discipline that aligns an organisation’s business strategy with its information assets, applications, and technology. Two open standards govern the field. TOGAF defines a lifecycle. ArchiMate defines a modelling language. Both assume systems that behave predictably. Both assume governance happens in periodic review meetings. Both assume an architecture document stays accurate for months after it is written.\nAI-native systems break these assumptions. A deployed language model produces different outputs for similar inputs. An autonomous agent calls tools in situations it has not seen during testing. A retrieval-augmented pipeline changes what it knows every time new documents are ingested. When such a system decides on credit, hiring, or infrastructure configuration, a static diagram cannot tell you whether the system still meets its regulatory obligations. That question needs checking that runs continuously and that a machine can perform.\nThe regulatory pressure is concrete. The EU AI Act entered into force in August 2024. Its rules for high-risk systems become enforceable from August 2026 (European Parliament and Council of the European Union 2024). ISO/IEC 42001, the management-system standard for AI, asks for a traceable index that links each obligation to the specific processes and documents that satisfy it. The NIST AI Risk Management Framework names traceability as a core property of trustworthy AI. Current enterprise architecture tools do not produce this kind of evidence at the level of detail or at the speed these rules expect."
-  },
-  {
-    "objectID": "posts/aegis-evidence-obligation/index.html#the-idea",
-    "href": "posts/aegis-evidence-obligation/index.html#the-idea",
-    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
-    "section": "The idea",
-    "text": "The idea\nAEGIS is a framework that sits one layer above existing architecture tools. The name stands for Architecture with Evidence, Governance, Intent, and Safety. The core move is simple to state. AEGIS makes evidence and obligations into things you can model directly, the same way TOGAF and ArchiMate already let you model services and data. Once an obligation is a modelled object, a machine can ask whether the evidence for it is still valid. Once that check is automatic, it can run all the time.\nThe paper makes three contributions. It defines the new building blocks and how they attach to existing architecture models. It replaces the periodic review cycle with a continuous one. It maps the new building blocks to actual regulation, so a conformance report can be generated rather than written by hand."
-  },
-  {
-    "objectID": "posts/aegis-evidence-obligation/index.html#the-new-building-blocks",
-    "href": "posts/aegis-evidence-obligation/index.html#the-new-building-blocks",
-    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
-    "section": "The new building blocks",
-    "text": "The new building blocks\nAEGIS introduces seven kinds of object. Each one names something that governance of an AI system needs but that current architecture languages cannot express.\n\nEvidence is a record that something is true, stamped with who issued it, when it was issued, and when it expires. Evidence can be valid, expired, superseded, or revoked.\nObligation is a requirement placed on part of the system, such as “this service must keep an audit log”. An obligation says what must be true, what would prove it, and which regulation it comes from.\nPolicy is a named, versioned bundle of obligations.\nRisk is a structured record of something that could go wrong, linked to the obligations meant to control it.\nRuntimeSignal is an event from a running system, such as an enforcement log or an audit result. Once it is linked to the right part of the model, it becomes a piece of evidence.\nException is a recorded, time-limited waiver from an obligation, with a reason and an owner.\nArchitectureDecisionRecord is the record of a design decision, made queryable so the obligations and risks behind a choice stay attached to it.\n\nThese objects connect to the services, agents, and data assets you already model. AEGIS is built as an extension, so existing architecture models do not need to be redrawn."
-  },
-  {
-    "objectID": "posts/aegis-evidence-obligation/index.html#the-rule-that-does-the-work",
-    "href": "posts/aegis-evidence-obligation/index.html#the-rule-that-does-the-work",
-    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
-    "section": "The rule that does the work",
-    "text": "The rule that does the work\nOne simple rule drives everything. A part of the system that is required to do something is in violation the moment there is no unexpired evidence that it is doing it. The framework checks this rule continuously rather than at review time.\nA short example shows why this matters. A service is required to keep personal data from leaving the organisation unless a redaction step has run first. This requirement comes from the EU AI Act. A piece of evidence confirms the redaction step works, and that evidence is set to expire on a fixed date. The day after it expires, the rule fires on its own. The service is now in violation, a signal is raised, and the responsible owner is notified. No one had to remember to re-check.\nThe same idea gives a health score for any part of the system. The score is the share of a part’s mandatory obligations that currently have valid evidence behind them. When the score drops below a set level, the framework re-checks the affected area and refreshes whatever has gone stale."
-  },
-  {
-    "objectID": "posts/aegis-evidence-obligation/index.html#what-this-lets-you-catch",
-    "href": "posts/aegis-evidence-obligation/index.html#what-this-lets-you-catch",
-    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
-    "section": "What this lets you catch",
-    "text": "What this lets you catch\nThe paper shows three things the framework can do that current tools cannot. None of these are measured on a live system. They are demonstrations of what the model can express.\nIt can express every control in the ISO/IEC 42001 standard as a checkable obligation, so a conformance report becomes a query rather than a manual exercise.\nIt can catch three ways governance silently drifts. Evidence can expire without anyone re-checking it. A rule enforced at the level of an individual agent can be changed while the organisation-wide policy is not, so the two no longer agree. A regulation can be updated so that an obligation now points at an old version of the law. Today’s architecture diagrams and code-level checks miss all three.\nIt can pull the rules enforced on individual AI agents up to the organisation level and show where two agents’ rules conflict with each other, a conflict that is invisible when each agent is governed on its own."
-  },
-  {
-    "objectID": "posts/aegis-evidence-obligation/index.html#limits",
-    "href": "posts/aegis-evidence-obligation/index.html#limits",
-    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
-    "section": "Limits",
-    "text": "Limits\nThe three demonstrations show what the model can represent. They do not report results from a deployed system. The mapping to regulation covers the EU AI Act and ISO/IEC 42001. Other regimes, such as GDPR or medical-device rules, would need their own mappings. The reasoning engine behind the checks has not been tested at the scale of a large organisation. A full working implementation is the main piece of future work, and a real evaluation against existing tools depends on building it first."
-  },
-  {
-    "objectID": "posts/aegis-evidence-obligation/index.html#read-the-paper",
-    "href": "posts/aegis-evidence-obligation/index.html#read-the-paper",
-    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
-    "section": "Read the paper",
-    "text": "Read the paper\nThe full paper, with the formal model and the complete regulatory mapping, is here: AEGIS (PDF and details)."
-  },
-  {
-    "objectID": "posts/aegis-evidence-obligation/index.html#references",
-    "href": "posts/aegis-evidence-obligation/index.html#references",
-    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
-    "section": "References",
-    "text": "References\n\n\nEuropean Parliament and Council of the European Union. 2024. Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act). Official Journal of the European Union, L 2024/1689."
-  },
-  {
-    "objectID": "posts/dam-associative-memory/index.html",
-    "href": "posts/dam-associative-memory/index.html",
-    "title": "Finite-size guarantees for dense associative memory",
-    "section": "",
-    "text": "The Librarian, Giuseppe Arcimboldo (c. 1566). Public domain, via Wikimedia Commons.\nAn associative memory stores a set of patterns and recalls the right one from a partial or corrupted version of it. Give it a noisy image and it returns the clean stored image it most resembles. The classic version is the Hopfield network. Dense Associative Memory, or DAM, is the modern version. It uses higher-order interactions among the stored bits, and that buys a large jump in capacity. The number of patterns it can hold grows roughly like a high power of the network size, where the power is set by the order of the interactions."
-  },
-  {
-    "objectID": "posts/dam-associative-memory/index.html#the-gap-in-the-theory",
-    "href": "posts/dam-associative-memory/index.html#the-gap-in-the-theory",
-    "title": "Finite-size guarantees for dense associative memory",
-    "section": "The gap in the theory",
-    "text": "The gap in the theory\nThe existing analysis of DAM studies the limit where the network is infinitely large and the stored patterns are drawn at random. That setting is clean, and it tells you the capacity scales. It does not tell you what happens in a real network of a fixed, finite size. It gives no convergence rate, so you do not know how many steps recall takes. It does not say how the memory behaves when an adversary, rather than chance, chooses the corruption. This work fills those gaps with an algorithmic analysis, meaning it studies the actual retrieval procedure step by step under conditions you can check."
-  },
-  {
-    "objectID": "posts/dam-associative-memory/index.html#how-fast-recall-settles",
-    "href": "posts/dam-associative-memory/index.html#how-fast-recall-settles",
-    "title": "Finite-size guarantees for dense associative memory",
-    "section": "How fast recall settles",
-    "text": "How fast recall settles\nThe first result is about speed. Recall in these networks runs by updating one unit at a time, which is called asynchronous updating. The paper assumes two checkable conditions. The stored patterns are well separated from each other, and the interference between them stays bounded even when the memory is heavily loaded. Under these, retrieval converges geometrically. Geometric convergence means the error shrinks by a constant fraction at every step. Once the state enters the basin of attraction, the region around a stored pattern that pulls inputs toward it, the number of steps needed to lock on grows only with the logarithm of the network size. That is fast. Doubling the network adds only a constant number of steps."
-  },
-  {
-    "objectID": "posts/dam-associative-memory/index.html#how-much-corruption-it-survives",
-    "href": "posts/dam-associative-memory/index.html#how-much-corruption-it-survives",
-    "title": "Finite-size guarantees for dense associative memory",
-    "section": "How much corruption it survives",
-    "text": "How much corruption it survives\nThe second result is about robustness against a deliberate attacker. The paper states an explicit margin condition. A margin here is the safety gap between the correct pattern and its nearest competitor. The condition turns that gap into a concrete number: how many corrupted bits the memory can absorb in a single pass and still recover the right pattern. This makes robustness a quantity you can compute for a given network rather than a hope."
-  },
-  {
-    "objectID": "posts/dam-associative-memory/index.html#why-it-always-settles",
-    "href": "posts/dam-associative-memory/index.html#why-it-always-settles",
-    "title": "Finite-size guarantees for dense associative memory",
-    "section": "Why it always settles",
-    "text": "Why it always settles\nThe third result explains why retrieval never gets stuck cycling. The paper shows that DAM retrieval is a potential game. A potential game is a system where every local update improves a single global score. Because each unit’s update can only raise that score, and the score cannot rise forever, the process must come to rest. It settles at a stable configuration, which in game terms is a pure Nash equilibrium and in memory terms is a recalled pattern. The capacity results survive this finite-size treatment, matching the classical scaling for random patterns and holding up to small logarithmic factors in the worst case."
-  },
-  {
-    "objectID": "posts/dam-associative-memory/index.html#why-it-matters",
-    "href": "posts/dam-associative-memory/index.html#why-it-matters",
-    "title": "Finite-size guarantees for dense associative memory",
-    "section": "Why it matters",
-    "text": "Why it matters\nDense associative memory underlies the attention mechanism in modern networks, so its guarantees are not a curiosity. Turning capacity, speed, and robustness from statements about an infinite limit into checkable conditions on a real network is what lets you reason about these systems as engineered components."
-  },
-  {
-    "objectID": "posts/dam-associative-memory/index.html#read-the-paper",
-    "href": "posts/dam-associative-memory/index.html#read-the-paper",
-    "title": "Finite-size guarantees for dense associative memory",
-    "section": "Read the paper",
-    "text": "Read the paper\nAlgorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop. OpenReview."
-  },
-  {
-    "objectID": "posts/memory-store-routing/index.html",
-    "href": "posts/memory-store-routing/index.html",
-    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
-    "section": "",
-    "text": "Cabinet of Curiosities, Domenico Remps (c. 1690). Public domain, via Wikimedia Commons.\nA memory-augmented agent keeps several specialized stores. One might hold facts, another the recent conversation, another notes about tools or users. When a request arrives, most systems read from every store and stuff all of it into the model’s context. That is the equivalent of patting down every pocket to find your keys. It works, and it is wasteful. Reading everything costs tokens, and it pulls in irrelevant context that can crowd out the useful part."
-  },
-  {
-    "objectID": "posts/memory-store-routing/index.html#retrieval-as-routing",
-    "href": "posts/memory-store-routing/index.html#retrieval-as-routing",
-    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
-    "section": "Retrieval as routing",
-    "text": "Retrieval as routing\nThe paper reframes the problem. Choosing which store to read is a routing decision, and routing deserves to be a first-class part of the design. Stated plainly, for each request the agent should decide which store or stores to consult, and that decision should weigh two things against each other. One is accuracy, the quality of the eventual answer. The other is retrieval cost, measured in context tokens. A good router reads the store that holds the answer and skips the rest."
-  },
-  {
-    "objectID": "posts/memory-store-routing/index.html#what-the-evidence-shows",
-    "href": "posts/memory-store-routing/index.html#what-the-evidence-shows",
-    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
-    "section": "What the evidence shows",
-    "text": "What the evidence shows\nTo measure the ceiling, the paper uses an oracle router. An oracle router is an idealized router that always picks the right store, used here to show what perfect routing would buy. The oracle achieves better downstream question-answering accuracy while spending far fewer context tokens than reading from all stores. Both numbers move in the good direction at once. Selective retrieval is not only cheaper, it gives better answers, because irrelevant context was hurting quality in the first place.\nThe oracle is a measurement tool rather than a deployable system, since it relies on knowing the right store in advance. The paper presents this as early-stage work and argues for learned routing, where the agent learns to make the store choice on its own, as the path to scalable multi-store systems."
-  },
-  {
-    "objectID": "posts/memory-store-routing/index.html#why-it-matters",
-    "href": "posts/memory-store-routing/index.html#why-it-matters",
-    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
-    "section": "Why it matters",
-    "text": "Why it matters\nAs agents accumulate more kinds of memory, reading all of it per request scales badly in both cost and quality. Turning store selection into an explicit, cost-aware decision is what keeps a multi-store agent affordable and sharp as the number of stores grows."
-  },
-  {
-    "objectID": "posts/memory-store-routing/index.html#read-the-paper",
-    "href": "posts/memory-store-routing/index.html#read-the-paper",
-    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
-    "section": "Read the paper",
-    "text": "Read the paper\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-profiles/index.html",
-    "href": "posts/ietf-benchmarking-profiles/index.html",
-    "title": "Declaring the measurement boundary: the IETF profiles draft",
-    "section": "",
-    "text": "Part of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nTime to first token is a single phrase that can mean several different numbers. It depends on where you start the clock. Do you include the gateway. Do you include the firewall inspection. Do you include the network hop. Each choice gives a different value, and a benchmark that does not say which choice it made cannot be compared with another. The third IETF draft fixes this with profiles. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-profiles/index.html#what-a-profile-is",
-    "href": "posts/ietf-benchmarking-profiles/index.html#what-a-profile-is",
-    "title": "Declaring the measurement boundary: the IETF profiles draft",
-    "section": "What a profile is",
-    "text": "What a profile is\nA profile binds the vocabulary and the procedures to a concrete role in the system and a concrete workload pattern. Its job is to declare the boundary. A profile says exactly where a measurement starts and stops, so two results taken under the same profile are measuring the same thing."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-profiles/index.html#the-profiles-it-defines",
-    "href": "posts/ietf-benchmarking-profiles/index.html#the-profiles-it-defines",
-    "title": "Declaring the measurement boundary: the IETF profiles draft",
-    "section": "The profiles it defines",
-    "text": "The profiles it defines\nThe draft defines infrastructure profiles for the distinct roles in a serving stack.\n\nModel engine. Raw inference: prefill, decode, and management of the key-value cache.\nAI gateway. The overhead of routing, authentication, and caching.\nAI firewall. The latency and accuracy of security inspection, including detection rates and false positive rates.\nCompound system. End-to-end completion for orchestrated multi-step workflows such as retrieval-augmented generation and agents.\n\nIt also defines workload profiles for how the system is driven, including a chatbot pattern, which is multi-turn and human-paced, and a compound workflow pattern, which is multi-step and machine-paced.\nThe draft specifies profiles only. It introduces no new metrics and no thresholds. It is the layer that makes the terminology and the methodology comparable across real deployments, where a request passes through several components before it reaches the model."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-profiles/index.html#why-it-matters",
-    "href": "posts/ietf-benchmarking-profiles/index.html#why-it-matters",
-    "title": "Declaring the measurement boundary: the IETF profiles draft",
-    "section": "Why it matters",
-    "text": "Why it matters\nProduction systems are built from a gateway, a firewall, an engine, and more. Most published benchmarks never say which of these the numbers include. Profiles remove that ambiguity by making the boundary an explicit, declared part of every result."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-profiles/index.html#read-the-draft",
-    "href": "posts/ietf-benchmarking-profiles/index.html#read-the-draft",
-    "title": "Declaring the measurement boundary: the IETF profiles draft",
-    "section": "Read the draft",
-    "text": "Read the draft\nPerformance Benchmarking Profiles for Large Language Model Serving Systems."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-terminology/index.html",
-    "href": "posts/ietf-benchmarking-terminology/index.html",
-    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
-    "section": "",
-    "text": "Saint Jerome in His Study, Antonello da Messina (c. 1475). Public domain, via Wikimedia Commons.\nPart of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nWhen two teams report a throughput number for serving a language model, the numbers often do not mean the same thing. One counted prompt tokens, the other did not. One measured at the model engine, the other after a gateway. The words match and the measurements do not. The first IETF draft in this series addresses that directly. It defines a shared vocabulary for LLM serving performance and nothing more. The draft is an individual submission to the IETF Benchmarking Methodology Working Group and carries no formal IETF endorsement."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-terminology/index.html#what-it-defines",
-    "href": "posts/ietf-benchmarking-terminology/index.html#what-it-defines",
-    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
-    "section": "What it defines",
-    "text": "What it defines\nThe draft gives precise definitions for a large set of metrics, on the order of seventy, grouped into about a dozen categories. The categories cover the parts of serving that people measure and disagree about.\n\nRequest and response timing. Time to first token, the delay before the first output appears. Inter-token latency, the gap between successive output tokens. Normalized latency, which adjusts for output length.\nPhase-specific timing. Prefill latency, the cost of processing the prompt, and decode latency, the cost of generating tokens. These two phases behave differently, so the draft keeps them separate.\nThroughput. Token rates and request rates, defined so it is clear what is being counted.\nLatency distribution. Percentiles and jitter, since an average hides the tail that users actually feel.\nMulti-tenancy and scheduling. Fairness across tenants and head-of-line blocking, where one large request stalls the queue behind it.\nOptimizations. Prefix caching, which reuses work across requests that share a prompt, and speculative decoding, which guesses tokens ahead and verifies them.\nCompound systems. Retrieval-augmented generation and agentic workflows, where a request triggers several model and tool calls.\nQuality enforcement. Policy violations and false refusals, so safety behavior is measurable rather than anecdotal."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-terminology/index.html#what-it-leaves-out-on-purpose",
-    "href": "posts/ietf-benchmarking-terminology/index.html#what-it-leaves-out-on-purpose",
-    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
-    "section": "What it leaves out, on purpose",
-    "text": "What it leaves out, on purpose\nThe draft defines terms only. It prescribes no method for measuring them and sets no pass-or-fail thresholds. That restraint is the point. A vocabulary that everyone agrees on has to be separable from any one way of testing. The method comes in the next draft, and the thresholds are left to whoever runs a benchmark."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-terminology/index.html#why-it-matters",
-    "href": "posts/ietf-benchmarking-terminology/index.html#why-it-matters",
-    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
-    "section": "Why it matters",
-    "text": "Why it matters\nComparable benchmarks start with agreed words. Once time to first token and inter-token latency mean one thing across papers and products, the rest of the benchmarking effort has a foundation to stand on."
-  },
-  {
-    "objectID": "posts/ietf-benchmarking-terminology/index.html#read-the-draft",
-    "href": "posts/ietf-benchmarking-terminology/index.html#read-the-draft",
-    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
-    "section": "Read the draft",
-    "text": "Read the draft\nBenchmarking Terminology for Large Language Model Serving."
-  },
-  {
-    "objectID": "posts/aligndp-rarity-privacy/index.html",
-    "href": "posts/aligndp-rarity-privacy/index.html",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
-    "section": "",
-    "text": "The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.\nLarge language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves."
-  },
-  {
-    "objectID": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
-    "href": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
-    "section": "Two kinds of field need two kinds of protection",
-    "text": "Two kinds of field need two kinds of protection\nThe key observation is that not all data is equally risky, and the right protection depends on how often a value appears.\nRare fields are the dangerous ones. A value that shows up only a few times can identify its source, so it needs strong hiding. AlignDP applies PAC indistinguishability to rare fields. The practical meaning is that an observer cannot reliably tell whether a given rare value was present, so the rare information stays concealed.\nCommon fields are different. You often want to keep useful aggregate statistics about them, such as how frequent each value is. AlignDP protects these with RAPPOR, a well-known method for local differential privacy. RAPPOR randomizes each individual report so no single response is revealing, while still allowing accurate frequency estimates once many reports are combined. The frequent values stay usable in aggregate without exposing any one contributor.\nA global aggregator sits over both tiers. It manages composition, meaning the way many small privacy releases add up, and it tracks the overall budget so the total exposure stays bounded."
-  },
-  {
-    "objectID": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
-    "href": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
-    "section": "What the paper shows",
-    "text": "What the paper shows\nThe work establishes theoretical results for both tiers. It extends the PAC guarantee to the global aggregation step and derives error bounds for the RAPPOR estimates. Simulations match the design intent. Rare categories remain hidden, while frequent categories can be recovered with small error. The paper is explicit about the tradeoff between privacy and utility, since that tension is the heart of any differential privacy scheme."
-  },
-  {
-    "objectID": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
-    "href": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
-    "section": "Why it matters",
-    "text": "Why it matters\nDefending a model after it has been copied is a weak position. AlignDP moves the control to the point where data enters, and it tailors the strength of protection to the risk each field carries. Strong hiding goes where identification is possible. Lighter, aggregate-preserving protection goes where only statistics matter."
-  },
-  {
-    "objectID": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
-    "href": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
-    "title": "AlignDP: locking knowledge transfer at the data interface",
-    "section": "Read the paper",
-    "text": "Read the paper\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)."
+    "text": "A companion blog post walks through the framework: AEGIS: typed evidence and obligations for AI-native enterprise architecture.\n⬇ Download PDF"
   },
   {
     "objectID": "posts/fibonacci-prime-statistics/index.html",
@@ -686,52 +154,661 @@
     "text": "References\n\n\nCubre, Paul, and Jeremy Rouse. 2014. “Divisibility Properties of the Fibonacci Entry Point.” Proceedings of the American Mathematical Society 142 (11): 3771–85. https://arxiv.org/abs/1212.6221.\n\n\nGrantham, Jon, and Andrew Granville. 2024. Fibonacci Primes, Primes of the Form 2^n-k, and Beyond. https://arxiv.org/abs/2307.07894.\n\n\nJärviniemi, Olli. 2022. “Positive Lower Density for Prime Divisors of Generic Linear Recurrences.” Mathematical Proceedings of the Cambridge Philosophical Society. https://arxiv.org/abs/2102.04042.\n\n\nLagarias, Jeffrey C. 1985. “The Set of Primes Dividing the Lucas Numbers Has Density 2/3.” Pacific Journal of Mathematics 118 (2): 449–61."
   },
   {
-    "objectID": "papers/aegis.html",
-    "href": "papers/aegis.html",
-    "title": "AEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture",
+    "objectID": "posts/aligndp-rarity-privacy/index.html",
+    "href": "posts/aligndp-rarity-privacy/index.html",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
     "section": "",
-    "text": "A companion blog post walks through the framework: AEGIS: typed evidence and obligations for AI-native enterprise architecture.\n⬇ Download PDF"
+    "text": "The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.\nLarge language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves."
   },
   {
-    "objectID": "papers/index.html",
-    "href": "papers/index.html",
-    "title": "Papers",
+    "objectID": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
+    "href": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "Two kinds of field need two kinds of protection",
+    "text": "Two kinds of field need two kinds of protection\nThe key observation is that not all data is equally risky, and the right protection depends on how often a value appears.\nRare fields are the dangerous ones. A value that shows up only a few times can identify its source, so it needs strong hiding. AlignDP applies PAC indistinguishability to rare fields. The practical meaning is that an observer cannot reliably tell whether a given rare value was present, so the rare information stays concealed.\nCommon fields are different. You often want to keep useful aggregate statistics about them, such as how frequent each value is. AlignDP protects these with RAPPOR, a well-known method for local differential privacy. RAPPOR randomizes each individual report so no single response is revealing, while still allowing accurate frequency estimates once many reports are combined. The frequent values stay usable in aggregate without exposing any one contributor.\nA global aggregator sits over both tiers. It manages composition, meaning the way many small privacy releases add up, and it tracks the overall budget so the total exposure stays bounded."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
+    "href": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "What the paper shows",
+    "text": "What the paper shows\nThe work establishes theoretical results for both tiers. It extends the PAC guarantee to the global aggregation step and derives error bounds for the RAPPOR estimates. Simulations match the design intent. Rare categories remain hidden, while frequent categories can be recovered with small error. The paper is explicit about the tradeoff between privacy and utility, since that tension is the heart of any differential privacy scheme."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
+    "href": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "Why it matters",
+    "text": "Why it matters\nDefending a model after it has been copied is a weak position. AlignDP moves the control to the point where data enters, and it tailors the strength of protection to the risk each field carries. Strong hiding goes where identification is possible. Lighter, aggregate-preserving protection goes where only statistics matter."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
+    "href": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "Read the paper",
+    "text": "Read the paper\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-terminology/index.html",
+    "href": "posts/ietf-benchmarking-terminology/index.html",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
     "section": "",
-    "text": "Papers and preprints. Each entry opens the full PDF with a download link, and most have a companion post that explains the ideas in plain language.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nJun 7, 2026\n\n\nHeuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics\n\n\nA reproducible verification study of the statistics of Fibonacci and k-bonacci prime indices, with a coverage-validated prediction interval, a null-model battery, and a fully cited provenance map.\n\n\n\n\n\n\nApr 9, 2026\n\n\nAEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture\n\n\nA typed ontology and lifecycle that makes evidence, obligations, and runtime signals first-class enterprise-architecture objects, with a crosswalk to the EU AI Act and ISO/IEC 42001.\n\n\n\n\n\n\nNo matching items"
+    "text": "Saint Jerome in His Study, Antonello da Messina (c. 1475). Public domain, via Wikimedia Commons.\nPart of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nWhen two teams report a throughput number for serving a language model, the numbers often do not mean the same thing. One counted prompt tokens, the other did not. One measured at the model engine, the other after a gateway. The words match and the measurements do not. The first IETF draft in this series addresses that directly. It defines a shared vocabulary for LLM serving performance and nothing more. The draft is an individual submission to the IETF Benchmarking Methodology Working Group and carries no formal IETF endorsement."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/ietf-benchmarking-terminology/index.html#what-it-defines",
+    "href": "posts/ietf-benchmarking-terminology/index.html#what-it-defines",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
+    "section": "What it defines",
+    "text": "What it defines\nThe draft gives precise definitions for a large set of metrics, on the order of seventy, grouped into about a dozen categories. The categories cover the parts of serving that people measure and disagree about.\n\nRequest and response timing. Time to first token, the delay before the first output appears. Inter-token latency, the gap between successive output tokens. Normalized latency, which adjusts for output length.\nPhase-specific timing. Prefill latency, the cost of processing the prompt, and decode latency, the cost of generating tokens. These two phases behave differently, so the draft keeps them separate.\nThroughput. Token rates and request rates, defined so it is clear what is being counted.\nLatency distribution. Percentiles and jitter, since an average hides the tail that users actually feel.\nMulti-tenancy and scheduling. Fairness across tenants and head-of-line blocking, where one large request stalls the queue behind it.\nOptimizations. Prefix caching, which reuses work across requests that share a prompt, and speculative decoding, which guesses tokens ahead and verifies them.\nCompound systems. Retrieval-augmented generation and agentic workflows, where a request triggers several model and tool calls.\nQuality enforcement. Policy violations and false refusals, so safety behavior is measurable rather than anecdotal."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-terminology/index.html#what-it-leaves-out-on-purpose",
+    "href": "posts/ietf-benchmarking-terminology/index.html#what-it-leaves-out-on-purpose",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
+    "section": "What it leaves out, on purpose",
+    "text": "What it leaves out, on purpose\nThe draft defines terms only. It prescribes no method for measuring them and sets no pass-or-fail thresholds. That restraint is the point. A vocabulary that everyone agrees on has to be separable from any one way of testing. The method comes in the next draft, and the thresholds are left to whoever runs a benchmark."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-terminology/index.html#why-it-matters",
+    "href": "posts/ietf-benchmarking-terminology/index.html#why-it-matters",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
+    "section": "Why it matters",
+    "text": "Why it matters\nComparable benchmarks start with agreed words. Once time to first token and inter-token latency mean one thing across papers and products, the rest of the benchmarking effort has a foundation to stand on."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-terminology/index.html#read-the-draft",
+    "href": "posts/ietf-benchmarking-terminology/index.html#read-the-draft",
+    "title": "A shared vocabulary for LLM serving (IETF terminology draft)",
+    "section": "Read the draft",
+    "text": "Read the draft\nBenchmarking Terminology for Large Language Model Serving."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-profiles/index.html",
+    "href": "posts/ietf-benchmarking-profiles/index.html",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
     "section": "",
-    "text": "Hi, I am Madhava Gaikwad.\nI am a Senior Software Engineer working at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts.\nI work on bridging AI alignment theory with real-world systems. My background spans differential privacy, reinforcement learning from feedback, distributed consensus, and novel data abstractions for telemetry and streaming analytics. The questions I keep coming back to are these. How do we reason about uncertainty rigorously. How do we guarantee safety and rollback in complex infrastructure. How do we design data and learning pipelines that stay robust at scale."
+    "text": "Part of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nTime to first token is a single phrase that can mean several different numbers. It depends on where you start the clock. Do you include the gateway. Do you include the firewall inspection. Do you include the network hop. Each choice gives a different value, and a benchmark that does not say which choice it made cannot be compared with another. The third IETF draft fixes this with profiles. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
   },
   {
-    "objectID": "about.html#what-i-build",
-    "href": "about.html#what-i-build",
-    "title": "About",
-    "section": "What I build",
-    "text": "What I build\nSmall, composable systems. Clear quickstarts. Minimal tests and CI. Figures you can reproduce."
+    "objectID": "posts/ietf-benchmarking-profiles/index.html#what-a-profile-is",
+    "href": "posts/ietf-benchmarking-profiles/index.html#what-a-profile-is",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
+    "section": "What a profile is",
+    "text": "What a profile is\nA profile binds the vocabulary and the procedures to a concrete role in the system and a concrete workload pattern. Its job is to declare the boundary. A profile says exactly where a measurement starts and stops, so two results taken under the same profile are measuring the same thing."
   },
   {
-    "objectID": "about.html#focus-areas",
-    "href": "about.html#focus-areas",
-    "title": "About",
-    "section": "Focus areas",
-    "text": "Focus areas\n\nAlignment loops, including RLHF and beyond\nOperator views of learning\nDifferential privacy for LLMs\nReliability at datacenter scale"
+    "objectID": "posts/ietf-benchmarking-profiles/index.html#the-profiles-it-defines",
+    "href": "posts/ietf-benchmarking-profiles/index.html#the-profiles-it-defines",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
+    "section": "The profiles it defines",
+    "text": "The profiles it defines\nThe draft defines infrastructure profiles for the distinct roles in a serving stack.\n\nModel engine. Raw inference: prefill, decode, and management of the key-value cache.\nAI gateway. The overhead of routing, authentication, and caching.\nAI firewall. The latency and accuracy of security inspection, including detection rates and false positive rates.\nCompound system. End-to-end completion for orchestrated multi-step workflows such as retrieval-augmented generation and agents.\n\nIt also defines workload profiles for how the system is driven, including a chatbot pattern, which is multi-turn and human-paced, and a compound workflow pattern, which is multi-step and machine-paced.\nThe draft specifies profiles only. It introduces no new metrics and no thresholds. It is the layer that makes the terminology and the methodology comparable across real deployments, where a request passes through several components before it reaches the model."
   },
   {
-    "objectID": "about.html#talk-to-me-about",
-    "href": "about.html#talk-to-me-about",
-    "title": "About",
-    "section": "Talk to me about",
-    "text": "Talk to me about\nTurning research into demos. Privacy-first LLMs. Robust infrastructure for ML."
+    "objectID": "posts/ietf-benchmarking-profiles/index.html#why-it-matters",
+    "href": "posts/ietf-benchmarking-profiles/index.html#why-it-matters",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
+    "section": "Why it matters",
+    "text": "Why it matters\nProduction systems are built from a gateway, a firewall, an engine, and more. Most published benchmarks never say which of these the numbers include. Profiles remove that ambiguity by making the boundary an explicit, declared part of every result."
   },
   {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "About",
-    "section": "Contact",
-    "text": "Contact\n\nEmail: gaikwad.madhav@gmail.com\nLinkedIn: safeai\nGitHub: krimler"
+    "objectID": "posts/ietf-benchmarking-profiles/index.html#read-the-draft",
+    "href": "posts/ietf-benchmarking-profiles/index.html#read-the-draft",
+    "title": "Declaring the measurement boundary: the IETF profiles draft",
+    "section": "Read the draft",
+    "text": "Read the draft\nPerformance Benchmarking Profiles for Large Language Model Serving Systems."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html",
+    "href": "posts/memory-store-routing/index.html",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "",
+    "text": "Cabinet of Curiosities, Domenico Remps (c. 1690). Public domain, via Wikimedia Commons.\nA memory-augmented agent keeps several specialized stores. One might hold facts, another the recent conversation, another notes about tools or users. When a request arrives, most systems read from every store and stuff all of it into the model’s context. That is the equivalent of patting down every pocket to find your keys. It works, and it is wasteful. Reading everything costs tokens, and it pulls in irrelevant context that can crowd out the useful part."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html#retrieval-as-routing",
+    "href": "posts/memory-store-routing/index.html#retrieval-as-routing",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "Retrieval as routing",
+    "text": "Retrieval as routing\nThe paper reframes the problem. Choosing which store to read is a routing decision, and routing deserves to be a first-class part of the design. Stated plainly, for each request the agent should decide which store or stores to consult, and that decision should weigh two things against each other. One is accuracy, the quality of the eventual answer. The other is retrieval cost, measured in context tokens. A good router reads the store that holds the answer and skips the rest."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html#what-the-evidence-shows",
+    "href": "posts/memory-store-routing/index.html#what-the-evidence-shows",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "What the evidence shows",
+    "text": "What the evidence shows\nTo measure the ceiling, the paper uses an oracle router. An oracle router is an idealized router that always picks the right store, used here to show what perfect routing would buy. The oracle achieves better downstream question-answering accuracy while spending far fewer context tokens than reading from all stores. Both numbers move in the good direction at once. Selective retrieval is not only cheaper, it gives better answers, because irrelevant context was hurting quality in the first place.\nThe oracle is a measurement tool rather than a deployable system, since it relies on knowing the right store in advance. The paper presents this as early-stage work and argues for learned routing, where the agent learns to make the store choice on its own, as the path to scalable multi-store systems."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html#why-it-matters",
+    "href": "posts/memory-store-routing/index.html#why-it-matters",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "Why it matters",
+    "text": "Why it matters\nAs agents accumulate more kinds of memory, reading all of it per request scales badly in both cost and quality. Turning store selection into an explicit, cost-aware decision is what keeps a multi-store agent affordable and sharp as the number of stores grows."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html#read-the-paper",
+    "href": "posts/memory-store-routing/index.html#read-the-paper",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "Read the paper",
+    "text": "Read the paper\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html",
+    "href": "posts/dam-associative-memory/index.html",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "",
+    "text": "The Librarian, Giuseppe Arcimboldo (c. 1566). Public domain, via Wikimedia Commons.\nAn associative memory stores a set of patterns and recalls the right one from a partial or corrupted version of it. Give it a noisy image and it returns the clean stored image it most resembles. The classic version is the Hopfield network. Dense Associative Memory, or DAM, is the modern version. It uses higher-order interactions among the stored bits, and that buys a large jump in capacity. The number of patterns it can hold grows roughly like a high power of the network size, where the power is set by the order of the interactions."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#the-gap-in-the-theory",
+    "href": "posts/dam-associative-memory/index.html#the-gap-in-the-theory",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "The gap in the theory",
+    "text": "The gap in the theory\nThe existing analysis of DAM studies the limit where the network is infinitely large and the stored patterns are drawn at random. That setting is clean, and it tells you the capacity scales. It does not tell you what happens in a real network of a fixed, finite size. It gives no convergence rate, so you do not know how many steps recall takes. It does not say how the memory behaves when an adversary, rather than chance, chooses the corruption. This work fills those gaps with an algorithmic analysis, meaning it studies the actual retrieval procedure step by step under conditions you can check."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#how-fast-recall-settles",
+    "href": "posts/dam-associative-memory/index.html#how-fast-recall-settles",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "How fast recall settles",
+    "text": "How fast recall settles\nThe first result is about speed. Recall in these networks runs by updating one unit at a time, which is called asynchronous updating. The paper assumes two checkable conditions. The stored patterns are well separated from each other, and the interference between them stays bounded even when the memory is heavily loaded. Under these, retrieval converges geometrically. Geometric convergence means the error shrinks by a constant fraction at every step. Once the state enters the basin of attraction, the region around a stored pattern that pulls inputs toward it, the number of steps needed to lock on grows only with the logarithm of the network size. That is fast. Doubling the network adds only a constant number of steps."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#how-much-corruption-it-survives",
+    "href": "posts/dam-associative-memory/index.html#how-much-corruption-it-survives",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "How much corruption it survives",
+    "text": "How much corruption it survives\nThe second result is about robustness against a deliberate attacker. The paper states an explicit margin condition. A margin here is the safety gap between the correct pattern and its nearest competitor. The condition turns that gap into a concrete number: how many corrupted bits the memory can absorb in a single pass and still recover the right pattern. This makes robustness a quantity you can compute for a given network rather than a hope."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#why-it-always-settles",
+    "href": "posts/dam-associative-memory/index.html#why-it-always-settles",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "Why it always settles",
+    "text": "Why it always settles\nThe third result explains why retrieval never gets stuck cycling. The paper shows that DAM retrieval is a potential game. A potential game is a system where every local update improves a single global score. Because each unit’s update can only raise that score, and the score cannot rise forever, the process must come to rest. It settles at a stable configuration, which in game terms is a pure Nash equilibrium and in memory terms is a recalled pattern. The capacity results survive this finite-size treatment, matching the classical scaling for random patterns and holding up to small logarithmic factors in the worst case."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#why-it-matters",
+    "href": "posts/dam-associative-memory/index.html#why-it-matters",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "Why it matters",
+    "text": "Why it matters\nDense associative memory underlies the attention mechanism in modern networks, so its guarantees are not a curiosity. Turning capacity, speed, and robustness from statements about an infinite limit into checkable conditions on a real network is what lets you reason about these systems as engineered components."
+  },
+  {
+    "objectID": "posts/dam-associative-memory/index.html#read-the-paper",
+    "href": "posts/dam-associative-memory/index.html#read-the-paper",
+    "title": "Finite-size guarantees for dense associative memory",
+    "section": "Read the paper",
+    "text": "Read the paper\nAlgorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop. OpenReview."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html",
+    "href": "posts/aegis-evidence-obligation/index.html",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "",
+    "text": "Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons.\nEnterprise architecture is the discipline that aligns an organisation’s business strategy with its information assets, applications, and technology. Two open standards govern the field. TOGAF defines a lifecycle. ArchiMate defines a modelling language. Both assume systems that behave predictably. Both assume governance happens in periodic review meetings. Both assume an architecture document stays accurate for months after it is written.\nAI-native systems break these assumptions. A deployed language model produces different outputs for similar inputs. An autonomous agent calls tools in situations it has not seen during testing. A retrieval-augmented pipeline changes what it knows every time new documents are ingested. When such a system decides on credit, hiring, or infrastructure configuration, a static diagram cannot tell you whether the system still meets its regulatory obligations. That question needs checking that runs continuously and that a machine can perform.\nThe regulatory pressure is concrete. The EU AI Act entered into force in August 2024. Its rules for high-risk systems become enforceable from August 2026 (European Parliament and Council of the European Union 2024). ISO/IEC 42001, the management-system standard for AI, asks for a traceable index that links each obligation to the specific processes and documents that satisfy it. The NIST AI Risk Management Framework names traceability as a core property of trustworthy AI. Current enterprise architecture tools do not produce this kind of evidence at the level of detail or at the speed these rules expect."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#the-idea",
+    "href": "posts/aegis-evidence-obligation/index.html#the-idea",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "The idea",
+    "text": "The idea\nAEGIS is a framework that sits one layer above existing architecture tools. The name stands for Architecture with Evidence, Governance, Intent, and Safety. The core move is simple to state. AEGIS makes evidence and obligations into things you can model directly, the same way TOGAF and ArchiMate already let you model services and data. Once an obligation is a modelled object, a machine can ask whether the evidence for it is still valid. Once that check is automatic, it can run all the time.\nThe paper makes three contributions. It defines the new building blocks and how they attach to existing architecture models. It replaces the periodic review cycle with a continuous one. It maps the new building blocks to actual regulation, so a conformance report can be generated rather than written by hand."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#the-new-building-blocks",
+    "href": "posts/aegis-evidence-obligation/index.html#the-new-building-blocks",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "The new building blocks",
+    "text": "The new building blocks\nAEGIS introduces seven kinds of object. Each one names something that governance of an AI system needs but that current architecture languages cannot express.\n\nEvidence is a record that something is true, stamped with who issued it, when it was issued, and when it expires. Evidence can be valid, expired, superseded, or revoked.\nObligation is a requirement placed on part of the system, such as “this service must keep an audit log”. An obligation says what must be true, what would prove it, and which regulation it comes from.\nPolicy is a named, versioned bundle of obligations.\nRisk is a structured record of something that could go wrong, linked to the obligations meant to control it.\nRuntimeSignal is an event from a running system, such as an enforcement log or an audit result. Once it is linked to the right part of the model, it becomes a piece of evidence.\nException is a recorded, time-limited waiver from an obligation, with a reason and an owner.\nArchitectureDecisionRecord is the record of a design decision, made queryable so the obligations and risks behind a choice stay attached to it.\n\nThese objects connect to the services, agents, and data assets you already model. AEGIS is built as an extension, so existing architecture models do not need to be redrawn."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#the-rule-that-does-the-work",
+    "href": "posts/aegis-evidence-obligation/index.html#the-rule-that-does-the-work",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "The rule that does the work",
+    "text": "The rule that does the work\nOne simple rule drives everything. A part of the system that is required to do something is in violation the moment there is no unexpired evidence that it is doing it. The framework checks this rule continuously rather than at review time.\nA short example shows why this matters. A service is required to keep personal data from leaving the organisation unless a redaction step has run first. This requirement comes from the EU AI Act. A piece of evidence confirms the redaction step works, and that evidence is set to expire on a fixed date. The day after it expires, the rule fires on its own. The service is now in violation, a signal is raised, and the responsible owner is notified. No one had to remember to re-check.\nThe same idea gives a health score for any part of the system. The score is the share of a part’s mandatory obligations that currently have valid evidence behind them. When the score drops below a set level, the framework re-checks the affected area and refreshes whatever has gone stale."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#what-this-lets-you-catch",
+    "href": "posts/aegis-evidence-obligation/index.html#what-this-lets-you-catch",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "What this lets you catch",
+    "text": "What this lets you catch\nThe paper shows three things the framework can do that current tools cannot. None of these are measured on a live system. They are demonstrations of what the model can express.\nIt can express every control in the ISO/IEC 42001 standard as a checkable obligation, so a conformance report becomes a query rather than a manual exercise.\nIt can catch three ways governance silently drifts. Evidence can expire without anyone re-checking it. A rule enforced at the level of an individual agent can be changed while the organisation-wide policy is not, so the two no longer agree. A regulation can be updated so that an obligation now points at an old version of the law. Today’s architecture diagrams and code-level checks miss all three.\nIt can pull the rules enforced on individual AI agents up to the organisation level and show where two agents’ rules conflict with each other, a conflict that is invisible when each agent is governed on its own."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#limits",
+    "href": "posts/aegis-evidence-obligation/index.html#limits",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "Limits",
+    "text": "Limits\nThe three demonstrations show what the model can represent. They do not report results from a deployed system. The mapping to regulation covers the EU AI Act and ISO/IEC 42001. Other regimes, such as GDPR or medical-device rules, would need their own mappings. The reasoning engine behind the checks has not been tested at the scale of a large organisation. A full working implementation is the main piece of future work, and a real evaluation against existing tools depends on building it first."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#read-the-paper",
+    "href": "posts/aegis-evidence-obligation/index.html#read-the-paper",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "Read the paper",
+    "text": "Read the paper\nThe full paper, with the formal model and the complete regulatory mapping, is here: AEGIS (PDF and details)."
+  },
+  {
+    "objectID": "posts/aegis-evidence-obligation/index.html#references",
+    "href": "posts/aegis-evidence-obligation/index.html#references",
+    "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
+    "section": "References",
+    "text": "References\n\n\nEuropean Parliament and Council of the European Union. 2024. Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act). Official Journal of the European Union, L 2024/1689."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html",
+    "href": "posts/murphy-alignment-gap/index.html",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "",
+    "text": "Landscape with the Fall of Icarus, after Pieter Bruegel the Elder (16th century). Public domain, via Wikimedia Commons.\nReinforcement learning from human feedback is the standard way to align a model. People compare model outputs, the comparisons train a reward model, and the model is tuned to score well on that reward. The whole scheme rests on the feedback being right. This paper studies what happens when it is not."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#a-compass-that-points-wrong-in-some-places",
+    "href": "posts/murphy-alignment-gap/index.html#a-compass-that-points-wrong-in-some-places",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "A compass that points wrong in some places",
+    "text": "A compass that points wrong in some places\nThe setup is misspecified feedback. Human feedback is systematically wrong on certain kinds of input. A useful picture is a compass that points true almost everywhere but points the wrong way in a few specific regions. The problem is not random error, which averages out. It is consistent error in particular places.\nTwo numbers describe how bad it is. One is the fraction of contexts where the feedback is biased. The other is the strength of that bias. The trouble lives in the corner of the input space where both are nonzero."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#the-hard-result",
+    "href": "posts/murphy-alignment-gap/index.html#the-hard-result",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "The hard result",
+    "text": "The hard result\nThe paper proves a lower bound. Suppose two candidate reward functions agree everywhere except on the biased contexts. To tell them apart from feedback alone, any learning algorithm needs a number of samples that grows exponentially in the prevalence of the bias and the square of its strength. Rare edge cases with subtly wrong feedback create a learning problem that is exponentially hard. You can pour in data and still not know which objective you are actually optimizing.\nThis is the sense in which the gap always wins. The gap is the distance between what you optimize, a proxy built from human feedback, and what you actually want, the true objective. When the problematic contexts are rare and the feedback there is quietly biased, no amount of ordinary data closes that gap."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#the-way-out",
+    "href": "posts/murphy-alignment-gap/index.html#the-way-out",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "The way out",
+    "text": "The way out\nThere is one escape, and it is specific. Suppose you have a calibration oracle, a way to identify where the feedback is unreliable. Then you can spend your limited questions on exactly those contexts. The paper shows that this collapses the cost from exponential to polynomial. You no longer need to find the needle by luck, because you have been told which haystack it is in.\nThe lesson is practical. Throwing more feedback at an aligned system does not help where the feedback itself is broken. Finding and targeting the broken regions does."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#what-is-settled-and-what-is-open",
+    "href": "posts/murphy-alignment-gap/index.html#what-is-settled-and-what-is-open",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "What is settled and what is open",
+    "text": "What is settled and what is open\nThe results are theoretical. The paper proves the lower bound and the oracle speedup. It invites collaboration on large-scale experiments and on building the benchmarks that would test these effects in practice."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#read-the-paper",
+    "href": "posts/murphy-alignment-gap/index.html#read-the-paper",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "Read the paper",
+    "text": "Read the paper\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html",
+    "href": "posts/ansc-capacity-health/index.html",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "",
+    "text": "Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons.\nA hyperscale datacenter network runs thousands of devices and links. When one fails, an alert fires. That alert tells you what broke. It does not tell you how close the whole system is to running out of capacity. Those are different questions. A single link failing in a region with plenty of spare capacity is routine. The same failure in a region already running hot can be the last step before a shortfall. ANSC is built to score the second question."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#the-gap-in-ordinary-alerting",
+    "href": "posts/ansc-capacity-health/index.html#the-gap-in-ordinary-alerting",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "The gap in ordinary alerting",
+    "text": "The gap in ordinary alerting\nStandard monitoring detects individual device or link failures. Each alert is local. It says nothing about the aggregate risk that several failures together push a datacenter or a region past its capacity limit. Operators are left to piece that picture together by hand, often while the alerts are still arriving. The risk that matters is the cascading one, and it lives above the level of any single alert."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#what-ansc-measures",
+    "href": "posts/ansc-capacity-health/index.html#what-ansc-measures",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "What ANSC measures",
+    "text": "What ANSC measures\nANSC produces a color-coded health score for each datacenter and region. The score ranks urgency by the probability of an imminent capacity violation rather than by the impact of what has already happened. Two ingredients go into it. The first is the current residual capacity, meaning how much headroom is left right now. The second is the probability of additional failures on top of the current state. The score combines these and normalizes them at the datacenter level and the regional level, so a green datacenter and a red one mean the same thing wherever you look."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#what-it-changes-for-operators",
+    "href": "posts/ansc-capacity-health/index.html#what-it-changes-for-operators",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "What it changes for operators",
+    "text": "What it changes for operators\nThe paper reports ANSC running across more than 400 datacenters and 60 regions. The effect is to cut noise and point attention at the places most likely to fail soon. Instead of a flat stream of equal-looking alerts, an operator sees a ranked view of where capacity is genuinely at risk. Remediation effort goes to the highest risk first, which is where it does the most good."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#why-it-matters",
+    "href": "posts/ansc-capacity-health/index.html#why-it-matters",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "Why it matters",
+    "text": "Why it matters\nReliability at this scale is a prioritization problem. There are always more alerts than people. A score that orders work by the probability of the next failure, rather than by the noise of the last one, is what lets a small team hold a large fleet."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#read-the-paper",
+    "href": "posts/ansc-capacity-health/index.html#read-the-paper",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "Read the paper",
+    "text": "Read the paper\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html",
+    "href": "posts/ietf-llm-benchmarking/index.html",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "",
+    "text": "The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.\nWhen two systems both claim a throughput number for serving a language model, the numbers usually do not compare. One measured tokens per second at the model engine. The other measured it after a gateway, a firewall, and a network hop. One counted the prompt tokens, the other did not. The words are the same and the measurements are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working Group sets out to fix this for large language model serving. The drafts are individual submissions under review and carry no formal IETF endorsement yet. Taken together they cover four layers of the problem: the words, the method, the measurement boundaries, and the workloads.\nThis post is the overview. Each draft also has its own post."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#the-words",
+    "href": "posts/ietf-llm-benchmarking/index.html#the-words",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "The words",
+    "text": "The words\nThe first draft is a terminology document. It defines a shared vocabulary for LLM serving performance, covering latency, throughput, resource use, and quality. It gives precise definitions for a large set of metrics. These include time to first token, the delay before the first output appears, and inter-token latency, the gap between successive output tokens. It separates the two phases of generation, prefill where the prompt is processed and decode where tokens are produced. It covers throughput, latency percentiles and jitter, multi-tenant concerns such as fairness and head-of-line blocking, optimizations such as prefix caching and speculative decoding, compound systems such as retrieval-augmented generation and agents, and quality signals such as policy violations and false refusals. It defines terms only. It prescribes no method and sets no pass-or-fail thresholds.\nSee the Terminology draft."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#the-method",
+    "href": "posts/ietf-llm-benchmarking/index.html#the-method",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "The method",
+    "text": "The method\nThe second draft is a methodology. It says how to run the tests, set up the parameters, take the measurements, and report the results. It defines three system boundaries to test at: the model engine, the application gateway, and the full compound system. It defines reference workloads, including uniform and skewed synthetic traffic, conversation, code completion, and long context. It defines ten tests, among them time to first token, output token throughput, the throughput-and-latency tradeoff, the distribution of inter-token latency, concurrent request capacity, scheduling fairness, prefix cache effectiveness, behavior under memory pressure, long-context scaling, and the overhead added by guardrails. The goal is reproducible and fair comparison that accounts for streaming output, dynamic batching, and the cost of safety systems.\nSee the Methodology draft."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#the-measurement-boundaries",
+    "href": "posts/ietf-llm-benchmarking/index.html#the-measurement-boundaries",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "The measurement boundaries",
+    "text": "The measurement boundaries\nThe third draft defines profiles. A profile binds the terms and the procedures to a concrete role in the system and a concrete workload pattern, and it declares exactly where the measurement starts and stops. This matters because a metric like time to first token changes depending on whether you include the gateway, the firewall, and the network. Without a declared boundary the numbers are not comparable. The draft defines infrastructure profiles for the model engine, the AI gateway, the AI firewall, and the compound system, along with workload profiles for a chatbot and a compound workflow. It specifies profiles only, not new metrics or thresholds.\nSee the Profiles draft."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#the-workloads",
+    "href": "posts/ietf-llm-benchmarking/index.html#the-workloads",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "The workloads",
+    "text": "The workloads\nThe fourth draft defines the workloads themselves. It gives 25 standard workload profiles organized into six groups, so that everyone tests against the same representative tasks. The groups run from non-generative work such as embeddings, reranking, and scoring, through minimal-output tasks such as classification and function calling, interactive streaming such as chat and code completion, prefill-heavy tasks such as summarization and document question answering, decode-heavy tasks such as content generation and reasoning, and multi-step agentic workflows. Each profile is described along five dimensions: the ratio of input to output, the constraints on the output, the latency sensitivity, the concurrency pattern, and how much of the prompt prefix is shared across requests.\nSee the Serving Workload Profiles draft."
+  },
+  {
+    "objectID": "posts/ietf-llm-benchmarking/index.html#why-it-matters",
+    "href": "posts/ietf-llm-benchmarking/index.html#why-it-matters",
+    "title": "A common language for benchmarking LLM serving: four IETF drafts",
+    "section": "Why it matters",
+    "text": "Why it matters\nBenchmarks only mean something when everyone measures the same thing the same way. These four drafts supply the missing pieces in order. The vocabulary removes ambiguity in the terms. The methodology makes a run reproducible. The profiles declare what was and was not included in a measurement. The workloads make sure systems are compared on representative tasks. Together they make LLM serving numbers something you can actually trust when you compare them."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html",
+    "href": "posts/ietf-benchmarking-workloads/index.html",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "",
+    "text": "Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons.\nPart of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nA serving system can look fast on one kind of task and slow on another. Embedding a short document and running a long agentic plan stress completely different parts of the stack. To compare systems fairly, the workloads themselves have to be standardized. The fourth IETF draft does this. It is co-authored by Mohadeb Mondal and Madhava Gaikwad, an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html#five-dimensions",
+    "href": "posts/ietf-benchmarking-workloads/index.html#five-dimensions",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "Five dimensions",
+    "text": "Five dimensions\nEvery workload is described along five dimensions. Together they capture what makes a task cheap or expensive to serve.\n\nInput to output ratio. Whether the task is mostly prompt, mostly generation, or balanced.\nOutput constraints. Whether the output is non-token, minimal, structured, semi-structured, or free-form.\nLatency sensitivity. Whether the task is interactive, near-real-time, or throughput-oriented.\nConcurrency pattern. Whether requests are single-stream, bursty, sustained and high, or chained in sequence.\nPrefix sharing. How much of the prompt prefix is shared across requests, from none, through a shared system prompt, up to a shared document or schema."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html#twenty-five-profiles-in-six-groups",
+    "href": "posts/ietf-benchmarking-workloads/index.html#twenty-five-profiles-in-six-groups",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "Twenty-five profiles in six groups",
+    "text": "Twenty-five profiles in six groups\nThe draft defines 25 standard workloads, sorted into six groups by what they demand of the system.\n\nGroup A, non-generative. Embeddings, cross-encoder reranking, and logprob scoring.\nGroup B, minimal output. Classification, short question answering, and function calling.\nGroup C, interactive streaming. Chat, code completion, and roleplay.\nGroup D, prefill-heavy. Summarization, document question answering, and extraction.\nGroup E, decode-heavy. Content generation, reasoning, and translation.\nGroup F, multi-step. Agentic workflows and planning.\n\nEach profile maps to the metrics and test procedures from the companion methodology and profiles drafts, so a workload, the way to measure it, and the boundary it is measured at all line up."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html#why-it-matters",
+    "href": "posts/ietf-benchmarking-workloads/index.html#why-it-matters",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "Why it matters",
+    "text": "Why it matters\nWithout standard workloads, every benchmark picks its own favourable task and the results stop being comparable. A fixed, representative set means a serving system is judged on the same range of work that production actually throws at it."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-workloads/index.html#read-the-draft",
+    "href": "posts/ietf-benchmarking-workloads/index.html#read-the-draft",
+    "title": "Twenty-five representative tasks: the IETF workload profiles draft",
+    "section": "Read the draft",
+    "text": "Read the draft\nBenchmarking Workload Profiles for Large Language Model Serving."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html",
+    "href": "posts/npo-meta-alignment/index.html",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "",
+    "text": "The Geographer, Johannes Vermeer (c. 1668). Public domain, via Wikimedia Commons.\nAlignment means making a model behave the way people actually want it to behave. Most production pipelines treat this as a one-time step. You train the model, you ship it, and you hope it stays aligned. NPO starts from a different stance. Alignment is a quantity you can measure, supervise, and drive down over time."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#the-two-quantities",
+    "href": "posts/npo-meta-alignment/index.html#the-two-quantities",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "The two quantities",
+    "text": "The two quantities\nNPO names two things and turns each into a number.\nThe first is alignment loss. This is how far the model’s behavior sits from what was intended. Driving it down is the usual goal.\nThe second is meta-alignment, and it is the idea that gives the paper its name. Meta-alignment asks whether your monitoring is itself trustworthy. A system that reports “everything looks aligned” is only useful if that report tracks reality. NPO calls this monitoring fidelity. The paper shows that meta-alignment reduces to ordinary alignment once you fix a threshold on the monitor. In plain terms, checking the checker is the same kind of problem as the original check, so the same machinery handles both."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#the-feedback-that-drives-it",
+    "href": "posts/npo-meta-alignment/index.html#the-feedback-that-drives-it",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "The feedback that drives it",
+    "text": "The feedback that drives it\nThe loop runs on structured human feedback. This is more than a thumbs up. It includes likes, explicit overrides where a person corrects the system, and abstentions where a person declines to answer. Each kind of signal carries different information, and NPO ingests all of them. Around this sit the operational pieces a real deployment needs: scoring scenarios, tuning thresholds, and validating policies before they take effect."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#why-the-loop-is-stable",
+    "href": "posts/npo-meta-alignment/index.html#why-the-loop-is-stable",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "Why the loop is stable",
+    "text": "Why the loop is stable\nA feedback loop is only useful if it settles rather than drifts. NPO proves that under noisy feedback both quantities converge, and that they do so together. The alignment loss and the monitoring fidelity both approach their targets as more feedback arrives. The paper backs the theory with results from a large deployment, along with simulation artifacts and ablation studies that isolate which parts of the design carry the weight."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#why-it-matters",
+    "href": "posts/npo-meta-alignment/index.html#why-it-matters",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "Why it matters",
+    "text": "Why it matters\nThe shift here is from a single alignment event to a controlled process. Once alignment and the honesty of its monitoring are both numbers that provably go down under feedback, you can run alignment the way you run any other reliability metric. You watch it, you set targets, and you route effort to where the number is worst."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#read-the-paper",
+    "href": "posts/npo-meta-alignment/index.html#read-the-paper",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "Read the paper",
+    "text": "Read the paper\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html",
+    "href": "posts/avec-edge-privacy/index.html",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "",
+    "text": "Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons.\nA local language model runs on your own device, which keeps your data close. Some queries are too hard for the small local model, so it delegates them to a larger model in the cloud. That handoff is the weak point. The query sent outward can carry sensitive information. AVEC is a proposal for controlling that handoff. The name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge and makes the delegation verifiable.\nA note on what this is. AVEC is a position paper. Its evaluation is simulation based by design, and it does not claim deployment readiness or measured task quality with live models. The contribution is an architecture and the theory that goes with it."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
+    "href": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "Spending a privacy budget per query",
+    "text": "Spending a privacy budget per query\nThe core mechanism is an adaptive budget. Differential privacy is a way of adding calibrated random noise so that an output reveals very little about any single underlying record. The strength of that protection is a budget, and spending more budget buys more accuracy at the cost of more exposure. Most systems fix one budget for everything. AVEC sets the budget per query, based on three things: how sensitive the query is, how confident the local model is on its own, and how much budget the user has already spent in the past.\nTo keep the spending honest, AVEC tracks it with an odometer. An odometer is a running tally of privacy budget consumed across many queries, so the system always knows how much protection remains. The accounting uses Rényi differential privacy, a version of the theory that composes cleanly when you add up many small releases."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
+    "href": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "What it proves it can and cannot do",
+    "text": "What it proves it can and cannot do\nThe paper does the unglamorous work of marking the boundaries. It establishes utility ceilings, which are limits on how good the answers can be at a given level of privacy. It establishes delegation-leakage bounds, which cap how much the handoff to the remote model can reveal. It also proves impossibility results. Two tempting shortcuts do not work on their own. Deterministic gating, where a fixed rule decides what to send, cannot provide the guarantee. Hash-only certification, where a hash is used to prove integrity, is not enough by itself."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#why-it-matters",
+    "href": "posts/avec-edge-privacy/index.html#why-it-matters",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "Why it matters",
+    "text": "Why it matters\nLocal models are sold on privacy, and the delegation step quietly undermines that promise. AVEC takes the step seriously. It treats each outward query as a metered privacy event, verifies the transformation on the device, and is honest about the ceilings and the dead ends. That gives later empirical work a clear target."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#read-the-paper",
+    "href": "posts/avec-edge-privacy/index.html#read-the-paper",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "Read the paper",
+    "text": "Read the paper\nAVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html",
+    "href": "posts/opal-rlhf-equivalence/index.html",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "",
+    "text": "Narcissus, Caravaggio (c. 1597-1599). Public domain, via Wikimedia Commons.\nAligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#canonicalization",
+    "href": "posts/opal-rlhf-equivalence/index.html#canonicalization",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "Canonicalization",
+    "text": "Canonicalization\nThe tool is called Opal, and it does canonicalization. A canonical form is a standard way of writing something so that two things that are really equal end up looking identical. Given two preference objectives, Opal returns one of two answers. Either it produces a canonical form that shows the two are algebraically the same, or it produces a concrete witness that they differ. A witness here is a specific case where the two objectives disagree, so the difference is demonstrated rather than asserted."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
+    "href": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "What it finds",
+    "text": "What it finds\nRun Opal across the popular methods and a clear picture emerges. Many widely used objectives optimize the same underlying thing. Their apparent differences are reparameterizations, meaning the same objective dressed in different variables. Some methods, by contrast, are provably distinct, and Opal isolates a small set of structural mechanisms that produce real differences rather than cosmetic ones.\nOne finding is worth calling out because it is easy to miss. Batch normalization can cause the same response pair to receive different gradients depending on which other examples share its batch. The training signal for a pair stops being a property of the pair alone. It becomes a property of the batch it landed in. That is a genuine difference in objective, and it comes from a detail most people treat as bookkeeping."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
+    "href": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "Why it matters",
+    "text": "Why it matters\nA field that keeps proposing objectives needs a way to tell novelty from notation. Opal turns that into a decidable check. It tells you when a new method is a real departure and when it is an old method in new clothes. That saves effort, and it points attention at the handful of structural choices that actually change what the model learns."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
+    "href": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "Read the paper",
+    "text": "Read the paper\nWhen Are Two RLHF Objectives the Same? (arXiv:2509.11298)."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-methodology/index.html",
+    "href": "posts/ietf-benchmarking-methodology/index.html",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "",
+    "text": "An Experiment on a Bird in the Air Pump, Joseph Wright of Derby (1768). Public domain, via Wikimedia Commons.\nPart of a series on the IETF drafts for benchmarking LLM serving. Start with the overview.\nAgreed words are the start. A reproducible benchmark also needs an agreed procedure. The second IETF draft supplies it. It specifies how to set up a test, what traffic to send, what to measure, and how to report the result. It is an individual submission to the IETF Benchmarking Methodology Working Group with no formal IETF endorsement."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#where-to-measure",
+    "href": "posts/ietf-benchmarking-methodology/index.html#where-to-measure",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "Where to measure",
+    "text": "Where to measure\nThe draft defines three system boundaries, because a serving stack has layers and a number means little without saying which layer it covers.\n\nThe model engine, which is raw inference.\nThe application gateway, which adds routing, authentication, and caching.\nThe compound system, which is the full end-to-end path including retrieval and tool use.\n\nA measurement always states which of these boundaries it was taken at."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#what-traffic-to-send",
+    "href": "posts/ietf-benchmarking-methodology/index.html#what-traffic-to-send",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "What traffic to send",
+    "text": "What traffic to send\nIt defines reference workloads so that everyone drives the system with comparable traffic. These include uniform synthetic traffic, skewed synthetic traffic, a conversation pattern, code completion, and long context. Each stresses the system in a different way, from steady load to bursty load to very long prompts."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#the-ten-tests",
+    "href": "posts/ietf-benchmarking-methodology/index.html#the-ten-tests",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "The ten tests",
+    "text": "The ten tests\nThe draft lays out ten benchmarking tests. Together they cover speed, capacity, fairness, and the cost of the features that production systems actually run.\n\nTime to first token.\nOutput token throughput.\nThe tradeoff between throughput and latency.\nThe distribution of inter-token latency, not just its average.\nConcurrent request capacity.\nScheduling fairness across requests.\nPrefix cache effectiveness.\nBehavior under memory pressure.\nLong-context scaling.\nThe overhead added by guardrails."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#what-it-accounts-for",
+    "href": "posts/ietf-benchmarking-methodology/index.html#what-it-accounts-for",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "What it accounts for",
+    "text": "What it accounts for\nThe methodology is built for how LLM serving really behaves. It handles streaming output, where tokens arrive over time rather than all at once. It handles dynamic batching, where the system groups requests on the fly. It handles context-dependent performance, where a long prompt changes the numbers. It also measures the cost of safety systems rather than ignoring them. The goal throughout is a run that someone else can repeat and get the same answer."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#why-it-matters",
+    "href": "posts/ietf-benchmarking-methodology/index.html#why-it-matters",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "Why it matters",
+    "text": "Why it matters\nA benchmark that cannot be reproduced is a marketing number. By fixing the boundaries, the traffic, and the tests, this draft makes a serving result something a second team can check."
+  },
+  {
+    "objectID": "posts/ietf-benchmarking-methodology/index.html#read-the-draft",
+    "href": "posts/ietf-benchmarking-methodology/index.html#read-the-draft",
+    "title": "How to run the tests: the IETF LLM serving methodology draft",
+    "section": "Read the draft",
+    "text": "Read the draft\nBenchmarking Methodology for Large Language Model Serving."
+  },
+  {
+    "objectID": "papers/fibonacci-primes.html",
+    "href": "papers/fibonacci-primes.html",
+    "title": "Heuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics",
+    "section": "",
+    "text": "A companion blog post walks through the results: Counting Fibonacci primes: what a finite computation can and cannot add.\nCode and scripts: github.com/krimler/k-bonacci.\n⬇ Download PDF"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Krimler",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCounting Fibonacci primes: what a finite computation can and cannot add\n\n\n\nnumber-theory\n\nprimes\n\nstatistics\n\nreproducibility\n\n\n\nTreating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAEGIS: typed evidence and obligations for AI-native enterprise architecture\n\n\n\nai-governance\n\nenterprise-architecture\n\nontology\n\nsecurity\n\n\n\nWhy static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.\n\n\n\n\n\nApr 9, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDid you check the right pocket? Routing retrieval across an agent’s memory\n\n\n\nllm-agents\n\nretrieval\n\nmemory\n\nml-systems\n\n\n\nMemory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers.\n\n\n\n\n\nMar 19, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nFinite-size guarantees for dense associative memory\n\n\n\nmachine-learning\n\nassociative-memory\n\nlearning-theory\n\n\n\nModern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nA common language for benchmarking LLM serving: four IETF drafts\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\ndistributed-systems\n\n\n\nThroughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTwenty-five representative tasks: the IETF workload profiles draft\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe fourth of four IETF drafts on benchmarking LLM serving. It standardizes the workloads themselves, so systems are compared on the same representative tasks, each described along five dimensions.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDeclaring the measurement boundary: the IETF profiles draft\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe third of four IETF drafts on benchmarking LLM serving. A profile binds the terms and the method to a concrete role in the system, so a number says exactly what it includes.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nA shared vocabulary for LLM serving (IETF terminology draft)\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe first of four IETF drafts on benchmarking LLM serving. It fixes the words: precise definitions for the metrics that everyone uses loosely, with no methodology and no thresholds.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nHow to run the tests: the IETF LLM serving methodology draft\n\n\n\nllm-systems\n\nbenchmarking\n\nietf\n\n\n\nThe second of four IETF drafts on benchmarking LLM serving. It turns the vocabulary into a procedure: where to measure, what traffic to send, and which ten tests to run.\n\n\n\n\n\nJan 20, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAlignDP: locking knowledge transfer at the data interface\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nsecurity\n\n\n\nWatermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.\n\n\n\n\n\nDec 21, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nEnforcing privacy at the edge for local language models: AVEC\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nedge\n\n\n\nA local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee.\n\n\n\n\n\nSep 13, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhen are two RLHF objectives the same? A canonical form for preference losses\n\n\n\nai-alignment\n\nrlhf\n\npreference-optimization\n\n\n\nThe preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.\n\n\n\n\n\nSep 11, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhy the alignment gap always wins, unless you know where to look\n\n\n\nai-alignment\n\nrlhf\n\nlearning-theory\n\n\n\nWhen human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.\n\n\n\n\n\nSep 5, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nScoring a datacenter fleet by the risk of what happens next\n\n\n\ndistributed-systems\n\nreliability\n\nsre\n\n\n\nAlerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact.\n\n\n\n\n\nAug 22, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTreating alignment as something you can measure and reduce: NPO\n\n\n\nai-alignment\n\nrlhf\n\nml-systems\n\n\n\nMost pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback.\n\n\n\n\n\nJul 28, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Madhava Gaikwad",
+    "section": "",
+    "text": "gaikwad.madhav@gmail.com · Bengaluru · LinkedIn · GitHub · Google Scholar\nI work at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts."
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Madhava Gaikwad",
+    "section": "Skills",
+    "text": "Skills\n\nLanguages: Python, Go, C++, Java\nAI and safety: RAG, guardrailing, MCP, evaluation and monitoring\nCryptography and authorization: Zero Trust, OAuth2/OIDC, SAML, PKI, OPA/Rego, WAF, SSL/TLS\nDistributed systems: containers, Kubernetes, Envoy, gRPC, Spark, Kafka, OpenTelemetry"
+  },
+  {
+    "objectID": "cv.html#experience",
+    "href": "cv.html#experience",
+    "title": "Madhava Gaikwad",
+    "section": "Experience",
+    "text": "Experience\nIndependent (Kriml), Founder, AI security startup. Bengaluru. December 2025 to present.\n\nResearched, built, and productized a secure, anonymous, FDA-compliant medical AI bot.\nWorked with the IETF BMWG group to develop AI-related measurement drafts.\n\nMicrosoft, Senior Software Engineer and Manager. Bengaluru. February 2021 to December 2025.\n\nBuilt Net Copilot, an LLM-powered multi-agent system with chat, search, and API capabilities, serving 250 daily active engineers. Implemented RAG pipelines and fine-tuned and distilled models for production.\nAs Engineering Manager from November 2022 to November 2025, led a 15-member cross-geo SRE team for GPU fleet network operations. Defined SLIs and SLOs for Azure datacenter networking. Owned MTTM and MTTR metrics and reduced time to mitigate by 30%. Designed on-call rotations, escalation policies, incident fatigue management, and an engineer growth path.\n\nCisco, Technical Leader. Bengaluru. June 2012 to February 2021.\n\nLed architecture and delivery of an $80M web security gateway platform. Engineered TLS performance optimizations and TCP tuning in the FreeBSD kernel, achieving 1.2x throughput and 2x faster decryption.\nDrove the enterprise security roadmap and cross-org architecture reviews. Implemented differential privacy guarantees for an enterprise firewall and ensured GDPR compliance.\n\nEarly roles (Symantec, TCS). Mumbai and Pune. December 2006 to June 2012.\n\nWorked on email security, AAA systems, and network protocol development in C/C++ and Java."
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Madhava Gaikwad",
+    "section": "Education",
+    "text": "Education\nBachelor of Engineering, Information Technology. Shivaji University, Kolhapur. 2006. Distinction."
+  },
+  {
+    "objectID": "cv.html#selected-publications-and-preprints",
+    "href": "cv.html#selected-publications-and-preprints",
+    "title": "Madhava Gaikwad",
+    "section": "Selected publications and preprints",
+    "text": "Selected publications and preprints\nSeveral of these have companion posts on this blog that explain the ideas in plain language. See the blog and papers.\n\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs. NeurIPS 2025 Workshop. arXiv:2512.17251 · post\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback. arXiv:2507.21131 · post\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability. arXiv:2508.16119 · post\nAVEC: Bootstrapping Privacy for Local LLMs. arXiv:2509.10561 · post\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins. arXiv:2509.05381 · post\nWhen Are Two RLHF Objectives the Same? (Opal). arXiv:2509.11298 · post\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents. ICLR 2026 Workshop. arXiv:2603.15658 · post\nAEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture. paper · post\nHeuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics. paper · post\nAlgorithmic Analysis of DAM. ICLR 2026 Workshop. OpenReview\nThe Abstention Protocol: Root Cause Analysis for Clos Fabrics. USENIX OSDI 2026.\nAgentic Trust Fabric: A Systematization of Knowledge of Security Architectures for Autonomous AI Agents. preprint\nAdaptive WAF: Multi-Armed Bandits for Web Application Firewall Rule Tuning. preprint\nZero Trust Identity and Authorization Profile. draft"
+  },
+  {
+    "objectID": "cv.html#ietf-drafts-llm-benchmarking-under-bmwg-review",
+    "href": "cv.html#ietf-drafts-llm-benchmarking-under-bmwg-review",
+    "title": "Madhava Gaikwad",
+    "section": "IETF drafts (LLM benchmarking, under BMWG review)",
+    "text": "IETF drafts (LLM benchmarking, under BMWG review)\n\nLLM Benchmarking Terminology\nLLM Benchmarking Methodology\nLLM Benchmarking Profiles\nLLM Serving Workload Profiles"
+  },
+  {
+    "objectID": "reviews/accelnet/index.html",
+    "href": "reviews/accelnet/index.html",
+    "title": "Reading AccelNet: SmartNICs in the public cloud",
+    "section": "",
+    "text": "Veduta del Canal Grande dalla Punta della Dogana, Bernardo Bellotto (18th century). Public domain, via Wikimedia Commons.\nA review of an external paper. The work is not mine. This post is a reader’s notes, in the spirit of an admiring colleague.\nPaper: Azure Accelerated Networking: SmartNICs in the Public Cloud. Firestone et al., Microsoft. NSDI ’18.\nRead the original: USENIX page. It appears in the Proceedings of the 15th USENIX Symposium on Networked Systems Design and Implementation, pages 51 to 66, Renton, WA, April 2018."
+  },
+  {
+    "objectID": "reviews/accelnet/index.html#what-the-paper-does",
+    "href": "reviews/accelnet/index.html#what-the-paper-does",
+    "title": "Reading AccelNet: SmartNICs in the public cloud",
+    "section": "What the paper does",
+    "text": "What the paper does\nAzure runs a lot of network policy in the hypervisor. Think private virtual networks, ACLs, load balancing, NAT, metering, and QoS. Running all of this on host CPUs costs cores. Those cores could be sold to customers instead.\nAccelNet moves this work onto an FPGA SmartNIC. The NIC sits between the host NIC and the top-of-rack switch. The authors call this a bump-in-the-wire design.\nThe clever part is the Generic Flow Table, or GFT. The first packet of a flow goes to software. The VFP stack reads the policy, compiles it into one exact-match rule, and installs that rule on the FPGA. Every packet after that is handled by hardware. The host CPU does almost nothing for the rest of the flow.\nThe numbers are strong. VM to VM latency drops from about 50 microseconds to about 17 microseconds. A single TCP connection reaches about 32 Gbps. Host CPU use for the datapath falls under 1 percent. This has been running on more than 1 million hosts since 2015."
+  },
+  {
+    "objectID": "reviews/accelnet/index.html#what-works-well",
+    "href": "reviews/accelnet/index.html#what-works-well",
+    "title": "Reading AccelNet: SmartNICs in the public cloud",
+    "section": "What works well",
+    "text": "What works well\nThe production evidence is the best part. These are real numbers from a real fleet over several years. Most papers cannot offer this.\nThe first-packet-in-software idea is simple and it ages well. You keep the full flexibility of software for policy. You keep the speed of hardware for the bulk of the traffic. For example, a typical TCP flow has at least 7 to 10 packets including the handshake. So processing only the first packet in software still offloads the large majority.\nThe four-way hardware comparison is honest. The team weighs ASICs, multicore SoCs, FPGAs, and plain host CPUs. They say plainly when a choice rests on judgment rather than measurement.\nThe operational story is unusually complete. They cover FPGA reconfiguration without losing flows. They cover live migration. They cover transparent VF bonding through NetVSC so a revoked VF does not break the VM. They even cover a failsafe path for DPDK and RDMA apps."
+  },
+  {
+    "objectID": "reviews/accelnet/index.html#a-few-friendly-suggestions",
+    "href": "reviews/accelnet/index.html#a-few-friendly-suggestions",
+    "title": "Reading AccelNet: SmartNICs in the public cloud",
+    "section": "A few friendly suggestions",
+    "text": "A few friendly suggestions\nThe FPGA versus ASIC versus SoC case could use real measurements. Right now it leans on judgment. It also leans on the fact that Catapult FPGAs were already deployed. A head-to-head test on the same policy workload would settle it. As written, a reader cannot tell if FPGAs won on merit or on circumstance.\nThe cost story is only half told. The price of a CPU core is laid out carefully, around 0.10 to 0.11 dollars per hour. The FPGA side is missing. We do not see FPGA unit cost. We do not see the aggregate power of 17 to 19 watts across more than 1 million hosts weighed against the cores it saves. A rough two-sided model would make the don’t-burn-cores thesis much stronger.\nThe software path is the part I would most like to see stressed. The first packet of every flow goes to software. So the real limit is the new-flow rate, not the packet rate. The paper measures long-lived elephant flows. It does not measure the corner cases.\nHere are concrete cases I would want tested. How many new connections per second can the VFP exception path handle before it saturates. What happens under a SYN flood, where an attacker opens many short connections on purpose. What happens when the flow count blows past the cache. The L1 cache holds only 2048 flows. The L2 cache lives in DRAM and holds about 1 million flows. The eviction policy and the miss cost are never described.\nThe AWS and GCP comparison is a single snapshot from November 2017. Competitors keep improving. So a point-in-time fastest-in-the-cloud claim is fragile. A note on the number of runs, the tuning, and the variance would help. A CDF would help more than P50, P99, and P99.9 bars alone.\nThe security framing is upbeat, and one tradeoff is left out. The Spectre and Meltdown resilience point is fair, because the datapath skips the host CPU. But SR-IOV hands a VF straight to an untrusted guest. That opens new surface, like guest-to-hardware DMA paths and side channels on a shared FPGA. One honest paragraph would round out the operational story.\nThe reliability claims would be better with numbers. The paper says failure rates stay low and that DRAM fails most often. Both are believable. The team has the fleet telemetry to give an annual failure rate, so it would be nice to see it."
+  },
+  {
+    "objectID": "reviews/accelnet/index.html#bottom-line",
+    "href": "reviews/accelnet/index.html#bottom-line",
+    "title": "Reading AccelNet: SmartNICs in the public cloud",
+    "section": "Bottom line",
+    "text": "Bottom line\nThis is a landmark paper and it earned its influence. Its strength is production evidence at real scale. Its soft spots are evaluation. The FPGA-versus-alternatives case is argued, not measured. The cost model is one-sided. The first-packet path is never stressed under high churn or attack. None of this takes away from a fine piece of engineering. These are the notes of an admiring colleague who would love to see the next version close the loop on the corner cases."
   }
 ]

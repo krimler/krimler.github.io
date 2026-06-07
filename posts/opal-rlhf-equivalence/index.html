@@ -83,13 +83,13 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="When are two RLHF objectives the same? A canonical form for preference losses – Krimler">
 <meta property="og:description" content="The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.">
-<meta property="og:image" content="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.svg">
+<meta property="og:image" content="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.jpg">
 <meta property="og:site_name" content="Krimler">
-<meta property="og:image:alt" content="Two mirrored forms meeting at a central axis">
+<meta property="og:image:alt" content="Caravaggio's Narcissus gazing at his identical reflection in the water">
 <meta name="twitter:title" content="When are two RLHF objectives the same? A canonical form for preference losses – Krimler">
 <meta name="twitter:description" content="The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.">
-<meta name="twitter:image" content="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.svg">
-<meta name="twitter:image:alt" content="Two mirrored forms meeting at a central axis">
+<meta name="twitter:image" content="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.jpg">
+<meta name="twitter:image:alt" content="Caravaggio's Narcissus gazing at his identical reflection in the water">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -281,6 +281,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../reviews/index.html"> 
+<span class="menu-text">Reviews</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
@@ -369,7 +373,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="cover.svg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Narcissus, Caravaggio (c.&nbsp;1597-1599). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>Aligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question.</p>
 <section id="canonicalization" class="level2">
 <h2 class="anchored" data-anchor-id="canonicalization">Canonicalization</h2>

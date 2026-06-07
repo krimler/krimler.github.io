@@ -1,5 +1,19 @@
 [
   {
+    "listing": "/reviews/index.html",
+    "items": [
+      "/reviews/accelnet/index.html",
+      "/reviews/mrc-srv6/index.html"
+    ]
+  },
+  {
+    "listing": "/papers/index.html",
+    "items": [
+      "/papers/fibonacci-primes.html",
+      "/papers/aegis.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/posts/fibonacci-prime-statistics/index.html",
@@ -17,13 +31,6 @@
       "/posts/murphy-alignment-gap/index.html",
       "/posts/ansc-capacity-health/index.html",
       "/posts/npo-meta-alignment/index.html"
-    ]
-  },
-  {
-    "listing": "/papers/index.html",
-    "items": [
-      "/papers/fibonacci-primes.html",
-      "/papers/aegis.html"
     ]
   }
 ]

@@ -670,7 +670,12 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
 
 
 
-<p><img src="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.svg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Narcissus, Caravaggio (c.&nbsp;1597-1599). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
 <p>Aligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question.</p>
 <section id="canonicalization" class="level2">
 <h2 class="anchored" data-anchor-id="canonicalization">Canonicalization</h2>
@@ -698,7 +703,7 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <category>preference-optimization</category>
   <guid>https://krimler.github.io/posts/opal-rlhf-equivalence/</guid>
   <pubDate>Wed, 10 Sep 2025 18:30:00 GMT</pubDate>
-  <media:content url="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.svg" medium="image" type="image/svg+xml"/>
+  <media:content url="https://krimler.github.io/posts/opal-rlhf-equivalence/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Why the alignment gap always wins, unless you know where to look</title>

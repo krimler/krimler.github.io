@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Madhava Gaikwad">
+<meta name="dcterms.date" content="2026-06-07">
+<meta name="description" content="A review of Azure Accelerated Networking (Firestone et al., NSDI ’18). A landmark paper with production evidence at real scale, and a few places where the evaluation could close the loop.">
 
-<title>Madhava Gaikwad – Krimler</title>
+<title>Reading AccelNet: SmartNICs in the public cloud – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +29,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,13 +80,17 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Madhava Gaikwad – Krimler">
-<meta property="og:description" content="Engineering Leader · 20 years in infrastructure and security">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Reading AccelNet: SmartNICs in the public cloud – Krimler">
+<meta property="og:description" content="A review of Azure Accelerated Networking (Firestone et al., NSDI ’18). A landmark paper with production evidence at real scale, and a few places where the evaluation could close the loop.">
+<meta property="og:image" content="https://krimler.github.io/reviews/accelnet/cover.jpg">
 <meta property="og:site_name" content="Krimler">
-<meta name="twitter:title" content="Madhava Gaikwad – Krimler">
-<meta name="twitter:description" content="Engineering Leader · 20 years in infrastructure and security">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:alt" content="Bellotto's view of the Grand Canal in Venice">
+<meta name="twitter:title" content="Reading AccelNet: SmartNICs in the public cloud – Krimler">
+<meta name="twitter:description" content="A review of Azure Accelerated Networking (Firestone et al., NSDI ’18). A landmark paper with production evidence at real scale, and a few places where the evaluation could close the loop.">
+<meta name="twitter:image" content="https://krimler.github.io/reviews/accelnet/cover.jpg">
+<meta name="twitter:image:alt" content="Bellotto's view of the Grand Canal in Venice">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -255,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Krimler</span>
     </a>
   </div>
@@ -266,23 +273,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./papers/index.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./reviews/index.html"> 
+    <a class="nav-link" href="../../reviews/index.html"> 
 <span class="menu-text">Reviews</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./cv.html" aria-current="page"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -293,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -314,11 +321,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#skills" id="toc-skills" class="nav-link active" data-scroll-target="#skills">Skills</a></li>
-  <li><a href="#experience" id="toc-experience" class="nav-link" data-scroll-target="#experience">Experience</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#selected-publications-and-preprints" id="toc-selected-publications-and-preprints" class="nav-link" data-scroll-target="#selected-publications-and-preprints">Selected publications and preprints</a></li>
-  <li><a href="#ietf-drafts-llm-benchmarking-under-bmwg-review" id="toc-ietf-drafts-llm-benchmarking-under-bmwg-review" class="nav-link" data-scroll-target="#ietf-drafts-llm-benchmarking-under-bmwg-review">IETF drafts (LLM benchmarking, under BMWG review)</a></li>
+  <li><a href="#what-the-paper-does" id="toc-what-the-paper-does" class="nav-link active" data-scroll-target="#what-the-paper-does">What the paper does</a></li>
+  <li><a href="#what-works-well" id="toc-what-works-well" class="nav-link" data-scroll-target="#what-works-well">What works well</a></li>
+  <li><a href="#a-few-friendly-suggestions" id="toc-a-few-friendly-suggestions" class="nav-link" data-scroll-target="#a-few-friendly-suggestions">A few friendly suggestions</a></li>
+  <li><a href="#bottom-line" id="toc-bottom-line" class="nav-link" data-scroll-target="#bottom-line">Bottom line</a></li>
   </ul>
 </nav>
     </div>
@@ -328,15 +334,36 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Madhava Gaikwad</h1>
-<p class="subtitle lead">Engineering Leader · 20 years in infrastructure and security</p>
-</div>
+<h1 class="title">Reading AccelNet: SmartNICs in the public cloud</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">paper-review</div>
+    <div class="quarto-category">networking</div>
+    <div class="quarto-category">systems</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    A review of Azure Accelerated Networking (Firestone et al., NSDI ’18). A landmark paper with production evidence at real scale, and a few places where the evaluation could close the loop.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Madhava Gaikwad </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 7, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -346,71 +373,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="mailto:gaikwad.madhav@gmail.com">gaikwad.madhav@gmail.com</a> · Bengaluru · <a href="https://www.linkedin.com/in/safeai/">LinkedIn</a> · <a href="https://github.com/krimler">GitHub</a> · <a href="https://scholar.google.com/citations?user=YReGIGMAAAAJ">Google Scholar</a></p>
-<p>I work at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts.</p>
-<section id="skills" class="level2">
-<h2 class="anchored" data-anchor-id="skills">Skills</h2>
-<ul>
-<li><strong>Languages:</strong> Python, Go, C++, Java</li>
-<li><strong>AI and safety:</strong> RAG, guardrailing, MCP, evaluation and monitoring</li>
-<li><strong>Cryptography and authorization:</strong> Zero Trust, OAuth2/OIDC, SAML, PKI, OPA/Rego, WAF, SSL/TLS</li>
-<li><strong>Distributed systems:</strong> containers, Kubernetes, Envoy, gRPC, Spark, Kafka, OpenTelemetry</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Veduta del Canal Grande dalla Punta della Dogana, Bernardo Bellotto (18th century). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
+<p>A review of an external paper. The work is not mine. This post is a reader’s notes, in the spirit of an admiring colleague.</p>
+<p><strong>Paper:</strong> Azure Accelerated Networking: SmartNICs in the Public Cloud. Firestone et al., Microsoft. NSDI ’18.</p>
+<p><strong>Read the original:</strong> <a href="https://www.usenix.org/conference/nsdi18/presentation/firestone">USENIX page</a>. It appears in the Proceedings of the 15th USENIX Symposium on Networked Systems Design and Implementation, pages 51 to 66, Renton, WA, April 2018.</p>
+<section id="what-the-paper-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-paper-does">What the paper does</h2>
+<p>Azure runs a lot of network policy in the hypervisor. Think private virtual networks, ACLs, load balancing, NAT, metering, and QoS. Running all of this on host CPUs costs cores. Those cores could be sold to customers instead.</p>
+<p>AccelNet moves this work onto an FPGA SmartNIC. The NIC sits between the host NIC and the top-of-rack switch. The authors call this a bump-in-the-wire design.</p>
+<p>The clever part is the Generic Flow Table, or GFT. The first packet of a flow goes to software. The VFP stack reads the policy, compiles it into one exact-match rule, and installs that rule on the FPGA. Every packet after that is handled by hardware. The host CPU does almost nothing for the rest of the flow.</p>
+<p>The numbers are strong. VM to VM latency drops from about 50 microseconds to about 17 microseconds. A single TCP connection reaches about 32 Gbps. Host CPU use for the datapath falls under 1 percent. This has been running on more than 1 million hosts since 2015.</p>
 </section>
-<section id="experience" class="level2">
-<h2 class="anchored" data-anchor-id="experience">Experience</h2>
-<p><strong>Independent (Kriml), Founder, AI security startup.</strong> Bengaluru. December 2025 to present.</p>
-<ul>
-<li>Researched, built, and productized a secure, anonymous, FDA-compliant medical AI bot.</li>
-<li>Worked with the IETF BMWG group to develop AI-related measurement drafts.</li>
-</ul>
-<p><strong>Microsoft, Senior Software Engineer and Manager.</strong> Bengaluru. February 2021 to December 2025.</p>
-<ul>
-<li>Built Net Copilot, an LLM-powered multi-agent system with chat, search, and API capabilities, serving 250 daily active engineers. Implemented RAG pipelines and fine-tuned and distilled models for production.</li>
-<li>As Engineering Manager from November 2022 to November 2025, led a 15-member cross-geo SRE team for GPU fleet network operations. Defined SLIs and SLOs for Azure datacenter networking. Owned MTTM and MTTR metrics and reduced time to mitigate by 30%. Designed on-call rotations, escalation policies, incident fatigue management, and an engineer growth path.</li>
-</ul>
-<p><strong>Cisco, Technical Leader.</strong> Bengaluru. June 2012 to February 2021.</p>
-<ul>
-<li>Led architecture and delivery of an $80M web security gateway platform. Engineered TLS performance optimizations and TCP tuning in the FreeBSD kernel, achieving 1.2x throughput and 2x faster decryption.</li>
-<li>Drove the enterprise security roadmap and cross-org architecture reviews. Implemented differential privacy guarantees for an enterprise firewall and ensured GDPR compliance.</li>
-</ul>
-<p><strong>Early roles (Symantec, TCS).</strong> Mumbai and Pune. December 2006 to June 2012.</p>
-<ul>
-<li>Worked on email security, AAA systems, and network protocol development in C/C++ and Java.</li>
-</ul>
+<section id="what-works-well" class="level2">
+<h2 class="anchored" data-anchor-id="what-works-well">What works well</h2>
+<p>The production evidence is the best part. These are real numbers from a real fleet over several years. Most papers cannot offer this.</p>
+<p>The first-packet-in-software idea is simple and it ages well. You keep the full flexibility of software for policy. You keep the speed of hardware for the bulk of the traffic. For example, a typical TCP flow has at least 7 to 10 packets including the handshake. So processing only the first packet in software still offloads the large majority.</p>
+<p>The four-way hardware comparison is honest. The team weighs ASICs, multicore SoCs, FPGAs, and plain host CPUs. They say plainly when a choice rests on judgment rather than measurement.</p>
+<p>The operational story is unusually complete. They cover FPGA reconfiguration without losing flows. They cover live migration. They cover transparent VF bonding through NetVSC so a revoked VF does not break the VM. They even cover a failsafe path for DPDK and RDMA apps.</p>
 </section>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<p><strong>Bachelor of Engineering, Information Technology.</strong> Shivaji University, Kolhapur. 2006. Distinction.</p>
+<section id="a-few-friendly-suggestions" class="level2">
+<h2 class="anchored" data-anchor-id="a-few-friendly-suggestions">A few friendly suggestions</h2>
+<p>The FPGA versus ASIC versus SoC case could use real measurements. Right now it leans on judgment. It also leans on the fact that Catapult FPGAs were already deployed. A head-to-head test on the same policy workload would settle it. As written, a reader cannot tell if FPGAs won on merit or on circumstance.</p>
+<p>The cost story is only half told. The price of a CPU core is laid out carefully, around 0.10 to 0.11 dollars per hour. The FPGA side is missing. We do not see FPGA unit cost. We do not see the aggregate power of 17 to 19 watts across more than 1 million hosts weighed against the cores it saves. A rough two-sided model would make the don’t-burn-cores thesis much stronger.</p>
+<p>The software path is the part I would most like to see stressed. The first packet of every flow goes to software. So the real limit is the new-flow rate, not the packet rate. The paper measures long-lived elephant flows. It does not measure the corner cases.</p>
+<p>Here are concrete cases I would want tested. How many new connections per second can the VFP exception path handle before it saturates. What happens under a SYN flood, where an attacker opens many short connections on purpose. What happens when the flow count blows past the cache. The L1 cache holds only 2048 flows. The L2 cache lives in DRAM and holds about 1 million flows. The eviction policy and the miss cost are never described.</p>
+<p>The AWS and GCP comparison is a single snapshot from November 2017. Competitors keep improving. So a point-in-time fastest-in-the-cloud claim is fragile. A note on the number of runs, the tuning, and the variance would help. A CDF would help more than P50, P99, and P99.9 bars alone.</p>
+<p>The security framing is upbeat, and one tradeoff is left out. The Spectre and Meltdown resilience point is fair, because the datapath skips the host CPU. But SR-IOV hands a VF straight to an untrusted guest. That opens new surface, like guest-to-hardware DMA paths and side channels on a shared FPGA. One honest paragraph would round out the operational story.</p>
+<p>The reliability claims would be better with numbers. The paper says failure rates stay low and that DRAM fails most often. Both are believable. The team has the fleet telemetry to give an annual failure rate, so it would be nice to see it.</p>
 </section>
-<section id="selected-publications-and-preprints" class="level2">
-<h2 class="anchored" data-anchor-id="selected-publications-and-preprints">Selected publications and preprints</h2>
-<p>Several of these have companion posts on this blog that explain the ideas in plain language. See the <a href="./index.html">blog</a> and <a href="./papers/index.html">papers</a>.</p>
-<ul>
-<li>AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs. NeurIPS 2025 Workshop. <a href="https://arxiv.org/abs/2512.17251">arXiv:2512.17251</a> · <a href="posts/aligndp-rarity-privacy/">post</a></li>
-<li>NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback. <a href="https://arxiv.org/abs/2507.21131">arXiv:2507.21131</a> · <a href="posts/npo-meta-alignment/">post</a></li>
-<li>ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability. <a href="https://arxiv.org/abs/2508.16119">arXiv:2508.16119</a> · <a href="posts/ansc-capacity-health/">post</a></li>
-<li>AVEC: Bootstrapping Privacy for Local LLMs. <a href="https://arxiv.org/abs/2509.10561">arXiv:2509.10561</a> · <a href="posts/avec-edge-privacy/">post</a></li>
-<li>Murphy’s Laws of AI Alignment: Why the Gap Always Wins. <a href="https://arxiv.org/abs/2509.05381">arXiv:2509.05381</a> · <a href="posts/murphy-alignment-gap/">post</a></li>
-<li>When Are Two RLHF Objectives the Same? (Opal). <a href="https://arxiv.org/abs/2509.11298">arXiv:2509.11298</a> · <a href="posts/opal-rlhf-equivalence/">post</a></li>
-<li>Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents. ICLR 2026 Workshop. <a href="https://arxiv.org/abs/2603.15658">arXiv:2603.15658</a> · <a href="posts/memory-store-routing/">post</a></li>
-<li>AEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture. <a href="./papers/aegis.html">paper</a> · <a href="posts/aegis-evidence-obligation/">post</a></li>
-<li>Heuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics. <a href="./papers/fibonacci-primes.html">paper</a> · <a href="posts/fibonacci-prime-statistics/">post</a></li>
-<li>Algorithmic Analysis of DAM. ICLR 2026 Workshop. <a href="https://openreview.net/pdf?id=zgHAqaIybd">OpenReview</a></li>
-<li>The Abstention Protocol: Root Cause Analysis for Clos Fabrics. USENIX OSDI 2026.</li>
-<li>Agentic Trust Fabric: A Systematization of Knowledge of Security Architectures for Autonomous AI Agents. <a href="https://philpapers.org/archive/GAITAT-2.pdf">preprint</a></li>
-<li>Adaptive WAF: Multi-Armed Bandits for Web Application Firewall Rule Tuning. <a href="https://philpapers.org/archive/GAIHPS.pdf">preprint</a></li>
-<li>Zero Trust Identity and Authorization Profile. <a href="https://philpapers.org/archive/GAIZTI.pdf">draft</a></li>
-</ul>
-</section>
-<section id="ietf-drafts-llm-benchmarking-under-bmwg-review" class="level2">
-<h2 class="anchored" data-anchor-id="ietf-drafts-llm-benchmarking-under-bmwg-review">IETF drafts (LLM benchmarking, under BMWG review)</h2>
-<ul>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/">LLM Benchmarking Terminology</a></li>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/">LLM Benchmarking Methodology</a></li>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/">LLM Benchmarking Profiles</a></li>
-<li><a href="https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/">LLM Serving Workload Profiles</a></li>
-</ul>
+<section id="bottom-line" class="level2">
+<h2 class="anchored" data-anchor-id="bottom-line">Bottom line</h2>
+<p>This is a landmark paper and it earned its influence. Its strength is production evidence at real scale. Its soft spots are evaluation. The FPGA-versus-alternatives case is argued, not measured. The cost model is one-sided. The first-packet path is never stressed under high churn or attack. None of this takes away from a fine piece of engineering. These are the notes of an admiring colleague who would love to see the next version close the loop on the corner cases.</p>
 
 
 </section>
@@ -854,5 +852,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
