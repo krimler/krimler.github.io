@@ -12,6 +12,21 @@ direct. State the problem. Define the terms. Build the idea step by step from
 something simple to the full result. Use concrete examples and worked cases.
 State results without decoration.
 
+## Purpose
+
+The blog exists to make the paper easy to understand. The reader has not read the
+paper. Write so that someone meeting the work for the first time can follow it.
+
+Do not make the post mathy. The paper already carries the mathematics. The post
+explains the ideas behind it. Prefer plain words over symbols and equations. State
+a result as a sentence a reader can follow without a pen. Convert a formula into
+what it says and why it holds.
+
+Use an equation only when the idea cannot be carried in words, and at most one or
+two in a post. When you do keep a symbol or term, define it the first time it
+appears. A symbol in an equation must be introduced in words first. Give a
+one-line definition for any term that is standard in the field but not universal.
+
 ## Voice
 
 Write the way a strong researcher talks through a problem at a whiteboard. Assume

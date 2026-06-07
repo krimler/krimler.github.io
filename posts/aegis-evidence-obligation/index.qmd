@@ -1,6 +1,6 @@
 ---
 title: "AEGIS: typed evidence and obligations for AI-native enterprise architecture"
-description: "Why static architecture diagrams cannot govern AI systems, and a metamodel that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk."
+description: "Why static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk."
 author: "Madhava Gaikwad"
 date: "2026-04-09"
 categories: [ai-governance, enterprise-architecture, ontology, security]
@@ -14,152 +14,114 @@ governance happens in periodic review meetings. Both assume an architecture
 document stays accurate for months after it is written.
 
 AI-native systems break these assumptions. A deployed language model produces
-probabilistic outputs. An autonomous agent calls tools in situations it has not
-seen during testing. A retrieval-augmented pipeline changes its effective
-knowledge base every time new documents are ingested. When such a system decides
-on credit, hiring, or infrastructure configuration, a static diagram cannot tell
-you whether the system still meets its regulatory obligations. That question
-needs continuous, machine-checkable governance.
+different outputs for similar inputs. An autonomous agent calls tools in
+situations it has not seen during testing. A retrieval-augmented pipeline changes
+what it knows every time new documents are ingested. When such a system decides on
+credit, hiring, or infrastructure configuration, a static diagram cannot tell you
+whether the system still meets its regulatory obligations. That question needs
+checking that runs continuously and that a machine can perform.
 
 The regulatory pressure is concrete. The EU AI Act entered into force in August
-2024. Its high-risk requirements become enforceable from August 2026
-[@euaiact2024]. ISO/IEC 42001:2023 requires a traceable evidence index that links
-each obligation to specific processes and artefacts. NIST AI RMF names
-traceability as a core property of trustworthy AI. Current enterprise
-architecture tools do not produce conformity evidence at this level of detail or
-at this cadence.
+2024. Its rules for high-risk systems become enforceable from August 2026
+[@euaiact2024]. ISO/IEC 42001, the management-system standard for AI, asks for a
+traceable index that links each obligation to the specific processes and documents
+that satisfy it. The NIST AI Risk Management Framework names traceability as a
+core property of trustworthy AI. Current enterprise architecture tools do not
+produce this kind of evidence at the level of detail or at the speed these rules
+expect.
 
-## What AEGIS adds
+## The idea
 
-AEGIS is a typed ontology and lifecycle framework. It sits at the enterprise
-architecture layer above existing artefacts. The name stands for Architecture
-with Evidence, Governance, Intent, and Safety. The paper makes three
-contributions.
+AEGIS is a framework that sits one layer above existing architecture tools. The
+name stands for Architecture with Evidence, Governance, Intent, and Safety. The
+core move is simple to state. AEGIS makes evidence and obligations into things you
+can model directly, the same way TOGAF and ArchiMate already let you model
+services and data. Once an obligation is a modelled object, a machine can ask
+whether the evidence for it is still valid. Once that check is automatic, it can
+run all the time.
 
-1. An evidence-obligation metamodel. Seven new typed entities become first-class
-   architectural objects. They connect to existing entities through seven typed
-   relations. AEGIS profiles ArchiMate Next and extends W3C PROV-O, so existing
-   models need no re-modelling.
-2. A continuous conformance lifecycle. The document-centric TOGAF lifecycle is
-   replaced by a six-phase loop called IMVDOA.
-3. A regulatory crosswalk. All 38 ISO/IEC 42001 controls and the key EU AI Act
-   articles for high-risk systems map to obligation types.
+The paper makes three contributions. It defines the new building blocks and how
+they attach to existing architecture models. It replaces the periodic review cycle
+with a continuous one. It maps the new building blocks to actual regulation, so a
+conformance report can be generated rather than written by hand.
 
-Recent work supplies useful artefacts at lower layers. Policy Cards encode
-per-agent obligations in machine-readable form [@mavracic2025policycards]. AI
-Bills of Materials track model provenance. Attestable Audits cryptographically
-verify benchmark claims [@schnabl2025attestable]. LLM Audit Trails log lifecycle
-events [@ojewale2026audittrails]. Each of these operates in isolation. A Policy
-Card governs one deployed agent. It does not know which architectural service the
-agent implements, which data asset it accesses, or which regulatory obligation
-that access is subject to. AEGIS connects agent-layer engineering to
-enterprise-level regulatory expectation.
+## The new building blocks
 
-## The seven entity types
+AEGIS introduces seven kinds of object. Each one names something that governance
+of an AI system needs but that current architecture languages cannot express.
 
-AEGIS defines seven typed entities as OWL2 classes, each aligned with PROV-O.
+- **Evidence** is a record that something is true, stamped with who issued it,
+  when it was issued, and when it expires. Evidence can be valid, expired,
+  superseded, or revoked.
+- **Obligation** is a requirement placed on part of the system, such as "this
+  service must keep an audit log". An obligation says what must be true, what
+  would prove it, and which regulation it comes from.
+- **Policy** is a named, versioned bundle of obligations.
+- **Risk** is a structured record of something that could go wrong, linked to the
+  obligations meant to control it.
+- **RuntimeSignal** is an event from a running system, such as an enforcement
+  log or an audit result. Once it is linked to the right part of the model, it
+  becomes a piece of evidence.
+- **Exception** is a recorded, time-limited waiver from an obligation, with a
+  reason and an owner.
+- **ArchitectureDecisionRecord** is the record of a design decision, made
+  queryable so the obligations and risks behind a choice stay attached to it.
 
-- **Evidence** is a time-stamped, provenance-carrying artefact that attests a
-  property of an architectural entity. Every instance carries an issuer, an issue
-  time, an expiry time, a status in {valid, expired, superseded, revoked}, and a
-  strength in $[0,1]$.
-- **Obligation** is a machine-checkable normative requirement on an architectural
-  entity. Each carries a deontic modality in {must, must_not, should, may}, a
-  trigger condition expressed in SHACL or OPA Rego, the evidence it requires, a
-  regulatory source, and a priority.
-- **Policy** is a named, versioned collection of obligations. It is the
-  enterprise-level counterpart to an agent-level Policy Card.
-- **Risk** is a structured risk entry aligned with ISO 31000.
-- **RuntimeSignal** is an event emitted by a deployed system. Once linked to an
-  architectural entity and an obligation it is promoted to an Evidence object.
-- **Exception** is a time-bounded, machine-readable dispensation from an
-  obligation, recording who granted it and why.
-- **ArchitectureDecisionRecord** extends the architecture decision record concept
-  and is machine-queryable.
+These objects connect to the services, agents, and data assets you already model.
+AEGIS is built as an extension, so existing architecture models do not need to be
+redrawn.
 
-## The closure rule
+## The rule that does the work
 
-The core inference is the evidence-obligation closure. Write
-$\text{constrained\_by}(e,o)$ when architectural entity $e$ is constrained by
-obligation $o$, and $\text{verified\_by}(o,v)$ when evidence $v$ verifies $o$. The
-rule is
+One simple rule drives everything. A part of the system that is required to do
+something is in violation the moment there is no unexpired evidence that it is
+doing it. The framework checks this rule continuously rather than at review time.
 
-$$
-\text{constrained\_by}(e,o) \;\wedge\; \neg\,\exists v\,\big(\text{verified\_by}(o,v) \wedge v.\text{status}=\text{valid}\big) \;\Rightarrow\; \text{violates}(e,o).
-$$ {#eq-closure}
+A short example shows why this matters. A service is required to keep personal data
+from leaving the organisation unless a redaction step has run first. This
+requirement comes from the EU AI Act. A piece of evidence confirms the redaction
+step works, and that evidence is set to expire on a fixed date. The day after it
+expires, the rule fires on its own. The service is now in violation, a signal is
+raised, and the responsible owner is notified. No one had to remember to re-check.
 
-In words, an entity constrained by an obligation violates that obligation when no
-valid evidence verifies it. @eq-closure is evaluated continuously as part of the
-runtime loop.
+The same idea gives a health score for any part of the system. The score is the
+share of a part's mandatory obligations that currently have valid evidence behind
+them. When the score drops below a set level, the framework re-checks the affected
+area and refreshes whatever has gone stale.
 
-A worked example shows how a violation appears over time. Service S1 is
-constrained by obligation O1, "PII must not flow to an external endpoint unless a
-redaction proof exists", sourced from EU AI Act Article 10. Evidence E1 verifies
-O1 with an expiry of 2026-07-15. On 16 July 2026 the status of E1 becomes
-expired. The closure rule fires. S1 now violates O1. The conformance loop raises a
-runtime signal and escalates it to the responsible actor. No human re-review was
-needed to detect this.
+## What this lets you catch
 
-## The IMVDOA lifecycle
+The paper shows three things the framework can do that current tools cannot. None
+of these are measured on a live system. They are demonstrations of what the model
+can express.
 
-AEGIS replaces the linear TOGAF lifecycle with a continuous six-phase loop:
-Intent, Model, Verify, Deploy, Observe, Adapt.
+It can express every control in the ISO/IEC 42001 standard as a checkable
+obligation, so a conformance report becomes a query rather than a manual exercise.
 
-- **Intent** derives typed obligations from regulatory sources, organisational
-  policies, and stakeholder constraints.
-- **Model** attaches policies, AI bills of materials, and obligations to every
-  agent, service, and data asset.
-- **Verify** runs SHACL shape checks for structural completeness and a Defeasible
-  Deontic Logic prover for obligation satisfiability. Failures block deployment.
-- **Deploy** registers a deployment event in the audit trail and activates fitness
-  functions.
-- **Observe** consumes enforcement events, audit-trail entries, and audit results
-  as runtime signals, then promotes verified signals to evidence.
-- **Adapt** fires when the per-entity conformance score falls below a threshold.
+It can catch three ways governance silently drifts. Evidence can expire without
+anyone re-checking it. A rule enforced at the level of an individual agent can be
+changed while the organisation-wide policy is not, so the two no longer agree. A
+regulation can be updated so that an obligation now points at an old version of the
+law. Today's architecture diagrams and code-level checks miss all three.
 
-The conformance score for entity $e$ is the fraction of its mandatory obligations
-that currently hold valid evidence.
-
-$$
-\kappa(e) = \frac{\big|\{\, o : \text{constrained\_by}(e,o),\; o.\text{deontic}=\text{must},\; \exists v\,(\text{verified\_by}(o,v) \wedge v.\text{status}=\text{valid}) \,\}\big|}{\big|\{\, o : \text{constrained\_by}(e,o),\; o.\text{deontic}=\text{must} \,\}\big|}.
-$$ {#eq-kappa}
-
-Adapt re-runs the Intent, Model, and Verify sub-cycle for the affected scope.
-
-## What the framework can express
-
-The paper gives three expressiveness constructions. Each is a structured
-demonstration that the metamodel can represent a class of governance artefact or
-detect a class of failure by logical inference alone. No deployed system is
-measured.
-
-The first maps all 38 ISO/IEC 42001 Annex A controls to typed obligations through
-the conformity triple "Control to Test to Evidence", expressed as machine-queryable
-SPARQL over the obligation graph.
-
-The second detects three classes of obligation drift by the closure rule.
-Evidence can expire without re-verification. A Policy Card can be updated at the
-agent layer while its enterprise-level policy is not. A regulatory update can
-supersede the source an obligation points to. ArchiMate models and code-level
-fitness functions detect none of these.
-
-The third lifts agent-level Policy Cards into an enterprise-level conformance
-graph and exposes conflicts between cards that agent-layer enforcement cannot see.
+It can pull the rules enforced on individual AI agents up to the organisation
+level and show where two agents' rules conflict with each other, a conflict that is
+invisible when each agent is governed on its own.
 
 ## Limits
 
-The three constructions are expressiveness demonstrations. They do not report
-measurements from a deployed system. The crosswalk covers the EU AI Act and
-ISO/IEC 42001. Extension to other regimes such as GDPR or FDA AI/ML guidance
-needs additional tables. The Defeasible Deontic Logic prover has polynomial
-complexity and has not been profiled at enterprise scale. A full implementation
-covering the OWL2 ontology, the SHACL shapes, the SPARQL closure queries, and a
-Policy Card lifting tool is the primary target for future work. Empirical
-evaluation against existing toolchains requires that implementation first.
+The three demonstrations show what the model can represent. They do not report
+results from a deployed system. The mapping to regulation covers the EU AI Act and
+ISO/IEC 42001. Other regimes, such as GDPR or medical-device rules, would need
+their own mappings. The reasoning engine behind the checks has not been tested at
+the scale of a large organisation. A full working implementation is the main piece
+of future work, and a real evaluation against existing tools depends on building it
+first.
 
 ## Read the paper
 
-The full paper is here: [AEGIS (PDF and details)](../../papers/aegis.qmd).
+The full paper, with the formal model and the complete regulatory mapping, is here:
+[AEGIS (PDF and details)](../../papers/aegis.qmd).
 
 ## References
 

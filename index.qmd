@@ -10,5 +10,4 @@ listing:
   filter-ui: true
   feed: true        # generates index.xml (RSS) for discoverability
 page-layout: full
-title-block-banner: true
 ---

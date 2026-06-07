@@ -1,130 +1,133 @@
 ---
 title: "Counting Fibonacci primes: what a finite computation can and cannot add"
-description: "Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a coverage-validated prediction interval, a null-model battery that finds no structure, and an exact divisibility layer."
+description: "Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences."
 author: "Madhava Gaikwad"
 date: "2026-06-07"
 categories: [number-theory, primes, statistics, reproducibility]
 ---
 
-A Fibonacci prime is a Fibonacci number $F_n$ that is prime. As of June 2025 there
-are 57 known indices $n$ for which $F_n$ is prime or probably prime. They range
-from $F_3$ up to $F_{11964299}$. The largest one proven prime is $F_{201107}$. The
-rest are probable primes. They pass a Miller-Rabin test and have not been
-certified. Whether there are infinitely many Fibonacci primes is open. No pattern
-is known beyond a density heuristic.
+A Fibonacci prime is a Fibonacci number that is also prime. The Fibonacci numbers
+are the familiar sequence 1, 1, 2, 3, 5, 8, 13, and so on, where each term is the
+sum of the two before it. Most of them are not prime. As of June 2025 we know of
+57 positions in the sequence where the Fibonacci number is prime or almost
+certainly prime. They are spread very far apart. The largest one that has been
+fully proven prime sits at position 201107. The largest one we believe is prime
+sits at position 11964299, a number with about 2.5 million digits, checked by a
+fast test that is right in practice but does not constitute a proof. Whether the
+list goes on forever is an open question. No one knows a rule that produces these
+positions.
 
-This study treats the 57 indices as a dataset. It asks whether any visible
-structure survives scrutiny, and where such structure lives. The mathematics
-behind the question is already established in the literature. The contribution is
-a method. It adds an uncertainty-quantified prediction layer, a null-model battery
-that separates real structure from sampling noise, and a fully cited
-reproduction. All computations run from released Python scripts at
+This study takes a different stance. It treats the 57 positions as a small
+dataset and asks a plain question. Is there any hidden pattern in them, and if
+there is, where does it live? The mathematics needed to answer this is already in
+the literature. What the study adds is method. It puts an honest error bar on a
+prediction, it runs a battery of tests to tell a real pattern apart from a
+coincidence, and it ships code so anyone can rerun everything. The scripts are at
 [github.com/krimler/k-bonacci](https://github.com/krimler/k-bonacci).
 
-## The density heuristic
+## How many should there be
 
-Start with the count. A random integer of the size of $F_p \sim \varphi^p/\sqrt5$
-is prime with probability about $1/\log F_p \approx 1/(p\log\varphi)$. The
-Fibonacci numbers form a divisibility sequence, so $F_m \mid F_n$ exactly when
-$m \mid n$ for $m > 2$. A prime $F_p$ with $p > 4$ therefore forces $p$ prime.
-Summing the prime probability over primes and applying Mertens' theorem injects a
-factor $e^{\gamma}$, where $\gamma$ is the Euler-Mascheroni constant. Grantham and
-Granville conjecture [@grantham2024fibonacci]
+There is a well-known way to guess how many Fibonacci primes lie below some
+cutoff. The Fibonacci numbers grow at a steady multiplicative rate, so a Fibonacci
+number deep in the sequence has a predictable size. A number of that size is prime
+with a chance that shrinks as the number grows, in the usual way primes thin out.
+A classical divisibility fact narrows the search further. A Fibonacci number can
+only be prime when its position is itself prime. Combining these gives a clean
+prediction. The number of Fibonacci primes up to a cutoff grows in step with the
+logarithm of that cutoff, times a fixed constant.
 
-$$
-\#\{\, n \le N : F_n \text{ prime} \,\} \;\sim\; e^{\gamma}\,\log_{\varphi} N.
-$$ {#eq-count}
+This is the Grantham and Granville heuristic [@grantham2024fibonacci]. Run it out
+to the current search depth and it predicts about 60 positions. We observe 57.
+The agreement is close.
 
-At $N = 1.2\times10^{7}$ the heuristic predicts about 60.3 indices. The observed
-count is 57.
+There is a wrinkle worth airing. A quick fit of the constant comes out about 19%
+higher than the value the theory predicts. The study tracks the gap down. Fitting
+the constant against the Fibonacci data alone lands within 3% of the theoretical
+value. Pooling several related sequences gives a range that comfortably contains
+it. The apparent excess turns out to be a mix of a bookkeeping choice in the
+formula and ordinary small-sample noise. With only 57 points, the data cannot even
+tell the theoretical constant apart from a nearby look-alike value. Settling that
+would take far more data than the search has produced.
 
-A naive maximum-likelihood estimate of the leading constant sits about 19% above
-$e^{\gamma}$. The study reconciles this. Fitting the constant over the Fibonacci
-indices alone gives an estimate within 3% of $e^{\gamma}$. A pooled estimate over
-four related division-type families gives $2.11$ with a 95% interval of
-$[1.75, 2.48]$, which contains $e^{\gamma}\approx 1.781$. The apparent excess
-decomposes into three parts. There is the choice of $\log X$ versus $\log X + E_1$
-in the Mertens partial sum. There is small-sample noise. There are family-specific
-divisor factors. The data cannot separate $e^{\gamma}\approx 1.781$ from
-$\sqrt{\pi}\approx 1.772$ at one standard deviation. Resolving the two would need
-about $4\times10^{4}$ primes, reachable only by pooling more families.
+## Predicting the next one
 
-## Prediction with quantified uncertainty
+If the positions are spread out with no memory of each other, you can still say
+something useful about the next one. Look at the gaps between consecutive positions
+on a logarithmic scale. Those gaps behave like the waiting times in a process that
+has no memory, the same statistics that govern how long you wait for the next
+random arrival. Standard tests back this up.
 
-The indices grow geometrically. Define the gaps $g_k = \log n_{k+1} - \log n_k$.
-To the resolution of 57 points these gaps are independent and exponentially
-distributed. A Kolmogorov-Smirnov test against the exponential gives $p = 0.63$.
-The lag-1 autocorrelation is $-0.09$ with $p = 0.53$. The gaps behave like a
-memoryless Poisson process in $\log n$.
+That observation supports a prediction with an error bar, which the earlier work
+never attempted. From the data available up to a point, the method gives a 90%
+window for where the next position should fall. The position that was actually
+found next landed inside the window. Replaying this one step at a time across the
+whole list, the true position fell inside its predicted window about 87% of the
+time. For a method with a single tunable number, landing near the promised 90% is
+about as well as one can ask.
 
-The reference literature performs no interval estimation. This study adds one.
-Treating the next index as $n_{37}\cdot e^{g}$ with $g$ exponential yields a 90%
-predictive window of $[2.04, 5.07]\times10^{5}$. The true next index is 397379,
-which lies inside. A one-step-ahead backtest over the 46 predictable indices puts
-40 of them inside their nominal 90% intervals. That is 87% coverage, which is well
-calibrated for a one-parameter model.
+## Looking for hidden patterns
 
-## Residue statistics
+The study then hunts for structure in the positions. It checks whether they favour
+certain remainders, whether neighbours influence each other, whether some special
+families of primes are over- or under-represented, and whether the leading digits
+follow the lopsided distribution that many natural datasets show. Every test comes
+back empty.
 
-The study probes the indices for structure. It runs residue-class biases modulo 4,
-5, and 10, a Lemke Oliver-Soundararajan consecutive-residue correlation, a Sophie
-Germain depletion, an order-of-primeness enrichment, and a Benford leading-digit
-test. All return null. As a global check the authors simulated 3000 index sets
-from the $e^{\gamma}$ density model and compared nine statistics. The observed data
-was an outlier in zero of the nine.
+As a single overall check, the authors generated three thousand fake datasets from
+the no-pattern model and compared nine summary measurements. The real data looked
+unremarkable on all nine. The honest conclusion is stated plainly. At 57 points
+there is no pattern to find. The biases people detect in primes are measured
+across millions of cases. A list of 57 is far too short to see effects that
+faint.
 
-The conclusion is stated plainly. No structure is detectable at $N = 57$. Against
-percent-level biases measured on millions of primes, the power of 57 points is
-negligible. The Lemke Oliver-Soundararajan effect cannot apply here. It is a
-short-range effect among consecutive primes. The positions studied here are
-long-range, with a median gap near 5000.
+## Where structure does live
 
-## The divisibility layer
+The positions of the primes carry no usable structure. The way primes divide these
+sequences is a different story, and here the picture is exact.
 
-The location of the indices carries no algebraic handle. The factor structure
-does. Here the established cases are theorems, and the study adds one conjectural
-set.
+For the Fibonacci numbers, ask which is the first position a given prime divides.
+A classical result of Lagarias says that for two thirds of primes that first
+position is even [@lagarias1985lucas]. The study confirms this to high precision
+across many primes. The finer details of this divisibility follow from a known
+proof built on a symmetry argument from algebra [@cubre2014divisibility].
 
-For Fibonacci numbers the rank of apparition $z(p)$ is the least $m$ with
-$p \mid F_m$. Lagarias proved that the primes dividing the Lucas numbers have
-density $2/3$ [@lagarias1985lucas]. The study confirms $P(z(p)\text{ even}) = 2/3$
-numerically, measuring $0.66684$ over 148931 primes. The Pisano multiplier and the
-2-adic valuation of $z(p)$ both follow from Cubre and Rouse's proof via a
-Chebotarev argument [@cubre2014divisibility].
+The study then moves to relatives of the Fibonacci numbers built from longer
+recurrences, where each term sums the previous three, four, or more. These no
+longer have the clean divisibility property. Their behaviour is instead controlled
+by a symmetry group attached to the recurrence, and a classical theorem turns that
+symmetry into exact proportions for how the sequence repeats when reduced by a
+prime. The study confirms these proportions numerically for the three-term and
+four-term cases.
 
-For $k$-bonacci sequences with $k \ge 3$ the divisibility-sequence property fails.
-The governing object is the Galois group of the characteristic polynomial
-$x^{k} - x^{k-1} - \cdots - 1$, which is the full symmetric group $S_k$ for $k$
-even or prime. The prime-splitting types, and so the period of the sequence modulo
-$p$, follow the cycle-type densities of $S_k$ by Chebotarev. The study confirms the
-$S_3$ and $S_4$ densities numerically.
+For the three-term case there is one quantity the study can only estimate. It
+measures it at about 0.40 and is careful to flag that the exact value is not known.
+The study also corrects a claim in an earlier draft that said these finer
+densities were computable for any length of recurrence. For the general case they
+are open, with a partial result under a standard unproven hypothesis as the best
+that is currently known [@jarviniemi2022density].
 
-For the Tribonacci period $h(p)$ the study records a conjectural density. Over 5131
-primes below $5\times10^{4}$ it estimates $P(h(p)\text{ odd}) \approx 0.397$. The
-exact constant is open. The study corrects an earlier draft that called the
-Tribonacci divisor and entry-point densities computable for any order. The general
-case is open. Järviniemi's positive lower density under GRH is the current state of
-the art [@jarviniemi2022density].
+## What is known and what is new
 
-## What is known versus what is added
-
-The value of this study is the line it draws. The count law, the $e^{\gamma}$
-constant, the $2/3$ Lucas density, the $S_k$ splitting densities, and the
-Tribonacci period structure are established theorems with citations. The additions
-are three. There is a coverage-validated prediction interval for the index counts.
-There is a reusable null-model battery for separating structure from sampling
-noise. There is a fully cited, script-based reproduction.
+The point of the study is the line it draws between the two. The count estimate,
+the matching constant, the two-thirds divisibility result, the symmetry-driven
+proportions, and the repetition structure of the longer sequences are established
+mathematics with citations. The new contributions are smaller and clearly marked.
+There is a prediction window with a measured success rate. There is a reusable
+battery of tests for telling structure apart from noise. There is a fully cited
+reproduction that anyone can run.
 
 ## Reproducibility
 
-All results come from self-contained Python scripts using NumPy, SciPy, and
-Matplotlib. The index data are the OEIS b-files for the Fibonacci, Lucas, Mersenne,
-and Wagstaff sequences. The code is at
+Every result comes from self-contained Python scripts using standard scientific
+libraries. The input data are the published index lists for the Fibonacci, Lucas,
+and related sequences. The code is at
 [github.com/krimler/k-bonacci](https://github.com/krimler/k-bonacci).
 
 ## Read the paper
 
-The full paper is here: [Fibonacci and k-bonacci prime statistics (PDF and details)](../../papers/fibonacci-primes.qmd).
+The full paper, with the precise statements, the constants, and the proofs it
+draws on, is here:
+[Fibonacci and k-bonacci prime statistics (PDF and details)](../../papers/fibonacci-primes.qmd).
 
 ## References
 
