@@ -1,0 +1,15 @@
+---
+title: "Papers"
+listing:
+  contents: "*.qmd"     # one .qmd per paper (excludes this index)
+  sort: "date desc"
+  type: table
+  fields: [date, title, description]
+  filter-ui: true
+---
+
+Finished papers (PDFs). Each entry opens a page with the PDF embedded inline and
+a download button.
+
+**To add a paper:** drop the PDF in `papers/files/`, copy
+`papers/_template.qmd` to `papers/your-paper.qmd`, and edit the front matter.

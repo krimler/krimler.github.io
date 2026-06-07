@@ -1,0 +1,14 @@
+---
+title: "Krimler"
+subtitle: "Math · Computer Science · AI/ML · Security"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  feed: true        # generates index.xml (RSS) for discoverability
+page-layout: full
+title-block-banner: true
+---

@@ -1,0 +1,6 @@
+# Defaults applied to every post in posts/
+freeze: auto          # cache computed/code output; only re-run when source changes
+title-block-banner: true
+toc: true
+code-copy: true
+code-overflow: wrap

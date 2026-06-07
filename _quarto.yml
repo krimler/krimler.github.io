@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Krimler"
+  description: "Notes and papers on mathematics, computer science, AI/ML, and security."
+  site-url: https://krimler.github.io
+  # If you publish to a project repo (username.github.io/REPO), also set:
+  # repo-url: https://github.com/krimler/REPO
+  open-graph: true
+  twitter-card: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Blog
+      - href: papers/index.qmd
+        text: Papers
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/krimler
+        aria-label: GitHub
+      - icon: rss
+        href: index.xml
+        aria-label: RSS
+  page-footer:
+    left: "© 2026 Krimler"
+    right:
+      - icon: github
+        href: https://github.com/krimler
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-overflow: wrap
+    code-tools: true          # "view source" button on code-heavy posts
+    highlight-style: github
+    anchor-sections: true
+    smooth-scroll: true
+
+# Math: KaTeX is fast and SEO-friendly; switch to mathjax if you need rare macros.
+html-math-method: katex
+
+# Citations: drop arxiv BibTeX entries into references.bib, cite with [@key].
+bibliography: references.bib
+link-citations: true
+# Want IEEE/ACM-style numbered citations? Download a .csl from
+# https://github.com/citation-style-language/styles and add:  csl: ieee.csl

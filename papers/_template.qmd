@@ -1,0 +1,18 @@
+---
+title: "Paper title goes here"
+description: "One-line abstract or summary."
+date: "2026-06-07"
+author: "Krimler"
+# Set this to your PDF's filename in papers/files/
+pdf: "files/your-paper.pdf"
+---
+
+```{=html}
+<p><a class="btn btn-primary" href="files/your-paper.pdf" download>⬇ Download PDF</a></p>
+<embed src="files/your-paper.pdf" type="application/pdf" width="100%" height="900px" />
+```
+
+::: {.callout-note collapse="true"}
+## Notes / context
+Add commentary, related blog posts, or links to the code here.
+:::

@@ -1,0 +1,12 @@
+---
+title: "About"
+---
+
+I write about **mathematics, computer science, AI/ML, and security** — notes,
+deep-dives, and occasional papers. Code referenced here lives on
+[GitHub](https://github.com/krimler).
+
+## Contact
+
+- GitHub: [\@krimler](https://github.com/krimler)
+- Email: *add your email*
