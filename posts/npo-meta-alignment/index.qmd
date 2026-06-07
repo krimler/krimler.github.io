@@ -3,6 +3,8 @@ title: "Treating alignment as something you can measure and reduce: NPO"
 description: "Most pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback."
 author: "Madhava Gaikwad"
 date: "2025-07-28"
+image: cover.jpg
+image-alt: "Vermeer's The Geographer holding measuring instruments"
 categories: [ai-alignment, rlhf, ml-systems]
 ---
 
@@ -54,3 +56,7 @@ You watch it, you set targets, and you route effort to where the number is worst
 ## Read the paper
 
 [NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)](https://arxiv.org/abs/2507.21131).
+
+---
+
+*Cover image: The Geographer, Johannes Vermeer (c. 1668). Public domain, via Wikimedia Commons.*

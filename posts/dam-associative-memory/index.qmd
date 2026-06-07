@@ -1,0 +1,76 @@
+---
+title: "Finite-size guarantees for dense associative memory"
+description: "Modern Hopfield networks store far more patterns than the classic kind, but the theory only described the infinite limit. This work proves how fast retrieval converges at finite size, how much corruption it tolerates, and why it always settles."
+author: "Madhava Gaikwad"
+date: "2026-01-20"
+image: cover.jpg
+image-alt: "Arcimboldo's The Librarian, a figure composed of books"
+categories: [machine-learning, associative-memory, learning-theory]
+---
+
+An associative memory stores a set of patterns and recalls the right one from a
+partial or corrupted version of it. Give it a noisy image and it returns the clean
+stored image it most resembles. The classic version is the Hopfield network. Dense
+Associative Memory, or DAM, is the modern version. It uses higher-order
+interactions among the stored bits, and that buys a large jump in capacity. The
+number of patterns it can hold grows roughly like a high power of the network size,
+where the power is set by the order of the interactions.
+
+## The gap in the theory
+
+The existing analysis of DAM studies the limit where the network is infinitely
+large and the stored patterns are drawn at random. That setting is clean, and it
+tells you the capacity scales. It does not tell you what happens in a real network
+of a fixed, finite size. It gives no convergence rate, so you do not know how many
+steps recall takes. It does not say how the memory behaves when an adversary, rather
+than chance, chooses the corruption. This work fills those gaps with an algorithmic
+analysis, meaning it studies the actual retrieval procedure step by step under
+conditions you can check.
+
+## How fast recall settles
+
+The first result is about speed. Recall in these networks runs by updating one unit
+at a time, which is called asynchronous updating. The paper assumes two checkable
+conditions. The stored patterns are well separated from each other, and the
+interference between them stays bounded even when the memory is heavily loaded.
+Under these, retrieval converges geometrically. Geometric convergence means the
+error shrinks by a constant fraction at every step. Once the state enters the basin
+of attraction, the region around a stored pattern that pulls inputs toward it, the
+number of steps needed to lock on grows only with the logarithm of the network
+size. That is fast. Doubling the network adds only a constant number of steps.
+
+## How much corruption it survives
+
+The second result is about robustness against a deliberate attacker. The paper
+states an explicit margin condition. A margin here is the safety gap between the
+correct pattern and its nearest competitor. The condition turns that gap into a
+concrete number: how many corrupted bits the memory can absorb in a single pass and
+still recover the right pattern. This makes robustness a quantity you can compute
+for a given network rather than a hope.
+
+## Why it always settles
+
+The third result explains why retrieval never gets stuck cycling. The paper shows
+that DAM retrieval is a potential game. A potential game is a system where every
+local update improves a single global score. Because each unit's update can only
+raise that score, and the score cannot rise forever, the process must come to rest.
+It settles at a stable configuration, which in game terms is a pure Nash
+equilibrium and in memory terms is a recalled pattern. The capacity results survive
+this finite-size treatment, matching the classical scaling for random patterns and
+holding up to small logarithmic factors in the worst case.
+
+## Why it matters
+
+Dense associative memory underlies the attention mechanism in modern networks, so
+its guarantees are not a curiosity. Turning capacity, speed, and robustness from
+statements about an infinite limit into checkable conditions on a real network is
+what lets you reason about these systems as engineered components.
+
+## Read the paper
+
+Algorithmic Analysis of Dense Associative Memory, ICLR 2026 Workshop.
+[OpenReview](https://openreview.net/forum?id=zgHAqaIybd).
+
+---
+
+*Cover image: The Librarian, Giuseppe Arcimboldo (c. 1566). Public domain, via Wikimedia Commons.*

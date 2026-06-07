@@ -3,6 +3,8 @@ title: "Scoring a datacenter fleet by the risk of what happens next"
 description: "Alerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact."
 author: "Madhava Gaikwad"
 date: "2025-08-22"
+image: cover.jpg
+image-alt: "Turner's Rain, Steam and Speed showing a railway in motion"
 categories: [distributed-systems, reliability, sre]
 ---
 
@@ -50,3 +52,7 @@ a large fleet.
 ## Read the paper
 
 [ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)](https://arxiv.org/abs/2508.16119).
+
+---
+
+*Cover image: Rain, Steam and Speed - The Great Western Railway, J. M. W. Turner (1844). Public domain, via Wikimedia Commons.*

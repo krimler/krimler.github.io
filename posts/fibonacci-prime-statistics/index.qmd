@@ -3,6 +3,8 @@ title: "Counting Fibonacci primes: what a finite computation can and cannot add"
 description: "Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences."
 author: "Madhava Gaikwad"
 date: "2026-06-07"
+image: cover.jpg
+image-alt: "The Great Wave off Kanagawa by Hokusai"
 categories: [number-theory, primes, statistics, reproducibility]
 ---
 
@@ -133,3 +135,7 @@ draws on, is here:
 
 ::: {#refs}
 :::
+
+---
+
+*Cover image: The Great Wave off Kanagawa, Katsushika Hokusai (c. 1831). Public domain, via Wikimedia Commons.*

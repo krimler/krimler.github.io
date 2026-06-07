@@ -3,6 +3,8 @@ title: "Why the alignment gap always wins, unless you know where to look"
 description: "When human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial."
 author: "Madhava Gaikwad"
 date: "2025-09-05"
+image: cover.jpg
+image-alt: "Landscape with the Fall of Icarus"
 categories: [ai-alignment, rlhf, learning-theory]
 ---
 
@@ -56,3 +58,7 @@ benchmarks that would test these effects in practice.
 ## Read the paper
 
 [Murphy's Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)](https://arxiv.org/abs/2509.05381).
+
+---
+
+*Cover image: Landscape with the Fall of Icarus, after Pieter Bruegel the Elder (16th century). Public domain, via Wikimedia Commons.*

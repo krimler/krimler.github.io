@@ -3,6 +3,8 @@ title: "AEGIS: typed evidence and obligations for AI-native enterprise architect
 description: "Why static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk."
 author: "Madhava Gaikwad"
 date: "2026-04-09"
+image: cover.jpg
+image-alt: "Lorenzetti's Allegory of Good Government fresco"
 categories: [ai-governance, enterprise-architecture, ontology, security]
 ---
 
@@ -127,3 +129,7 @@ The full paper, with the formal model and the complete regulatory mapping, is he
 
 ::: {#refs}
 :::
+
+---
+
+*Cover image: Allegory of Good Government, Ambrogio Lorenzetti (1338-1339). Public domain, via Wikimedia Commons.*

@@ -3,6 +3,8 @@ title: "Did you check the right pocket? Routing retrieval across an agent's memo
 description: "Memory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers."
 author: "Madhava Gaikwad"
 date: "2026-03-19"
+image: cover.jpg
+image-alt: "Domenico Remps Cabinet of Curiosities with many compartments"
 categories: [llm-agents, retrieval, memory, ml-systems]
 ---
 
@@ -47,3 +49,7 @@ number of stores grows.
 ## Read the paper
 
 [Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)](https://arxiv.org/abs/2603.15658).
+
+---
+
+*Cover image: Cabinet of Curiosities, Domenico Remps (c. 1690). Public domain, via Wikimedia Commons.*

@@ -3,6 +3,8 @@ title: "AlignDP: locking knowledge transfer at the data interface"
 description: "Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones."
 author: "Madhava Gaikwad"
 date: "2025-12-21"
+image: cover.jpg
+image-alt: "Massys' The Moneylender and His Wife"
 categories: [privacy, differential-privacy, llm, security]
 ---
 
@@ -56,3 +58,7 @@ matter.
 ## Read the paper
 
 [AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)](https://arxiv.org/abs/2512.17251).
+
+---
+
+*Cover image: The Moneylender and His Wife, Quentin Massys (1514). Public domain, via Wikimedia Commons.*

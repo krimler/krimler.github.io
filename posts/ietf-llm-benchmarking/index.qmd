@@ -1,0 +1,96 @@
+---
+title: "A common language for benchmarking LLM serving: four IETF drafts"
+description: "Throughput, latency, and tokens-per-second mean different things in different papers and products, so the numbers do not compare. A set of IETF drafts fixes the vocabulary, the method, the measurement boundaries, and the workloads."
+author: "Madhava Gaikwad"
+date: "2026-01-20"
+image: cover.jpg
+image-alt: "Bruegel's The Tower of Babel"
+categories: [llm-systems, benchmarking, ietf, distributed-systems]
+---
+
+When two systems both claim a throughput number for serving a language model, the
+numbers usually do not compare. One measured tokens per second at the model engine.
+The other measured it after a gateway, a firewall, and a network hop. One counted
+the prompt tokens, the other did not. The words are the same and the measurements
+are not. A set of Internet-Drafts in the IETF Benchmarking Methodology Working
+Group sets out to fix this for large language model serving. The drafts are
+individual submissions under review and carry no formal IETF endorsement yet. Taken
+together they cover four layers of the problem: the words, the method, the
+measurement boundaries, and the workloads.
+
+## The words
+
+The first draft is a terminology document. It defines a shared vocabulary for LLM
+serving performance, covering latency, throughput, resource use, and quality. It
+gives precise definitions for a large set of metrics. These include time to first
+token, the delay before the first output appears, and inter-token latency, the gap
+between successive output tokens. It separates the two phases of generation,
+prefill where the prompt is processed and decode where tokens are produced. It
+covers throughput, latency percentiles and jitter, multi-tenant concerns such as
+fairness and head-of-line blocking, optimizations such as prefix caching and
+speculative decoding, compound systems such as retrieval-augmented generation and
+agents, and quality signals such as policy violations and false refusals. It
+defines terms only. It prescribes no method and sets no pass-or-fail thresholds.
+
+See the
+[Terminology draft](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/).
+
+## The method
+
+The second draft is a methodology. It says how to run the tests, set up the
+parameters, take the measurements, and report the results. It defines three system
+boundaries to test at: the model engine, the application gateway, and the full
+compound system. It defines reference workloads, including uniform and skewed
+synthetic traffic, conversation, code completion, and long context. It defines ten
+tests, among them time to first token, output token throughput, the
+throughput-and-latency tradeoff, the distribution of inter-token latency, concurrent
+request capacity, scheduling fairness, prefix cache effectiveness, behavior under
+memory pressure, long-context scaling, and the overhead added by guardrails. The
+goal is reproducible and fair comparison that accounts for streaming output, dynamic
+batching, and the cost of safety systems.
+
+See the
+[Methodology draft](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/).
+
+## The measurement boundaries
+
+The third draft defines profiles. A profile binds the terms and the procedures to a
+concrete role in the system and a concrete workload pattern, and it declares exactly
+where the measurement starts and stops. This matters because a metric like time to
+first token changes depending on whether you include the gateway, the firewall, and
+the network. Without a declared boundary the numbers are not comparable. The draft
+defines infrastructure profiles for the model engine, the AI gateway, the AI
+firewall, and the compound system, along with workload profiles for a chatbot and a
+compound workflow. It specifies profiles only, not new metrics or thresholds.
+
+See the
+[Profiles draft](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/).
+
+## The workloads
+
+The fourth draft defines the workloads themselves. It gives 25 standard workload
+profiles organized into six groups, so that everyone tests against the same
+representative tasks. The groups run from non-generative work such as embeddings,
+reranking, and scoring, through minimal-output tasks such as classification and
+function calling, interactive streaming such as chat and code completion,
+prefill-heavy tasks such as summarization and document question answering,
+decode-heavy tasks such as content generation and reasoning, and multi-step agentic
+workflows. Each profile is described along five dimensions: the ratio of input to
+output, the constraints on the output, the latency sensitivity, the concurrency
+pattern, and how much of the prompt prefix is shared across requests.
+
+See the
+[Serving Workload Profiles draft](https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/).
+
+## Why it matters
+
+Benchmarks only mean something when everyone measures the same thing the same way.
+These four drafts supply the missing pieces in order. The vocabulary removes
+ambiguity in the terms. The methodology makes a run reproducible. The profiles
+declare what was and was not included in a measurement. The workloads make sure
+systems are compared on representative tasks. Together they make LLM serving numbers
+something you can actually trust when you compare them.
+
+---
+
+*Cover image: The Tower of Babel, Pieter Bruegel the Elder (1563). Public domain, via Wikimedia Commons.*

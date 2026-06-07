@@ -3,6 +3,8 @@ title: "When are two RLHF objectives the same? A canonical form for preference l
 description: "The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different."
 author: "Madhava Gaikwad"
 date: "2025-09-11"
+image: cover.svg
+image-alt: "Two mirrored forms meeting at a central axis"
 categories: [ai-alignment, rlhf, preference-optimization]
 ---
 

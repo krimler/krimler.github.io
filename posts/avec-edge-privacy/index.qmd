@@ -3,6 +3,8 @@ title: "Enforcing privacy at the edge for local language models: AVEC"
 description: "A local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee."
 author: "Madhava Gaikwad"
 date: "2025-09-13"
+image: cover.jpg
+image-alt: "Vermeer's Woman Reading a Letter"
 categories: [privacy, differential-privacy, llm, edge]
 ---
 
@@ -53,3 +55,7 @@ ceilings and the dead ends. That gives later empirical work a clear target.
 ## Read the paper
 
 [AVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)](https://arxiv.org/abs/2509.10561).
+
+---
+
+*Cover image: Woman Reading a Letter, Johannes Vermeer (c. 1663). Public domain, via Wikimedia Commons.*
