@@ -1,66 +1,52 @@
 [
   {
-    "objectID": "prompts/write-post.html",
-    "href": "prompts/write-post.html",
-    "title": "Blog writing prompt",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Madhava Gaikwad",
     "section": "",
-    "text": "Use this as the system instruction before drafting or editing any post on this blog. Paste the draft after it. The goal is writing that reads like a careful researcher explaining work to a colleague.\n\nYou are writing a technical blog post on mathematics, computer science, AI/ML, or security. Write in the manner of Barna Saha. That means precise, plain, and direct. State the problem. Define the terms. Build the idea step by step from something simple to the full result. Use concrete examples and worked cases. State results without decoration.\n\n\nThe blog exists to make the paper easy to understand. The reader has not read the paper. Write so that someone meeting the work for the first time can follow it.\nDo not make the post mathy. The paper already carries the mathematics. The post explains the ideas behind it. Prefer plain words over symbols and equations. State a result as a sentence a reader can follow without a pen. Convert a formula into what it says and why it holds.\nUse an equation only when the idea cannot be carried in words, and at most one or two in a post. When you do keep a symbol or term, define it the first time it appears. A symbol in an equation must be introduced in words first. Give a one-line definition for any term that is standard in the field but not universal.\n\n\n\nWrite the way a strong researcher talks through a problem at a whiteboard. Assume the reader is smart and busy. Respect their time. Explain the idea, not your feelings about the idea.\n\n\n\n\nNo em dashes anywhere. Do not use the character “—”.\nDo not join two independent statements with an em dash, a comma, or a semicolon. Write the statement straight. If two ideas are joined, split them into two sentences.\nWrong: “The algorithm runs in linear time, this matters for large inputs.” Wrong: “The algorithm runs in linear time; this matters for large inputs.” Right: “The algorithm runs in linear time. This matters for large inputs.”\nNo contrastive framing. Do not set up a contrast to sound clever.\nBanned shapes: “It is not X, it is Y.” “X is not just Y, it is Z.” “Rather than X, we Y.” “The point is not X but Y.” Instead, say the thing you mean directly.\nNo rhetorical questions. Ask a question only when you answer it with real content in the next sentence.\nNo AI slop. Remove filler and stock phrases. Banned words and phrases include: delve, dive into, unleash, unlock, leverage (as a verb), seamless, robust (as filler), realm, landscape, tapestry, testament, navigate (figurative), in today’s world, it is worth noting, it is important to note, needless to say, at the end of the day, game changer, the world of, journey, embark, foster, harness (figurative), elevate, supercharge, cutting edge, paradigm shift.\nNo hype and no hedging clichés. Do not write “very”, “really”, “simply”, “just”, “of course”, “obviously”, “clearly” as padding. Say the precise claim.\nNo lists where prose works. Use a list only for genuinely parallel items, steps, or cases.\n\n\n\n\n\nOpen with the problem and why it is hard. One or two sentences. State it concretely.\nSet up notation and definitions before you use them.\nDevelop the idea in order. Each paragraph should add one thing.\nShow a small example or special case before the general result.\nState the main result plainly. Give the bound, the theorem, or the claim.\nGive the argument or the intuition for why it holds.\nNote limits and open questions honestly.\nLink the code and cite the papers.\n\n\n\n\n\nMath uses $...$ inline and $$...$$ for display. Number important equations and reference them.\nCode goes in fenced blocks with a language tag. Keep snippets short and real. Link the full source on GitHub instead of pasting long files.\nCite papers with [@bibkey] and add the BibTeX to references.bib. Pull the entry from the arXiv page under “Export BibTeX citation”.\n\n\n\n\nNever add Claude, AI tools, or any assistant as an author, co-author, or contributor. Commits and posts carry only human authorship. Do not add “Co-Authored-By” lines or “Generated with” notes.\n\n\n\nRead the draft once and confirm each item.\n\nNo “—” anywhere in the text.\nNo comma or semicolon joining two independent statements.\nNo “not X but Y” or similar contrastive shapes.\nNo banned slop words.\nEvery claim is precise. Every term is defined before use.\nEvery code block runs or links to source. Every cited paper is in the bib.\nA knowledgeable reader learns the result and why it holds."
+    "text": "gaikwad.madhav@gmail.com · Bengaluru · LinkedIn · GitHub · Google Scholar\nI work at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts."
   },
   {
-    "objectID": "prompts/write-post.html#purpose",
-    "href": "prompts/write-post.html#purpose",
-    "title": "Blog writing prompt",
-    "section": "",
-    "text": "The blog exists to make the paper easy to understand. The reader has not read the paper. Write so that someone meeting the work for the first time can follow it.\nDo not make the post mathy. The paper already carries the mathematics. The post explains the ideas behind it. Prefer plain words over symbols and equations. State a result as a sentence a reader can follow without a pen. Convert a formula into what it says and why it holds.\nUse an equation only when the idea cannot be carried in words, and at most one or two in a post. When you do keep a symbol or term, define it the first time it appears. A symbol in an equation must be introduced in words first. Give a one-line definition for any term that is standard in the field but not universal."
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Madhava Gaikwad",
+    "section": "Skills",
+    "text": "Skills\n\nLanguages: Python, Go, C++, Java\nAI and safety: RAG, guardrailing, MCP, evaluation and monitoring\nCryptography and authorization: Zero Trust, OAuth2/OIDC, SAML, PKI, OPA/Rego, WAF, SSL/TLS\nDistributed systems: containers, Kubernetes, Envoy, gRPC, Spark, Kafka, OpenTelemetry"
   },
   {
-    "objectID": "prompts/write-post.html#voice",
-    "href": "prompts/write-post.html#voice",
-    "title": "Blog writing prompt",
-    "section": "",
-    "text": "Write the way a strong researcher talks through a problem at a whiteboard. Assume the reader is smart and busy. Respect their time. Explain the idea, not your feelings about the idea."
+    "objectID": "cv.html#experience",
+    "href": "cv.html#experience",
+    "title": "Madhava Gaikwad",
+    "section": "Experience",
+    "text": "Experience\nIndependent (Kriml), Founder, AI security startup. Bengaluru. December 2025 to present.\n\nResearched, built, and productized a secure, anonymous, FDA-compliant medical AI bot.\nWorked with the IETF BMWG group to develop AI-related measurement drafts.\n\nMicrosoft, Senior Software Engineer and Manager. Bengaluru. February 2021 to December 2025.\n\nBuilt Net Copilot, an LLM-powered multi-agent system with chat, search, and API capabilities, serving 250 daily active engineers. Implemented RAG pipelines and fine-tuned and distilled models for production.\nAs Engineering Manager from November 2022 to November 2025, led a 15-member cross-geo SRE team for GPU fleet network operations. Defined SLIs and SLOs for Azure datacenter networking. Owned MTTM and MTTR metrics and reduced time to mitigate by 30%. Designed on-call rotations, escalation policies, incident fatigue management, and an engineer growth path.\n\nCisco, Technical Leader. Bengaluru. June 2012 to February 2021.\n\nLed architecture and delivery of an $80M web security gateway platform. Engineered TLS performance optimizations and TCP tuning in the FreeBSD kernel, achieving 1.2x throughput and 2x faster decryption.\nDrove the enterprise security roadmap and cross-org architecture reviews. Implemented differential privacy guarantees for an enterprise firewall and ensured GDPR compliance.\n\nEarly roles (Symantec, TCS). Mumbai and Pune. December 2006 to June 2012.\n\nWorked on email security, AAA systems, and network protocol development in C/C++ and Java."
   },
   {
-    "objectID": "prompts/write-post.html#hard-rules",
-    "href": "prompts/write-post.html#hard-rules",
-    "title": "Blog writing prompt",
-    "section": "",
-    "text": "No em dashes anywhere. Do not use the character “—”.\nDo not join two independent statements with an em dash, a comma, or a semicolon. Write the statement straight. If two ideas are joined, split them into two sentences.\nWrong: “The algorithm runs in linear time, this matters for large inputs.” Wrong: “The algorithm runs in linear time; this matters for large inputs.” Right: “The algorithm runs in linear time. This matters for large inputs.”\nNo contrastive framing. Do not set up a contrast to sound clever.\nBanned shapes: “It is not X, it is Y.” “X is not just Y, it is Z.” “Rather than X, we Y.” “The point is not X but Y.” Instead, say the thing you mean directly.\nNo rhetorical questions. Ask a question only when you answer it with real content in the next sentence.\nNo AI slop. Remove filler and stock phrases. Banned words and phrases include: delve, dive into, unleash, unlock, leverage (as a verb), seamless, robust (as filler), realm, landscape, tapestry, testament, navigate (figurative), in today’s world, it is worth noting, it is important to note, needless to say, at the end of the day, game changer, the world of, journey, embark, foster, harness (figurative), elevate, supercharge, cutting edge, paradigm shift.\nNo hype and no hedging clichés. Do not write “very”, “really”, “simply”, “just”, “of course”, “obviously”, “clearly” as padding. Say the precise claim.\nNo lists where prose works. Use a list only for genuinely parallel items, steps, or cases."
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Madhava Gaikwad",
+    "section": "Education",
+    "text": "Education\nBachelor of Engineering, Information Technology. Shivaji University, Kolhapur. 2006. Distinction."
   },
   {
-    "objectID": "prompts/write-post.html#how-to-structure-a-post",
-    "href": "prompts/write-post.html#how-to-structure-a-post",
-    "title": "Blog writing prompt",
-    "section": "",
-    "text": "Open with the problem and why it is hard. One or two sentences. State it concretely.\nSet up notation and definitions before you use them.\nDevelop the idea in order. Each paragraph should add one thing.\nShow a small example or special case before the general result.\nState the main result plainly. Give the bound, the theorem, or the claim.\nGive the argument or the intuition for why it holds.\nNote limits and open questions honestly.\nLink the code and cite the papers."
+    "objectID": "cv.html#selected-publications-and-preprints",
+    "href": "cv.html#selected-publications-and-preprints",
+    "title": "Madhava Gaikwad",
+    "section": "Selected publications and preprints",
+    "text": "Selected publications and preprints\nSeveral of these have companion posts on this blog that explain the ideas in plain language. See the blog and papers.\n\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs. NeurIPS 2025 Workshop. arXiv:2512.17251 · post\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback. arXiv:2507.21131 · post\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability. arXiv:2508.16119 · post\nAVEC: Bootstrapping Privacy for Local LLMs. arXiv:2509.10561 · post\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins. arXiv:2509.05381 · post\nWhen Are Two RLHF Objectives the Same? (Opal). arXiv:2509.11298 · post\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents. ICLR 2026 Workshop. arXiv:2603.15658 · post\nAEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture. paper · post\nHeuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics. paper · post\nAlgorithmic Analysis of DAM. ICLR 2026 Workshop. OpenReview\nThe Abstention Protocol: Root Cause Analysis for Clos Fabrics. USENIX OSDI 2026.\nAgentic Trust Fabric: A Systematization of Knowledge of Security Architectures for Autonomous AI Agents. preprint\nAdaptive WAF: Multi-Armed Bandits for Web Application Firewall Rule Tuning. preprint\nZero Trust Identity and Authorization Profile. draft"
   },
   {
-    "objectID": "prompts/write-post.html#math-code-and-citations-on-this-blog",
-    "href": "prompts/write-post.html#math-code-and-citations-on-this-blog",
-    "title": "Blog writing prompt",
-    "section": "",
-    "text": "Math uses $...$ inline and $$...$$ for display. Number important equations and reference them.\nCode goes in fenced blocks with a language tag. Keep snippets short and real. Link the full source on GitHub instead of pasting long files.\nCite papers with [@bibkey] and add the BibTeX to references.bib. Pull the entry from the arXiv page under “Export BibTeX citation”."
-  },
-  {
-    "objectID": "prompts/write-post.html#attribution",
-    "href": "prompts/write-post.html#attribution",
-    "title": "Blog writing prompt",
-    "section": "",
-    "text": "Never add Claude, AI tools, or any assistant as an author, co-author, or contributor. Commits and posts carry only human authorship. Do not add “Co-Authored-By” lines or “Generated with” notes."
-  },
-  {
-    "objectID": "prompts/write-post.html#self-check-before-publishing",
-    "href": "prompts/write-post.html#self-check-before-publishing",
-    "title": "Blog writing prompt",
-    "section": "",
-    "text": "Read the draft once and confirm each item.\n\nNo “—” anywhere in the text.\nNo comma or semicolon joining two independent statements.\nNo “not X but Y” or similar contrastive shapes.\nNo banned slop words.\nEvery claim is precise. Every term is defined before use.\nEvery code block runs or links to source. Every cited paper is in the bib.\nA knowledgeable reader learns the result and why it holds."
+    "objectID": "cv.html#ietf-drafts-llm-benchmarking-under-bmwg-review",
+    "href": "cv.html#ietf-drafts-llm-benchmarking-under-bmwg-review",
+    "title": "Madhava Gaikwad",
+    "section": "IETF drafts (LLM benchmarking, under BMWG review)",
+    "text": "IETF drafts (LLM benchmarking, under BMWG review)\n\nLLM Benchmarking Terminology\nLLM Benchmarking Methodology\nLLM Benchmarking Profiles\nLLM Serving Workload Profiles"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Krimler",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCounting Fibonacci primes: what a finite computation can and cannot add\n\n\n\nnumber-theory\n\nprimes\n\nstatistics\n\nreproducibility\n\n\n\nTreating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAEGIS: typed evidence and obligations for AI-native enterprise architecture\n\n\n\nai-governance\n\nenterprise-architecture\n\nontology\n\nsecurity\n\n\n\nWhy static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.\n\n\n\n\n\nApr 9, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCounting Fibonacci primes: what a finite computation can and cannot add\n\n\n\nnumber-theory\n\nprimes\n\nstatistics\n\nreproducibility\n\n\n\nTreating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.\n\n\n\n\n\nJun 7, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAEGIS: typed evidence and obligations for AI-native enterprise architecture\n\n\n\nai-governance\n\nenterprise-architecture\n\nontology\n\nsecurity\n\n\n\nWhy static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.\n\n\n\n\n\nApr 9, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nDid you check the right pocket? Routing retrieval across an agent’s memory\n\n\n\nllm-agents\n\nretrieval\n\nmemory\n\nml-systems\n\n\n\nMemory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers.\n\n\n\n\n\nMar 19, 2026\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nAlignDP: locking knowledge transfer at the data interface\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nsecurity\n\n\n\nWatermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.\n\n\n\n\n\nDec 21, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nEnforcing privacy at the edge for local language models: AVEC\n\n\n\nprivacy\n\ndifferential-privacy\n\nllm\n\nedge\n\n\n\nA local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee.\n\n\n\n\n\nSep 13, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhen are two RLHF objectives the same? A canonical form for preference losses\n\n\n\nai-alignment\n\nrlhf\n\npreference-optimization\n\n\n\nThe preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.\n\n\n\n\n\nSep 11, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nWhy the alignment gap always wins, unless you know where to look\n\n\n\nai-alignment\n\nrlhf\n\nlearning-theory\n\n\n\nWhen human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.\n\n\n\n\n\nSep 5, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nScoring a datacenter fleet by the risk of what happens next\n\n\n\ndistributed-systems\n\nreliability\n\nsre\n\n\n\nAlerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact.\n\n\n\n\n\nAug 22, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\n\n\n\n\n\n\n\nTreating alignment as something you can measure and reduce: NPO\n\n\n\nai-alignment\n\nrlhf\n\nml-systems\n\n\n\nMost pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback.\n\n\n\n\n\nJul 28, 2025\n\n\nMadhava Gaikwad\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "papers/fibonacci-primes.html",
@@ -133,6 +119,167 @@
     "text": "References\n\n\nCubre, Paul, and Jeremy Rouse. 2014. “Divisibility Properties of the Fibonacci Entry Point.” Proceedings of the American Mathematical Society 142 (11): 3771–85. https://arxiv.org/abs/1212.6221.\n\n\nGrantham, Jon, and Andrew Granville. 2024. Fibonacci Primes, Primes of the Form 2^n-k, and Beyond. https://arxiv.org/abs/2307.07894.\n\n\nJärviniemi, Olli. 2022. “Positive Lower Density for Prime Divisors of Generic Linear Recurrences.” Mathematical Proceedings of the Cambridge Philosophical Society. https://arxiv.org/abs/2102.04042.\n\n\nLagarias, Jeffrey C. 1985. “The Set of Primes Dividing the Lucas Numbers Has Density 2/3.” Pacific Journal of Mathematics 118 (2): 449–61."
   },
   {
+    "objectID": "posts/aligndp-rarity-privacy/index.html",
+    "href": "posts/aligndp-rarity-privacy/index.html",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "",
+    "text": "Large language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
+    "href": "posts/aligndp-rarity-privacy/index.html#two-kinds-of-field-need-two-kinds-of-protection",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "Two kinds of field need two kinds of protection",
+    "text": "Two kinds of field need two kinds of protection\nThe key observation is that not all data is equally risky, and the right protection depends on how often a value appears.\nRare fields are the dangerous ones. A value that shows up only a few times can identify its source, so it needs strong hiding. AlignDP applies PAC indistinguishability to rare fields. The practical meaning is that an observer cannot reliably tell whether a given rare value was present, so the rare information stays concealed.\nCommon fields are different. You often want to keep useful aggregate statistics about them, such as how frequent each value is. AlignDP protects these with RAPPOR, a well-known method for local differential privacy. RAPPOR randomizes each individual report so no single response is revealing, while still allowing accurate frequency estimates once many reports are combined. The frequent values stay usable in aggregate without exposing any one contributor.\nA global aggregator sits over both tiers. It manages composition, meaning the way many small privacy releases add up, and it tracks the overall budget so the total exposure stays bounded."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
+    "href": "posts/aligndp-rarity-privacy/index.html#what-the-paper-shows",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "What the paper shows",
+    "text": "What the paper shows\nThe work establishes theoretical results for both tiers. It extends the PAC guarantee to the global aggregation step and derives error bounds for the RAPPOR estimates. Simulations match the design intent. Rare categories remain hidden, while frequent categories can be recovered with small error. The paper is explicit about the tradeoff between privacy and utility, since that tension is the heart of any differential privacy scheme."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
+    "href": "posts/aligndp-rarity-privacy/index.html#why-it-matters",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "Why it matters",
+    "text": "Why it matters\nDefending a model after it has been copied is a weak position. AlignDP moves the control to the point where data enters, and it tailors the strength of protection to the risk each field carries. Strong hiding goes where identification is possible. Lighter, aggregate-preserving protection goes where only statistics matter."
+  },
+  {
+    "objectID": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
+    "href": "posts/aligndp-rarity-privacy/index.html#read-the-paper",
+    "title": "AlignDP: locking knowledge transfer at the data interface",
+    "section": "Read the paper",
+    "text": "Read the paper\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html",
+    "href": "posts/npo-meta-alignment/index.html",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "",
+    "text": "Alignment means making a model behave the way people actually want it to behave. Most production pipelines treat this as a one-time step. You train the model, you ship it, and you hope it stays aligned. NPO starts from a different stance. Alignment is a quantity you can measure, supervise, and drive down over time."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#the-two-quantities",
+    "href": "posts/npo-meta-alignment/index.html#the-two-quantities",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "The two quantities",
+    "text": "The two quantities\nNPO names two things and turns each into a number.\nThe first is alignment loss. This is how far the model’s behavior sits from what was intended. Driving it down is the usual goal.\nThe second is meta-alignment, and it is the idea that gives the paper its name. Meta-alignment asks whether your monitoring is itself trustworthy. A system that reports “everything looks aligned” is only useful if that report tracks reality. NPO calls this monitoring fidelity. The paper shows that meta-alignment reduces to ordinary alignment once you fix a threshold on the monitor. In plain terms, checking the checker is the same kind of problem as the original check, so the same machinery handles both."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#the-feedback-that-drives-it",
+    "href": "posts/npo-meta-alignment/index.html#the-feedback-that-drives-it",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "The feedback that drives it",
+    "text": "The feedback that drives it\nThe loop runs on structured human feedback. This is more than a thumbs up. It includes likes, explicit overrides where a person corrects the system, and abstentions where a person declines to answer. Each kind of signal carries different information, and NPO ingests all of them. Around this sit the operational pieces a real deployment needs: scoring scenarios, tuning thresholds, and validating policies before they take effect."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#why-the-loop-is-stable",
+    "href": "posts/npo-meta-alignment/index.html#why-the-loop-is-stable",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "Why the loop is stable",
+    "text": "Why the loop is stable\nA feedback loop is only useful if it settles rather than drifts. NPO proves that under noisy feedback both quantities converge, and that they do so together. The alignment loss and the monitoring fidelity both approach their targets as more feedback arrives. The paper backs the theory with results from a large deployment, along with simulation artifacts and ablation studies that isolate which parts of the design carry the weight."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#why-it-matters",
+    "href": "posts/npo-meta-alignment/index.html#why-it-matters",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "Why it matters",
+    "text": "Why it matters\nThe shift here is from a single alignment event to a controlled process. Once alignment and the honesty of its monitoring are both numbers that provably go down under feedback, you can run alignment the way you run any other reliability metric. You watch it, you set targets, and you route effort to where the number is worst."
+  },
+  {
+    "objectID": "posts/npo-meta-alignment/index.html#read-the-paper",
+    "href": "posts/npo-meta-alignment/index.html#read-the-paper",
+    "title": "Treating alignment as something you can measure and reduce: NPO",
+    "section": "Read the paper",
+    "text": "Read the paper\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html",
+    "href": "posts/ansc-capacity-health/index.html",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "",
+    "text": "A hyperscale datacenter network runs thousands of devices and links. When one fails, an alert fires. That alert tells you what broke. It does not tell you how close the whole system is to running out of capacity. Those are different questions. A single link failing in a region with plenty of spare capacity is routine. The same failure in a region already running hot can be the last step before a shortfall. ANSC is built to score the second question."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#the-gap-in-ordinary-alerting",
+    "href": "posts/ansc-capacity-health/index.html#the-gap-in-ordinary-alerting",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "The gap in ordinary alerting",
+    "text": "The gap in ordinary alerting\nStandard monitoring detects individual device or link failures. Each alert is local. It says nothing about the aggregate risk that several failures together push a datacenter or a region past its capacity limit. Operators are left to piece that picture together by hand, often while the alerts are still arriving. The risk that matters is the cascading one, and it lives above the level of any single alert."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#what-ansc-measures",
+    "href": "posts/ansc-capacity-health/index.html#what-ansc-measures",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "What ANSC measures",
+    "text": "What ANSC measures\nANSC produces a color-coded health score for each datacenter and region. The score ranks urgency by the probability of an imminent capacity violation rather than by the impact of what has already happened. Two ingredients go into it. The first is the current residual capacity, meaning how much headroom is left right now. The second is the probability of additional failures on top of the current state. The score combines these and normalizes them at the datacenter level and the regional level, so a green datacenter and a red one mean the same thing wherever you look."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#what-it-changes-for-operators",
+    "href": "posts/ansc-capacity-health/index.html#what-it-changes-for-operators",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "What it changes for operators",
+    "text": "What it changes for operators\nThe paper reports ANSC running across more than 400 datacenters and 60 regions. The effect is to cut noise and point attention at the places most likely to fail soon. Instead of a flat stream of equal-looking alerts, an operator sees a ranked view of where capacity is genuinely at risk. Remediation effort goes to the highest risk first, which is where it does the most good."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#why-it-matters",
+    "href": "posts/ansc-capacity-health/index.html#why-it-matters",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "Why it matters",
+    "text": "Why it matters\nReliability at this scale is a prioritization problem. There are always more alerts than people. A score that orders work by the probability of the next failure, rather than by the noise of the last one, is what lets a small team hold a large fleet."
+  },
+  {
+    "objectID": "posts/ansc-capacity-health/index.html#read-the-paper",
+    "href": "posts/ansc-capacity-health/index.html#read-the-paper",
+    "title": "Scoring a datacenter fleet by the risk of what happens next",
+    "section": "Read the paper",
+    "text": "Read the paper\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html",
+    "href": "posts/murphy-alignment-gap/index.html",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "",
+    "text": "Reinforcement learning from human feedback is the standard way to align a model. People compare model outputs, the comparisons train a reward model, and the model is tuned to score well on that reward. The whole scheme rests on the feedback being right. This paper studies what happens when it is not."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#a-compass-that-points-wrong-in-some-places",
+    "href": "posts/murphy-alignment-gap/index.html#a-compass-that-points-wrong-in-some-places",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "A compass that points wrong in some places",
+    "text": "A compass that points wrong in some places\nThe setup is misspecified feedback. Human feedback is systematically wrong on certain kinds of input. A useful picture is a compass that points true almost everywhere but points the wrong way in a few specific regions. The problem is not random error, which averages out. It is consistent error in particular places.\nTwo numbers describe how bad it is. One is the fraction of contexts where the feedback is biased. The other is the strength of that bias. The trouble lives in the corner of the input space where both are nonzero."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#the-hard-result",
+    "href": "posts/murphy-alignment-gap/index.html#the-hard-result",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "The hard result",
+    "text": "The hard result\nThe paper proves a lower bound. Suppose two candidate reward functions agree everywhere except on the biased contexts. To tell them apart from feedback alone, any learning algorithm needs a number of samples that grows exponentially in the prevalence of the bias and the square of its strength. Rare edge cases with subtly wrong feedback create a learning problem that is exponentially hard. You can pour in data and still not know which objective you are actually optimizing.\nThis is the sense in which the gap always wins. The gap is the distance between what you optimize, a proxy built from human feedback, and what you actually want, the true objective. When the problematic contexts are rare and the feedback there is quietly biased, no amount of ordinary data closes that gap."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#the-way-out",
+    "href": "posts/murphy-alignment-gap/index.html#the-way-out",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "The way out",
+    "text": "The way out\nThere is one escape, and it is specific. Suppose you have a calibration oracle, a way to identify where the feedback is unreliable. Then you can spend your limited questions on exactly those contexts. The paper shows that this collapses the cost from exponential to polynomial. You no longer need to find the needle by luck, because you have been told which haystack it is in.\nThe lesson is practical. Throwing more feedback at an aligned system does not help where the feedback itself is broken. Finding and targeting the broken regions does."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#what-is-settled-and-what-is-open",
+    "href": "posts/murphy-alignment-gap/index.html#what-is-settled-and-what-is-open",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "What is settled and what is open",
+    "text": "What is settled and what is open\nThe results are theoretical. The paper proves the lower bound and the oracle speedup. It invites collaboration on large-scale experiments and on building the benchmarks that would test these effects in practice."
+  },
+  {
+    "objectID": "posts/murphy-alignment-gap/index.html#read-the-paper",
+    "href": "posts/murphy-alignment-gap/index.html#read-the-paper",
+    "title": "Why the alignment gap always wins, unless you know where to look",
+    "section": "Read the paper",
+    "text": "Read the paper\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)."
+  },
+  {
     "objectID": "posts/aegis-evidence-obligation/index.html",
     "href": "posts/aegis-evidence-obligation/index.html",
     "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
@@ -187,6 +334,111 @@
     "title": "AEGIS: typed evidence and obligations for AI-native enterprise architecture",
     "section": "References",
     "text": "References\n\n\nEuropean Parliament and Council of the European Union. 2024. Regulation (EU) 2024/1689 Laying down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act). Official Journal of the European Union, L 2024/1689."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html",
+    "href": "posts/memory-store-routing/index.html",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "",
+    "text": "A memory-augmented agent keeps several specialized stores. One might hold facts, another the recent conversation, another notes about tools or users. When a request arrives, most systems read from every store and stuff all of it into the model’s context. That is the equivalent of patting down every pocket to find your keys. It works, and it is wasteful. Reading everything costs tokens, and it pulls in irrelevant context that can crowd out the useful part."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html#retrieval-as-routing",
+    "href": "posts/memory-store-routing/index.html#retrieval-as-routing",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "Retrieval as routing",
+    "text": "Retrieval as routing\nThe paper reframes the problem. Choosing which store to read is a routing decision, and routing deserves to be a first-class part of the design. Stated plainly, for each request the agent should decide which store or stores to consult, and that decision should weigh two things against each other. One is accuracy, the quality of the eventual answer. The other is retrieval cost, measured in context tokens. A good router reads the store that holds the answer and skips the rest."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html#what-the-evidence-shows",
+    "href": "posts/memory-store-routing/index.html#what-the-evidence-shows",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "What the evidence shows",
+    "text": "What the evidence shows\nTo measure the ceiling, the paper uses an oracle router. An oracle router is an idealized router that always picks the right store, used here to show what perfect routing would buy. The oracle achieves better downstream question-answering accuracy while spending far fewer context tokens than reading from all stores. Both numbers move in the good direction at once. Selective retrieval is not only cheaper, it gives better answers, because irrelevant context was hurting quality in the first place.\nThe oracle is a measurement tool rather than a deployable system, since it relies on knowing the right store in advance. The paper presents this as early-stage work and argues for learned routing, where the agent learns to make the store choice on its own, as the path to scalable multi-store systems."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html#why-it-matters",
+    "href": "posts/memory-store-routing/index.html#why-it-matters",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "Why it matters",
+    "text": "Why it matters\nAs agents accumulate more kinds of memory, reading all of it per request scales badly in both cost and quality. Turning store selection into an explicit, cost-aware decision is what keeps a multi-store agent affordable and sharp as the number of stores grows."
+  },
+  {
+    "objectID": "posts/memory-store-routing/index.html#read-the-paper",
+    "href": "posts/memory-store-routing/index.html#read-the-paper",
+    "title": "Did you check the right pocket? Routing retrieval across an agent’s memory",
+    "section": "Read the paper",
+    "text": "Read the paper\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html",
+    "href": "posts/avec-edge-privacy/index.html",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "",
+    "text": "A local language model runs on your own device, which keeps your data close. Some queries are too hard for the small local model, so it delegates them to a larger model in the cloud. That handoff is the weak point. The query sent outward can carry sensitive information. AVEC is a proposal for controlling that handoff. The name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge and makes the delegation verifiable.\nA note on what this is. AVEC is a position paper. Its evaluation is simulation based by design, and it does not claim deployment readiness or measured task quality with live models. The contribution is an architecture and the theory that goes with it."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
+    "href": "posts/avec-edge-privacy/index.html#spending-a-privacy-budget-per-query",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "Spending a privacy budget per query",
+    "text": "Spending a privacy budget per query\nThe core mechanism is an adaptive budget. Differential privacy is a way of adding calibrated random noise so that an output reveals very little about any single underlying record. The strength of that protection is a budget, and spending more budget buys more accuracy at the cost of more exposure. Most systems fix one budget for everything. AVEC sets the budget per query, based on three things: how sensitive the query is, how confident the local model is on its own, and how much budget the user has already spent in the past.\nTo keep the spending honest, AVEC tracks it with an odometer. An odometer is a running tally of privacy budget consumed across many queries, so the system always knows how much protection remains. The accounting uses Rényi differential privacy, a version of the theory that composes cleanly when you add up many small releases."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
+    "href": "posts/avec-edge-privacy/index.html#what-it-proves-it-can-and-cannot-do",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "What it proves it can and cannot do",
+    "text": "What it proves it can and cannot do\nThe paper does the unglamorous work of marking the boundaries. It establishes utility ceilings, which are limits on how good the answers can be at a given level of privacy. It establishes delegation-leakage bounds, which cap how much the handoff to the remote model can reveal. It also proves impossibility results. Two tempting shortcuts do not work on their own. Deterministic gating, where a fixed rule decides what to send, cannot provide the guarantee. Hash-only certification, where a hash is used to prove integrity, is not enough by itself."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#why-it-matters",
+    "href": "posts/avec-edge-privacy/index.html#why-it-matters",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "Why it matters",
+    "text": "Why it matters\nLocal models are sold on privacy, and the delegation step quietly undermines that promise. AVEC takes the step seriously. It treats each outward query as a metered privacy event, verifies the transformation on the device, and is honest about the ceilings and the dead ends. That gives later empirical work a clear target."
+  },
+  {
+    "objectID": "posts/avec-edge-privacy/index.html#read-the-paper",
+    "href": "posts/avec-edge-privacy/index.html#read-the-paper",
+    "title": "Enforcing privacy at the edge for local language models: AVEC",
+    "section": "Read the paper",
+    "text": "Read the paper\nAVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html",
+    "href": "posts/opal-rlhf-equivalence/index.html",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "",
+    "text": "Aligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#canonicalization",
+    "href": "posts/opal-rlhf-equivalence/index.html#canonicalization",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "Canonicalization",
+    "text": "Canonicalization\nThe tool is called Opal, and it does canonicalization. A canonical form is a standard way of writing something so that two things that are really equal end up looking identical. Given two preference objectives, Opal returns one of two answers. Either it produces a canonical form that shows the two are algebraically the same, or it produces a concrete witness that they differ. A witness here is a specific case where the two objectives disagree, so the difference is demonstrated rather than asserted."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
+    "href": "posts/opal-rlhf-equivalence/index.html#what-it-finds",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "What it finds",
+    "text": "What it finds\nRun Opal across the popular methods and a clear picture emerges. Many widely used objectives optimize the same underlying thing. Their apparent differences are reparameterizations, meaning the same objective dressed in different variables. Some methods, by contrast, are provably distinct, and Opal isolates a small set of structural mechanisms that produce real differences rather than cosmetic ones.\nOne finding is worth calling out because it is easy to miss. Batch normalization can cause the same response pair to receive different gradients depending on which other examples share its batch. The training signal for a pair stops being a property of the pair alone. It becomes a property of the batch it landed in. That is a genuine difference in objective, and it comes from a detail most people treat as bookkeeping."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
+    "href": "posts/opal-rlhf-equivalence/index.html#why-it-matters",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "Why it matters",
+    "text": "Why it matters\nA field that keeps proposing objectives needs a way to tell novelty from notation. Opal turns that into a decidable check. It tells you when a new method is a real departure and when it is an old method in new clothes. That saves effort, and it points attention at the handful of structural choices that actually change what the model learns."
+  },
+  {
+    "objectID": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
+    "href": "posts/opal-rlhf-equivalence/index.html#read-the-paper",
+    "title": "When are two RLHF objectives the same? A canonical form for preference losses",
+    "section": "Read the paper",
+    "text": "Read the paper\nWhen Are Two RLHF Objectives the Same? (arXiv:2509.11298)."
   },
   {
     "objectID": "papers/aegis.html",

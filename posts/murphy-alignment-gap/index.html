@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Madhava Gaikwad">
+<meta name="dcterms.date" content="2025-09-05">
+<meta name="description" content="When human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.">
 
-<title>Krimler</title>
+<title>Why the alignment gap always wins, unless you know where to look – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,29 +29,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,87 +77,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Krimler" href="index.xml" data-external="1"><meta property="og:title" content="Krimler">
-<meta property="og:description" content="Math · Computer Science · AI/ML · Security">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Why the alignment gap always wins, unless you know where to look – Krimler">
+<meta property="og:description" content="When human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.">
 <meta property="og:site_name" content="Krimler">
-<meta name="twitter:title" content="Krimler">
-<meta name="twitter:description" content="Math · Computer Science · AI/ML · Security">
+<meta name="twitter:title" content="Why the alignment gap always wins, unless you know where to look – Krimler">
+<meta name="twitter:description" content="When human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -329,7 +258,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Krimler</span>
     </a>
   </div>
@@ -340,19 +269,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./papers/index.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -363,7 +292,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -376,27 +305,58 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="YWktYWxpZ25tZW50">ai-alignment <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YWktZ292ZXJuYW5jZQ==">ai-governance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlmZmVyZW50aWFsLXByaXZhY3k=">differential-privacy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGlzdHJpYnV0ZWQtc3lzdGVtcw==">distributed-systems <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZWRnZQ==">edge <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW50ZXJwcmlzZS1hcmNoaXRlY3R1cmU=">enterprise-architecture <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGVhcm5pbmctdGhlb3J5">learning-theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGxt">llm <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGxtLWFnZW50cw==">llm-agents <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVtb3J5">memory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWwtc3lzdGVtcw==">ml-systems <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bnVtYmVyLXRoZW9yeQ==">number-theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b250b2xvZ3k=">ontology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJlZmVyZW5jZS1vcHRpbWl6YXRpb24=">preference-optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJpbWVz">primes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJpdmFjeQ==">privacy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmVsaWFiaWxpdHk=">reliability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVwcm9kdWNpYmlsaXR5">reproducibility <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmV0cmlldmFs">retrieval <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmxoZg==">rlhf <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c2VjdXJpdHk=">security <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3Jl">sre <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RhdGlzdGljcw==">statistics <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-compass-that-points-wrong-in-some-places" id="toc-a-compass-that-points-wrong-in-some-places" class="nav-link active" data-scroll-target="#a-compass-that-points-wrong-in-some-places">A compass that points wrong in some places</a></li>
+  <li><a href="#the-hard-result" id="toc-the-hard-result" class="nav-link" data-scroll-target="#the-hard-result">The hard result</a></li>
+  <li><a href="#the-way-out" id="toc-the-way-out" class="nav-link" data-scroll-target="#the-way-out">The way out</a></li>
+  <li><a href="#what-is-settled-and-what-is-open" id="toc-what-is-settled-and-what-is-open" class="nav-link" data-scroll-target="#what-is-settled-and-what-is-open">What is settled and what is open</a></li>
+  <li><a href="#read-the-paper" id="toc-read-the-paper" class="nav-link" data-scroll-target="#read-the-paper">Read the paper</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Krimler</h1>
-<p class="subtitle lead">Math · Computer Science · AI/ML · Security</p>
+<h1 class="title">Why the alignment gap always wins, unless you know where to look</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ai-alignment</div>
+    <div class="quarto-category">rlhf</div>
+    <div class="quarto-category">learning-theory</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    When human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.
+  </div>
 </div>
 
 
+<div class="quarto-title-meta">
 
-<div class="quarto-title-meta column-page-left">
-
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Madhava Gaikwad </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 5, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -406,356 +366,34 @@ window.Quarto = {
 </header>
 
 
+<p>Reinforcement learning from human feedback is the standard way to align a model. People compare model outputs, the comparisons train a reward model, and the model is tuned to score well on that reward. The whole scheme rests on the feedback being right. This paper studies what happens when it is not.</p>
+<section id="a-compass-that-points-wrong-in-some-places" class="level2">
+<h2 class="anchored" data-anchor-id="a-compass-that-points-wrong-in-some-places">A compass that points wrong in some places</h2>
+<p>The setup is misspecified feedback. Human feedback is systematically wrong on certain kinds of input. A useful picture is a compass that points true almost everywhere but points the wrong way in a few specific regions. The problem is not random error, which averages out. It is consistent error in particular places.</p>
+<p>Two numbers describe how bad it is. One is the fraction of contexts where the feedback is biased. The other is the strength of that bias. The trouble lives in the corner of the input space where both are nonzero.</p>
+</section>
+<section id="the-hard-result" class="level2">
+<h2 class="anchored" data-anchor-id="the-hard-result">The hard result</h2>
+<p>The paper proves a lower bound. Suppose two candidate reward functions agree everywhere except on the biased contexts. To tell them apart from feedback alone, any learning algorithm needs a number of samples that grows exponentially in the prevalence of the bias and the square of its strength. Rare edge cases with subtly wrong feedback create a learning problem that is exponentially hard. You can pour in data and still not know which objective you are actually optimizing.</p>
+<p>This is the sense in which the gap always wins. The gap is the distance between what you optimize, a proxy built from human feedback, and what you actually want, the true objective. When the problematic contexts are rare and the feedback there is quietly biased, no amount of ordinary data closes that gap.</p>
+</section>
+<section id="the-way-out" class="level2">
+<h2 class="anchored" data-anchor-id="the-way-out">The way out</h2>
+<p>There is one escape, and it is specific. Suppose you have a calibration oracle, a way to identify where the feedback is unreliable. Then you can spend your limited questions on exactly those contexts. The paper shows that this collapses the cost from exponential to polynomial. You no longer need to find the needle by luck, because you have been told which haystack it is in.</p>
+<p>The lesson is practical. Throwing more feedback at an aligned system does not help where the feedback itself is broken. Finding and targeting the broken regions does.</p>
+</section>
+<section id="what-is-settled-and-what-is-open" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-settled-and-what-is-open">What is settled and what is open</h2>
+<p>The results are theoretical. The paper proves the lower bound and the oracle speedup. It invites collaboration on large-scale experiments and on building the benchmarks that would test these effects in practice.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p><a href="https://arxiv.org/abs/2509.05381">Murphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)</a>.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bnVtYmVyLXRoZW9yeSUyQ3ByaW1lcyUyQ3N0YXRpc3RpY3MlMkNyZXByb2R1Y2liaWxpdHk=" data-listing-date-sort="1780770600000" data-listing-file-modified-sort="1780828092131" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1057">
-<div class="thumbnail"><a href="./posts/fibonacci-prime-statistics/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fibonacci-prime-statistics/index.html" class="no-external">Counting Fibonacci primes: what a finite computation can and cannot add</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bnVtYmVyLXRoZW9yeQ=='); return false;">number-theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJpbWVz'); return false;">primes</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljcw=='); return false;">statistics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVwcm9kdWNpYmlsaXR5'); return false;">reproducibility</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fibonacci-prime-statistics/index.html" class="no-external">
-<p>Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fibonacci-prime-statistics/index.html" class="no-external">
-<div class="listing-date">
-Jun 7, 2026
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="YWktZ292ZXJuYW5jZSUyQ2VudGVycHJpc2UtYXJjaGl0ZWN0dXJlJTJDb250b2xvZ3klMkNzZWN1cml0eQ==" data-listing-date-sort="1775673000000" data-listing-file-modified-sort="1780828035160" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="980">
-<div class="thumbnail"><a href="./posts/aegis-evidence-obligation/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/aegis-evidence-obligation/index.html" class="no-external">AEGIS: typed evidence and obligations for AI-native enterprise architecture</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWktZ292ZXJuYW5jZQ=='); return false;">ai-governance</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZW50ZXJwcmlzZS1hcmNoaXRlY3R1cmU='); return false;">enterprise-architecture</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b250b2xvZ3k='); return false;">ontology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/aegis-evidence-obligation/index.html" class="no-external">
-<p>Why static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/aegis-evidence-obligation/index.html" class="no-external">
-<div class="listing-date">
-Apr 9, 2026
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bGxtLWFnZW50cyUyQ3JldHJpZXZhbCUyQ21lbW9yeSUyQ21sLXN5c3RlbXM=" data-listing-date-sort="1773858600000" data-listing-file-modified-sort="1780829331637" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="328">
-<div class="thumbnail"><a href="./posts/memory-store-routing/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/memory-store-routing/index.html" class="no-external">Did you check the right pocket? Routing retrieval across an agent’s memory</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxtLWFnZW50cw=='); return false;">llm-agents</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmV0cmlldmFs'); return false;">retrieval</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWVtb3J5'); return false;">memory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWwtc3lzdGVtcw=='); return false;">ml-systems</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/memory-store-routing/index.html" class="no-external">
-<p>Memory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/memory-store-routing/index.html" class="no-external">
-<div class="listing-date">
-Mar 19, 2026
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="cHJpdmFjeSUyQ2RpZmZlcmVudGlhbC1wcml2YWN5JTJDbGxtJTJDc2VjdXJpdHk=" data-listing-date-sort="1766255400000" data-listing-file-modified-sort="1780829313643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="360">
-<div class="thumbnail"><a href="./posts/aligndp-rarity-privacy/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/aligndp-rarity-privacy/index.html" class="no-external">AlignDP: locking knowledge transfer at the data interface</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJpdmFjeQ=='); return false;">privacy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlmZmVyZW50aWFsLXByaXZhY3k='); return false;">differential-privacy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxt'); return false;">llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/aligndp-rarity-privacy/index.html" class="no-external">
-<p>Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/aligndp-rarity-privacy/index.html" class="no-external">
-<div class="listing-date">
-Dec 21, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="cHJpdmFjeSUyQ2RpZmZlcmVudGlhbC1wcml2YWN5JTJDbGxtJTJDZWRnZQ==" data-listing-date-sort="1757701800000" data-listing-file-modified-sort="1780829259934" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="398">
-<div class="thumbnail"><a href="./posts/avec-edge-privacy/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/avec-edge-privacy/index.html" class="no-external">Enforcing privacy at the edge for local language models: AVEC</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJpdmFjeQ=='); return false;">privacy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlmZmVyZW50aWFsLXByaXZhY3k='); return false;">differential-privacy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxt'); return false;">llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZWRnZQ=='); return false;">edge</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/avec-edge-privacy/index.html" class="no-external">
-<p>A local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/avec-edge-privacy/index.html" class="no-external">
-<div class="listing-date">
-Sep 13, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="YWktYWxpZ25tZW50JTJDcmxoZiUyQ3ByZWZlcmVuY2Utb3B0aW1pemF0aW9u" data-listing-date-sort="1757529000000" data-listing-file-modified-sort="1780829294100" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="329">
-<div class="thumbnail"><a href="./posts/opal-rlhf-equivalence/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/opal-rlhf-equivalence/index.html" class="no-external">When are two RLHF objectives the same? A canonical form for preference losses</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWktYWxpZ25tZW50'); return false;">ai-alignment</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmxoZg=='); return false;">rlhf</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJlZmVyZW5jZS1vcHRpbWl6YXRpb24='); return false;">preference-optimization</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/opal-rlhf-equivalence/index.html" class="no-external">
-<p>The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/opal-rlhf-equivalence/index.html" class="no-external">
-<div class="listing-date">
-Sep 11, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="YWktYWxpZ25tZW50JTJDcmxoZiUyQ2xlYXJuaW5nLXRoZW9yeQ==" data-listing-date-sort="1757010600000" data-listing-file-modified-sort="1780829278714" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="397">
-<div class="thumbnail"><a href="./posts/murphy-alignment-gap/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/murphy-alignment-gap/index.html" class="no-external">Why the alignment gap always wins, unless you know where to look</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWktYWxpZ25tZW50'); return false;">ai-alignment</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmxoZg=='); return false;">rlhf</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmctdGhlb3J5'); return false;">learning-theory</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/murphy-alignment-gap/index.html" class="no-external">
-<p>When human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/murphy-alignment-gap/index.html" class="no-external">
-<div class="listing-date">
-Sep 5, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="ZGlzdHJpYnV0ZWQtc3lzdGVtcyUyQ3JlbGlhYmlsaXR5JTJDc3Jl" data-listing-date-sort="1755801000000" data-listing-file-modified-sort="1780829240193" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="354">
-<div class="thumbnail"><a href="./posts/ansc-capacity-health/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/ansc-capacity-health/index.html" class="no-external">Scoring a datacenter fleet by the risk of what happens next</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlzdHJpYnV0ZWQtc3lzdGVtcw=='); return false;">distributed-systems</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVsaWFiaWxpdHk='); return false;">reliability</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3Jl'); return false;">sre</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/ansc-capacity-health/index.html" class="no-external">
-<p>Alerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/ansc-capacity-health/index.html" class="no-external">
-<div class="listing-date">
-Aug 22, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="YWktYWxpZ25tZW50JTJDcmxoZiUyQ21sLXN5c3RlbXM=" data-listing-date-sort="1753641000000" data-listing-file-modified-sort="1780829221766" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="362">
-<div class="thumbnail"><a href="./posts/npo-meta-alignment/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/npo-meta-alignment/index.html" class="no-external">Treating alignment as something you can measure and reduce: NPO</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWktYWxpZ25tZW50'); return false;">ai-alignment</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmxoZg=='); return false;">rlhf</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWwtc3lzdGVtcw=='); return false;">ml-systems</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/npo-meta-alignment/index.html" class="no-external">
-<p>Most pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/npo-meta-alignment/index.html" class="no-external">
-<div class="listing-date">
-Jul 28, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1194,5 +832,5 @@ Madhava Gaikwad
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Krimler</title>
+<title>Madhava Gaikwad – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,87 +74,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Krimler" href="index.xml" data-external="1"><meta property="og:title" content="Krimler">
-<meta property="og:description" content="Math · Computer Science · AI/ML · Security">
+<meta property="og:title" content="Madhava Gaikwad – Krimler">
+<meta property="og:description" content="Engineering Leader · 20 years in infrastructure and security">
 <meta property="og:site_name" content="Krimler">
-<meta name="twitter:title" content="Krimler">
-<meta name="twitter:description" content="Math · Computer Science · AI/ML · Security">
+<meta name="twitter:title" content="Madhava Gaikwad – Krimler">
+<meta name="twitter:description" content="Engineering Leader · 20 years in infrastructure and security">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -340,7 +266,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -348,7 +274,7 @@ window.Quarto = {
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link active" href="./cv.html" aria-current="page"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
@@ -376,25 +302,35 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="YWktYWxpZ25tZW50">ai-alignment <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YWktZ292ZXJuYW5jZQ==">ai-governance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlmZmVyZW50aWFsLXByaXZhY3k=">differential-privacy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGlzdHJpYnV0ZWQtc3lzdGVtcw==">distributed-systems <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZWRnZQ==">edge <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW50ZXJwcmlzZS1hcmNoaXRlY3R1cmU=">enterprise-architecture <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGVhcm5pbmctdGhlb3J5">learning-theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGxt">llm <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGxtLWFnZW50cw==">llm-agents <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVtb3J5">memory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWwtc3lzdGVtcw==">ml-systems <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bnVtYmVyLXRoZW9yeQ==">number-theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b250b2xvZ3k=">ontology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJlZmVyZW5jZS1vcHRpbWl6YXRpb24=">preference-optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJpbWVz">primes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJpdmFjeQ==">privacy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmVsaWFiaWxpdHk=">reliability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVwcm9kdWNpYmlsaXR5">reproducibility <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmV0cmlldmFs">retrieval <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmxoZg==">rlhf <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c2VjdXJpdHk=">security <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3Jl">sre <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RhdGlzdGljcw==">statistics <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#skills" id="toc-skills" class="nav-link active" data-scroll-target="#skills">Skills</a></li>
+  <li><a href="#experience" id="toc-experience" class="nav-link" data-scroll-target="#experience">Experience</a></li>
+  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
+  <li><a href="#selected-publications-and-preprints" id="toc-selected-publications-and-preprints" class="nav-link" data-scroll-target="#selected-publications-and-preprints">Selected publications and preprints</a></li>
+  <li><a href="#ietf-drafts-llm-benchmarking-under-bmwg-review" id="toc-ietf-drafts-llm-benchmarking-under-bmwg-review" class="nav-link" data-scroll-target="#ietf-drafts-llm-benchmarking-under-bmwg-review">IETF drafts (LLM benchmarking, under BMWG review)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Krimler</h1>
-<p class="subtitle lead">Math · Computer Science · AI/ML · Security</p>
+<h1 class="title">Madhava Gaikwad</h1>
+<p class="subtitle lead">Engineering Leader · 20 years in infrastructure and security</p>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -406,356 +342,76 @@ window.Quarto = {
 </header>
 
 
+<p><a href="mailto:gaikwad.madhav@gmail.com">gaikwad.madhav@gmail.com</a> · Bengaluru · <a href="https://www.linkedin.com/in/safeai/">LinkedIn</a> · <a href="https://github.com/krimler">GitHub</a> · <a href="https://scholar.google.com/citations?user=YReGIGMAAAAJ">Google Scholar</a></p>
+<p>I work at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts.</p>
+<section id="skills" class="level2">
+<h2 class="anchored" data-anchor-id="skills">Skills</h2>
+<ul>
+<li><strong>Languages:</strong> Python, Go, C++, Java</li>
+<li><strong>AI and safety:</strong> RAG, guardrailing, MCP, evaluation and monitoring</li>
+<li><strong>Cryptography and authorization:</strong> Zero Trust, OAuth2/OIDC, SAML, PKI, OPA/Rego, WAF, SSL/TLS</li>
+<li><strong>Distributed systems:</strong> containers, Kubernetes, Envoy, gRPC, Spark, Kafka, OpenTelemetry</li>
+</ul>
+</section>
+<section id="experience" class="level2">
+<h2 class="anchored" data-anchor-id="experience">Experience</h2>
+<p><strong>Independent (Kriml), Founder, AI security startup.</strong> Bengaluru. December 2025 to present.</p>
+<ul>
+<li>Researched, built, and productized a secure, anonymous, FDA-compliant medical AI bot.</li>
+<li>Worked with the IETF BMWG group to develop AI-related measurement drafts.</li>
+</ul>
+<p><strong>Microsoft, Senior Software Engineer and Manager.</strong> Bengaluru. February 2021 to December 2025.</p>
+<ul>
+<li>Built Net Copilot, an LLM-powered multi-agent system with chat, search, and API capabilities, serving 250 daily active engineers. Implemented RAG pipelines and fine-tuned and distilled models for production.</li>
+<li>As Engineering Manager from November 2022 to November 2025, led a 15-member cross-geo SRE team for GPU fleet network operations. Defined SLIs and SLOs for Azure datacenter networking. Owned MTTM and MTTR metrics and reduced time to mitigate by 30%. Designed on-call rotations, escalation policies, incident fatigue management, and an engineer growth path.</li>
+</ul>
+<p><strong>Cisco, Technical Leader.</strong> Bengaluru. June 2012 to February 2021.</p>
+<ul>
+<li>Led architecture and delivery of an $80M web security gateway platform. Engineered TLS performance optimizations and TCP tuning in the FreeBSD kernel, achieving 1.2x throughput and 2x faster decryption.</li>
+<li>Drove the enterprise security roadmap and cross-org architecture reviews. Implemented differential privacy guarantees for an enterprise firewall and ensured GDPR compliance.</li>
+</ul>
+<p><strong>Early roles (Symantec, TCS).</strong> Mumbai and Pune. December 2006 to June 2012.</p>
+<ul>
+<li>Worked on email security, AAA systems, and network protocol development in C/C++ and Java.</li>
+</ul>
+</section>
+<section id="education" class="level2">
+<h2 class="anchored" data-anchor-id="education">Education</h2>
+<p><strong>Bachelor of Engineering, Information Technology.</strong> Shivaji University, Kolhapur. 2006. Distinction.</p>
+</section>
+<section id="selected-publications-and-preprints" class="level2">
+<h2 class="anchored" data-anchor-id="selected-publications-and-preprints">Selected publications and preprints</h2>
+<p>Several of these have companion posts on this blog that explain the ideas in plain language. See the <a href="./index.html">blog</a> and <a href="./papers/index.html">papers</a>.</p>
+<ul>
+<li>AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs. NeurIPS 2025 Workshop. <a href="https://arxiv.org/abs/2512.17251">arXiv:2512.17251</a> · <a href="posts/aligndp-rarity-privacy/">post</a></li>
+<li>NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback. <a href="https://arxiv.org/abs/2507.21131">arXiv:2507.21131</a> · <a href="posts/npo-meta-alignment/">post</a></li>
+<li>ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability. <a href="https://arxiv.org/abs/2508.16119">arXiv:2508.16119</a> · <a href="posts/ansc-capacity-health/">post</a></li>
+<li>AVEC: Bootstrapping Privacy for Local LLMs. <a href="https://arxiv.org/abs/2509.10561">arXiv:2509.10561</a> · <a href="posts/avec-edge-privacy/">post</a></li>
+<li>Murphy’s Laws of AI Alignment: Why the Gap Always Wins. <a href="https://arxiv.org/abs/2509.05381">arXiv:2509.05381</a> · <a href="posts/murphy-alignment-gap/">post</a></li>
+<li>When Are Two RLHF Objectives the Same? (Opal). <a href="https://arxiv.org/abs/2509.11298">arXiv:2509.11298</a> · <a href="posts/opal-rlhf-equivalence/">post</a></li>
+<li>Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents. ICLR 2026 Workshop. <a href="https://arxiv.org/abs/2603.15658">arXiv:2603.15658</a> · <a href="posts/memory-store-routing/">post</a></li>
+<li>AEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture. <a href="./papers/aegis.html">paper</a> · <a href="posts/aegis-evidence-obligation/">post</a></li>
+<li>Heuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics. <a href="./papers/fibonacci-primes.html">paper</a> · <a href="posts/fibonacci-prime-statistics/">post</a></li>
+<li>Algorithmic Analysis of DAM. ICLR 2026 Workshop. <a href="https://openreview.net/pdf?id=zgHAqaIybd">OpenReview</a></li>
+<li>The Abstention Protocol: Root Cause Analysis for Clos Fabrics. USENIX OSDI 2026.</li>
+<li>Agentic Trust Fabric: A Systematization of Knowledge of Security Architectures for Autonomous AI Agents. <a href="https://philpapers.org/archive/GAITAT-2.pdf">preprint</a></li>
+<li>Adaptive WAF: Multi-Armed Bandits for Web Application Firewall Rule Tuning. <a href="https://philpapers.org/archive/GAIHPS.pdf">preprint</a></li>
+<li>Zero Trust Identity and Authorization Profile. <a href="https://philpapers.org/archive/GAIZTI.pdf">draft</a></li>
+</ul>
+</section>
+<section id="ietf-drafts-llm-benchmarking-under-bmwg-review" class="level2">
+<h2 class="anchored" data-anchor-id="ietf-drafts-llm-benchmarking-under-bmwg-review">IETF drafts (LLM benchmarking, under BMWG review)</h2>
+<ul>
+<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/">LLM Benchmarking Terminology</a></li>
+<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/">LLM Benchmarking Methodology</a></li>
+<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/">LLM Benchmarking Profiles</a></li>
+<li><a href="https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/">LLM Serving Workload Profiles</a></li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bnVtYmVyLXRoZW9yeSUyQ3ByaW1lcyUyQ3N0YXRpc3RpY3MlMkNyZXByb2R1Y2liaWxpdHk=" data-listing-date-sort="1780770600000" data-listing-file-modified-sort="1780828092131" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1057">
-<div class="thumbnail"><a href="./posts/fibonacci-prime-statistics/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fibonacci-prime-statistics/index.html" class="no-external">Counting Fibonacci primes: what a finite computation can and cannot add</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bnVtYmVyLXRoZW9yeQ=='); return false;">number-theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJpbWVz'); return false;">primes</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljcw=='); return false;">statistics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVwcm9kdWNpYmlsaXR5'); return false;">reproducibility</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fibonacci-prime-statistics/index.html" class="no-external">
-<p>Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fibonacci-prime-statistics/index.html" class="no-external">
-<div class="listing-date">
-Jun 7, 2026
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="YWktZ292ZXJuYW5jZSUyQ2VudGVycHJpc2UtYXJjaGl0ZWN0dXJlJTJDb250b2xvZ3klMkNzZWN1cml0eQ==" data-listing-date-sort="1775673000000" data-listing-file-modified-sort="1780828035160" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="980">
-<div class="thumbnail"><a href="./posts/aegis-evidence-obligation/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/aegis-evidence-obligation/index.html" class="no-external">AEGIS: typed evidence and obligations for AI-native enterprise architecture</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWktZ292ZXJuYW5jZQ=='); return false;">ai-governance</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZW50ZXJwcmlzZS1hcmNoaXRlY3R1cmU='); return false;">enterprise-architecture</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b250b2xvZ3k='); return false;">ontology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/aegis-evidence-obligation/index.html" class="no-external">
-<p>Why static architecture diagrams cannot govern AI systems, and a framework that makes evidence, obligations, and runtime signals first-class objects with a regulatory crosswalk.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/aegis-evidence-obligation/index.html" class="no-external">
-<div class="listing-date">
-Apr 9, 2026
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bGxtLWFnZW50cyUyQ3JldHJpZXZhbCUyQ21lbW9yeSUyQ21sLXN5c3RlbXM=" data-listing-date-sort="1773858600000" data-listing-file-modified-sort="1780829331637" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="328">
-<div class="thumbnail"><a href="./posts/memory-store-routing/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/memory-store-routing/index.html" class="no-external">Did you check the right pocket? Routing retrieval across an agent’s memory</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxtLWFnZW50cw=='); return false;">llm-agents</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmV0cmlldmFs'); return false;">retrieval</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWVtb3J5'); return false;">memory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWwtc3lzdGVtcw=='); return false;">ml-systems</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/memory-store-routing/index.html" class="no-external">
-<p>Memory-augmented agents keep several specialized stores and usually query all of them for every request. Treating store selection as a cost-sensitive routing problem cuts tokens and improves answers.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/memory-store-routing/index.html" class="no-external">
-<div class="listing-date">
-Mar 19, 2026
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="cHJpdmFjeSUyQ2RpZmZlcmVudGlhbC1wcml2YWN5JTJDbGxtJTJDc2VjdXJpdHk=" data-listing-date-sort="1766255400000" data-listing-file-modified-sort="1780829313643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="360">
-<div class="thumbnail"><a href="./posts/aligndp-rarity-privacy/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/aligndp-rarity-privacy/index.html" class="no-external">AlignDP: locking knowledge transfer at the data interface</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJpdmFjeQ=='); return false;">privacy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlmZmVyZW50aWFsLXByaXZhY3k='); return false;">differential-privacy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxt'); return false;">llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/aligndp-rarity-privacy/index.html" class="no-external">
-<p>Watermarking and monitoring react after a model has already leaked. AlignDP blocks knowledge transfer at the input, with strong hiding for rare fields and unbiased frequency estimates for common ones.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/aligndp-rarity-privacy/index.html" class="no-external">
-<div class="listing-date">
-Dec 21, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="cHJpdmFjeSUyQ2RpZmZlcmVudGlhbC1wcml2YWN5JTJDbGxtJTJDZWRnZQ==" data-listing-date-sort="1757701800000" data-listing-file-modified-sort="1780829259934" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="398">
-<div class="thumbnail"><a href="./posts/avec-edge-privacy/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/avec-edge-privacy/index.html" class="no-external">Enforcing privacy at the edge for local language models: AVEC</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJpdmFjeQ=='); return false;">privacy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlmZmVyZW50aWFsLXByaXZhY3k='); return false;">differential-privacy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxt'); return false;">llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZWRnZQ=='); return false;">edge</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/avec-edge-privacy/index.html" class="no-external">
-<p>A local model that hands hard queries to a bigger remote model can leak private data in the handoff. AVEC proposes adaptive per-query privacy budgets with on-device verification, and proves what such a scheme can and cannot guarantee.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/avec-edge-privacy/index.html" class="no-external">
-<div class="listing-date">
-Sep 13, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="YWktYWxpZ25tZW50JTJDcmxoZiUyQ3ByZWZlcmVuY2Utb3B0aW1pemF0aW9u" data-listing-date-sort="1757529000000" data-listing-file-modified-sort="1780829294100" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="329">
-<div class="thumbnail"><a href="./posts/opal-rlhf-equivalence/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/opal-rlhf-equivalence/index.html" class="no-external">When are two RLHF objectives the same? A canonical form for preference losses</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWktYWxpZ25tZW50'); return false;">ai-alignment</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmxoZg=='); return false;">rlhf</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJlZmVyZW5jZS1vcHRpbWl6YXRpb24='); return false;">preference-optimization</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/opal-rlhf-equivalence/index.html" class="no-external">
-<p>The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/opal-rlhf-equivalence/index.html" class="no-external">
-<div class="listing-date">
-Sep 11, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="YWktYWxpZ25tZW50JTJDcmxoZiUyQ2xlYXJuaW5nLXRoZW9yeQ==" data-listing-date-sort="1757010600000" data-listing-file-modified-sort="1780829278714" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="397">
-<div class="thumbnail"><a href="./posts/murphy-alignment-gap/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/murphy-alignment-gap/index.html" class="no-external">Why the alignment gap always wins, unless you know where to look</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWktYWxpZ25tZW50'); return false;">ai-alignment</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmxoZg=='); return false;">rlhf</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmctdGhlb3J5'); return false;">learning-theory</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/murphy-alignment-gap/index.html" class="no-external">
-<p>When human feedback is subtly wrong on rare cases, learning the true objective takes exponentially many samples. A calibration oracle that flags the unreliable cases collapses that cost to polynomial.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/murphy-alignment-gap/index.html" class="no-external">
-<div class="listing-date">
-Sep 5, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="ZGlzdHJpYnV0ZWQtc3lzdGVtcyUyQ3JlbGlhYmlsaXR5JTJDc3Jl" data-listing-date-sort="1755801000000" data-listing-file-modified-sort="1780829240193" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="354">
-<div class="thumbnail"><a href="./posts/ansc-capacity-health/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/ansc-capacity-health/index.html" class="no-external">Scoring a datacenter fleet by the risk of what happens next</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlzdHJpYnV0ZWQtc3lzdGVtcw=='); return false;">distributed-systems</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVsaWFiaWxpdHk='); return false;">reliability</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3Jl'); return false;">sre</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/ansc-capacity-health/index.html" class="no-external">
-<p>Alerts tell you what already broke. ANSC scores how close a hyperscale network is to running out of capacity, ranked by the probability of an imminent shortfall rather than by current impact.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/ansc-capacity-health/index.html" class="no-external">
-<div class="listing-date">
-Aug 22, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="YWktYWxpZ25tZW50JTJDcmxoZiUyQ21sLXN5c3RlbXM=" data-listing-date-sort="1753641000000" data-listing-file-modified-sort="1780829221766" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="362">
-<div class="thumbnail"><a href="./posts/npo-meta-alignment/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/npo-meta-alignment/index.html" class="no-external">Treating alignment as something you can measure and reduce: NPO</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWktYWxpZ25tZW50'); return false;">ai-alignment</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmxoZg=='); return false;">rlhf</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWwtc3lzdGVtcw=='); return false;">ml-systems</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/npo-meta-alignment/index.html" class="no-external">
-<p>Most pipelines align a model once and ship it. NPO treats alignment as an ongoing quantity, adds a way to check that the monitoring itself is honest, and proves the loop converges under noisy feedback.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/npo-meta-alignment/index.html" class="no-external">
-<div class="listing-date">
-Jul 28, 2025
-</div>
-<div class="listing-author">
-Madhava Gaikwad
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

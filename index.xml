@@ -158,5 +158,291 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <guid>https://krimler.github.io/posts/aegis-evidence-obligation/</guid>
   <pubDate>Wed, 08 Apr 2026 18:30:00 GMT</pubDate>
 </item>
+<item>
+  <title>Did you check the right pocket? Routing retrieval across an agent’s memory</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/memory-store-routing/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A memory-augmented agent keeps several specialized stores. One might hold facts, another the recent conversation, another notes about tools or users. When a request arrives, most systems read from every store and stuff all of it into the model’s context. That is the equivalent of patting down every pocket to find your keys. It works, and it is wasteful. Reading everything costs tokens, and it pulls in irrelevant context that can crowd out the useful part.</p>
+<section id="retrieval-as-routing" class="level2">
+<h2 class="anchored" data-anchor-id="retrieval-as-routing">Retrieval as routing</h2>
+<p>The paper reframes the problem. Choosing which store to read is a routing decision, and routing deserves to be a first-class part of the design. Stated plainly, for each request the agent should decide which store or stores to consult, and that decision should weigh two things against each other. One is accuracy, the quality of the eventual answer. The other is retrieval cost, measured in context tokens. A good router reads the store that holds the answer and skips the rest.</p>
+</section>
+<section id="what-the-evidence-shows" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-evidence-shows">What the evidence shows</h2>
+<p>To measure the ceiling, the paper uses an oracle router. An oracle router is an idealized router that always picks the right store, used here to show what perfect routing would buy. The oracle achieves better downstream question-answering accuracy while spending far fewer context tokens than reading from all stores. Both numbers move in the good direction at once. Selective retrieval is not only cheaper, it gives better answers, because irrelevant context was hurting quality in the first place.</p>
+<p>The oracle is a measurement tool rather than a deployable system, since it relies on knowing the right store in advance. The paper presents this as early-stage work and argues for learned routing, where the agent learns to make the store choice on its own, as the path to scalable multi-store systems.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>As agents accumulate more kinds of memory, reading all of it per request scales badly in both cost and quality. Turning store selection into an explicit, cost-aware decision is what keeps a multi-store agent affordable and sharp as the number of stores grows.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p><a href="https://arxiv.org/abs/2603.15658">Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents (arXiv:2603.15658)</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>llm-agents</category>
+  <category>retrieval</category>
+  <category>memory</category>
+  <category>ml-systems</category>
+  <guid>https://krimler.github.io/posts/memory-store-routing/</guid>
+  <pubDate>Wed, 18 Mar 2026 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>AlignDP: locking knowledge transfer at the data interface</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/aligndp-rarity-privacy/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Large language models can be copied without permission. An attacker can extract training data, distill the model into a smaller copy, or fine-tune on its outputs. The common defenses are watermarking and monitoring. Both share a weakness. They act after the leak. A watermark helps you prove that copying happened, and monitoring helps you notice it, but by then the knowledge has already moved. AlignDP works earlier. It is a hybrid privacy lock that blocks the transfer at the data interface, before knowledge leaves.</p>
+<section id="two-kinds-of-field-need-two-kinds-of-protection" class="level2">
+<h2 class="anchored" data-anchor-id="two-kinds-of-field-need-two-kinds-of-protection">Two kinds of field need two kinds of protection</h2>
+<p>The key observation is that not all data is equally risky, and the right protection depends on how often a value appears.</p>
+<p>Rare fields are the dangerous ones. A value that shows up only a few times can identify its source, so it needs strong hiding. AlignDP applies PAC indistinguishability to rare fields. The practical meaning is that an observer cannot reliably tell whether a given rare value was present, so the rare information stays concealed.</p>
+<p>Common fields are different. You often want to keep useful aggregate statistics about them, such as how frequent each value is. AlignDP protects these with RAPPOR, a well-known method for local differential privacy. RAPPOR randomizes each individual report so no single response is revealing, while still allowing accurate frequency estimates once many reports are combined. The frequent values stay usable in aggregate without exposing any one contributor.</p>
+<p>A global aggregator sits over both tiers. It manages composition, meaning the way many small privacy releases add up, and it tracks the overall budget so the total exposure stays bounded.</p>
+</section>
+<section id="what-the-paper-shows" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-paper-shows">What the paper shows</h2>
+<p>The work establishes theoretical results for both tiers. It extends the PAC guarantee to the global aggregation step and derives error bounds for the RAPPOR estimates. Simulations match the design intent. Rare categories remain hidden, while frequent categories can be recovered with small error. The paper is explicit about the tradeoff between privacy and utility, since that tension is the heart of any differential privacy scheme.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Defending a model after it has been copied is a weak position. AlignDP moves the control to the point where data enters, and it tailors the strength of protection to the risk each field carries. Strong hiding goes where identification is possible. Lighter, aggregate-preserving protection goes where only statistics matter.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p><a href="https://arxiv.org/abs/2512.17251">AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs (arXiv:2512.17251)</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>privacy</category>
+  <category>differential-privacy</category>
+  <category>llm</category>
+  <category>security</category>
+  <guid>https://krimler.github.io/posts/aligndp-rarity-privacy/</guid>
+  <pubDate>Sat, 20 Dec 2025 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>Enforcing privacy at the edge for local language models: AVEC</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/avec-edge-privacy/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A local language model runs on your own device, which keeps your data close. Some queries are too hard for the small local model, so it delegates them to a larger model in the cloud. That handoff is the weak point. The query sent outward can carry sensitive information. AVEC is a proposal for controlling that handoff. The name stands for Adaptive Verifiable Edge Control. It enforces privacy at the edge and makes the delegation verifiable.</p>
+<p>A note on what this is. AVEC is a position paper. Its evaluation is simulation based by design, and it does not claim deployment readiness or measured task quality with live models. The contribution is an architecture and the theory that goes with it.</p>
+<section id="spending-a-privacy-budget-per-query" class="level2">
+<h2 class="anchored" data-anchor-id="spending-a-privacy-budget-per-query">Spending a privacy budget per query</h2>
+<p>The core mechanism is an adaptive budget. Differential privacy is a way of adding calibrated random noise so that an output reveals very little about any single underlying record. The strength of that protection is a budget, and spending more budget buys more accuracy at the cost of more exposure. Most systems fix one budget for everything. AVEC sets the budget per query, based on three things: how sensitive the query is, how confident the local model is on its own, and how much budget the user has already spent in the past.</p>
+<p>To keep the spending honest, AVEC tracks it with an odometer. An odometer is a running tally of privacy budget consumed across many queries, so the system always knows how much protection remains. The accounting uses Rényi differential privacy, a version of the theory that composes cleanly when you add up many small releases.</p>
+</section>
+<section id="what-it-proves-it-can-and-cannot-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-proves-it-can-and-cannot-do">What it proves it can and cannot do</h2>
+<p>The paper does the unglamorous work of marking the boundaries. It establishes utility ceilings, which are limits on how good the answers can be at a given level of privacy. It establishes delegation-leakage bounds, which cap how much the handoff to the remote model can reveal. It also proves impossibility results. Two tempting shortcuts do not work on their own. Deterministic gating, where a fixed rule decides what to send, cannot provide the guarantee. Hash-only certification, where a hash is used to prove integrity, is not enough by itself.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Local models are sold on privacy, and the delegation step quietly undermines that promise. AVEC takes the step seriously. It treats each outward query as a metered privacy event, verifies the transformation on the device, and is honest about the ceilings and the dead ends. That gives later empirical work a clear target.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p><a href="https://arxiv.org/abs/2509.10561">AVEC: Bootstrapping Privacy for Local LLMs (arXiv:2509.10561)</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>privacy</category>
+  <category>differential-privacy</category>
+  <category>llm</category>
+  <category>edge</category>
+  <guid>https://krimler.github.io/posts/avec-edge-privacy/</guid>
+  <pubDate>Fri, 12 Sep 2025 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>When are two RLHF objectives the same? A canonical form for preference losses</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/opal-rlhf-equivalence/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Aligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question.</p>
+<section id="canonicalization" class="level2">
+<h2 class="anchored" data-anchor-id="canonicalization">Canonicalization</h2>
+<p>The tool is called Opal, and it does canonicalization. A canonical form is a standard way of writing something so that two things that are really equal end up looking identical. Given two preference objectives, Opal returns one of two answers. Either it produces a canonical form that shows the two are algebraically the same, or it produces a concrete witness that they differ. A witness here is a specific case where the two objectives disagree, so the difference is demonstrated rather than asserted.</p>
+</section>
+<section id="what-it-finds" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-finds">What it finds</h2>
+<p>Run Opal across the popular methods and a clear picture emerges. Many widely used objectives optimize the same underlying thing. Their apparent differences are reparameterizations, meaning the same objective dressed in different variables. Some methods, by contrast, are provably distinct, and Opal isolates a small set of structural mechanisms that produce real differences rather than cosmetic ones.</p>
+<p>One finding is worth calling out because it is easy to miss. Batch normalization can cause the same response pair to receive different gradients depending on which other examples share its batch. The training signal for a pair stops being a property of the pair alone. It becomes a property of the batch it landed in. That is a genuine difference in objective, and it comes from a detail most people treat as bookkeeping.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>A field that keeps proposing objectives needs a way to tell novelty from notation. Opal turns that into a decidable check. It tells you when a new method is a real departure and when it is an old method in new clothes. That saves effort, and it points attention at the handful of structural choices that actually change what the model learns.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p><a href="https://arxiv.org/abs/2509.11298">When Are Two RLHF Objectives the Same? (arXiv:2509.11298)</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ai-alignment</category>
+  <category>rlhf</category>
+  <category>preference-optimization</category>
+  <guid>https://krimler.github.io/posts/opal-rlhf-equivalence/</guid>
+  <pubDate>Wed, 10 Sep 2025 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>Why the alignment gap always wins, unless you know where to look</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/murphy-alignment-gap/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Reinforcement learning from human feedback is the standard way to align a model. People compare model outputs, the comparisons train a reward model, and the model is tuned to score well on that reward. The whole scheme rests on the feedback being right. This paper studies what happens when it is not.</p>
+<section id="a-compass-that-points-wrong-in-some-places" class="level2">
+<h2 class="anchored" data-anchor-id="a-compass-that-points-wrong-in-some-places">A compass that points wrong in some places</h2>
+<p>The setup is misspecified feedback. Human feedback is systematically wrong on certain kinds of input. A useful picture is a compass that points true almost everywhere but points the wrong way in a few specific regions. The problem is not random error, which averages out. It is consistent error in particular places.</p>
+<p>Two numbers describe how bad it is. One is the fraction of contexts where the feedback is biased. The other is the strength of that bias. The trouble lives in the corner of the input space where both are nonzero.</p>
+</section>
+<section id="the-hard-result" class="level2">
+<h2 class="anchored" data-anchor-id="the-hard-result">The hard result</h2>
+<p>The paper proves a lower bound. Suppose two candidate reward functions agree everywhere except on the biased contexts. To tell them apart from feedback alone, any learning algorithm needs a number of samples that grows exponentially in the prevalence of the bias and the square of its strength. Rare edge cases with subtly wrong feedback create a learning problem that is exponentially hard. You can pour in data and still not know which objective you are actually optimizing.</p>
+<p>This is the sense in which the gap always wins. The gap is the distance between what you optimize, a proxy built from human feedback, and what you actually want, the true objective. When the problematic contexts are rare and the feedback there is quietly biased, no amount of ordinary data closes that gap.</p>
+</section>
+<section id="the-way-out" class="level2">
+<h2 class="anchored" data-anchor-id="the-way-out">The way out</h2>
+<p>There is one escape, and it is specific. Suppose you have a calibration oracle, a way to identify where the feedback is unreliable. Then you can spend your limited questions on exactly those contexts. The paper shows that this collapses the cost from exponential to polynomial. You no longer need to find the needle by luck, because you have been told which haystack it is in.</p>
+<p>The lesson is practical. Throwing more feedback at an aligned system does not help where the feedback itself is broken. Finding and targeting the broken regions does.</p>
+</section>
+<section id="what-is-settled-and-what-is-open" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-settled-and-what-is-open">What is settled and what is open</h2>
+<p>The results are theoretical. The paper proves the lower bound and the oracle speedup. It invites collaboration on large-scale experiments and on building the benchmarks that would test these effects in practice.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p><a href="https://arxiv.org/abs/2509.05381">Murphy’s Laws of AI Alignment: Why the Gap Always Wins (arXiv:2509.05381)</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ai-alignment</category>
+  <category>rlhf</category>
+  <category>learning-theory</category>
+  <guid>https://krimler.github.io/posts/murphy-alignment-gap/</guid>
+  <pubDate>Thu, 04 Sep 2025 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>Scoring a datacenter fleet by the risk of what happens next</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/ansc-capacity-health/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A hyperscale datacenter network runs thousands of devices and links. When one fails, an alert fires. That alert tells you what broke. It does not tell you how close the whole system is to running out of capacity. Those are different questions. A single link failing in a region with plenty of spare capacity is routine. The same failure in a region already running hot can be the last step before a shortfall. ANSC is built to score the second question.</p>
+<section id="the-gap-in-ordinary-alerting" class="level2">
+<h2 class="anchored" data-anchor-id="the-gap-in-ordinary-alerting">The gap in ordinary alerting</h2>
+<p>Standard monitoring detects individual device or link failures. Each alert is local. It says nothing about the aggregate risk that several failures together push a datacenter or a region past its capacity limit. Operators are left to piece that picture together by hand, often while the alerts are still arriving. The risk that matters is the cascading one, and it lives above the level of any single alert.</p>
+</section>
+<section id="what-ansc-measures" class="level2">
+<h2 class="anchored" data-anchor-id="what-ansc-measures">What ANSC measures</h2>
+<p>ANSC produces a color-coded health score for each datacenter and region. The score ranks urgency by the probability of an imminent capacity violation rather than by the impact of what has already happened. Two ingredients go into it. The first is the current residual capacity, meaning how much headroom is left right now. The second is the probability of additional failures on top of the current state. The score combines these and normalizes them at the datacenter level and the regional level, so a green datacenter and a red one mean the same thing wherever you look.</p>
+</section>
+<section id="what-it-changes-for-operators" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-changes-for-operators">What it changes for operators</h2>
+<p>The paper reports ANSC running across more than 400 datacenters and 60 regions. The effect is to cut noise and point attention at the places most likely to fail soon. Instead of a flat stream of equal-looking alerts, an operator sees a ranked view of where capacity is genuinely at risk. Remediation effort goes to the highest risk first, which is where it does the most good.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Reliability at this scale is a prioritization problem. There are always more alerts than people. A score that orders work by the probability of the next failure, rather than by the noise of the last one, is what lets a small team hold a large fleet.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p><a href="https://arxiv.org/abs/2508.16119">ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability (arXiv:2508.16119)</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>distributed-systems</category>
+  <category>reliability</category>
+  <category>sre</category>
+  <guid>https://krimler.github.io/posts/ansc-capacity-health/</guid>
+  <pubDate>Thu, 21 Aug 2025 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>Treating alignment as something you can measure and reduce: NPO</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/npo-meta-alignment/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Alignment means making a model behave the way people actually want it to behave. Most production pipelines treat this as a one-time step. You train the model, you ship it, and you hope it stays aligned. NPO starts from a different stance. Alignment is a quantity you can measure, supervise, and drive down over time.</p>
+<section id="the-two-quantities" class="level2">
+<h2 class="anchored" data-anchor-id="the-two-quantities">The two quantities</h2>
+<p>NPO names two things and turns each into a number.</p>
+<p>The first is alignment loss. This is how far the model’s behavior sits from what was intended. Driving it down is the usual goal.</p>
+<p>The second is meta-alignment, and it is the idea that gives the paper its name. Meta-alignment asks whether your monitoring is itself trustworthy. A system that reports “everything looks aligned” is only useful if that report tracks reality. NPO calls this monitoring fidelity. The paper shows that meta-alignment reduces to ordinary alignment once you fix a threshold on the monitor. In plain terms, checking the checker is the same kind of problem as the original check, so the same machinery handles both.</p>
+</section>
+<section id="the-feedback-that-drives-it" class="level2">
+<h2 class="anchored" data-anchor-id="the-feedback-that-drives-it">The feedback that drives it</h2>
+<p>The loop runs on structured human feedback. This is more than a thumbs up. It includes likes, explicit overrides where a person corrects the system, and abstentions where a person declines to answer. Each kind of signal carries different information, and NPO ingests all of them. Around this sit the operational pieces a real deployment needs: scoring scenarios, tuning thresholds, and validating policies before they take effect.</p>
+</section>
+<section id="why-the-loop-is-stable" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-loop-is-stable">Why the loop is stable</h2>
+<p>A feedback loop is only useful if it settles rather than drifts. NPO proves that under noisy feedback both quantities converge, and that they do so together. The alignment loss and the monitoring fidelity both approach their targets as more feedback arrives. The paper backs the theory with results from a large deployment, along with simulation artifacts and ablation studies that isolate which parts of the design carry the weight.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>The shift here is from a single alignment event to a controlled process. Once alignment and the honesty of its monitoring are both numbers that provably go down under feedback, you can run alignment the way you run any other reliability metric. You watch it, you set targets, and you route effort to where the number is worst.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p><a href="https://arxiv.org/abs/2507.21131">NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback (arXiv:2507.21131)</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ai-alignment</category>
+  <category>rlhf</category>
+  <category>ml-systems</category>
+  <guid>https://krimler.github.io/posts/npo-meta-alignment/</guid>
+  <pubDate>Sun, 27 Jul 2025 18:30:00 GMT</pubDate>
+</item>
 </channel>
 </rss>

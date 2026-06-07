@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Madhava Gaikwad">
+<meta name="dcterms.date" content="2025-09-11">
+<meta name="description" content="The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.">
 
-<title>write-post – Krimler</title>
+<title>When are two RLHF objectives the same? A canonical form for preference losses – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +29,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,12 +80,12 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Krimler">
-<meta property="og:description" content="Notes and papers on mathematics, computer science, AI/ML, and security.">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="When are two RLHF objectives the same? A canonical form for preference losses – Krimler">
+<meta property="og:description" content="The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.">
 <meta property="og:site_name" content="Krimler">
-<meta name="twitter:title" content="Krimler">
-<meta name="twitter:description" content="Notes and papers on mathematics, computer science, AI/ML, and security.">
+<meta name="twitter:title" content="When are two RLHF objectives the same? A canonical form for preference losses – Krimler">
+<meta name="twitter:description" content="The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -255,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Krimler</span>
     </a>
   </div>
@@ -266,15 +269,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../papers/index.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -285,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -306,95 +313,77 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#blog-writing-prompt" id="toc-blog-writing-prompt" class="nav-link active" data-scroll-target="#blog-writing-prompt">Blog writing prompt</a>
-  <ul class="collapse">
-  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
-  <li><a href="#voice" id="toc-voice" class="nav-link" data-scroll-target="#voice">Voice</a></li>
-  <li><a href="#hard-rules" id="toc-hard-rules" class="nav-link" data-scroll-target="#hard-rules">Hard rules</a></li>
-  <li><a href="#how-to-structure-a-post" id="toc-how-to-structure-a-post" class="nav-link" data-scroll-target="#how-to-structure-a-post">How to structure a post</a></li>
-  <li><a href="#math-code-and-citations-on-this-blog" id="toc-math-code-and-citations-on-this-blog" class="nav-link" data-scroll-target="#math-code-and-citations-on-this-blog">Math, code, and citations on this blog</a></li>
-  <li><a href="#attribution" id="toc-attribution" class="nav-link" data-scroll-target="#attribution">Attribution</a></li>
-  <li><a href="#self-check-before-publishing" id="toc-self-check-before-publishing" class="nav-link" data-scroll-target="#self-check-before-publishing">Self check before publishing</a></li>
-  </ul></li>
+  <li><a href="#canonicalization" id="toc-canonicalization" class="nav-link active" data-scroll-target="#canonicalization">Canonicalization</a></li>
+  <li><a href="#what-it-finds" id="toc-what-it-finds" class="nav-link" data-scroll-target="#what-it-finds">What it finds</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">Why it matters</a></li>
+  <li><a href="#read-the-paper" id="toc-read-the-paper" class="nav-link" data-scroll-target="#read-the-paper">Read the paper</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">When are two RLHF objectives the same? A canonical form for preference losses</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ai-alignment</div>
+    <div class="quarto-category">rlhf</div>
+    <div class="quarto-category">preference-optimization</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
 
-<section id="blog-writing-prompt" class="level1">
-<h1>Blog writing prompt</h1>
-<p>Use this as the system instruction before drafting or editing any post on this blog. Paste the draft after it. The goal is writing that reads like a careful researcher explaining work to a colleague.</p>
-<hr>
-<p>You are writing a technical blog post on mathematics, computer science, AI/ML, or security. Write in the manner of Barna Saha. That means precise, plain, and direct. State the problem. Define the terms. Build the idea step by step from something simple to the full result. Use concrete examples and worked cases. State results without decoration.</p>
-<section id="purpose" class="level2">
-<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
-<p>The blog exists to make the paper easy to understand. The reader has not read the paper. Write so that someone meeting the work for the first time can follow it.</p>
-<p>Do not make the post mathy. The paper already carries the mathematics. The post explains the ideas behind it. Prefer plain words over symbols and equations. State a result as a sentence a reader can follow without a pen. Convert a formula into what it says and why it holds.</p>
-<p>Use an equation only when the idea cannot be carried in words, and at most one or two in a post. When you do keep a symbol or term, define it the first time it appears. A symbol in an equation must be introduced in words first. Give a one-line definition for any term that is standard in the field but not universal.</p>
-</section>
-<section id="voice" class="level2">
-<h2 class="anchored" data-anchor-id="voice">Voice</h2>
-<p>Write the way a strong researcher talks through a problem at a whiteboard. Assume the reader is smart and busy. Respect their time. Explain the idea, not your feelings about the idea.</p>
-</section>
-<section id="hard-rules" class="level2">
-<h2 class="anchored" data-anchor-id="hard-rules">Hard rules</h2>
-<ol type="1">
-<li><p>No em dashes anywhere. Do not use the character “—”.</p></li>
-<li><p>Do not join two independent statements with an em dash, a comma, or a semicolon. Write the statement straight. If two ideas are joined, split them into two sentences.</p>
-<p>Wrong: “The algorithm runs in linear time, this matters for large inputs.” Wrong: “The algorithm runs in linear time; this matters for large inputs.” Right: “The algorithm runs in linear time. This matters for large inputs.”</p></li>
-<li><p>No contrastive framing. Do not set up a contrast to sound clever.</p>
-<p>Banned shapes: “It is not X, it is Y.” “X is not just Y, it is Z.” “Rather than X, we Y.” “The point is not X but Y.” Instead, say the thing you mean directly.</p></li>
-<li><p>No rhetorical questions. Ask a question only when you answer it with real content in the next sentence.</p></li>
-<li><p>No AI slop. Remove filler and stock phrases. Banned words and phrases include: delve, dive into, unleash, unlock, leverage (as a verb), seamless, robust (as filler), realm, landscape, tapestry, testament, navigate (figurative), in today’s world, it is worth noting, it is important to note, needless to say, at the end of the day, game changer, the world of, journey, embark, foster, harness (figurative), elevate, supercharge, cutting edge, paradigm shift.</p></li>
-<li><p>No hype and no hedging clichés. Do not write “very”, “really”, “simply”, “just”, “of course”, “obviously”, “clearly” as padding. Say the precise claim.</p></li>
-<li><p>No lists where prose works. Use a list only for genuinely parallel items, steps, or cases.</p></li>
-</ol>
-</section>
-<section id="how-to-structure-a-post" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-structure-a-post">How to structure a post</h2>
-<ol type="1">
-<li>Open with the problem and why it is hard. One or two sentences. State it concretely.</li>
-<li>Set up notation and definitions before you use them.</li>
-<li>Develop the idea in order. Each paragraph should add one thing.</li>
-<li>Show a small example or special case before the general result.</li>
-<li>State the main result plainly. Give the bound, the theorem, or the claim.</li>
-<li>Give the argument or the intuition for why it holds.</li>
-<li>Note limits and open questions honestly.</li>
-<li>Link the code and cite the papers.</li>
-</ol>
-</section>
-<section id="math-code-and-citations-on-this-blog" class="level2">
-<h2 class="anchored" data-anchor-id="math-code-and-citations-on-this-blog">Math, code, and citations on this blog</h2>
-<ul>
-<li>Math uses <code>$...$</code> inline and <code>$$...$$</code> for display. Number important equations and reference them.</li>
-<li>Code goes in fenced blocks with a language tag. Keep snippets short and real. Link the full source on GitHub instead of pasting long files.</li>
-<li>Cite papers with <code>[@bibkey]</code> and add the BibTeX to <code>references.bib</code>. Pull the entry from the arXiv page under “Export BibTeX citation”.</li>
-</ul>
-</section>
-<section id="attribution" class="level2">
-<h2 class="anchored" data-anchor-id="attribution">Attribution</h2>
-<p>Never add Claude, AI tools, or any assistant as an author, co-author, or contributor. Commits and posts carry only human authorship. Do not add “Co-Authored-By” lines or “Generated with” notes.</p>
-</section>
-<section id="self-check-before-publishing" class="level2">
-<h2 class="anchored" data-anchor-id="self-check-before-publishing">Self check before publishing</h2>
-<p>Read the draft once and confirm each item.</p>
-<ul class="task-list">
-<li><label><input type="checkbox">No “—” anywhere in the text.</label></li>
-<li><label><input type="checkbox">No comma or semicolon joining two independent statements.</label></li>
-<li><label><input type="checkbox">No “not X but Y” or similar contrastive shapes.</label></li>
-<li><label><input type="checkbox">No banned slop words.</label></li>
-<li><label><input type="checkbox">Every claim is precise. Every term is defined before use.</label></li>
-<li><label><input type="checkbox">Every code block runs or links to source. Every cited paper is in the bib.</label></li>
-<li><label><input type="checkbox">A knowledgeable reader learns the result and why it holds.</label></li>
-</ul>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Madhava Gaikwad </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 11, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p>Aligning a model to human preferences has produced a long list of training objectives. Each new one tends to arrive as a distinct improvement over the last. The list keeps growing, and it is hard to tell which of these objectives are genuinely new and which are the same idea written in different notation. This paper gives a tool to settle the question.</p>
+<section id="canonicalization" class="level2">
+<h2 class="anchored" data-anchor-id="canonicalization">Canonicalization</h2>
+<p>The tool is called Opal, and it does canonicalization. A canonical form is a standard way of writing something so that two things that are really equal end up looking identical. Given two preference objectives, Opal returns one of two answers. Either it produces a canonical form that shows the two are algebraically the same, or it produces a concrete witness that they differ. A witness here is a specific case where the two objectives disagree, so the difference is demonstrated rather than asserted.</p>
 </section>
+<section id="what-it-finds" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-finds">What it finds</h2>
+<p>Run Opal across the popular methods and a clear picture emerges. Many widely used objectives optimize the same underlying thing. Their apparent differences are reparameterizations, meaning the same objective dressed in different variables. Some methods, by contrast, are provably distinct, and Opal isolates a small set of structural mechanisms that produce real differences rather than cosmetic ones.</p>
+<p>One finding is worth calling out because it is easy to miss. Batch normalization can cause the same response pair to receive different gradients depending on which other examples share its batch. The training signal for a pair stops being a property of the pair alone. It becomes a property of the batch it landed in. That is a genuine difference in objective, and it comes from a detail most people treat as bookkeeping.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>A field that keeps proposing objectives needs a way to tell novelty from notation. Opal turns that into a decidable check. It tells you when a new method is a real departure and when it is an old method in new clothes. That saves effort, and it points attention at the handful of structural choices that actually change what the model learns.</p>
+</section>
+<section id="read-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
+<p><a href="https://arxiv.org/abs/2509.11298">When Are Two RLHF Objectives the Same? (arXiv:2509.11298)</a>.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -836,5 +825,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
