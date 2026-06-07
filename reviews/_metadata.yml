@@ -1,0 +1,4 @@
+# Defaults for every review in reviews/
+freeze: auto
+toc: true
+code-copy: true

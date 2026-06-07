@@ -3,11 +3,11 @@ title: "When are two RLHF objectives the same? A canonical form for preference l
 description: "The preference optimization literature is full of objectives presented as distinct improvements. Opal canonicalizes them and shows many are the same objective in disguise, while a few are provably different."
 author: "Madhava Gaikwad"
 date: "2025-09-11"
-image: cover.svg
-image-alt: "Two mirrored forms meeting at a central axis"
+image: cover.jpg
+image-alt: "Caravaggio's Narcissus gazing at his identical reflection in the water"
 categories: [ai-alignment, rlhf, preference-optimization]
 ---
-![](cover.svg)
+![Narcissus, Caravaggio (c. 1597-1599). Public domain, via Wikimedia Commons.](cover.jpg)
 
 Aligning a model to human preferences has produced a long list of training
 objectives. Each new one tends to arrive as a distinct improvement over the last.

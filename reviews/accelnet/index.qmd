@@ -1,0 +1,109 @@
+---
+title: "Reading AccelNet: SmartNICs in the public cloud"
+description: "A review of Azure Accelerated Networking (Firestone et al., NSDI '18). A landmark paper with production evidence at real scale, and a few places where the evaluation could close the loop."
+author: "Madhava Gaikwad"
+date: "2026-06-07"
+categories: [paper-review, networking, systems]
+image: cover.jpg
+image-alt: "Bellotto's view of the Grand Canal in Venice"
+---
+
+![Veduta del Canal Grande dalla Punta della Dogana, Bernardo Bellotto (18th century). Public domain, via Wikimedia Commons.](cover.jpg)
+
+A review of an external paper. The work is not mine. This post is a reader's
+notes, in the spirit of an admiring colleague.
+
+**Paper:** Azure Accelerated Networking: SmartNICs in the Public Cloud. Firestone
+et al., Microsoft. NSDI '18.
+
+**Read the original:** [USENIX page](https://www.usenix.org/conference/nsdi18/presentation/firestone).
+It appears in the Proceedings of the 15th USENIX Symposium on Networked Systems
+Design and Implementation, pages 51 to 66, Renton, WA, April 2018.
+
+## What the paper does
+
+Azure runs a lot of network policy in the hypervisor. Think private virtual
+networks, ACLs, load balancing, NAT, metering, and QoS. Running all of this on
+host CPUs costs cores. Those cores could be sold to customers instead.
+
+AccelNet moves this work onto an FPGA SmartNIC. The NIC sits between the host NIC
+and the top-of-rack switch. The authors call this a bump-in-the-wire design.
+
+The clever part is the Generic Flow Table, or GFT. The first packet of a flow goes
+to software. The VFP stack reads the policy, compiles it into one exact-match rule,
+and installs that rule on the FPGA. Every packet after that is handled by hardware.
+The host CPU does almost nothing for the rest of the flow.
+
+The numbers are strong. VM to VM latency drops from about 50 microseconds to about
+17 microseconds. A single TCP connection reaches about 32 Gbps. Host CPU use for
+the datapath falls under 1 percent. This has been running on more than 1 million
+hosts since 2015.
+
+## What works well
+
+The production evidence is the best part. These are real numbers from a real fleet
+over several years. Most papers cannot offer this.
+
+The first-packet-in-software idea is simple and it ages well. You keep the full
+flexibility of software for policy. You keep the speed of hardware for the bulk of
+the traffic. For example, a typical TCP flow has at least 7 to 10 packets including
+the handshake. So processing only the first packet in software still offloads the
+large majority.
+
+The four-way hardware comparison is honest. The team weighs ASICs, multicore SoCs,
+FPGAs, and plain host CPUs. They say plainly when a choice rests on judgment rather
+than measurement.
+
+The operational story is unusually complete. They cover FPGA reconfiguration
+without losing flows. They cover live migration. They cover transparent VF bonding
+through NetVSC so a revoked VF does not break the VM. They even cover a failsafe
+path for DPDK and RDMA apps.
+
+## A few friendly suggestions
+
+The FPGA versus ASIC versus SoC case could use real measurements. Right now it
+leans on judgment. It also leans on the fact that Catapult FPGAs were already
+deployed. A head-to-head test on the same policy workload would settle it. As
+written, a reader cannot tell if FPGAs won on merit or on circumstance.
+
+The cost story is only half told. The price of a CPU core is laid out carefully,
+around 0.10 to 0.11 dollars per hour. The FPGA side is missing. We do not see FPGA
+unit cost. We do not see the aggregate power of 17 to 19 watts across more than 1
+million hosts weighed against the cores it saves. A rough two-sided model would
+make the don't-burn-cores thesis much stronger.
+
+The software path is the part I would most like to see stressed. The first packet
+of every flow goes to software. So the real limit is the new-flow rate, not the
+packet rate. The paper measures long-lived elephant flows. It does not measure the
+corner cases.
+
+Here are concrete cases I would want tested. How many new connections per second
+can the VFP exception path handle before it saturates. What happens under a SYN
+flood, where an attacker opens many short connections on purpose. What happens when
+the flow count blows past the cache. The L1 cache holds only 2048 flows. The L2
+cache lives in DRAM and holds about 1 million flows. The eviction policy and the
+miss cost are never described.
+
+The AWS and GCP comparison is a single snapshot from November 2017. Competitors
+keep improving. So a point-in-time fastest-in-the-cloud claim is fragile. A note on
+the number of runs, the tuning, and the variance would help. A CDF would help more
+than P50, P99, and P99.9 bars alone.
+
+The security framing is upbeat, and one tradeoff is left out. The Spectre and
+Meltdown resilience point is fair, because the datapath skips the host CPU. But
+SR-IOV hands a VF straight to an untrusted guest. That opens new surface, like
+guest-to-hardware DMA paths and side channels on a shared FPGA. One honest
+paragraph would round out the operational story.
+
+The reliability claims would be better with numbers. The paper says failure rates
+stay low and that DRAM fails most often. Both are believable. The team has the
+fleet telemetry to give an annual failure rate, so it would be nice to see it.
+
+## Bottom line
+
+This is a landmark paper and it earned its influence. Its strength is production
+evidence at real scale. Its soft spots are evaluation. The FPGA-versus-alternatives
+case is argued, not measured. The cost model is one-sided. The first-packet path is
+never stressed under high churn or attack. None of this takes away from a fine
+piece of engineering. These are the notes of an admiring colleague who would love
+to see the next version close the loop on the corner cases.

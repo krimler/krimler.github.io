@@ -1,0 +1,14 @@
+---
+title: "Reviews"
+listing:
+  contents: "*/index.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+page-layout: full
+---
+
+Reader's notes on papers worth reading, written in the spirit of an admiring
+colleague. These review external work. Each post links to the original and does not
+host it.
