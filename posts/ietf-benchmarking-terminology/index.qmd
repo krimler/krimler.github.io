@@ -1,0 +1,66 @@
+---
+title: "A shared vocabulary for LLM serving (IETF terminology draft)"
+description: "The first of four IETF drafts on benchmarking LLM serving. It fixes the words: precise definitions for the metrics that everyone uses loosely, with no methodology and no thresholds."
+author: "Madhava Gaikwad"
+date: "2026-01-20"
+image: cover.jpg
+image-alt: "Antonello da Messina's Saint Jerome in His Study"
+categories: [llm-systems, benchmarking, ietf]
+---
+
+*Part of a series on the IETF drafts for benchmarking LLM serving. Start with the
+[overview](../ietf-llm-benchmarking/).*
+
+When two teams report a throughput number for serving a language model, the
+numbers often do not mean the same thing. One counted prompt tokens, the other did
+not. One measured at the model engine, the other after a gateway. The words match
+and the measurements do not. The first IETF draft in this series addresses that
+directly. It defines a shared vocabulary for LLM serving performance and nothing
+more. The draft is an individual submission to the IETF Benchmarking Methodology
+Working Group and carries no formal IETF endorsement.
+
+## What it defines
+
+The draft gives precise definitions for a large set of metrics, on the order of
+seventy, grouped into about a dozen categories. The categories cover the parts of
+serving that people measure and disagree about.
+
+- **Request and response timing.** Time to first token, the delay before the first
+  output appears. Inter-token latency, the gap between successive output tokens.
+  Normalized latency, which adjusts for output length.
+- **Phase-specific timing.** Prefill latency, the cost of processing the prompt,
+  and decode latency, the cost of generating tokens. These two phases behave
+  differently, so the draft keeps them separate.
+- **Throughput.** Token rates and request rates, defined so it is clear what is
+  being counted.
+- **Latency distribution.** Percentiles and jitter, since an average hides the tail
+  that users actually feel.
+- **Multi-tenancy and scheduling.** Fairness across tenants and head-of-line
+  blocking, where one large request stalls the queue behind it.
+- **Optimizations.** Prefix caching, which reuses work across requests that share a
+  prompt, and speculative decoding, which guesses tokens ahead and verifies them.
+- **Compound systems.** Retrieval-augmented generation and agentic workflows, where
+  a request triggers several model and tool calls.
+- **Quality enforcement.** Policy violations and false refusals, so safety behavior
+  is measurable rather than anecdotal.
+
+## What it leaves out, on purpose
+
+The draft defines terms only. It prescribes no method for measuring them and sets
+no pass-or-fail thresholds. That restraint is the point. A vocabulary that everyone
+agrees on has to be separable from any one way of testing. The method comes in the
+next draft, and the thresholds are left to whoever runs a benchmark.
+
+## Why it matters
+
+Comparable benchmarks start with agreed words. Once time to first token and
+inter-token latency mean one thing across papers and products, the rest of the
+benchmarking effort has a foundation to stand on.
+
+## Read the draft
+
+[Benchmarking Terminology for Large Language Model Serving](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/).
+
+---
+
+*Cover image: Saint Jerome in His Study, Antonello da Messina (c. 1475). Public domain, via Wikimedia Commons.*

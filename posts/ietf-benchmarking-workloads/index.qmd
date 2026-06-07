@@ -1,0 +1,68 @@
+---
+title: "Twenty-five representative tasks: the IETF workload profiles draft"
+description: "The fourth of four IETF drafts on benchmarking LLM serving. It standardizes the workloads themselves, so systems are compared on the same representative tasks, each described along five dimensions."
+author: "Madhava Gaikwad"
+date: "2026-01-20"
+image: cover.jpg
+image-alt: "Ernst Haeckel's plate of sea anemones from Kunstformen der Natur"
+categories: [llm-systems, benchmarking, ietf]
+---
+
+*Part of a series on the IETF drafts for benchmarking LLM serving. Start with the
+[overview](../ietf-llm-benchmarking/).*
+
+A serving system can look fast on one kind of task and slow on another. Embedding a
+short document and running a long agentic plan stress completely different parts of
+the stack. To compare systems fairly, the workloads themselves have to be
+standardized. The fourth IETF draft does this. It is co-authored by Mohadeb Mondal
+and Madhava Gaikwad, an individual submission to the IETF Benchmarking Methodology
+Working Group with no formal IETF endorsement.
+
+## Five dimensions
+
+Every workload is described along five dimensions. Together they capture what makes
+a task cheap or expensive to serve.
+
+- **Input to output ratio.** Whether the task is mostly prompt, mostly generation,
+  or balanced.
+- **Output constraints.** Whether the output is non-token, minimal, structured,
+  semi-structured, or free-form.
+- **Latency sensitivity.** Whether the task is interactive, near-real-time, or
+  throughput-oriented.
+- **Concurrency pattern.** Whether requests are single-stream, bursty, sustained
+  and high, or chained in sequence.
+- **Prefix sharing.** How much of the prompt prefix is shared across requests, from
+  none, through a shared system prompt, up to a shared document or schema.
+
+## Twenty-five profiles in six groups
+
+The draft defines 25 standard workloads, sorted into six groups by what they
+demand of the system.
+
+- **Group A, non-generative.** Embeddings, cross-encoder reranking, and logprob
+  scoring.
+- **Group B, minimal output.** Classification, short question answering, and
+  function calling.
+- **Group C, interactive streaming.** Chat, code completion, and roleplay.
+- **Group D, prefill-heavy.** Summarization, document question answering, and
+  extraction.
+- **Group E, decode-heavy.** Content generation, reasoning, and translation.
+- **Group F, multi-step.** Agentic workflows and planning.
+
+Each profile maps to the metrics and test procedures from the companion methodology
+and profiles drafts, so a workload, the way to measure it, and the boundary it is
+measured at all line up.
+
+## Why it matters
+
+Without standard workloads, every benchmark picks its own favourable task and the
+results stop being comparable. A fixed, representative set means a serving system is
+judged on the same range of work that production actually throws at it.
+
+## Read the draft
+
+[Benchmarking Workload Profiles for Large Language Model Serving](https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/).
+
+---
+
+*Cover image: Actiniae, from Kunstformen der Natur, Ernst Haeckel (1904). Public domain, via Wikimedia Commons.*

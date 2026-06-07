@@ -34,5 +34,5 @@ Turning research into demos. Privacy-first LLMs. Robust infrastructure for ML.
 ## Contact
 
 - Email: [gaikwad.madhav@gmail.com](mailto:gaikwad.madhav@gmail.com)
-- LinkedIn: [li69nux](https://www.linkedin.com/in/li69nux/)
+- LinkedIn: [safeai](https://www.linkedin.com/in/safeai/)
 - GitHub: [krimler](https://github.com/krimler)

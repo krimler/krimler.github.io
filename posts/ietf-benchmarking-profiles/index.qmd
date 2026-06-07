@@ -1,0 +1,59 @@
+---
+title: "Declaring the measurement boundary: the IETF profiles draft"
+description: "The third of four IETF drafts on benchmarking LLM serving. A profile binds the terms and the method to a concrete role in the system, so a number says exactly what it includes."
+author: "Madhava Gaikwad"
+date: "2026-01-20"
+image: cover.svg
+image-alt: "Nested measurement boundaries from model engine to compound system"
+categories: [llm-systems, benchmarking, ietf]
+---
+
+*Part of a series on the IETF drafts for benchmarking LLM serving. Start with the
+[overview](../ietf-llm-benchmarking/).*
+
+Time to first token is a single phrase that can mean several different numbers. It
+depends on where you start the clock. Do you include the gateway. Do you include
+the firewall inspection. Do you include the network hop. Each choice gives a
+different value, and a benchmark that does not say which choice it made cannot be
+compared with another. The third IETF draft fixes this with profiles. It is an
+individual submission to the IETF Benchmarking Methodology Working Group with no
+formal IETF endorsement.
+
+## What a profile is
+
+A profile binds the vocabulary and the procedures to a concrete role in the system
+and a concrete workload pattern. Its job is to declare the boundary. A profile says
+exactly where a measurement starts and stops, so two results taken under the same
+profile are measuring the same thing.
+
+## The profiles it defines
+
+The draft defines infrastructure profiles for the distinct roles in a serving
+stack.
+
+- **Model engine.** Raw inference: prefill, decode, and management of the key-value
+  cache.
+- **AI gateway.** The overhead of routing, authentication, and caching.
+- **AI firewall.** The latency and accuracy of security inspection, including
+  detection rates and false positive rates.
+- **Compound system.** End-to-end completion for orchestrated multi-step workflows
+  such as retrieval-augmented generation and agents.
+
+It also defines workload profiles for how the system is driven, including a chatbot
+pattern, which is multi-turn and human-paced, and a compound workflow pattern,
+which is multi-step and machine-paced.
+
+The draft specifies profiles only. It introduces no new metrics and no thresholds.
+It is the layer that makes the terminology and the methodology comparable across
+real deployments, where a request passes through several components before it
+reaches the model.
+
+## Why it matters
+
+Production systems are built from a gateway, a firewall, an engine, and more. Most
+published benchmarks never say which of these the numbers include. Profiles remove
+that ambiguity by making the boundary an explicit, declared part of every result.
+
+## Read the draft
+
+[Performance Benchmarking Profiles for Large Language Model Serving Systems](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/).

@@ -18,6 +18,13 @@ individual submissions under review and carry no formal IETF endorsement yet. Ta
 together they cover four layers of the problem: the words, the method, the
 measurement boundaries, and the workloads.
 
+This post is the overview. Each draft also has its own post.
+
+- [Terminology: a shared vocabulary](../ietf-benchmarking-terminology/)
+- [Methodology: how to run the tests](../ietf-benchmarking-methodology/)
+- [Profiles: declaring the measurement boundary](../ietf-benchmarking-profiles/)
+- [Workloads: twenty-five representative tasks](../ietf-benchmarking-workloads/)
+
 ## The words
 
 The first draft is a terminology document. It defines a shared vocabulary for LLM
