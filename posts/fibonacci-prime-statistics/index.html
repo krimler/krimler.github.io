@@ -8,7 +8,7 @@
 
 <meta name="author" content="Madhava Gaikwad">
 <meta name="dcterms.date" content="2026-06-07">
-<meta name="description" content="Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a coverage-validated prediction interval, a null-model battery that finds no structure, and an exact divisibility layer.">
+<meta name="description" content="Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.">
 
 <title>Counting Fibonacci primes: what a finite computation can and cannot add – Krimler</title>
 <style>
@@ -179,10 +179,10 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Counting Fibonacci primes: what a finite computation can and cannot add – Krimler">
-<meta property="og:description" content="Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a coverage-validated prediction interval, a null-model battery that finds no structure, and an exact divisibility layer.">
+<meta property="og:description" content="Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.">
 <meta property="og:site_name" content="Krimler">
 <meta name="twitter:title" content="Counting Fibonacci primes: what a finite computation can and cannot add – Krimler">
-<meta name="twitter:description" content="Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a coverage-validated prediction interval, a null-model battery that finds no structure, and an exact divisibility layer.">
+<meta name="twitter:description" content="Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -351,7 +351,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -398,46 +398,7 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <div class="quarto-title-block"><div><h1 class="title">Counting Fibonacci primes: what a finite computation can and cannot add</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-                  <div>
-        <div class="description">
-          Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a coverage-validated prediction interval, a null-model battery that finds no structure, and an exact divisibility layer.
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">number-theory</div>
-                <div class="quarto-category">primes</div>
-                <div class="quarto-category">statistics</div>
-                <div class="quarto-category">reproducibility</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Madhava Gaikwad </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">June 7, 2026</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -445,11 +406,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-density-heuristic" id="toc-the-density-heuristic" class="nav-link active" data-scroll-target="#the-density-heuristic">The density heuristic</a></li>
-  <li><a href="#prediction-with-quantified-uncertainty" id="toc-prediction-with-quantified-uncertainty" class="nav-link" data-scroll-target="#prediction-with-quantified-uncertainty">Prediction with quantified uncertainty</a></li>
-  <li><a href="#residue-statistics" id="toc-residue-statistics" class="nav-link" data-scroll-target="#residue-statistics">Residue statistics</a></li>
-  <li><a href="#the-divisibility-layer" id="toc-the-divisibility-layer" class="nav-link" data-scroll-target="#the-divisibility-layer">The divisibility layer</a></li>
-  <li><a href="#what-is-known-versus-what-is-added" id="toc-what-is-known-versus-what-is-added" class="nav-link" data-scroll-target="#what-is-known-versus-what-is-added">What is known versus what is added</a></li>
+  <li><a href="#how-many-should-there-be" id="toc-how-many-should-there-be" class="nav-link active" data-scroll-target="#how-many-should-there-be">How many should there be</a></li>
+  <li><a href="#predicting-the-next-one" id="toc-predicting-the-next-one" class="nav-link" data-scroll-target="#predicting-the-next-one">Predicting the next one</a></li>
+  <li><a href="#looking-for-hidden-patterns" id="toc-looking-for-hidden-patterns" class="nav-link" data-scroll-target="#looking-for-hidden-patterns">Looking for hidden patterns</a></li>
+  <li><a href="#where-structure-does-live" id="toc-where-structure-does-live" class="nav-link" data-scroll-target="#where-structure-does-live">Where structure does live</a></li>
+  <li><a href="#what-is-known-and-what-is-new" id="toc-what-is-known-and-what-is-new" class="nav-link" data-scroll-target="#what-is-known-and-what-is-new">What is known and what is new</a></li>
   <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility">Reproducibility</a></li>
   <li><a href="#read-the-paper" id="toc-read-the-paper" class="nav-link" data-scroll-target="#read-the-paper">Read the paper</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -457,52 +418,87 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Counting Fibonacci primes: what a finite computation can and cannot add</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">number-theory</div>
+    <div class="quarto-category">primes</div>
+    <div class="quarto-category">statistics</div>
+    <div class="quarto-category">reproducibility</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Madhava Gaikwad </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 7, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
-<p>A Fibonacci prime is a Fibonacci number <span class="math inline">F_n</span> that is prime. As of June 2025 there are 57 known indices <span class="math inline">n</span> for which <span class="math inline">F_n</span> is prime or probably prime. They range from <span class="math inline">F_3</span> up to <span class="math inline">F_{11964299}</span>. The largest one proven prime is <span class="math inline">F_{201107}</span>. The rest are probable primes. They pass a Miller-Rabin test and have not been certified. Whether there are infinitely many Fibonacci primes is open. No pattern is known beyond a density heuristic.</p>
-<p>This study treats the 57 indices as a dataset. It asks whether any visible structure survives scrutiny, and where such structure lives. The mathematics behind the question is already established in the literature. The contribution is a method. It adds an uncertainty-quantified prediction layer, a null-model battery that separates real structure from sampling noise, and a fully cited reproduction. All computations run from released Python scripts at <a href="https://github.com/krimler/k-bonacci">github.com/krimler/k-bonacci</a>.</p>
-<section id="the-density-heuristic" class="level2">
-<h2 class="anchored" data-anchor-id="the-density-heuristic">The density heuristic</h2>
-<p>Start with the count. A random integer of the size of <span class="math inline">F_p \sim \varphi^p/\sqrt5</span> is prime with probability about <span class="math inline">1/\log F_p \approx 1/(p\log\varphi)</span>. The Fibonacci numbers form a divisibility sequence, so <span class="math inline">F_m \mid F_n</span> exactly when <span class="math inline">m \mid n</span> for <span class="math inline">m &gt; 2</span>. A prime <span class="math inline">F_p</span> with <span class="math inline">p &gt; 4</span> therefore forces <span class="math inline">p</span> prime. Summing the prime probability over primes and applying Mertens’ theorem injects a factor <span class="math inline">e^{\gamma}</span>, where <span class="math inline">\gamma</span> is the Euler-Mascheroni constant. Grantham and Granville conjecture <span class="citation" data-cites="grantham2024fibonacci">(<a href="#ref-grantham2024fibonacci" role="doc-biblioref">Grantham and Granville 2024</a>)</span></p>
-<p><span id="eq-count"><span class="math display">
-\#\{\, n \le N : F_n \text{ prime} \,\} \;\sim\; e^{\gamma}\,\log_{\varphi} N.
-\tag{1}</span></span></p>
-<p>At <span class="math inline">N = 1.2\times10^{7}</span> the heuristic predicts about 60.3 indices. The observed count is 57.</p>
-<p>A naive maximum-likelihood estimate of the leading constant sits about 19% above <span class="math inline">e^{\gamma}</span>. The study reconciles this. Fitting the constant over the Fibonacci indices alone gives an estimate within 3% of <span class="math inline">e^{\gamma}</span>. A pooled estimate over four related division-type families gives <span class="math inline">2.11</span> with a 95% interval of <span class="math inline">[1.75, 2.48]</span>, which contains <span class="math inline">e^{\gamma}\approx 1.781</span>. The apparent excess decomposes into three parts. There is the choice of <span class="math inline">\log X</span> versus <span class="math inline">\log X + E_1</span> in the Mertens partial sum. There is small-sample noise. There are family-specific divisor factors. The data cannot separate <span class="math inline">e^{\gamma}\approx 1.781</span> from <span class="math inline">\sqrt{\pi}\approx 1.772</span> at one standard deviation. Resolving the two would need about <span class="math inline">4\times10^{4}</span> primes, reachable only by pooling more families.</p>
+</header>
+
+
+<p>A Fibonacci prime is a Fibonacci number that is also prime. The Fibonacci numbers are the familiar sequence 1, 1, 2, 3, 5, 8, 13, and so on, where each term is the sum of the two before it. Most of them are not prime. As of June 2025 we know of 57 positions in the sequence where the Fibonacci number is prime or almost certainly prime. They are spread very far apart. The largest one that has been fully proven prime sits at position 201107. The largest one we believe is prime sits at position 11964299, a number with about 2.5 million digits, checked by a fast test that is right in practice but does not constitute a proof. Whether the list goes on forever is an open question. No one knows a rule that produces these positions.</p>
+<p>This study takes a different stance. It treats the 57 positions as a small dataset and asks a plain question. Is there any hidden pattern in them, and if there is, where does it live? The mathematics needed to answer this is already in the literature. What the study adds is method. It puts an honest error bar on a prediction, it runs a battery of tests to tell a real pattern apart from a coincidence, and it ships code so anyone can rerun everything. The scripts are at <a href="https://github.com/krimler/k-bonacci">github.com/krimler/k-bonacci</a>.</p>
+<section id="how-many-should-there-be" class="level2">
+<h2 class="anchored" data-anchor-id="how-many-should-there-be">How many should there be</h2>
+<p>There is a well-known way to guess how many Fibonacci primes lie below some cutoff. The Fibonacci numbers grow at a steady multiplicative rate, so a Fibonacci number deep in the sequence has a predictable size. A number of that size is prime with a chance that shrinks as the number grows, in the usual way primes thin out. A classical divisibility fact narrows the search further. A Fibonacci number can only be prime when its position is itself prime. Combining these gives a clean prediction. The number of Fibonacci primes up to a cutoff grows in step with the logarithm of that cutoff, times a fixed constant.</p>
+<p>This is the Grantham and Granville heuristic <span class="citation" data-cites="grantham2024fibonacci">(<a href="#ref-grantham2024fibonacci" role="doc-biblioref">Grantham and Granville 2024</a>)</span>. Run it out to the current search depth and it predicts about 60 positions. We observe 57. The agreement is close.</p>
+<p>There is a wrinkle worth airing. A quick fit of the constant comes out about 19% higher than the value the theory predicts. The study tracks the gap down. Fitting the constant against the Fibonacci data alone lands within 3% of the theoretical value. Pooling several related sequences gives a range that comfortably contains it. The apparent excess turns out to be a mix of a bookkeeping choice in the formula and ordinary small-sample noise. With only 57 points, the data cannot even tell the theoretical constant apart from a nearby look-alike value. Settling that would take far more data than the search has produced.</p>
 </section>
-<section id="prediction-with-quantified-uncertainty" class="level2">
-<h2 class="anchored" data-anchor-id="prediction-with-quantified-uncertainty">Prediction with quantified uncertainty</h2>
-<p>The indices grow geometrically. Define the gaps <span class="math inline">g_k = \log n_{k+1} - \log n_k</span>. To the resolution of 57 points these gaps are independent and exponentially distributed. A Kolmogorov-Smirnov test against the exponential gives <span class="math inline">p = 0.63</span>. The lag-1 autocorrelation is <span class="math inline">-0.09</span> with <span class="math inline">p = 0.53</span>. The gaps behave like a memoryless Poisson process in <span class="math inline">\log n</span>.</p>
-<p>The reference literature performs no interval estimation. This study adds one. Treating the next index as <span class="math inline">n_{37}\cdot e^{g}</span> with <span class="math inline">g</span> exponential yields a 90% predictive window of <span class="math inline">[2.04, 5.07]\times10^{5}</span>. The true next index is 397379, which lies inside. A one-step-ahead backtest over the 46 predictable indices puts 40 of them inside their nominal 90% intervals. That is 87% coverage, which is well calibrated for a one-parameter model.</p>
+<section id="predicting-the-next-one" class="level2">
+<h2 class="anchored" data-anchor-id="predicting-the-next-one">Predicting the next one</h2>
+<p>If the positions are spread out with no memory of each other, you can still say something useful about the next one. Look at the gaps between consecutive positions on a logarithmic scale. Those gaps behave like the waiting times in a process that has no memory, the same statistics that govern how long you wait for the next random arrival. Standard tests back this up.</p>
+<p>That observation supports a prediction with an error bar, which the earlier work never attempted. From the data available up to a point, the method gives a 90% window for where the next position should fall. The position that was actually found next landed inside the window. Replaying this one step at a time across the whole list, the true position fell inside its predicted window about 87% of the time. For a method with a single tunable number, landing near the promised 90% is about as well as one can ask.</p>
 </section>
-<section id="residue-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="residue-statistics">Residue statistics</h2>
-<p>The study probes the indices for structure. It runs residue-class biases modulo 4, 5, and 10, a Lemke Oliver-Soundararajan consecutive-residue correlation, a Sophie Germain depletion, an order-of-primeness enrichment, and a Benford leading-digit test. All return null. As a global check the authors simulated 3000 index sets from the <span class="math inline">e^{\gamma}</span> density model and compared nine statistics. The observed data was an outlier in zero of the nine.</p>
-<p>The conclusion is stated plainly. No structure is detectable at <span class="math inline">N = 57</span>. Against percent-level biases measured on millions of primes, the power of 57 points is negligible. The Lemke Oliver-Soundararajan effect cannot apply here. It is a short-range effect among consecutive primes. The positions studied here are long-range, with a median gap near 5000.</p>
+<section id="looking-for-hidden-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="looking-for-hidden-patterns">Looking for hidden patterns</h2>
+<p>The study then hunts for structure in the positions. It checks whether they favour certain remainders, whether neighbours influence each other, whether some special families of primes are over- or under-represented, and whether the leading digits follow the lopsided distribution that many natural datasets show. Every test comes back empty.</p>
+<p>As a single overall check, the authors generated three thousand fake datasets from the no-pattern model and compared nine summary measurements. The real data looked unremarkable on all nine. The honest conclusion is stated plainly. At 57 points there is no pattern to find. The biases people detect in primes are measured across millions of cases. A list of 57 is far too short to see effects that faint.</p>
 </section>
-<section id="the-divisibility-layer" class="level2">
-<h2 class="anchored" data-anchor-id="the-divisibility-layer">The divisibility layer</h2>
-<p>The location of the indices carries no algebraic handle. The factor structure does. Here the established cases are theorems, and the study adds one conjectural set.</p>
-<p>For Fibonacci numbers the rank of apparition <span class="math inline">z(p)</span> is the least <span class="math inline">m</span> with <span class="math inline">p \mid F_m</span>. Lagarias proved that the primes dividing the Lucas numbers have density <span class="math inline">2/3</span> <span class="citation" data-cites="lagarias1985lucas">(<a href="#ref-lagarias1985lucas" role="doc-biblioref">Lagarias 1985</a>)</span>. The study confirms <span class="math inline">P(z(p)\text{ even}) = 2/3</span> numerically, measuring <span class="math inline">0.66684</span> over 148931 primes. The Pisano multiplier and the 2-adic valuation of <span class="math inline">z(p)</span> both follow from Cubre and Rouse’s proof via a Chebotarev argument <span class="citation" data-cites="cubre2014divisibility">(<a href="#ref-cubre2014divisibility" role="doc-biblioref">Cubre and Rouse 2014</a>)</span>.</p>
-<p>For <span class="math inline">k</span>-bonacci sequences with <span class="math inline">k \ge 3</span> the divisibility-sequence property fails. The governing object is the Galois group of the characteristic polynomial <span class="math inline">x^{k} - x^{k-1} - \cdots - 1</span>, which is the full symmetric group <span class="math inline">S_k</span> for <span class="math inline">k</span> even or prime. The prime-splitting types, and so the period of the sequence modulo <span class="math inline">p</span>, follow the cycle-type densities of <span class="math inline">S_k</span> by Chebotarev. The study confirms the <span class="math inline">S_3</span> and <span class="math inline">S_4</span> densities numerically.</p>
-<p>For the Tribonacci period <span class="math inline">h(p)</span> the study records a conjectural density. Over 5131 primes below <span class="math inline">5\times10^{4}</span> it estimates <span class="math inline">P(h(p)\text{ odd}) \approx 0.397</span>. The exact constant is open. The study corrects an earlier draft that called the Tribonacci divisor and entry-point densities computable for any order. The general case is open. Järviniemi’s positive lower density under GRH is the current state of the art <span class="citation" data-cites="jarviniemi2022density">(<a href="#ref-jarviniemi2022density" role="doc-biblioref">Järviniemi 2022</a>)</span>.</p>
+<section id="where-structure-does-live" class="level2">
+<h2 class="anchored" data-anchor-id="where-structure-does-live">Where structure does live</h2>
+<p>The positions of the primes carry no usable structure. The way primes divide these sequences is a different story, and here the picture is exact.</p>
+<p>For the Fibonacci numbers, ask which is the first position a given prime divides. A classical result of Lagarias says that for two thirds of primes that first position is even <span class="citation" data-cites="lagarias1985lucas">(<a href="#ref-lagarias1985lucas" role="doc-biblioref">Lagarias 1985</a>)</span>. The study confirms this to high precision across many primes. The finer details of this divisibility follow from a known proof built on a symmetry argument from algebra <span class="citation" data-cites="cubre2014divisibility">(<a href="#ref-cubre2014divisibility" role="doc-biblioref">Cubre and Rouse 2014</a>)</span>.</p>
+<p>The study then moves to relatives of the Fibonacci numbers built from longer recurrences, where each term sums the previous three, four, or more. These no longer have the clean divisibility property. Their behaviour is instead controlled by a symmetry group attached to the recurrence, and a classical theorem turns that symmetry into exact proportions for how the sequence repeats when reduced by a prime. The study confirms these proportions numerically for the three-term and four-term cases.</p>
+<p>For the three-term case there is one quantity the study can only estimate. It measures it at about 0.40 and is careful to flag that the exact value is not known. The study also corrects a claim in an earlier draft that said these finer densities were computable for any length of recurrence. For the general case they are open, with a partial result under a standard unproven hypothesis as the best that is currently known <span class="citation" data-cites="jarviniemi2022density">(<a href="#ref-jarviniemi2022density" role="doc-biblioref">Järviniemi 2022</a>)</span>.</p>
 </section>
-<section id="what-is-known-versus-what-is-added" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-known-versus-what-is-added">What is known versus what is added</h2>
-<p>The value of this study is the line it draws. The count law, the <span class="math inline">e^{\gamma}</span> constant, the <span class="math inline">2/3</span> Lucas density, the <span class="math inline">S_k</span> splitting densities, and the Tribonacci period structure are established theorems with citations. The additions are three. There is a coverage-validated prediction interval for the index counts. There is a reusable null-model battery for separating structure from sampling noise. There is a fully cited, script-based reproduction.</p>
+<section id="what-is-known-and-what-is-new" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-known-and-what-is-new">What is known and what is new</h2>
+<p>The point of the study is the line it draws between the two. The count estimate, the matching constant, the two-thirds divisibility result, the symmetry-driven proportions, and the repetition structure of the longer sequences are established mathematics with citations. The new contributions are smaller and clearly marked. There is a prediction window with a measured success rate. There is a reusable battery of tests for telling structure apart from noise. There is a fully cited reproduction that anyone can run.</p>
 </section>
 <section id="reproducibility" class="level2">
 <h2 class="anchored" data-anchor-id="reproducibility">Reproducibility</h2>
-<p>All results come from self-contained Python scripts using NumPy, SciPy, and Matplotlib. The index data are the OEIS b-files for the Fibonacci, Lucas, Mersenne, and Wagstaff sequences. The code is at <a href="https://github.com/krimler/k-bonacci">github.com/krimler/k-bonacci</a>.</p>
+<p>Every result comes from self-contained Python scripts using standard scientific libraries. The input data are the published index lists for the Fibonacci, Lucas, and related sequences. The code is at <a href="https://github.com/krimler/k-bonacci">github.com/krimler/k-bonacci</a>.</p>
 </section>
 <section id="read-the-paper" class="level2">
 <h2 class="anchored" data-anchor-id="read-the-paper">Read the paper</h2>
-<p>The full paper is here: <a href="../../papers/fibonacci-primes.html">Fibonacci and k-bonacci prime statistics (PDF and details)</a>.</p>
+<p>The full paper, with the precise statements, the constants, and the proofs it draws on, is here: <a href="../../papers/fibonacci-primes.html">Fibonacci and k-bonacci prime statistics (PDF and details)</a>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
@@ -993,136 +989,139 @@ Lagarias, Jeffrey C. 1985. <span>“The Set of Primes Dividing the Lucas Numbers
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Counting Fibonacci primes: what a finite computation can and cannot add"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a coverage-validated prediction interval, a null-model battery that finds no structure, and an exact divisibility layer."</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Treating the 57 known Fibonacci prime indices as a dataset. A density heuristic, a prediction window for the next one, a battery of tests that finds no hidden pattern, and an exact picture of how primes divide these sequences."</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Madhava Gaikwad"</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-06-07"</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [number-theory, primes, statistics, reproducibility]</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>A Fibonacci prime is a Fibonacci number $F_n$ that is prime. As of June 2025 there</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>are 57 known indices $n$ for which $F_n$ is prime or probably prime. They range</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>from $F_3$ up to $F_{11964299}$. The largest one proven prime is $F_{201107}$. The</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>rest are probable primes. They pass a Miller-Rabin test and have not been</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>certified. Whether there are infinitely many Fibonacci primes is open. No pattern</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>is known beyond a density heuristic.</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>This study treats the 57 indices as a dataset. It asks whether any visible</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>structure survives scrutiny, and where such structure lives. The mathematics</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>behind the question is already established in the literature. The contribution is</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>a method. It adds an uncertainty-quantified prediction layer, a null-model battery</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>that separates real structure from sampling noise, and a fully cited</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>reproduction. All computations run from released Python scripts at</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">github.com/krimler/k-bonacci</span><span class="co">](https://github.com/krimler/k-bonacci)</span>.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## The density heuristic</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>Start with the count. A random integer of the size of $F_p \sim \varphi^p/\sqrt5$</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>is prime with probability about $1/\log F_p \approx 1/(p\log\varphi)$. The</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Fibonacci numbers form a divisibility sequence, so $F_m \mid F_n$ exactly when</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>$m \mid n$ for $m &gt; 2$. A prime $F_p$ with $p &gt; 4$ therefore forces $p$ prime.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>Summing the prime probability over primes and applying Mertens' theorem injects a</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>factor $e^{\gamma}$, where $\gamma$ is the Euler-Mascheroni constant. Grantham and</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Granville conjecture <span class="co">[</span><span class="ot">@grantham2024fibonacci</span><span class="co">]</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="sc">\#\{</span>\, n \le N : F_n \text{ prime} \,<span class="sc">\}</span> \;\sim\; e^{\gamma}\,\log_{\varphi} N.</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>$$ {#eq-count}</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>At $N = 1.2\times10^{7}$ the heuristic predicts about 60.3 indices. The observed</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>count is 57.</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>A naive maximum-likelihood estimate of the leading constant sits about 19% above</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>$e^{\gamma}$. The study reconciles this. Fitting the constant over the Fibonacci</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>indices alone gives an estimate within 3% of $e^{\gamma}$. A pooled estimate over</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>four related division-type families gives $2.11$ with a 95% interval of</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>$<span class="co">[</span><span class="ot">1.75, 2.48</span><span class="co">]</span>$, which contains $e^{\gamma}\approx 1.781$. The apparent excess</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>decomposes into three parts. There is the choice of $\log X$ versus $\log X + E_1$</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>in the Mertens partial sum. There is small-sample noise. There are family-specific</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>divisor factors. The data cannot separate $e^{\gamma}\approx 1.781$ from</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>$\sqrt{\pi}\approx 1.772$ at one standard deviation. Resolving the two would need</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>about $4\times10^{4}$ primes, reachable only by pooling more families.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>A Fibonacci prime is a Fibonacci number that is also prime. The Fibonacci numbers</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>are the familiar sequence 1, 1, 2, 3, 5, 8, 13, and so on, where each term is the</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>sum of the two before it. Most of them are not prime. As of June 2025 we know of</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>57 positions in the sequence where the Fibonacci number is prime or almost</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>certainly prime. They are spread very far apart. The largest one that has been</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>fully proven prime sits at position 201107. The largest one we believe is prime</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>sits at position 11964299, a number with about 2.5 million digits, checked by a</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>fast test that is right in practice but does not constitute a proof. Whether the</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>list goes on forever is an open question. No one knows a rule that produces these</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>positions.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>This study takes a different stance. It treats the 57 positions as a small</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>dataset and asks a plain question. Is there any hidden pattern in them, and if</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>there is, where does it live? The mathematics needed to answer this is already in</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>the literature. What the study adds is method. It puts an honest error bar on a</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>prediction, it runs a battery of tests to tell a real pattern apart from a</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>coincidence, and it ships code so anyone can rerun everything. The scripts are at</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">github.com/krimler/k-bonacci</span><span class="co">](https://github.com/krimler/k-bonacci)</span>.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## How many should there be</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>There is a well-known way to guess how many Fibonacci primes lie below some</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>cutoff. The Fibonacci numbers grow at a steady multiplicative rate, so a Fibonacci</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>number deep in the sequence has a predictable size. A number of that size is prime</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>with a chance that shrinks as the number grows, in the usual way primes thin out.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>A classical divisibility fact narrows the search further. A Fibonacci number can</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>only be prime when its position is itself prime. Combining these gives a clean</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>prediction. The number of Fibonacci primes up to a cutoff grows in step with the</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>logarithm of that cutoff, times a fixed constant.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>This is the Grantham and Granville heuristic <span class="co">[</span><span class="ot">@grantham2024fibonacci</span><span class="co">]</span>. Run it out</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>to the current search depth and it predicts about 60 positions. We observe 57.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>The agreement is close.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>There is a wrinkle worth airing. A quick fit of the constant comes out about 19%</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>higher than the value the theory predicts. The study tracks the gap down. Fitting</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>the constant against the Fibonacci data alone lands within 3% of the theoretical</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>value. Pooling several related sequences gives a range that comfortably contains</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>it. The apparent excess turns out to be a mix of a bookkeeping choice in the</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>formula and ordinary small-sample noise. With only 57 points, the data cannot even</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>tell the theoretical constant apart from a nearby look-alike value. Settling that</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>would take far more data than the search has produced.</span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prediction with quantified uncertainty</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Predicting the next one</span></span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>The indices grow geometrically. Define the gaps $g_k = \log n_{k+1} - \log n_k$.</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>To the resolution of 57 points these gaps are independent and exponentially</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>distributed. A Kolmogorov-Smirnov test against the exponential gives $p = 0.63$.</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>The lag-1 autocorrelation is $-0.09$ with $p = 0.53$. The gaps behave like a</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>memoryless Poisson process in $\log n$.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>If the positions are spread out with no memory of each other, you can still say</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>something useful about the next one. Look at the gaps between consecutive positions</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>on a logarithmic scale. Those gaps behave like the waiting times in a process that</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>has no memory, the same statistics that govern how long you wait for the next</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>random arrival. Standard tests back this up.</span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>The reference literature performs no interval estimation. This study adds one.</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>Treating the next index as $n_{37}\cdot e^{g}$ with $g$ exponential yields a 90%</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>predictive window of $<span class="co">[</span><span class="ot">2.04, 5.07</span><span class="co">]</span>\times10^{5}$. The true next index is 397379,</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>which lies inside. A one-step-ahead backtest over the 46 predictable indices puts</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>40 of them inside their nominal 90% intervals. That is 87% coverage, which is well</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>calibrated for a one-parameter model.</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">## Residue statistics</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>The study probes the indices for structure. It runs residue-class biases modulo 4,</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>5, and 10, a Lemke Oliver-Soundararajan consecutive-residue correlation, a Sophie</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>Germain depletion, an order-of-primeness enrichment, and a Benford leading-digit</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>test. All return null. As a global check the authors simulated 3000 index sets</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>from the $e^{\gamma}$ density model and compared nine statistics. The observed data</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>was an outlier in zero of the nine.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>That observation supports a prediction with an error bar, which the earlier work</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>never attempted. From the data available up to a point, the method gives a 90%</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>window for where the next position should fall. The position that was actually</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>found next landed inside the window. Replaying this one step at a time across the</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>whole list, the true position fell inside its predicted window about 87% of the</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>time. For a method with a single tunable number, landing near the promised 90% is</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>about as well as one can ask.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">## Looking for hidden patterns</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>The study then hunts for structure in the positions. It checks whether they favour</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>certain remainders, whether neighbours influence each other, whether some special</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>families of primes are over- or under-represented, and whether the leading digits</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>follow the lopsided distribution that many natural datasets show. Every test comes</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>back empty.</span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>The conclusion is stated plainly. No structure is detectable at $N = 57$. Against</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>percent-level biases measured on millions of primes, the power of 57 points is</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>negligible. The Lemke Oliver-Soundararajan effect cannot apply here. It is a</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>short-range effect among consecutive primes. The positions studied here are</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>long-range, with a median gap near 5000.</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="fu">## The divisibility layer</span></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>The location of the indices carries no algebraic handle. The factor structure</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>does. Here the established cases are theorems, and the study adds one conjectural</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>set.</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>As a single overall check, the authors generated three thousand fake datasets from</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>the no-pattern model and compared nine summary measurements. The real data looked</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>unremarkable on all nine. The honest conclusion is stated plainly. At 57 points</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>there is no pattern to find. The biases people detect in primes are measured</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>across millions of cases. A list of 57 is far too short to see effects that</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>faint.</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Where structure does live</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>The positions of the primes carry no usable structure. The way primes divide these</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>sequences is a different story, and here the picture is exact.</span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>For Fibonacci numbers the rank of apparition $z(p)$ is the least $m$ with</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>$p \mid F_m$. Lagarias proved that the primes dividing the Lucas numbers have</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>density $2/3$ <span class="co">[</span><span class="ot">@lagarias1985lucas</span><span class="co">]</span>. The study confirms $P(z(p)\text{ even}) = 2/3$</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>numerically, measuring $0.66684$ over 148931 primes. The Pisano multiplier and the</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>2-adic valuation of $z(p)$ both follow from Cubre and Rouse's proof via a</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>Chebotarev argument <span class="co">[</span><span class="ot">@cubre2014divisibility</span><span class="co">]</span>.</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>For $k$-bonacci sequences with $k \ge 3$ the divisibility-sequence property fails.</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>The governing object is the Galois group of the characteristic polynomial</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>$x^{k} - x^{k-1} - \cdots - 1$, which is the full symmetric group $S_k$ for $k$</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>even or prime. The prime-splitting types, and so the period of the sequence modulo</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>$p$, follow the cycle-type densities of $S_k$ by Chebotarev. The study confirms the</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>$S_3$ and $S_4$ densities numerically.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>For the Fibonacci numbers, ask which is the first position a given prime divides.</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>A classical result of Lagarias says that for two thirds of primes that first</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>position is even <span class="co">[</span><span class="ot">@lagarias1985lucas</span><span class="co">]</span>. The study confirms this to high precision</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>across many primes. The finer details of this divisibility follow from a known</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>proof built on a symmetry argument from algebra <span class="co">[</span><span class="ot">@cubre2014divisibility</span><span class="co">]</span>.</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>The study then moves to relatives of the Fibonacci numbers built from longer</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>recurrences, where each term sums the previous three, four, or more. These no</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>longer have the clean divisibility property. Their behaviour is instead controlled</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>by a symmetry group attached to the recurrence, and a classical theorem turns that</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>symmetry into exact proportions for how the sequence repeats when reduced by a</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>prime. The study confirms these proportions numerically for the three-term and</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>four-term cases.</span>
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>For the Tribonacci period $h(p)$ the study records a conjectural density. Over 5131</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>primes below $5\times10^{4}$ it estimates $P(h(p)\text{ odd}) \approx 0.397$. The</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>exact constant is open. The study corrects an earlier draft that called the</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>Tribonacci divisor and entry-point densities computable for any order. The general</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>case is open. Järviniemi's positive lower density under GRH is the current state of</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>the art <span class="co">[</span><span class="ot">@jarviniemi2022density</span><span class="co">]</span>.</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>For the three-term case there is one quantity the study can only estimate. It</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>measures it at about 0.40 and is careful to flag that the exact value is not known.</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>The study also corrects a claim in an earlier draft that said these finer</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>densities were computable for any length of recurrence. For the general case they</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>are open, with a partial result under a standard unproven hypothesis as the best</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>that is currently known <span class="co">[</span><span class="ot">@jarviniemi2022density</span><span class="co">]</span>.</span>
 <span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is known versus what is added</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is known and what is new</span></span>
 <span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>The value of this study is the line it draws. The count law, the $e^{\gamma}$</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>constant, the $2/3$ Lucas density, the $S_k$ splitting densities, and the</span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>Tribonacci period structure are established theorems with citations. The additions</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>are three. There is a coverage-validated prediction interval for the index counts.</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>There is a reusable null-model battery for separating structure from sampling</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>noise. There is a fully cited, script-based reproduction.</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reproducibility</span></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>All results come from self-contained Python scripts using NumPy, SciPy, and</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>Matplotlib. The index data are the OEIS b-files for the Fibonacci, Lucas, Mersenne,</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>and Wagstaff sequences. The code is at</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">github.com/krimler/k-bonacci</span><span class="co">](https://github.com/krimler/k-bonacci)</span>.</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="fu">## Read the paper</span></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>The full paper is here: <span class="co">[</span><span class="ot">Fibonacci and k-bonacci prime statistics (PDF and details)</span><span class="co">](../../papers/fibonacci-primes.qmd)</span>.</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>The point of the study is the line it draws between the two. The count estimate,</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>the matching constant, the two-thirds divisibility result, the symmetry-driven</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>proportions, and the repetition structure of the longer sequences are established</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>mathematics with citations. The new contributions are smaller and clearly marked.</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>There is a prediction window with a measured success rate. There is a reusable</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>battery of tests for telling structure apart from noise. There is a fully cited</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>reproduction that anyone can run.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reproducibility</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>Every result comes from self-contained Python scripts using standard scientific</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>libraries. The input data are the published index lists for the Fibonacci, Lucas,</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>and related sequences. The code is at</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">github.com/krimler/k-bonacci</span><span class="co">](https://github.com/krimler/k-bonacci)</span>.</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## Read the paper</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>The full paper, with the precise statements, the constants, and the proofs it</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>draws on, is here:</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Fibonacci and k-bonacci prime statistics (PDF and details)</span><span class="co">](../../papers/fibonacci-primes.qmd)</span>.</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
