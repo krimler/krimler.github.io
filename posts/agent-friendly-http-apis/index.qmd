@@ -2,7 +2,7 @@
 title: "Designing HTTP APIs that AI agents can actually use"
 description: "AI agents are a fast-growing kind of API client, and they read an API very differently from a human developer. An IETF draft collects the properties that make an HTTP API easy for an agent to use into one reusable profile."
 author: "Madhava Gaikwad"
-date: "2026-01-20"
+date: "2026-06-09"
 categories: [ai-agents, http, api-design, ietf]
 image: cover.jpg
 image-alt: "Goltzius's painting of Mercury, the messenger"
