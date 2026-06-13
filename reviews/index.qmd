@@ -7,8 +7,15 @@ listing:
   categories: true
   feed: true
 page-layout: full
+format:
+  html:
+    include-in-header:
+      text: |
+        <link rel="alternate" type="application/rss+xml" title="Krimler — Reviews" href="https://krimler.github.io/reviews/index.xml">
 ---
 
 Reader's notes on papers worth reading, written in the spirit of an admiring
 colleague. These review external work. Each post links to the original and does not
 host it.
+
+[Subscribe to the reviews feed (RSS)](index.xml)

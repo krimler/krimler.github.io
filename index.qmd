@@ -11,3 +11,5 @@ listing:
   feed: true        # generates index.xml (RSS) for discoverability
 page-layout: full
 ---
+
+[Subscribe to the blog feed (RSS)](index.xml) · [Reviews feed](reviews/index.xml)
