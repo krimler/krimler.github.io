@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Madhava Gaikwad">
+<meta name="dcterms.date" content="2026-01-20">
+<meta name="description" content="AI agents are a fast-growing kind of API client, and they read an API very differently from a human developer. An IETF draft collects the properties that make an HTTP API easy for an agent to use into one reusable profile.">
 
-<title>Madhava Gaikwad – Krimler</title>
+<title>Designing HTTP APIs that AI agents can actually use – Krimler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +29,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d05667a7cf763527d0ffc0f60659af7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3ec94c05892decc904263a063af11aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,13 +80,17 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Madhava Gaikwad – Krimler">
-<meta property="og:description" content="Engineering Leader · 20 years in infrastructure and security">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Designing HTTP APIs that AI agents can actually use – Krimler">
+<meta property="og:description" content="AI agents are a fast-growing kind of API client, and they read an API very differently from a human developer. An IETF draft collects the properties that make an HTTP API easy for an agent to use into one reusable profile.">
+<meta property="og:image" content="https://krimler.github.io/posts/agent-friendly-http-apis/cover.jpg">
 <meta property="og:site_name" content="Krimler">
-<meta name="twitter:title" content="Madhava Gaikwad – Krimler">
-<meta name="twitter:description" content="Engineering Leader · 20 years in infrastructure and security">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:alt" content="Goltzius's painting of Mercury, the messenger">
+<meta name="twitter:title" content="Designing HTTP APIs that AI agents can actually use – Krimler">
+<meta name="twitter:description" content="AI agents are a fast-growing kind of API client, and they read an API very differently from a human developer. An IETF draft collects the properties that make an HTTP API easy for an agent to use into one reusable profile.">
+<meta name="twitter:image" content="https://krimler.github.io/posts/agent-friendly-http-apis/cover.jpg">
+<meta name="twitter:image:alt" content="Goltzius's painting of Mercury, the messenger">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -255,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Krimler</span>
     </a>
   </div>
@@ -266,23 +273,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./papers/index.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./reviews/index.html"> 
+    <a class="nav-link" href="../../reviews/index.html"> 
 <span class="menu-text">Reviews</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./cv.html" aria-current="page"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -293,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -314,11 +321,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#skills" id="toc-skills" class="nav-link active" data-scroll-target="#skills">Skills</a></li>
-  <li><a href="#experience" id="toc-experience" class="nav-link" data-scroll-target="#experience">Experience</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#selected-publications-and-preprints" id="toc-selected-publications-and-preprints" class="nav-link" data-scroll-target="#selected-publications-and-preprints">Selected publications and preprints</a></li>
-  <li><a href="#ietf-drafts" id="toc-ietf-drafts" class="nav-link" data-scroll-target="#ietf-drafts">IETF drafts</a></li>
+  <li><a href="#machine-readable-signals-not-prose" id="toc-machine-readable-signals-not-prose" class="nav-link active" data-scroll-target="#machine-readable-signals-not-prose">Machine-readable signals, not prose</a></li>
+  <li><a href="#the-description-is-the-contract" id="toc-the-description-is-the-contract" class="nav-link" data-scroll-target="#the-description-is-the-contract">The description is the contract</a></li>
+  <li><a href="#consistency-and-predictability" id="toc-consistency-and-predictability" class="nav-link" data-scroll-target="#consistency-and-predictability">Consistency and predictability</a></li>
+  <li><a href="#respect-the-context-budget" id="toc-respect-the-context-budget" class="nav-link" data-scroll-target="#respect-the-context-budget">Respect the context budget</a></li>
+  <li><a href="#errors-the-agent-can-recover-from" id="toc-errors-the-agent-can-recover-from" class="nav-link" data-scroll-target="#errors-the-agent-can-recover-from">Errors the agent can recover from</a></li>
+  <li><a href="#safe-writes" id="toc-safe-writes" class="nav-link" data-scroll-target="#safe-writes">Safe writes</a></li>
+  <li><a href="#tell-the-agent-when-to-slow-down" id="toc-tell-the-agent-when-to-slow-down" class="nav-link" data-scroll-target="#tell-the-agent-when-to-slow-down">Tell the agent when to slow down</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">Why it matters</a></li>
+  <li><a href="#read-the-draft" id="toc-read-the-draft" class="nav-link" data-scroll-target="#read-the-draft">Read the draft</a></li>
   </ul>
 </nav>
     </div>
@@ -328,15 +339,37 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Madhava Gaikwad</h1>
-<p class="subtitle lead">Engineering Leader · 20 years in infrastructure and security</p>
-</div>
+<h1 class="title">Designing HTTP APIs that AI agents can actually use</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ai-agents</div>
+    <div class="quarto-category">http</div>
+    <div class="quarto-category">api-design</div>
+    <div class="quarto-category">ietf</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    AI agents are a fast-growing kind of API client, and they read an API very differently from a human developer. An IETF draft collects the properties that make an HTTP API easy for an agent to use into one reusable profile.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Madhava Gaikwad </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 20, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -346,76 +379,48 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="mailto:gaikwad.madhav@gmail.com">gaikwad.madhav@gmail.com</a> · Bengaluru · <a href="https://www.linkedin.com/in/safeai/">LinkedIn</a> · <a href="https://github.com/krimler">GitHub</a> · <a href="https://scholar.google.com/citations?user=YReGIGMAAAAJ">Google Scholar</a></p>
-<p>I work at the intersection of distributed systems, AI alignment, privacy and differential privacy, and ML systems. I turn theory into runnable, tested artifacts.</p>
-<section id="skills" class="level2">
-<h2 class="anchored" data-anchor-id="skills">Skills</h2>
-<ul>
-<li><strong>Languages:</strong> Python, Go, C++, Java</li>
-<li><strong>AI and safety:</strong> RAG, guardrailing, MCP, evaluation and monitoring</li>
-<li><strong>Cryptography and authorization:</strong> Zero Trust, OAuth2/OIDC, SAML, PKI, OPA/Rego, WAF, SSL/TLS</li>
-<li><strong>Distributed systems:</strong> containers, Kubernetes, Envoy, gRPC, Spark, Kafka, OpenTelemetry</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Mercury, Hendrick Goltzius (1611). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
+<p>An AI agent is now a common kind of HTTP API client. An HTTP API is the interface a service exposes for programs to call over the web. Agents read these interfaces in a way a human developer does not. A developer reads the documentation once, remembers it, and writes code. An agent works from the machine-readable description on every call, holds only a limited amount of text at a time, retries often, and chooses which operation to call by matching the description to its current goal. An API that was designed for a person to read can be hard for an agent to use well. This IETF draft collects the properties that make an API easy for an agent and assembles them into one reusable profile.</p>
+<section id="machine-readable-signals-not-prose" class="level2">
+<h2 class="anchored" data-anchor-id="machine-readable-signals-not-prose">Machine-readable signals, not prose</h2>
+<p>An agent should not have to parse a paragraph of English to learn how to behave. The API should hand it structured, actionable signals instead. A rule expressed as a field the agent can read is worth more than the same rule buried in a sentence it has to interpret.</p>
 </section>
-<section id="experience" class="level2">
-<h2 class="anchored" data-anchor-id="experience">Experience</h2>
-<p><strong>Independent (Kriml), Founder, AI security startup.</strong> Bengaluru. December 2025 to present.</p>
-<ul>
-<li>Researched, built, and productized a secure, anonymous, FDA-compliant medical AI bot.</li>
-<li>Worked with the IETF BMWG group to develop AI-related measurement drafts.</li>
-</ul>
-<p><strong>Microsoft, Senior Software Engineer and Manager.</strong> Bengaluru. February 2021 to December 2025.</p>
-<ul>
-<li>Built Net Copilot, an LLM-powered multi-agent system with chat, search, and API capabilities, serving 250 daily active engineers. Implemented RAG pipelines and fine-tuned and distilled models for production.</li>
-<li>As Engineering Manager from November 2022 to November 2025, led a 15-member cross-geo SRE team for GPU fleet network operations. Defined SLIs and SLOs for Azure datacenter networking. Owned MTTM and MTTR metrics and reduced time to mitigate by 30%. Designed on-call rotations, escalation policies, incident fatigue management, and an engineer growth path.</li>
-</ul>
-<p><strong>Cisco, Technical Leader.</strong> Bengaluru. June 2012 to February 2021.</p>
-<ul>
-<li>Led architecture and delivery of an $80M web security gateway platform. Engineered TLS performance optimizations and TCP tuning in the FreeBSD kernel, achieving 1.2x throughput and 2x faster decryption.</li>
-<li>Drove the enterprise security roadmap and cross-org architecture reviews. Implemented differential privacy guarantees for an enterprise firewall and ensured GDPR compliance.</li>
-</ul>
-<p><strong>Early roles (Symantec, TCS).</strong> Mumbai and Pune. December 2006 to June 2012.</p>
-<ul>
-<li>Worked on email security, AAA systems, and network protocol development in C/C++ and Java.</li>
-</ul>
+<section id="the-description-is-the-contract" class="level2">
+<h2 class="anchored" data-anchor-id="the-description-is-the-contract">The description is the contract</h2>
+<p>For an agent, the API description is the thing it actually programs against. Two properties follow. Operation identifiers must be stable and meaningful, because the agent selects operations by their names and descriptions. The description of each operation should say plainly when to use it and what side effects it has. A side effect is a change the call makes to the world, such as charging a card or sending a message.</p>
 </section>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<p><strong>Bachelor of Engineering, Information Technology.</strong> Shivaji University, Kolhapur. 2006. Distinction.</p>
+<section id="consistency-and-predictability" class="level2">
+<h2 class="anchored" data-anchor-id="consistency-and-predictability">Consistency and predictability</h2>
+<p>The API should look the same everywhere. Naming, pagination, error formats, and authentication should follow one convention across every operation. An agent that learns the pattern once can then apply it everywhere, which saves the limited context it has to work with.</p>
 </section>
-<section id="selected-publications-and-preprints" class="level2">
-<h2 class="anchored" data-anchor-id="selected-publications-and-preprints">Selected publications and preprints</h2>
-<p>Several of these have companion posts on this blog that explain the ideas in plain language. See the <a href="./index.html">blog</a> and <a href="./papers/index.html">papers</a>.</p>
-<ul>
-<li>AlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs. NeurIPS 2025 Workshop. <a href="https://arxiv.org/abs/2512.17251">arXiv:2512.17251</a> · <a href="posts/aligndp-rarity-privacy/">post</a></li>
-<li>NPO: Learning Alignment and Meta-Alignment through Structured Human Feedback. <a href="https://arxiv.org/abs/2507.21131">arXiv:2507.21131</a> · <a href="posts/npo-meta-alignment/">post</a></li>
-<li>ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability. <a href="https://arxiv.org/abs/2508.16119">arXiv:2508.16119</a> · <a href="posts/ansc-capacity-health/">post</a></li>
-<li>AVEC: Bootstrapping Privacy for Local LLMs. <a href="https://arxiv.org/abs/2509.10561">arXiv:2509.10561</a> · <a href="posts/avec-edge-privacy/">post</a></li>
-<li>Murphy’s Laws of AI Alignment: Why the Gap Always Wins. <a href="https://arxiv.org/abs/2509.05381">arXiv:2509.05381</a> · <a href="posts/murphy-alignment-gap/">post</a></li>
-<li>When Are Two RLHF Objectives the Same? (Opal). <a href="https://arxiv.org/abs/2509.11298">arXiv:2509.11298</a> · <a href="posts/opal-rlhf-equivalence/">post</a></li>
-<li>Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents. ICLR 2026 Workshop. <a href="https://arxiv.org/abs/2603.15658">arXiv:2603.15658</a> · <a href="posts/memory-store-routing/">post</a></li>
-<li>AEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture. <a href="./papers/aegis.html">paper</a> · <a href="posts/aegis-evidence-obligation/">post</a></li>
-<li>Heuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics. <a href="./papers/fibonacci-primes.html">paper</a> · <a href="posts/fibonacci-prime-statistics/">post</a></li>
-<li>Algorithmic Analysis of DAM. ICLR 2026 Workshop. <a href="https://openreview.net/pdf?id=zgHAqaIybd">OpenReview</a></li>
-<li>The Abstention Protocol: Root Cause Analysis for Clos Fabrics. USENIX OSDI 2026.</li>
-<li>Agentic Trust Fabric: A Systematization of Knowledge of Security Architectures for Autonomous AI Agents. <a href="https://philpapers.org/archive/GAITAT-2.pdf">preprint</a></li>
-<li>Adaptive WAF: Multi-Armed Bandits for Web Application Firewall Rule Tuning. <a href="https://philpapers.org/archive/GAIHPS.pdf">preprint</a></li>
-<li>Zero Trust Identity and Authorization Profile. <a href="https://philpapers.org/archive/GAIZTI.pdf">draft</a></li>
-</ul>
+<section id="respect-the-context-budget" class="level2">
+<h2 class="anchored" data-anchor-id="respect-the-context-budget">Respect the context budget</h2>
+<p>An agent can only hold so much text at a time. A response that dumps everything eats into that budget and crowds out the agent’s actual reasoning. The draft asks that responses be bounded by default, with controls for field selection or verbosity so the agent can ask for only what it needs.</p>
 </section>
-<section id="ietf-drafts" class="level2">
-<h2 class="anchored" data-anchor-id="ietf-drafts">IETF drafts</h2>
-<p><strong>LLM serving benchmarking (BMWG):</strong></p>
-<ul>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/">LLM Benchmarking Terminology</a></li>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/">LLM Benchmarking Methodology</a></li>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/">LLM Benchmarking Profiles</a></li>
-<li><a href="https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/">LLM Serving Workload Profiles</a></li>
-</ul>
-<p><strong>HTTP APIs for AI agents:</strong></p>
-<ul>
-<li><a href="https://datatracker.ietf.org/doc/draft-gaikwad-agent-friendly-http-api-profile/">Design Considerations and Profile for HTTP APIs Consumed by AI Agents</a> · <a href="posts/agent-friendly-http-apis/">post</a></li>
-</ul>
+<section id="errors-the-agent-can-recover-from" class="level2">
+<h2 class="anchored" data-anchor-id="errors-the-agent-can-recover-from">Errors the agent can recover from</h2>
+<p>When a call fails, the failure should be machine-readable. The draft points to RFC 9457 Problem Details, a standard JSON format for HTTP errors. A good error says whether retrying is worthwhile and gives field-level feedback on what was invalid, so the agent can fix the request rather than guess.</p>
+</section>
+<section id="safe-writes" class="level2">
+<h2 class="anchored" data-anchor-id="safe-writes">Safe writes</h2>
+<p>Agents retry often, so a write operation must tolerate being repeated. The draft calls for idempotency keys, which let the agent mark a request so that sending it twice has the same effect as sending it once. It also calls for dry-run and preview modes, so an agent can check what a write would do before committing to it.</p>
+</section>
+<section id="tell-the-agent-when-to-slow-down" class="level2">
+<h2 class="anchored" data-anchor-id="tell-the-agent-when-to-slow-down">Tell the agent when to slow down</h2>
+<p>Rate limits should be expressed as machine-readable backoff hints. When the service wants the client to wait, it should say so in a form the agent can read directly, so the agent can throttle itself rather than hammer the endpoint and get blocked.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Agents are becoming a primary audience for APIs, and they have real constraints: a small context window, frequent retries, and selection by description. An API that ignores these makes agents slow, expensive, and error-prone to work with. The profile gives API designers a concrete checklist for serving autonomous clients while keeping security, reliability, and operational visibility intact.</p>
+</section>
+<section id="read-the-draft" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
+<p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-agent-friendly-http-api-profile/">Design Considerations and Profile for HTTP APIs Consumed by AI Agents</a>.</p>
 
 
 </section>
@@ -859,5 +864,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

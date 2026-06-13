@@ -94,6 +94,127 @@ Lagarias, Jeffrey C. 1985. <span>“The Set of Primes Dividing the Lucas Numbers
   <media:content url="https://krimler.github.io/posts/fibonacci-prime-statistics/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
+  <title>Reading MRC and SRv6: resilient AI supercomputer networking</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/reviews/mrc-srv6/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/reviews/mrc-srv6/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Las Hilanderas (The Spinners), Diego Velázquez (c.&nbsp;1657). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
+<p>A review of an external paper. The work is not mine. This post is a reader’s notes, in the spirit of an admiring colleague.</p>
+<p><strong>Paper:</strong> Resilient AI Supercomputer Networking using MRC and SRv6. Araujo et al. Authors come from OpenAI, Microsoft, AMD, Broadcom, and NVIDIA. arXiv preprint 2605.04333, May 2026.</p>
+<p><strong>Read the original:</strong> <a href="https://arxiv.org/abs/2605.04333">arXiv:2605.04333</a>. It is arXiv preprint 2605.04333v1 in cs.NI, dated 5 May 2026.</p>
+<section id="what-the-paper-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-paper-does">What the paper does</h2>
+<p>Large AI training jobs are synchronous. Every GPU waits for the slowest transfer in a step. So one bad link can stall the whole job. At 100,000 GPUs, network failures stop being rare. They become a daily event.</p>
+<p>The paper offers a three-part answer.</p>
+<p>First, a new transport called MRC, short for Multipath RC. It extends RoCEv2. It sprays each queue pair across many paths instead of pinning it to one. It balances load with ECN signals. It recovers losses with selective ACK and packet trimming. It turns off PFC and runs the fabric in best-effort lossy mode.</p>
+<p>Second, a multi-plane Clos topology. Take an 800 Gb/s NIC and split it into 8 lanes of 100 Gb/s. Build 8 parallel planes from the same switches. Now a 100,000 GPU cluster needs only two switch tiers, not three. This lowers latency, lowers cost and power, and shrinks the blast radius of any one link.</p>
+<p>Third, static source routing with SRv6. The endpoint writes the full path into each packet using uN micro-segments. Dynamic routing in the switches is turned off completely. So the endpoint owns failure handling, not the switch.</p>
+<p>This runs in production at OpenAI and Microsoft. It has trained frontier models including ChatGPT and Codex. It is implemented on NVIDIA CX-8, AMD Pollara and Vulcano, and Broadcom Thor Ultra NICs. The spec is released openly through OCP.</p>
+</section>
+<section id="what-works-well" class="level2">
+<h2 class="anchored" data-anchor-id="what-works-well">What works well</h2>
+<p>The design choices are bold and well argued. Turning off dynamic routing sounds backwards at first. Turning off PFC sounds risky too. But the reasoning is clean. Two adaptive systems fighting each other add no value. MRC already routes around failures on its own. So let it do that job alone.</p>
+<p>The blast-radius argument is concrete and convincing. Losing one T0-to-T1 link in an 800 Gb/s single plane cuts a node’s capacity by about 3 percent. The same loss in a 100 Gb/s plane costs only about 0.4 percent. So the job barely notices a link flap. The team even leaves flapping links in service and repairs them later.</p>
+<p>The observability insight is elegant. With static source routing, a probe takes the exact same path a data packet would take. So a Clustermapper probe gives ground truth on the forwarding plane. Switch telemetry cannot match this. This is why they can run a relaxed repair posture and still feel safe.</p>
+<p>The multi-vendor breadth is a real systems achievement. The same protocol works across three NIC vendors and several switch platforms. That is strong evidence the design generalizes.</p>
+<p>The honesty is refreshing. The team flags the single points of failure that remain. They flag the cases where their load-balancing rule does not behave well.</p>
+</section>
+<section id="a-few-friendly-suggestions" class="level2">
+<h2 class="anchored" data-anchor-id="a-few-friendly-suggestions">A few friendly suggestions</h2>
+<p>The MRC versus RoCE comparison is uneven, and that is the thing I would fix first. MRC’s headline results come from 42,000 to 75,000 GPU jobs. The head-to-head against RoCE runs on tiny testbeds of 16 and 64 GPUs, called Cluster C and Cluster D. The authors say plainly they have no large deployment for a direct comparison.</p>
+<p>That gap matters for two reasons. The RoCE baseline is configured by the authors, as a single plane with DCQCN. The authors also call DCQCN very hard to tune. So a skeptic could read the comparison as a gentle strawman. Even a partial at-scale A or B test would make the case airtight.</p>
+<p>There is no at-scale before-and-after. The paper shows MRC works well at scale. It shows RoCE struggles on small testbeds. It never shows the old approach at the same scale. So the size of the win is asserted, not measured. The strongest possible number would be the job-interruption rate before MRC and after MRC at a fixed scale.</p>
+<p>Clustermapper’s own cost deserves a paragraph. Every node runs an agent. Every agent probes every directly connected link every millisecond. That is powerful. But the total probe traffic and control overhead at 100,000 nodes is not characterized. There is also a small tension to resolve. The paper says MRC makes denylists unnecessary. Yet it keeps Clustermapper for observability and some policy calls. One sentence reconciling the two would help.</p>
+<p>Several key figures are single incidents. Figure 6 is one transceiver glitch that cost about 25 percent throughput. Figure 8 is one T1 reboot. These traces are vivid and useful. But a distribution across many failures would tell readers the typical case, not just the illustrative one. For example, a histogram of throughput dips and recovery times across all flaps in a job.</p>
+<p>The remaining single point of failure is flagged, and it should be quantified. An 800 Gb/s NIC optic splits into 4 lanes of 200 Gb/s. If the NIC transceiver itself flaps, all ports go down at once. Then the queue pairs fail and the job cannot ride it out. The authors say this is rare and that a different optical design might avoid it. How often does it happen at scale, and what does it cost the job. That number would tell readers how close to fully resilient the system really is.</p>
+<p>Generalizability is narrow by design. MRC needs SRv6 uN micro-segment support in the switches. It needs packet trimming in the switches. It needs specific NICs. It needs a multi-plane topology. So it suits a 100,000 GPU frontier cluster, where you can co-design the whole stack. A short note on what a smaller operator could adopt step by step would widen the paper’s reach.</p>
+<p>The relation to UET could be sharper. MRC is described as a minimal extension to RoCE that borrows from Ultra Ethernet Transport. So a crisp line on what is new in MRC beyond UET would help. The novelty seems to be the SRv6 static-routing plus multi-plane co-design plus the production experience itself. Saying so directly would place the contribution well.</p>
+</section>
+<section id="bottom-line" class="level2">
+<h2 class="anchored" data-anchor-id="bottom-line">Bottom line</h2>
+<p>This is a bold, important, and candid paper. The static-routing-for-observability argument is a standout. The multi-vendor production deployment is rare and valuable. Turning off both dynamic routing and PFC is exactly the kind of principled risk-taking the field needs.</p>
+<p>The main opportunity is evidence symmetry. MRC’s at-scale wins are weighed against small-testbed RoCE. They are also weighed against an unquantified before. So the size of the benefit is the one thing a reader has to take partly on faith. Close that gap and a very persuasive paper becomes an unarguable one.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>paper-review</category>
+  <category>networking</category>
+  <category>ml-systems</category>
+  <guid>https://krimler.github.io/reviews/mrc-srv6/</guid>
+  <pubDate>Sat, 06 Jun 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/reviews/mrc-srv6/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Reading AccelNet: SmartNICs in the public cloud</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/reviews/accelnet/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/reviews/accelnet/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Veduta del Canal Grande dalla Punta della Dogana, Bernardo Bellotto (18th century). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
+<p>A review of an external paper. The work is not mine. This post is a reader’s notes, in the spirit of an admiring colleague.</p>
+<p><strong>Paper:</strong> Azure Accelerated Networking: SmartNICs in the Public Cloud. Firestone et al., Microsoft. NSDI ’18.</p>
+<p><strong>Read the original:</strong> <a href="https://www.usenix.org/conference/nsdi18/presentation/firestone">USENIX page</a>. It appears in the Proceedings of the 15th USENIX Symposium on Networked Systems Design and Implementation, pages 51 to 66, Renton, WA, April 2018.</p>
+<section id="what-the-paper-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-paper-does">What the paper does</h2>
+<p>Azure runs a lot of network policy in the hypervisor. Think private virtual networks, ACLs, load balancing, NAT, metering, and QoS. Running all of this on host CPUs costs cores. Those cores could be sold to customers instead.</p>
+<p>AccelNet moves this work onto an FPGA SmartNIC. The NIC sits between the host NIC and the top-of-rack switch. The authors call this a bump-in-the-wire design.</p>
+<p>The clever part is the Generic Flow Table, or GFT. The first packet of a flow goes to software. The VFP stack reads the policy, compiles it into one exact-match rule, and installs that rule on the FPGA. Every packet after that is handled by hardware. The host CPU does almost nothing for the rest of the flow.</p>
+<p>The numbers are strong. VM to VM latency drops from about 50 microseconds to about 17 microseconds. A single TCP connection reaches about 32 Gbps. Host CPU use for the datapath falls under 1 percent. This has been running on more than 1 million hosts since 2015.</p>
+</section>
+<section id="what-works-well" class="level2">
+<h2 class="anchored" data-anchor-id="what-works-well">What works well</h2>
+<p>The production evidence is the best part. These are real numbers from a real fleet over several years. Most papers cannot offer this.</p>
+<p>The first-packet-in-software idea is simple and it ages well. You keep the full flexibility of software for policy. You keep the speed of hardware for the bulk of the traffic. For example, a typical TCP flow has at least 7 to 10 packets including the handshake. So processing only the first packet in software still offloads the large majority.</p>
+<p>The four-way hardware comparison is honest. The team weighs ASICs, multicore SoCs, FPGAs, and plain host CPUs. They say plainly when a choice rests on judgment rather than measurement.</p>
+<p>The operational story is unusually complete. They cover FPGA reconfiguration without losing flows. They cover live migration. They cover transparent VF bonding through NetVSC so a revoked VF does not break the VM. They even cover a failsafe path for DPDK and RDMA apps.</p>
+</section>
+<section id="a-few-friendly-suggestions" class="level2">
+<h2 class="anchored" data-anchor-id="a-few-friendly-suggestions">A few friendly suggestions</h2>
+<p>The FPGA versus ASIC versus SoC case could use real measurements. Right now it leans on judgment. It also leans on the fact that Catapult FPGAs were already deployed. A head-to-head test on the same policy workload would settle it. As written, a reader cannot tell if FPGAs won on merit or on circumstance.</p>
+<p>The cost story is only half told. The price of a CPU core is laid out carefully, around 0.10 to 0.11 dollars per hour. The FPGA side is missing. We do not see FPGA unit cost. We do not see the aggregate power of 17 to 19 watts across more than 1 million hosts weighed against the cores it saves. A rough two-sided model would make the don’t-burn-cores thesis much stronger.</p>
+<p>The software path is the part I would most like to see stressed. The first packet of every flow goes to software. So the real limit is the new-flow rate, not the packet rate. The paper measures long-lived elephant flows. It does not measure the corner cases.</p>
+<p>Here are concrete cases I would want tested. How many new connections per second can the VFP exception path handle before it saturates. What happens under a SYN flood, where an attacker opens many short connections on purpose. What happens when the flow count blows past the cache. The L1 cache holds only 2048 flows. The L2 cache lives in DRAM and holds about 1 million flows. The eviction policy and the miss cost are never described.</p>
+<p>The AWS and GCP comparison is a single snapshot from November 2017. Competitors keep improving. So a point-in-time fastest-in-the-cloud claim is fragile. A note on the number of runs, the tuning, and the variance would help. A CDF would help more than P50, P99, and P99.9 bars alone.</p>
+<p>The security framing is upbeat, and one tradeoff is left out. The Spectre and Meltdown resilience point is fair, because the datapath skips the host CPU. But SR-IOV hands a VF straight to an untrusted guest. That opens new surface, like guest-to-hardware DMA paths and side channels on a shared FPGA. One honest paragraph would round out the operational story.</p>
+<p>The reliability claims would be better with numbers. The paper says failure rates stay low and that DRAM fails most often. Both are believable. The team has the fleet telemetry to give an annual failure rate, so it would be nice to see it.</p>
+</section>
+<section id="bottom-line" class="level2">
+<h2 class="anchored" data-anchor-id="bottom-line">Bottom line</h2>
+<p>This is a landmark paper and it earned its influence. Its strength is production evidence at real scale. Its soft spots are evaluation. The FPGA-versus-alternatives case is argued, not measured. The cost model is one-sided. The first-packet path is never stressed under high churn or attack. None of this takes away from a fine piece of engineering. These are the notes of an admiring colleague who would love to see the next version close the loop on the corner cases.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>paper-review</category>
+  <category>networking</category>
+  <category>systems</category>
+  <guid>https://krimler.github.io/reviews/accelnet/</guid>
+  <pubDate>Sat, 06 Jun 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/reviews/accelnet/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>AEGIS: typed evidence and obligations for AI-native enterprise architecture</title>
   <dc:creator>Madhava Gaikwad</dc:creator>
   <link>https://krimler.github.io/posts/aegis-evidence-obligation/</link>
@@ -493,6 +614,71 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <guid>https://krimler.github.io/posts/ietf-benchmarking-terminology/</guid>
   <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
   <media:content url="https://krimler.github.io/posts/ietf-benchmarking-terminology/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Designing HTTP APIs that AI agents can actually use</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/agent-friendly-http-apis/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/agent-friendly-http-apis/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Mercury, Hendrick Goltzius (1611). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
+<p>An AI agent is now a common kind of HTTP API client. An HTTP API is the interface a service exposes for programs to call over the web. Agents read these interfaces in a way a human developer does not. A developer reads the documentation once, remembers it, and writes code. An agent works from the machine-readable description on every call, holds only a limited amount of text at a time, retries often, and chooses which operation to call by matching the description to its current goal. An API that was designed for a person to read can be hard for an agent to use well. This IETF draft collects the properties that make an API easy for an agent and assembles them into one reusable profile.</p>
+<section id="machine-readable-signals-not-prose" class="level2">
+<h2 class="anchored" data-anchor-id="machine-readable-signals-not-prose">Machine-readable signals, not prose</h2>
+<p>An agent should not have to parse a paragraph of English to learn how to behave. The API should hand it structured, actionable signals instead. A rule expressed as a field the agent can read is worth more than the same rule buried in a sentence it has to interpret.</p>
+</section>
+<section id="the-description-is-the-contract" class="level2">
+<h2 class="anchored" data-anchor-id="the-description-is-the-contract">The description is the contract</h2>
+<p>For an agent, the API description is the thing it actually programs against. Two properties follow. Operation identifiers must be stable and meaningful, because the agent selects operations by their names and descriptions. The description of each operation should say plainly when to use it and what side effects it has. A side effect is a change the call makes to the world, such as charging a card or sending a message.</p>
+</section>
+<section id="consistency-and-predictability" class="level2">
+<h2 class="anchored" data-anchor-id="consistency-and-predictability">Consistency and predictability</h2>
+<p>The API should look the same everywhere. Naming, pagination, error formats, and authentication should follow one convention across every operation. An agent that learns the pattern once can then apply it everywhere, which saves the limited context it has to work with.</p>
+</section>
+<section id="respect-the-context-budget" class="level2">
+<h2 class="anchored" data-anchor-id="respect-the-context-budget">Respect the context budget</h2>
+<p>An agent can only hold so much text at a time. A response that dumps everything eats into that budget and crowds out the agent’s actual reasoning. The draft asks that responses be bounded by default, with controls for field selection or verbosity so the agent can ask for only what it needs.</p>
+</section>
+<section id="errors-the-agent-can-recover-from" class="level2">
+<h2 class="anchored" data-anchor-id="errors-the-agent-can-recover-from">Errors the agent can recover from</h2>
+<p>When a call fails, the failure should be machine-readable. The draft points to RFC 9457 Problem Details, a standard JSON format for HTTP errors. A good error says whether retrying is worthwhile and gives field-level feedback on what was invalid, so the agent can fix the request rather than guess.</p>
+</section>
+<section id="safe-writes" class="level2">
+<h2 class="anchored" data-anchor-id="safe-writes">Safe writes</h2>
+<p>Agents retry often, so a write operation must tolerate being repeated. The draft calls for idempotency keys, which let the agent mark a request so that sending it twice has the same effect as sending it once. It also calls for dry-run and preview modes, so an agent can check what a write would do before committing to it.</p>
+</section>
+<section id="tell-the-agent-when-to-slow-down" class="level2">
+<h2 class="anchored" data-anchor-id="tell-the-agent-when-to-slow-down">Tell the agent when to slow down</h2>
+<p>Rate limits should be expressed as machine-readable backoff hints. When the service wants the client to wait, it should say so in a form the agent can read directly, so the agent can throttle itself rather than hammer the endpoint and get blocked.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Agents are becoming a primary audience for APIs, and they have real constraints: a small context window, frequent retries, and selection by description. An API that ignores these makes agents slow, expensive, and error-prone to work with. The profile gives API designers a concrete checklist for serving autonomous clients while keeping security, reliability, and operational visibility intact.</p>
+</section>
+<section id="read-the-draft" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
+<p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-agent-friendly-http-api-profile/">Design Considerations and Profile for HTTP APIs Consumed by AI Agents</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ai-agents</category>
+  <category>http</category>
+  <category>api-design</category>
+  <category>ietf</category>
+  <guid>https://krimler.github.io/posts/agent-friendly-http-apis/</guid>
+  <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/agent-friendly-http-apis/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>How to run the tests: the IETF LLM serving methodology draft</title>
