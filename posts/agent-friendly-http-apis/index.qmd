@@ -1,0 +1,83 @@
+---
+title: "Designing HTTP APIs that AI agents can actually use"
+description: "AI agents are a fast-growing kind of API client, and they read an API very differently from a human developer. An IETF draft collects the properties that make an HTTP API easy for an agent to use into one reusable profile."
+author: "Madhava Gaikwad"
+date: "2026-01-20"
+categories: [ai-agents, http, api-design, ietf]
+image: cover.jpg
+image-alt: "Goltzius's painting of Mercury, the messenger"
+---
+
+![Mercury, Hendrick Goltzius (1611). Public domain, via Wikimedia Commons.](cover.jpg)
+
+An AI agent is now a common kind of HTTP API client. An HTTP API is the interface
+a service exposes for programs to call over the web. Agents read these interfaces
+in a way a human developer does not. A developer reads the documentation once,
+remembers it, and writes code. An agent works from the machine-readable
+description on every call, holds only a limited amount of text at a time, retries
+often, and chooses which operation to call by matching the description to its
+current goal. An API that was designed for a person to read can be hard for an
+agent to use well. This IETF draft collects the properties that make an API easy
+for an agent and assembles them into one reusable profile.
+
+## Machine-readable signals, not prose
+
+An agent should not have to parse a paragraph of English to learn how to behave. The
+API should hand it structured, actionable signals instead. A rule expressed as a
+field the agent can read is worth more than the same rule buried in a sentence it
+has to interpret.
+
+## The description is the contract
+
+For an agent, the API description is the thing it actually programs against. Two
+properties follow. Operation identifiers must be stable and meaningful, because the
+agent selects operations by their names and descriptions. The description of each
+operation should say plainly when to use it and what side effects it has. A side
+effect is a change the call makes to the world, such as charging a card or sending
+a message.
+
+## Consistency and predictability
+
+The API should look the same everywhere. Naming, pagination, error formats, and
+authentication should follow one convention across every operation. An agent that
+learns the pattern once can then apply it everywhere, which saves the limited
+context it has to work with.
+
+## Respect the context budget
+
+An agent can only hold so much text at a time. A response that dumps everything
+eats into that budget and crowds out the agent's actual reasoning. The draft asks
+that responses be bounded by default, with controls for field selection or
+verbosity so the agent can ask for only what it needs.
+
+## Errors the agent can recover from
+
+When a call fails, the failure should be machine-readable. The draft points to RFC
+9457 Problem Details, a standard JSON format for HTTP errors. A good error says
+whether retrying is worthwhile and gives field-level feedback on what was invalid,
+so the agent can fix the request rather than guess.
+
+## Safe writes
+
+Agents retry often, so a write operation must tolerate being repeated. The draft
+calls for idempotency keys, which let the agent mark a request so that sending it
+twice has the same effect as sending it once. It also calls for dry-run and preview
+modes, so an agent can check what a write would do before committing to it.
+
+## Tell the agent when to slow down
+
+Rate limits should be expressed as machine-readable backoff hints. When the service
+wants the client to wait, it should say so in a form the agent can read directly, so
+the agent can throttle itself rather than hammer the endpoint and get blocked.
+
+## Why it matters
+
+Agents are becoming a primary audience for APIs, and they have real constraints: a
+small context window, frequent retries, and selection by description. An API that
+ignores these makes agents slow, expensive, and error-prone to work with. The
+profile gives API designers a concrete checklist for serving autonomous clients
+while keeping security, reliability, and operational visibility intact.
+
+## Read the draft
+
+[Design Considerations and Profile for HTTP APIs Consumed by AI Agents](https://datatracker.ietf.org/doc/draft-gaikwad-agent-friendly-http-api-profile/).

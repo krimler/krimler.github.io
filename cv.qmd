@@ -112,4 +112,4 @@ language. See the [blog](index.qmd) and [papers](papers/index.qmd).
 
 **HTTP APIs for AI agents:**
 
-- [Design Considerations and Profile for HTTP APIs Consumed by AI Agents](https://datatracker.ietf.org/doc/draft-gaikwad-agent-friendly-http-api-profile/)
+- [Design Considerations and Profile for HTTP APIs Consumed by AI Agents](https://datatracker.ietf.org/doc/draft-gaikwad-agent-friendly-http-api-profile/) · [post](posts/agent-friendly-http-apis/)

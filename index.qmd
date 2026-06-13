@@ -2,7 +2,9 @@
 title: "Krimler"
 subtitle: "Math · Computer Science · AI/ML · Security"
 listing:
-  contents: posts
+  contents:
+    - posts
+    - "reviews/*/index.qmd"
   sort: "date desc"
   type: default
   categories: true
