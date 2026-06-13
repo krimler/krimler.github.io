@@ -770,11 +770,11 @@
     "text": "Selected publications and preprints\nSeveral of these have companion posts on this blog that explain the ideas in plain language. See the blog and papers.\n\nAlignDP: Hybrid Differential Privacy with Rarity-Aware Protection for LLMs. NeurIPS 2025 Workshop. arXiv:2512.17251 · post\nNPO: Learning Alignment and Meta-Alignment through Structured Human Feedback. arXiv:2507.21131 · post\nANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability. arXiv:2508.16119 · post\nAVEC: Bootstrapping Privacy for Local LLMs. arXiv:2509.10561 · post\nMurphy’s Laws of AI Alignment: Why the Gap Always Wins. arXiv:2509.05381 · post\nWhen Are Two RLHF Objectives the Same? (Opal). arXiv:2509.11298 · post\nDid You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents. ICLR 2026 Workshop. arXiv:2603.15658 · post\nAEGIS: An Evidence-Obligation Framework for AI-Native Enterprise Architecture. paper · post\nHeuristics, Prediction, and Provenance for Fibonacci and k-bonacci Prime Statistics. paper · post\nAlgorithmic Analysis of DAM. ICLR 2026 Workshop. OpenReview\nThe Abstention Protocol: Root Cause Analysis for Clos Fabrics. USENIX OSDI 2026.\nAgentic Trust Fabric: A Systematization of Knowledge of Security Architectures for Autonomous AI Agents. preprint\nAdaptive WAF: Multi-Armed Bandits for Web Application Firewall Rule Tuning. preprint\nZero Trust Identity and Authorization Profile. draft"
   },
   {
-    "objectID": "cv.html#ietf-drafts-llm-benchmarking-under-bmwg-review",
-    "href": "cv.html#ietf-drafts-llm-benchmarking-under-bmwg-review",
+    "objectID": "cv.html#ietf-drafts",
+    "href": "cv.html#ietf-drafts",
     "title": "Madhava Gaikwad",
-    "section": "IETF drafts (LLM benchmarking, under BMWG review)",
-    "text": "IETF drafts (LLM benchmarking, under BMWG review)\n\nLLM Benchmarking Terminology\nLLM Benchmarking Methodology\nLLM Benchmarking Profiles\nLLM Serving Workload Profiles"
+    "section": "IETF drafts",
+    "text": "IETF drafts\nLLM serving benchmarking (BMWG):\n\nLLM Benchmarking Terminology\nLLM Benchmarking Methodology\nLLM Benchmarking Profiles\nLLM Serving Workload Profiles\n\nHTTP APIs for AI agents:\n\nDesign Considerations and Profile for HTTP APIs Consumed by AI Agents"
   },
   {
     "objectID": "reviews/accelnet/index.html",
