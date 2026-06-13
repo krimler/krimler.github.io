@@ -10,7 +10,72 @@
 <atom:link href="https://krimler.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Notes and papers on mathematics, computer science, AI/ML, and security.</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Sat, 06 Jun 2026 18:30:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 08 Jun 2026 18:30:00 GMT</lastBuildDate>
+<item>
+  <title>Designing HTTP APIs that AI agents can actually use</title>
+  <dc:creator>Madhava Gaikwad</dc:creator>
+  <link>https://krimler.github.io/posts/agent-friendly-http-apis/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://krimler.github.io/posts/agent-friendly-http-apis/cover.jpg" class="img-fluid figure-img"></p>
+<figcaption>Mercury, Hendrick Goltzius (1611). Public domain, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
+<p>An AI agent is now a common kind of HTTP API client. An HTTP API is the interface a service exposes for programs to call over the web. Agents read these interfaces in a way a human developer does not. A developer reads the documentation once, remembers it, and writes code. An agent works from the machine-readable description on every call, holds only a limited amount of text at a time, retries often, and chooses which operation to call by matching the description to its current goal. An API that was designed for a person to read can be hard for an agent to use well. This IETF draft collects the properties that make an API easy for an agent and assembles them into one reusable profile.</p>
+<section id="machine-readable-signals-not-prose" class="level2">
+<h2 class="anchored" data-anchor-id="machine-readable-signals-not-prose">Machine-readable signals, not prose</h2>
+<p>An agent should not have to parse a paragraph of English to learn how to behave. The API should hand it structured, actionable signals instead. A rule expressed as a field the agent can read is worth more than the same rule buried in a sentence it has to interpret.</p>
+</section>
+<section id="the-description-is-the-contract" class="level2">
+<h2 class="anchored" data-anchor-id="the-description-is-the-contract">The description is the contract</h2>
+<p>For an agent, the API description is the thing it actually programs against. Two properties follow. Operation identifiers must be stable and meaningful, because the agent selects operations by their names and descriptions. The description of each operation should say plainly when to use it and what side effects it has. A side effect is a change the call makes to the world, such as charging a card or sending a message.</p>
+</section>
+<section id="consistency-and-predictability" class="level2">
+<h2 class="anchored" data-anchor-id="consistency-and-predictability">Consistency and predictability</h2>
+<p>The API should look the same everywhere. Naming, pagination, error formats, and authentication should follow one convention across every operation. An agent that learns the pattern once can then apply it everywhere, which saves the limited context it has to work with.</p>
+</section>
+<section id="respect-the-context-budget" class="level2">
+<h2 class="anchored" data-anchor-id="respect-the-context-budget">Respect the context budget</h2>
+<p>An agent can only hold so much text at a time. A response that dumps everything eats into that budget and crowds out the agent’s actual reasoning. The draft asks that responses be bounded by default, with controls for field selection or verbosity so the agent can ask for only what it needs.</p>
+</section>
+<section id="errors-the-agent-can-recover-from" class="level2">
+<h2 class="anchored" data-anchor-id="errors-the-agent-can-recover-from">Errors the agent can recover from</h2>
+<p>When a call fails, the failure should be machine-readable. The draft points to RFC 9457 Problem Details, a standard JSON format for HTTP errors. A good error says whether retrying is worthwhile and gives field-level feedback on what was invalid, so the agent can fix the request rather than guess.</p>
+</section>
+<section id="safe-writes" class="level2">
+<h2 class="anchored" data-anchor-id="safe-writes">Safe writes</h2>
+<p>Agents retry often, so a write operation must tolerate being repeated. The draft calls for idempotency keys, which let the agent mark a request so that sending it twice has the same effect as sending it once. It also calls for dry-run and preview modes, so an agent can check what a write would do before committing to it.</p>
+</section>
+<section id="tell-the-agent-when-to-slow-down" class="level2">
+<h2 class="anchored" data-anchor-id="tell-the-agent-when-to-slow-down">Tell the agent when to slow down</h2>
+<p>Rate limits should be expressed as machine-readable backoff hints. When the service wants the client to wait, it should say so in a form the agent can read directly, so the agent can throttle itself rather than hammer the endpoint and get blocked.</p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
+<p>Agents are becoming a primary audience for APIs, and they have real constraints: a small context window, frequent retries, and selection by description. An API that ignores these makes agents slow, expensive, and error-prone to work with. The profile gives API designers a concrete checklist for serving autonomous clients while keeping security, reliability, and operational visibility intact.</p>
+</section>
+<section id="read-the-draft" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
+<p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-agent-friendly-http-api-profile/">Design Considerations and Profile for HTTP APIs Consumed by AI Agents</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ai-agents</category>
+  <category>http</category>
+  <category>api-design</category>
+  <category>ietf</category>
+  <guid>https://krimler.github.io/posts/agent-friendly-http-apis/</guid>
+  <pubDate>Mon, 08 Jun 2026 18:30:00 GMT</pubDate>
+  <media:content url="https://krimler.github.io/posts/agent-friendly-http-apis/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Counting Fibonacci primes: what a finite computation can and cannot add</title>
   <dc:creator>Madhava Gaikwad</dc:creator>
@@ -614,71 +679,6 @@ European Parliament and Council of the European Union. 2024. <em>Regulation (EU)
   <guid>https://krimler.github.io/posts/ietf-benchmarking-terminology/</guid>
   <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
   <media:content url="https://krimler.github.io/posts/ietf-benchmarking-terminology/cover.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Designing HTTP APIs that AI agents can actually use</title>
-  <dc:creator>Madhava Gaikwad</dc:creator>
-  <link>https://krimler.github.io/posts/agent-friendly-http-apis/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://krimler.github.io/posts/agent-friendly-http-apis/cover.jpg" class="img-fluid figure-img"></p>
-<figcaption>Mercury, Hendrick Goltzius (1611). Public domain, via Wikimedia Commons.</figcaption>
-</figure>
-</div>
-<p>An AI agent is now a common kind of HTTP API client. An HTTP API is the interface a service exposes for programs to call over the web. Agents read these interfaces in a way a human developer does not. A developer reads the documentation once, remembers it, and writes code. An agent works from the machine-readable description on every call, holds only a limited amount of text at a time, retries often, and chooses which operation to call by matching the description to its current goal. An API that was designed for a person to read can be hard for an agent to use well. This IETF draft collects the properties that make an API easy for an agent and assembles them into one reusable profile.</p>
-<section id="machine-readable-signals-not-prose" class="level2">
-<h2 class="anchored" data-anchor-id="machine-readable-signals-not-prose">Machine-readable signals, not prose</h2>
-<p>An agent should not have to parse a paragraph of English to learn how to behave. The API should hand it structured, actionable signals instead. A rule expressed as a field the agent can read is worth more than the same rule buried in a sentence it has to interpret.</p>
-</section>
-<section id="the-description-is-the-contract" class="level2">
-<h2 class="anchored" data-anchor-id="the-description-is-the-contract">The description is the contract</h2>
-<p>For an agent, the API description is the thing it actually programs against. Two properties follow. Operation identifiers must be stable and meaningful, because the agent selects operations by their names and descriptions. The description of each operation should say plainly when to use it and what side effects it has. A side effect is a change the call makes to the world, such as charging a card or sending a message.</p>
-</section>
-<section id="consistency-and-predictability" class="level2">
-<h2 class="anchored" data-anchor-id="consistency-and-predictability">Consistency and predictability</h2>
-<p>The API should look the same everywhere. Naming, pagination, error formats, and authentication should follow one convention across every operation. An agent that learns the pattern once can then apply it everywhere, which saves the limited context it has to work with.</p>
-</section>
-<section id="respect-the-context-budget" class="level2">
-<h2 class="anchored" data-anchor-id="respect-the-context-budget">Respect the context budget</h2>
-<p>An agent can only hold so much text at a time. A response that dumps everything eats into that budget and crowds out the agent’s actual reasoning. The draft asks that responses be bounded by default, with controls for field selection or verbosity so the agent can ask for only what it needs.</p>
-</section>
-<section id="errors-the-agent-can-recover-from" class="level2">
-<h2 class="anchored" data-anchor-id="errors-the-agent-can-recover-from">Errors the agent can recover from</h2>
-<p>When a call fails, the failure should be machine-readable. The draft points to RFC 9457 Problem Details, a standard JSON format for HTTP errors. A good error says whether retrying is worthwhile and gives field-level feedback on what was invalid, so the agent can fix the request rather than guess.</p>
-</section>
-<section id="safe-writes" class="level2">
-<h2 class="anchored" data-anchor-id="safe-writes">Safe writes</h2>
-<p>Agents retry often, so a write operation must tolerate being repeated. The draft calls for idempotency keys, which let the agent mark a request so that sending it twice has the same effect as sending it once. It also calls for dry-run and preview modes, so an agent can check what a write would do before committing to it.</p>
-</section>
-<section id="tell-the-agent-when-to-slow-down" class="level2">
-<h2 class="anchored" data-anchor-id="tell-the-agent-when-to-slow-down">Tell the agent when to slow down</h2>
-<p>Rate limits should be expressed as machine-readable backoff hints. When the service wants the client to wait, it should say so in a form the agent can read directly, so the agent can throttle itself rather than hammer the endpoint and get blocked.</p>
-</section>
-<section id="why-it-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-it-matters">Why it matters</h2>
-<p>Agents are becoming a primary audience for APIs, and they have real constraints: a small context window, frequent retries, and selection by description. An API that ignores these makes agents slow, expensive, and error-prone to work with. The profile gives API designers a concrete checklist for serving autonomous clients while keeping security, reliability, and operational visibility intact.</p>
-</section>
-<section id="read-the-draft" class="level2">
-<h2 class="anchored" data-anchor-id="read-the-draft">Read the draft</h2>
-<p><a href="https://datatracker.ietf.org/doc/draft-gaikwad-agent-friendly-http-api-profile/">Design Considerations and Profile for HTTP APIs Consumed by AI Agents</a>.</p>
-
-
-</section>
-
- ]]></description>
-  <category>ai-agents</category>
-  <category>http</category>
-  <category>api-design</category>
-  <category>ietf</category>
-  <guid>https://krimler.github.io/posts/agent-friendly-http-apis/</guid>
-  <pubDate>Mon, 19 Jan 2026 18:30:00 GMT</pubDate>
-  <media:content url="https://krimler.github.io/posts/agent-friendly-http-apis/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>How to run the tests: the IETF LLM serving methodology draft</title>

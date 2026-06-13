@@ -16,6 +16,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/agent-friendly-http-apis/index.html",
       "/posts/fibonacci-prime-statistics/index.html",
       "/reviews/mrc-srv6/index.html",
       "/reviews/accelnet/index.html",
@@ -26,7 +27,6 @@
       "/posts/ietf-benchmarking-workloads/index.html",
       "/posts/ietf-benchmarking-profiles/index.html",
       "/posts/ietf-benchmarking-terminology/index.html",
-      "/posts/agent-friendly-http-apis/index.html",
       "/posts/ietf-benchmarking-methodology/index.html",
       "/posts/aligndp-rarity-privacy/index.html",
       "/posts/avec-edge-privacy/index.html",
