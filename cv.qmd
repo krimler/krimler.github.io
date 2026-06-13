@@ -103,8 +103,6 @@ language. See the [blog](index.qmd) and [papers](papers/index.qmd).
 
 ## IETF drafts
 
-Individual Internet-Drafts, not IETF-endorsed.
-
 **LLM serving benchmarking (BMWG):**
 
 - [LLM Benchmarking Terminology](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/)
