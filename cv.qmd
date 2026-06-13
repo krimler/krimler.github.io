@@ -101,9 +101,17 @@ language. See the [blog](index.qmd) and [papers](papers/index.qmd).
 - Zero Trust Identity and Authorization Profile.
   [draft](https://philpapers.org/archive/GAIZTI.pdf)
 
-## IETF drafts (LLM benchmarking, under BMWG review)
+## IETF drafts
+
+Individual Internet-Drafts, not IETF-endorsed.
+
+**LLM serving benchmarking (BMWG):**
 
 - [LLM Benchmarking Terminology](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-terminology/)
 - [LLM Benchmarking Methodology](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-methodology/)
 - [LLM Benchmarking Profiles](https://datatracker.ietf.org/doc/draft-gaikwad-llm-benchmarking-profiles/)
 - [LLM Serving Workload Profiles](https://datatracker.ietf.org/doc/draft-mondal-llm-serving-workload-profiles/)
+
+**HTTP APIs for AI agents:**
+
+- [Design Considerations and Profile for HTTP APIs Consumed by AI Agents](https://datatracker.ietf.org/doc/draft-gaikwad-agent-friendly-http-api-profile/)
